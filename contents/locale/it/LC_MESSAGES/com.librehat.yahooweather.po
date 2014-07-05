@@ -1,0 +1,338 @@
+# plasma-applet-yahooweather language translation file.
+# Copyright (C) 2014 William Wong
+# This file is distributed under the same license as the plasma-applet-yahooweather package.
+#
+#
+# Valter Mura <valtermura@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-20 10:35+0800\n"
+"PO-Revision-Date: 2014-03-23 10:59+0100\n"
+"Last-Translator: Valter Mura <valtermura@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: ../ui/main.qml:98
+msgid "YAHOO! Weather"
+msgstr "YAHOO! Weather"
+
+#: ../ui/main.qml:123
+msgid "Sunrise"
+msgstr "Alba"
+
+#: ../ui/main.qml:123
+msgid "Sunset"
+msgstr "Tramonto"
+
+#: ../ui/main.qml:150
+msgid "Feels like"
+msgstr "Indice di calore"
+
+#: ../ui/main.qml:150
+msgid "Visibility"
+msgstr "Visibilità"
+
+#: ../ui/main.qml:150
+msgid "NULL"
+msgstr "NULL"
+
+#: ../ui/main.qml:156
+msgid "Humidity"
+msgstr "Umidità"
+
+#: ../ui/main.qml:156
+msgid "Pressure"
+msgstr "Pressione"
+
+#: ../ui/main.qml:162
+msgid "UV Index"
+msgstr "Indice UV"
+
+#: ../ui/main.qml:162
+msgid "Wind"
+msgstr "Vento"
+
+#: ../ui/main.qml:176
+msgid "Today"
+msgstr "Oggi"
+
+#: ../ui/main.qml:183
+msgid "Tomorrow"
+msgstr "Domani"
+
+#: ../ui/main.qml:351 ../ui/Yahoo.qml:154
+msgid "Error 2. WOEID may be invalid."
+msgstr "Errore 2. Il WOEID potrebbe non essere corretto."
+
+#: ../ui/main.qml:451
+msgid "Tornado"
+msgstr "Tornado"
+
+#: ../ui/main.qml:453
+msgid "Tropical Storm"
+msgstr "Tempesta tropicale"
+
+#: ../ui/main.qml:455
+msgid "Hurricane"
+msgstr "Uragano"
+
+#: ../ui/main.qml:457
+msgid "Severe Thunderstorms"
+msgstr "Temporale forte"
+
+#: ../ui/main.qml:459
+msgid "Thunderstorms"
+msgstr "Temporali"
+
+#: ../ui/main.qml:461
+msgid "Mixed Rain and Snow"
+msgstr "Pioggia e neve"
+
+#: ../ui/main.qml:463
+msgid "Mixed Rain and Sleet"
+msgstr "Pioggia e nevischio"
+
+#: ../ui/main.qml:465
+msgid "Mixed Snow and Sleet"
+msgstr "Neve e nevischio"
+
+#: ../ui/main.qml:467
+msgid "Freezing Drizzle"
+msgstr "Pioggerella gelida"
+
+#: ../ui/main.qml:469
+msgid "Drizzle"
+msgstr "Pioggerella"
+
+#: ../ui/main.qml:471
+msgid "Freezing Rain"
+msgstr "Pioggia gelida"
+
+#: ../ui/main.qml:474
+msgid "Showers"
+msgstr "Acquazzoni"
+
+#: ../ui/main.qml:476
+msgid "Snow Flurries"
+msgstr "Nevischiate"
+
+#: ../ui/main.qml:478
+msgid "Light Snow Showers"
+msgstr "Nevicate leggere"
+
+#: ../ui/main.qml:480
+msgid "Blowing Snow"
+msgstr "Raffiche di neve"
+
+#: ../ui/main.qml:482
+msgid "Snow"
+msgstr "Neve"
+
+#: ../ui/main.qml:484
+msgid "Hail"
+msgstr "Grandine"
+
+#: ../ui/main.qml:486
+msgid "Sleet"
+msgstr "Nevischio"
+
+#: ../ui/main.qml:488
+msgid "Dust"
+msgstr "Polvere"
+
+#: ../ui/main.qml:490
+msgid "Foggy"
+msgstr "Nebbia"
+
+#: ../ui/main.qml:492
+msgid "Haze"
+msgstr "Foschia"
+
+#: ../ui/main.qml:494
+msgid "Smoky"
+msgstr "Fumoso"
+
+#: ../ui/main.qml:496
+msgid "Blustery"
+msgstr "Burrascoso"
+
+#: ../ui/main.qml:498
+msgid "Windy"
+msgstr "Ventoso"
+
+#: ../ui/main.qml:500
+msgid "Cold"
+msgstr "Freddo"
+
+#: ../ui/main.qml:502
+msgid "Cloudy"
+msgstr "Nuvoloso"
+
+#: ../ui/main.qml:504
+msgid "Mostly Cloudy (Night)"
+msgstr "Molto nuvoloso (notte)"
+
+#: ../ui/main.qml:506
+msgid "Mostly Cloudy (Day)"
+msgstr "Molto nuvoloso (giorno)"
+
+#: ../ui/main.qml:508
+msgid "Partly Cloudy (Night)"
+msgstr "Parzialmente nuvoloso (notte)"
+
+#: ../ui/main.qml:510
+msgid "Partly Cloudy (Day)"
+msgstr "Parzialmente nuvoloso (giorno)"
+
+#: ../ui/main.qml:512
+msgid "Clear (Night)"
+msgstr "Terso (notte)"
+
+#: ../ui/main.qml:514
+msgid "Sunny"
+msgstr "Soleggiato"
+
+#: ../ui/main.qml:516
+msgid "Fair (Night)"
+msgstr "Sereno (notte)"
+
+#: ../ui/main.qml:518
+msgid "Fair (Day)"
+msgstr "Sereno (giorno)"
+
+#: ../ui/main.qml:520
+msgid "Mixed Rain and Hail"
+msgstr "Pioggia e grandine"
+
+#: ../ui/main.qml:522
+msgid "Hot"
+msgstr "Caldo"
+
+#: ../ui/main.qml:524
+msgid "Isolated Thunderstorms"
+msgstr "Temporali isolati"
+
+#: ../ui/main.qml:527
+msgid "Scattered Thunderstorms"
+msgstr "Temporali sparsi"
+
+#: ../ui/main.qml:529
+msgid "Scattered Showers"
+msgstr "Piogge sparse"
+
+#: ../ui/main.qml:532
+msgid "Heavy Snow"
+msgstr "Neve abbondante"
+
+#: ../ui/main.qml:534
+msgid "Scattered Snow Showers"
+msgstr "Nevicate sparse"
+
+#: ../ui/main.qml:536
+msgid "Partly Cloudy"
+msgstr "Parzialmente nuvoloso"
+
+#: ../ui/main.qml:538
+msgid "Thundershowers"
+msgstr "Acquazzoni"
+
+#: ../ui/main.qml:540
+msgid "Snow Showers"
+msgstr "Nevicate"
+
+#: ../ui/main.qml:542
+msgid "Isolated Thundershowers"
+msgstr "Acquazzoni isolati"
+
+#: ../ui/main.qml:544
+msgid "Not Available"
+msgstr "Non disponibile"
+
+#: ../ui/main.qml:568
+msgid "Yahoo! Weather Widget"
+msgstr "Oggetto Yahoo! Weather"
+
+#: ../ui/Yahoo.qml:100
+msgid "Error 1. Please check your network."
+msgstr "Errore 1. Controlla la tua rete."
+
+#: ../ui/Yahoo.qml:162
+msgid "Sunday"
+msgstr "Domenica"
+
+#: ../ui/Yahoo.qml:164
+msgid "Monday"
+msgstr "Lunedì"
+
+#: ../ui/Yahoo.qml:166
+msgid "Tuesday"
+msgstr "Martedì"
+
+#: ../ui/Yahoo.qml:168
+msgid "Wednesday"
+msgstr "Mercoledì"
+
+#: ../ui/Yahoo.qml:170
+msgid "Thursday"
+msgstr "Giovedì"
+
+#: ../ui/Yahoo.qml:172
+msgid "Friday"
+msgstr "Venerdì"
+
+#: ../ui/Yahoo.qml:174
+msgid "Saturday"
+msgstr "Sabato"
+
+#: rc.js:3
+msgid "Form"
+msgstr "Modulo"
+
+#: rc.js:6
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
+
+#: rc.js:9
+msgid "Degrees Unit"
+msgstr "Unità dei gradi"
+
+#: rc.js:12
+msgid "Where On Earth ID"
+msgstr "Identificativo di posizione sulla Terra (Where On Earth ID)"
+
+#: rc.js:15
+msgid "WOEID"
+msgstr "WOEID"
+
+#: rc.js:18
+msgid "Celsius"
+msgstr "Celsius"
+
+#: rc.js:21
+msgid ""
+"<html><head/><body><p>To find your city's WOEID.</p><p>Go to http://zourbuth."
+"com/tools/woeid/ <br />Type in your city's zip code or name or landmark.<br /"
+">Then click Lookup.</p></body></html>"
+msgstr ""
+"<html><head/><body><p>Per trovare il WOEID della tua città:</p><p>Vai "
+"all'indirizzo «http://zourbuth.com/tools/woeid/» <br />Digita il C.A.P. (zip "
+"code) della tua città, il nome o la regione.<br />Poi fai clic su «Lookup» "
+"(Cerca).</p></body></html>"
+
+#: rc.js:22
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Valter Mura"
+
+#: rc.js:23
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "valtermura@gmail.com"
+

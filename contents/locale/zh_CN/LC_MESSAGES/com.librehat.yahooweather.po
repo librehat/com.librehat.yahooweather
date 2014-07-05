@@ -1,0 +1,335 @@
+# plasma-applet-yahooweather language translation file.
+# Copyright (C) 2014 William Wong
+# This file is distributed under the same license as the plasma-applet-yahooweather package.
+# 
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-20 10:30+0800\n"
+"PO-Revision-Date: 2014-03-19 13:59+0800\n"
+"Last-Translator: William Wong <hzwhuang@gmail.com>\n"
+"Language-Team: Chinese Simplified <>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: ../ui/main.qml:98
+msgid "YAHOO! Weather"
+msgstr "雅虎天气"
+
+#: ../ui/main.qml:123
+msgid "Sunrise"
+msgstr "日出"
+
+#: ../ui/main.qml:123
+msgid "Sunset"
+msgstr "日落"
+
+#: ../ui/main.qml:150
+msgid "Feels like"
+msgstr "体感温度"
+
+#: ../ui/main.qml:150
+msgid "Visibility"
+msgstr "能见度"
+
+#: ../ui/main.qml:150
+msgid "NULL"
+msgstr "无数据"
+
+#: ../ui/main.qml:156
+msgid "Humidity"
+msgstr "湿度"
+
+#: ../ui/main.qml:156
+msgid "Pressure"
+msgstr "气压"
+
+#: ../ui/main.qml:162
+msgid "UV Index"
+msgstr "紫外线指数"
+
+#: ../ui/main.qml:162
+msgid "Wind"
+msgstr "风速"
+
+#: ../ui/main.qml:176
+msgid "Today"
+msgstr "今天"
+
+#: ../ui/main.qml:183
+msgid "Tomorrow"
+msgstr "明天"
+
+#: ../ui/main.qml:351 ../ui/Yahoo.qml:154
+msgid "Error 2. WOEID may be invalid."
+msgstr "错误2。WOEID或许无效。"
+
+#: ../ui/main.qml:451
+msgid "Tornado"
+msgstr "龙卷风"
+
+#: ../ui/main.qml:453
+msgid "Tropical Storm"
+msgstr "热带风暴"
+
+#: ../ui/main.qml:455
+msgid "Hurricane"
+msgstr "飓风"
+
+#: ../ui/main.qml:457
+msgid "Severe Thunderstorms"
+msgstr "猛烈雷暴"
+
+#: ../ui/main.qml:459
+msgid "Thunderstorms"
+msgstr "雷暴"
+
+#: ../ui/main.qml:461
+msgid "Mixed Rain and Snow"
+msgstr "雨夹雪"
+
+#: ../ui/main.qml:463
+msgid "Mixed Rain and Sleet"
+msgstr "雨夹冰雹"
+
+#: ../ui/main.qml:465
+msgid "Mixed Snow and Sleet"
+msgstr "雪夹冰雹"
+
+#: ../ui/main.qml:467
+msgid "Freezing Drizzle"
+msgstr "冻毛毛雨"
+
+#: ../ui/main.qml:469
+msgid "Drizzle"
+msgstr "毛毛雨"
+
+#: ../ui/main.qml:471
+msgid "Freezing Rain"
+msgstr "冻雨"
+
+#: ../ui/main.qml:474
+msgid "Showers"
+msgstr "阵雨"
+
+#: ../ui/main.qml:476
+msgid "Snow Flurries"
+msgstr "小雪"
+
+#: ../ui/main.qml:478
+msgid "Light Snow Showers"
+msgstr "偶有小雪"
+
+#: ../ui/main.qml:480
+msgid "Blowing Snow"
+msgstr "飞雪"
+
+#: ../ui/main.qml:482
+msgid "Snow"
+msgstr "雪"
+
+#: ../ui/main.qml:484
+msgid "Hail"
+msgstr "冰雹"
+
+#: ../ui/main.qml:486
+msgid "Sleet"
+msgstr "雨凇"
+
+#: ../ui/main.qml:488
+msgid "Dust"
+msgstr "灰尘"
+
+#: ../ui/main.qml:490
+msgid "Foggy"
+msgstr "浓雾"
+
+#: ../ui/main.qml:492
+msgid "Haze"
+msgstr "阴霾"
+
+#: ../ui/main.qml:494
+msgid "Smoky"
+msgstr "烟雾"
+
+#: ../ui/main.qml:496
+msgid "Blustery"
+msgstr "狂风"
+
+#: ../ui/main.qml:498
+msgid "Windy"
+msgstr "有风"
+
+#: ../ui/main.qml:500
+msgid "Cold"
+msgstr "寒冷"
+
+#: ../ui/main.qml:502
+msgid "Cloudy"
+msgstr "多云"
+
+#: ../ui/main.qml:504
+msgid "Mostly Cloudy (Night)"
+msgstr "大部份地区多云 （夜晚）"
+
+#: ../ui/main.qml:506
+msgid "Mostly Cloudy (Day)"
+msgstr "大部分地区多云 （白天）"
+
+#: ../ui/main.qml:508
+msgid "Partly Cloudy (Night)"
+msgstr "部分地区多云 （夜晚）"
+
+#: ../ui/main.qml:510
+msgid "Partly Cloudy (Day)"
+msgstr "部分地区多云 （白天）"
+
+#: ../ui/main.qml:512
+msgid "Clear (Night)"
+msgstr "晴朗 （夜晚）"
+
+#: ../ui/main.qml:514
+msgid "Sunny"
+msgstr "晴朗"
+
+#: ../ui/main.qml:516
+msgid "Fair (Night)"
+msgstr "晴朗 （夜晚）"
+
+#: ../ui/main.qml:518
+msgid "Fair (Day)"
+msgstr "晴朗 （白天）"
+
+#: ../ui/main.qml:520
+msgid "Mixed Rain and Hail"
+msgstr "雨夹冰雹"
+
+#: ../ui/main.qml:522
+msgid "Hot"
+msgstr "热"
+
+#: ../ui/main.qml:524
+msgid "Isolated Thunderstorms"
+msgstr "局部雷暴"
+
+#: ../ui/main.qml:527
+msgid "Scattered Thunderstorms"
+msgstr "偶有雷暴"
+
+#: ../ui/main.qml:529
+msgid "Scattered Showers"
+msgstr "偶有阵雨"
+
+#: ../ui/main.qml:532
+msgid "Heavy Snow"
+msgstr "大雪"
+
+#: ../ui/main.qml:534
+msgid "Scattered Snow Showers"
+msgstr "偶有阵雪"
+
+#: ../ui/main.qml:536
+msgid "Partly Cloudy"
+msgstr "部分地区多云"
+
+#: ../ui/main.qml:538
+msgid "Thundershowers"
+msgstr "雷阵雨"
+
+#: ../ui/main.qml:540
+msgid "Snow Showers"
+msgstr "阵雪"
+
+#: ../ui/main.qml:542
+msgid "Isolated Thundershowers"
+msgstr "偶有雷阵雨"
+
+#: ../ui/main.qml:544
+msgid "Not Available"
+msgstr "不可用"
+
+#: ../ui/main.qml:568
+msgid "Yahoo! Weather Widget"
+msgstr "雅虎天气小部件"
+
+#: ../ui/Yahoo.qml:100
+msgid "Error 1. Please check your network."
+msgstr "错误1。请检查您的网络。"
+
+#: ../ui/Yahoo.qml:162
+msgid "Sunday"
+msgstr "星期日"
+
+#: ../ui/Yahoo.qml:164
+msgid "Monday"
+msgstr "星期一"
+
+#: ../ui/Yahoo.qml:166
+msgid "Tuesday"
+msgstr "星期二"
+
+#: ../ui/Yahoo.qml:168
+msgid "Wednesday"
+msgstr "星期三"
+
+#: ../ui/Yahoo.qml:170
+msgid "Thursday"
+msgstr "星期四"
+
+#: ../ui/Yahoo.qml:172
+msgid "Friday"
+msgstr "星期五"
+
+#: ../ui/Yahoo.qml:174
+msgid "Saturday"
+msgstr "星期六"
+
+#: rc.js:3
+msgid "Form"
+msgstr ""
+
+#: rc.js:6
+msgid "Fahrenheit"
+msgstr "华氏"
+
+#: rc.js:9
+msgid "Degrees Unit"
+msgstr "度的单位"
+
+#: rc.js:12
+msgid "Where On Earth ID"
+msgstr ""
+
+#: rc.js:15
+msgid "WOEID"
+msgstr ""
+
+#: rc.js:18
+msgid "Celsius"
+msgstr "摄氏"
+
+#: rc.js:21
+msgid ""
+"<html><head/><body><p>To find your city's WOEID.</p><p>Go to http://zourbuth."
+"com/tools/woeid/ <br />Type in your city's zip code or name or landmark.<br /"
+">Then click Lookup.</p></body></html>"
+msgstr ""
+"<html><head/><body><p>想找到您所在城市的WOEID</p><p>前往 http://zourbuth.com/"
+"tools/woeid/ <br />输入城市的邮编、名称或者地标。<br />然后点击Lookup.</p></"
+"body></html>"
+
+#: rc.js:22
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#: rc.js:23
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
