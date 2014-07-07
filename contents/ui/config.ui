@@ -16,9 +16,6 @@
     <height>235</height>
    </size>
   </property>
-  <property name="windowTitle">
-   <string>Form</string>
-  </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="2" column="2">
     <widget class="QRadioButton" name="kcfg_fahrenheit">
@@ -79,6 +76,11 @@
    <header>klineedit.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>kcfg_woeid</tabstop>
+  <tabstop>kcfg_celsius</tabstop>
+  <tabstop>kcfg_fahrenheit</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

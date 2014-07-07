@@ -1,6 +1,6 @@
 /*
- *   Author: librehat <librehat@outlook.com>
- *   Date: Mon Mar 17 2014, 13:13:05
+ *   Authour: William Wong (librehat) <librehat@outlook.com>
+ *   Copyright 2014
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
