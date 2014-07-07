@@ -81,7 +81,7 @@ Item {
     Timer {
         id: repeatquery
         interval: 10000
-        running: true
+        running: false
         repeat: true
         onTriggered: {
             running = false;
