@@ -67,6 +67,26 @@ Item {
         XmlRole { name: 'fivecode' ; query: 'item/yweather:forecast[5]/@code/string()' }
         
         onCountChanged: getweatherinfo();
+
+        onStatusChanged: {// include Errorhandling
+            if (status === XmlListModel.Error)   {// sh033
+                console.debug("XmlListModel.Error: ", errorString);
+                repeatquery.running = true;
+            }
+        }
+    }
+    
+    // timer for repeat query from sh033
+    Timer {
+        id: repeatquery
+        interval: 10000
+        running: true
+        repeat: true
+        onTriggered: {
+            running = false;
+            console.debug("Reapeat Query.. ");
+            query (mainWindow.m_woeid);
+        }
     }
     
     function query(woeid) {
