@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-20 10:35+0800\n"
+"POT-Creation-Date: 2014-07-07 20:18+0800\n"
 "PO-Revision-Date: 2014-03-23 10:59+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "Oggi"
 msgid "Tomorrow"
 msgstr "Domani"
 
-#: ../ui/main.qml:351 ../ui/Yahoo.qml:154
+#: ../ui/main.qml:351 ../ui/Yahoo.qml:175
 msgid "Error 2. WOEID may be invalid."
 msgstr "Errore 2. Il WOEID potrebbe non essere corretto."
 
@@ -259,63 +259,59 @@ msgstr "Non disponibile"
 msgid "Yahoo! Weather Widget"
 msgstr "Oggetto Yahoo! Weather"
 
-#: ../ui/Yahoo.qml:100
+#: ../ui/Yahoo.qml:121
 msgid "Error 1. Please check your network."
 msgstr "Errore 1. Controlla la tua rete."
 
-#: ../ui/Yahoo.qml:162
+#: ../ui/Yahoo.qml:183
 msgid "Sunday"
 msgstr "Domenica"
 
-#: ../ui/Yahoo.qml:164
+#: ../ui/Yahoo.qml:185
 msgid "Monday"
 msgstr "Lunedì"
 
-#: ../ui/Yahoo.qml:166
+#: ../ui/Yahoo.qml:187
 msgid "Tuesday"
 msgstr "Martedì"
 
-#: ../ui/Yahoo.qml:168
+#: ../ui/Yahoo.qml:189
 msgid "Wednesday"
 msgstr "Mercoledì"
 
-#: ../ui/Yahoo.qml:170
+#: ../ui/Yahoo.qml:191
 msgid "Thursday"
 msgstr "Giovedì"
 
-#: ../ui/Yahoo.qml:172
+#: ../ui/Yahoo.qml:193
 msgid "Friday"
 msgstr "Venerdì"
 
-#: ../ui/Yahoo.qml:174
+#: ../ui/Yahoo.qml:195
 msgid "Saturday"
 msgstr "Sabato"
 
 #: rc.js:3
-msgid "Form"
-msgstr "Modulo"
-
-#: rc.js:6
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: rc.js:9
+#: rc.js:6
 msgid "Degrees Unit"
 msgstr "Unità dei gradi"
 
-#: rc.js:12
+#: rc.js:9
 msgid "Where On Earth ID"
 msgstr "Identificativo di posizione sulla Terra (Where On Earth ID)"
 
-#: rc.js:15
+#: rc.js:12
 msgid "WOEID"
 msgstr "WOEID"
 
-#: rc.js:18
+#: rc.js:15
 msgid "Celsius"
 msgstr "Celsius"
 
-#: rc.js:21
+#: rc.js:18
 msgid ""
 "<html><head/><body><p>To find your city's WOEID.</p><p>Go to http://zourbuth."
 "com/tools/woeid/ <br />Type in your city's zip code or name or landmark.<br /"
@@ -323,16 +319,18 @@ msgid ""
 msgstr ""
 "<html><head/><body><p>Per trovare il WOEID della tua città:</p><p>Vai "
 "all'indirizzo «http://zourbuth.com/tools/woeid/» <br />Digita il C.A.P. (zip "
-"code) della tua città, il nome o la regione.<br />Poi fai clic su «Lookup» "
-"(Cerca).</p></body></html>"
+"code) della tua città, il nome o la regione.<br />Poi fai clic su "
+"«Lookup» (Cerca).</p></body></html>"
 
-#: rc.js:22
+#: rc.js:19
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Valter Mura"
 
-#: rc.js:23
+#: rc.js:20
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "valtermura@gmail.com"
 
+#~ msgid "Form"
+#~ msgstr "Modulo"

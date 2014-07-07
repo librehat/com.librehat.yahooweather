@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-20 10:35+0800\n"
+"POT-Creation-Date: 2014-07-07 20:18+0800\n"
 "PO-Revision-Date: 2014-07-05 00:44+0100\n"
 "Last-Translator: spyder <ghostdarkhid@gmail.com>\n"
 "Language-Team: French <kde-i18n-it@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "Aujourd'hui"
 msgid "Tomorrow"
 msgstr "Demain"
 
-#: ../ui/main.qml:351 ../ui/Yahoo.qml:154
+#: ../ui/main.qml:351 ../ui/Yahoo.qml:175
 msgid "Error 2. WOEID may be invalid."
 msgstr "Erreur 2. L'WOEID peut ne pas être correcte."
 
@@ -259,63 +259,59 @@ msgstr "Non disponibile"
 msgid "Yahoo! Weather Widget"
 msgstr "Yahoo! Widget Météo"
 
-#: ../ui/Yahoo.qml:100
+#: ../ui/Yahoo.qml:121
 msgid "Error 1. Please check your network."
 msgstr "Erreur 1. Vérifiez votre connexion"
 
-#: ../ui/Yahoo.qml:162
+#: ../ui/Yahoo.qml:183
 msgid "Sunday"
 msgstr "Dimanche"
 
-#: ../ui/Yahoo.qml:164
+#: ../ui/Yahoo.qml:185
 msgid "Monday"
 msgstr "Lundi"
 
-#: ../ui/Yahoo.qml:166
+#: ../ui/Yahoo.qml:187
 msgid "Tuesday"
 msgstr "Mardi"
 
-#: ../ui/Yahoo.qml:168
+#: ../ui/Yahoo.qml:189
 msgid "Wednesday"
 msgstr "Mercredi"
 
-#: ../ui/Yahoo.qml:170
+#: ../ui/Yahoo.qml:191
 msgid "Thursday"
 msgstr "Jeudi"
 
-#: ../ui/Yahoo.qml:172
+#: ../ui/Yahoo.qml:193
 msgid "Friday"
 msgstr "Vendredi"
 
-#: ../ui/Yahoo.qml:174
+#: ../ui/Yahoo.qml:195
 msgid "Saturday"
 msgstr "Samedi"
 
 #: rc.js:3
-msgid "Form"
-msgstr "Forme"
-
-#: rc.js:6
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
-#: rc.js:9
+#: rc.js:6
 msgid "Degrees Unit"
 msgstr "Unité Degrés"
 
-#: rc.js:12
+#: rc.js:9
 msgid "Where On Earth ID"
 msgstr "Ou se trouve l'ID de localisation"
 
-#: rc.js:15
+#: rc.js:12
 msgid "WOEID"
 msgstr "WOEID"
 
-#: rc.js:18
+#: rc.js:15
 msgid "Celsius"
 msgstr "Celsius"
 
-#: rc.js:21
+#: rc.js:18
 msgid ""
 "<html><head/><body><p>To find your city's WOEID.</p><p>Go to http://zourbuth."
 "com/tools/woeid/ <br />Type in your city's zip code or name or landmark.<br /"
@@ -326,12 +322,15 @@ msgstr ""
 "ville, ou le nom de la région. <br /> Puis cliquez sur Recherche. </ p> </ "
 "body> </ html>"
 
-#: rc.js:22
+#: rc.js:19
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Spyder"
 
-#: rc.js:23
+#: rc.js:20
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ghostdarkhid@gmail.com"
+
+#~ msgid "Form"
+#~ msgstr "Forme"

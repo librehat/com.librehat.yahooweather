@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.3.1\n"
+"Project-Id-Version: 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-05 18:14+0800\n"
+"POT-Creation-Date: 2014-07-07 20:18+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Tomorrow"
 msgstr ""
 
-#: ../ui/main.qml:351 ../ui/Yahoo.qml:154
+#: ../ui/main.qml:351 ../ui/Yahoo.qml:175
 msgid "Error 2. WOEID may be invalid."
 msgstr ""
 
@@ -257,75 +257,71 @@ msgstr ""
 msgid "Yahoo! Weather Widget"
 msgstr ""
 
-#: ../ui/Yahoo.qml:100
+#: ../ui/Yahoo.qml:121
 msgid "Error 1. Please check your network."
 msgstr ""
 
-#: ../ui/Yahoo.qml:162
+#: ../ui/Yahoo.qml:183
 msgid "Sunday"
 msgstr ""
 
-#: ../ui/Yahoo.qml:164
+#: ../ui/Yahoo.qml:185
 msgid "Monday"
 msgstr ""
 
-#: ../ui/Yahoo.qml:166
+#: ../ui/Yahoo.qml:187
 msgid "Tuesday"
 msgstr ""
 
-#: ../ui/Yahoo.qml:168
+#: ../ui/Yahoo.qml:189
 msgid "Wednesday"
 msgstr ""
 
-#: ../ui/Yahoo.qml:170
+#: ../ui/Yahoo.qml:191
 msgid "Thursday"
 msgstr ""
 
-#: ../ui/Yahoo.qml:172
+#: ../ui/Yahoo.qml:193
 msgid "Friday"
 msgstr ""
 
-#: ../ui/Yahoo.qml:174
+#: ../ui/Yahoo.qml:195
 msgid "Saturday"
 msgstr ""
 
 #: rc.js:3
-msgid "Form"
-msgstr ""
-
-#: rc.js:6
 msgid "Fahrenheit"
 msgstr ""
 
-#: rc.js:9
+#: rc.js:6
 msgid "Degrees Unit"
 msgstr ""
 
-#: rc.js:12
+#: rc.js:9
 msgid "Where On Earth ID"
 msgstr ""
 
-#: rc.js:15
+#: rc.js:12
 msgid "WOEID"
 msgstr ""
 
-#: rc.js:18
+#: rc.js:15
 msgid "Celsius"
 msgstr ""
 
-#: rc.js:21
+#: rc.js:18
 msgid ""
 "<html><head/><body><p>To find your city's WOEID.</p><p>Go to http://zourbuth."
 "com/tools/woeid/ <br />Type in your city's zip code or name or landmark.<br /"
 ">Then click Lookup.</p></body></html>"
 msgstr ""
 
-#: rc.js:22
+#: rc.js:19
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: rc.js:23
+#: rc.js:20
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
