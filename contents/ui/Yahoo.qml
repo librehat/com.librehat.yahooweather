@@ -130,11 +130,17 @@ Item {
         mainWindow.m_country = yhModel.get(0).country;
         mainWindow.m_unitTemperature = yhModel.get(0).unittemp;
         mainWindow.m_unitDistance = yhModel.get(0).unitdist;
-        mainWindow.m_unitPressure = yhModel.get(0).unitpressure;
-        mainWindow.m_unitSpeed = yhModel.get(0).unitspeed;
+        mainWindow.m_unitPressure = yhModel.get(0).unitpressure;     
         mainWindow.m_windChill = yhModel.get(0).windchill;
         mainWindow.m_windDirection = yhModel.get(0).winddirection;
         mainWindow.m_windSpeed = yhModel.get(0).windspeed;
+        if (mainWindow.m_unitms) {
+            mainWindow.m_unitSpeed = "m/s";
+            mainWindow.m_windSpeed = Math.round(mainWindow.m_windSpeed * 1000 / 3600, 3);
+        }
+        else {
+            mainWindow.m_unitSpeed = "km/h";
+        }
         mainWindow.m_atmosphereHumidity = yhModel.get(0).atmospherehumidity;
         mainWindow.m_atmosphereVisibility = yhModel.get(0).atmospherevisibility;
         mainWindow.m_atmospherePressure = yhModel.get(0).atmospherepressure;

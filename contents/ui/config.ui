@@ -22,6 +22,9 @@
      <property name="text">
       <string>Fahrenheit</string>
      </property>
+     <attribute name="buttonGroup">
+      <string notr="true">degreeGroup</string>
+     </attribute>
     </widget>
    </item>
    <item row="2" column="0">
@@ -52,6 +55,9 @@
      <property name="checked">
       <bool>true</bool>
      </property>
+     <attribute name="buttonGroup">
+      <string notr="true">degreeGroup</string>
+     </attribute>
     </widget>
    </item>
    <item row="0" column="1" colspan="2">
@@ -65,6 +71,39 @@
      <property name="showClearButton" stdset="0">
       <bool>true</bool>
      </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_sunit">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Speed Unit</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QRadioButton" name="kcfg_ms">
+     <property name="text">
+      <string>m/s</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">speedGroup</string>
+     </attribute>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QRadioButton" name="kcfg_kmh">
+     <property name="text">
+      <string>km/h</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">speedGroup</string>
+     </attribute>
     </widget>
    </item>
   </layout>
@@ -83,4 +122,8 @@
  </tabstops>
  <resources/>
  <connections/>
+ <buttongroups>
+  <buttongroup name="speedGroup"/>
+  <buttongroup name="degreeGroup"/>
+ </buttongroups>
 </ui>

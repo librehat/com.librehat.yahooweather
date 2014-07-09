@@ -25,6 +25,7 @@ Item {
     //hold city properties
     property string m_woeid;//http://developer.yahoo.com/geo/geoplanet/guide/concepts.html
     property bool m_unitCelsius;//neglect bool fahrenheit
+    property bool m_unitms;//speed unit m/s neglect bool km/h
 
     property string m_lastBuildDate;
     property string m_link;
@@ -550,6 +551,7 @@ Item {
 
         m_woeid = plasmoid.readConfig("woeid");
         m_unitCelsius = plasmoid.readConfig("celsius");
+        m_unitms = plasmoid.readConfig("ms");
 
         timer.running = true;
         yh.query(m_woeid);
