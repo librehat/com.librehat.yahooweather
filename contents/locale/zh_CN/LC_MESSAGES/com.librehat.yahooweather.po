@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-07 20:18+0800\n"
+"POT-Creation-Date: 2014-11-16 21:07+0000\n"
 "PO-Revision-Date: 2014-03-19 13:59+0800\n"
 "Last-Translator: William Wong <hzwhuang@gmail.com>\n"
 "Language-Team: Chinese Simplified <>\n"
@@ -18,243 +18,243 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: ../ui/main.qml:98
+#: ../ui/main.qml:99
 msgid "YAHOO! Weather"
 msgstr "雅虎天气"
 
-#: ../ui/main.qml:123
+#: ../ui/main.qml:124
 msgid "Sunrise"
 msgstr "日出"
 
-#: ../ui/main.qml:123
+#: ../ui/main.qml:124
 msgid "Sunset"
 msgstr "日落"
 
-#: ../ui/main.qml:150
+#: ../ui/main.qml:151
 msgid "Feels like"
 msgstr "体感温度"
 
-#: ../ui/main.qml:150
+#: ../ui/main.qml:151
 msgid "Visibility"
 msgstr "能见度"
 
-#: ../ui/main.qml:150
+#: ../ui/main.qml:151
 msgid "NULL"
 msgstr "无数据"
 
-#: ../ui/main.qml:156
+#: ../ui/main.qml:157
 msgid "Humidity"
 msgstr "湿度"
 
-#: ../ui/main.qml:156
+#: ../ui/main.qml:157
 msgid "Pressure"
 msgstr "气压"
 
-#: ../ui/main.qml:162
+#: ../ui/main.qml:163
 msgid "UV Index"
 msgstr "紫外线指数"
 
-#: ../ui/main.qml:162
+#: ../ui/main.qml:163
 msgid "Wind"
 msgstr "风速"
 
-#: ../ui/main.qml:176
+#: ../ui/main.qml:177
 msgid "Today"
 msgstr "今天"
 
-#: ../ui/main.qml:183
+#: ../ui/main.qml:184
 msgid "Tomorrow"
 msgstr "明天"
 
-#: ../ui/main.qml:351 ../ui/Yahoo.qml:175
+#: ../ui/main.qml:352 ../ui/Yahoo.qml:181
 msgid "Error 2. WOEID may be invalid."
 msgstr "错误2。WOEID或许无效。"
 
-#: ../ui/main.qml:451
+#: ../ui/main.qml:452
 msgid "Tornado"
 msgstr "龙卷风"
 
-#: ../ui/main.qml:453
+#: ../ui/main.qml:454
 msgid "Tropical Storm"
 msgstr "热带风暴"
 
-#: ../ui/main.qml:455
+#: ../ui/main.qml:456
 msgid "Hurricane"
 msgstr "飓风"
 
-#: ../ui/main.qml:457
+#: ../ui/main.qml:458
 msgid "Severe Thunderstorms"
 msgstr "猛烈雷暴"
 
-#: ../ui/main.qml:459
+#: ../ui/main.qml:460
 msgid "Thunderstorms"
 msgstr "雷暴"
 
-#: ../ui/main.qml:461
+#: ../ui/main.qml:462
 msgid "Mixed Rain and Snow"
 msgstr "雨夹雪"
 
-#: ../ui/main.qml:463
+#: ../ui/main.qml:464
 msgid "Mixed Rain and Sleet"
 msgstr "雨夹冰雹"
 
-#: ../ui/main.qml:465
+#: ../ui/main.qml:466
 msgid "Mixed Snow and Sleet"
 msgstr "雪夹冰雹"
 
-#: ../ui/main.qml:467
+#: ../ui/main.qml:468
 msgid "Freezing Drizzle"
 msgstr "冻毛毛雨"
 
-#: ../ui/main.qml:469
+#: ../ui/main.qml:470
 msgid "Drizzle"
 msgstr "毛毛雨"
 
-#: ../ui/main.qml:471
+#: ../ui/main.qml:472
 msgid "Freezing Rain"
 msgstr "冻雨"
 
-#: ../ui/main.qml:474
+#: ../ui/main.qml:475
 msgid "Showers"
 msgstr "阵雨"
 
-#: ../ui/main.qml:476
+#: ../ui/main.qml:477
 msgid "Snow Flurries"
 msgstr "小雪"
 
-#: ../ui/main.qml:478
+#: ../ui/main.qml:479
 msgid "Light Snow Showers"
 msgstr "偶有小雪"
 
-#: ../ui/main.qml:480
+#: ../ui/main.qml:481
 msgid "Blowing Snow"
 msgstr "飞雪"
 
-#: ../ui/main.qml:482
+#: ../ui/main.qml:483
 msgid "Snow"
 msgstr "雪"
 
-#: ../ui/main.qml:484
+#: ../ui/main.qml:485
 msgid "Hail"
 msgstr "冰雹"
 
-#: ../ui/main.qml:486
+#: ../ui/main.qml:487
 msgid "Sleet"
 msgstr "雨凇"
 
-#: ../ui/main.qml:488
+#: ../ui/main.qml:489
 msgid "Dust"
 msgstr "灰尘"
 
-#: ../ui/main.qml:490
+#: ../ui/main.qml:491
 msgid "Foggy"
 msgstr "浓雾"
 
-#: ../ui/main.qml:492
+#: ../ui/main.qml:493
 msgid "Haze"
 msgstr "阴霾"
 
-#: ../ui/main.qml:494
+#: ../ui/main.qml:495
 msgid "Smoky"
 msgstr "烟雾"
 
-#: ../ui/main.qml:496
+#: ../ui/main.qml:497
 msgid "Blustery"
 msgstr "狂风"
 
-#: ../ui/main.qml:498
+#: ../ui/main.qml:499
 msgid "Windy"
 msgstr "有风"
 
-#: ../ui/main.qml:500
+#: ../ui/main.qml:501
 msgid "Cold"
 msgstr "寒冷"
 
-#: ../ui/main.qml:502
+#: ../ui/main.qml:503
 msgid "Cloudy"
 msgstr "多云"
 
-#: ../ui/main.qml:504
+#: ../ui/main.qml:505
 msgid "Mostly Cloudy (Night)"
 msgstr "大部份地区多云 （夜晚）"
 
-#: ../ui/main.qml:506
+#: ../ui/main.qml:507
 msgid "Mostly Cloudy (Day)"
 msgstr "大部分地区多云 （白天）"
 
-#: ../ui/main.qml:508
+#: ../ui/main.qml:509
 msgid "Partly Cloudy (Night)"
 msgstr "部分地区多云 （夜晚）"
 
-#: ../ui/main.qml:510
+#: ../ui/main.qml:511
 msgid "Partly Cloudy (Day)"
 msgstr "部分地区多云 （白天）"
 
-#: ../ui/main.qml:512
+#: ../ui/main.qml:513
 msgid "Clear (Night)"
 msgstr "晴朗 （夜晚）"
 
-#: ../ui/main.qml:514
+#: ../ui/main.qml:515
 msgid "Sunny"
 msgstr "晴朗"
 
-#: ../ui/main.qml:516
+#: ../ui/main.qml:517
 msgid "Fair (Night)"
 msgstr "晴朗 （夜晚）"
 
-#: ../ui/main.qml:518
+#: ../ui/main.qml:519
 msgid "Fair (Day)"
 msgstr "晴朗 （白天）"
 
-#: ../ui/main.qml:520
+#: ../ui/main.qml:521
 msgid "Mixed Rain and Hail"
 msgstr "雨夹冰雹"
 
-#: ../ui/main.qml:522
+#: ../ui/main.qml:523
 msgid "Hot"
 msgstr "热"
 
-#: ../ui/main.qml:524
+#: ../ui/main.qml:525
 msgid "Isolated Thunderstorms"
 msgstr "局部雷暴"
 
-#: ../ui/main.qml:527
+#: ../ui/main.qml:528
 msgid "Scattered Thunderstorms"
 msgstr "偶有雷暴"
 
-#: ../ui/main.qml:529
+#: ../ui/main.qml:530
 msgid "Scattered Showers"
 msgstr "偶有阵雨"
 
-#: ../ui/main.qml:532
+#: ../ui/main.qml:533
 msgid "Heavy Snow"
 msgstr "大雪"
 
-#: ../ui/main.qml:534
+#: ../ui/main.qml:535
 msgid "Scattered Snow Showers"
 msgstr "偶有阵雪"
 
-#: ../ui/main.qml:536
+#: ../ui/main.qml:537
 msgid "Partly Cloudy"
 msgstr "部分地区多云"
 
-#: ../ui/main.qml:538
+#: ../ui/main.qml:539
 msgid "Thundershowers"
 msgstr "雷阵雨"
 
-#: ../ui/main.qml:540
+#: ../ui/main.qml:541
 msgid "Snow Showers"
 msgstr "阵雪"
 
-#: ../ui/main.qml:542
+#: ../ui/main.qml:543
 msgid "Isolated Thundershowers"
 msgstr "偶有雷阵雨"
 
-#: ../ui/main.qml:544
+#: ../ui/main.qml:545
 msgid "Not Available"
 msgstr "不可用"
 
-#: ../ui/main.qml:568
+#: ../ui/main.qml:570
 msgid "Yahoo! Weather Widget"
 msgstr "雅虎天气小部件"
 
@@ -262,55 +262,75 @@ msgstr "雅虎天气小部件"
 msgid "Error 1. Please check your network."
 msgstr "错误1。请检查您的网络。"
 
-#: ../ui/Yahoo.qml:183
+#: ../ui/Yahoo.qml:189
 msgid "Sunday"
 msgstr "星期日"
 
-#: ../ui/Yahoo.qml:185
+#: ../ui/Yahoo.qml:191
 msgid "Monday"
 msgstr "星期一"
 
-#: ../ui/Yahoo.qml:187
+#: ../ui/Yahoo.qml:193
 msgid "Tuesday"
 msgstr "星期二"
 
-#: ../ui/Yahoo.qml:189
+#: ../ui/Yahoo.qml:195
 msgid "Wednesday"
 msgstr "星期三"
 
-#: ../ui/Yahoo.qml:191
+#: ../ui/Yahoo.qml:197
 msgid "Thursday"
 msgstr "星期四"
 
-#: ../ui/Yahoo.qml:193
+#: ../ui/Yahoo.qml:199
 msgid "Friday"
 msgstr "星期五"
 
-#: ../ui/Yahoo.qml:195
+#: ../ui/Yahoo.qml:201
 msgid "Saturday"
 msgstr "星期六"
 
+#. i18n: file: ../ui/config.ui:23
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_fahrenheit)
 #: rc.js:3
 msgid "Fahrenheit"
 msgstr "华氏"
 
-#: rc.js:6
+#. i18n: file: ../ui/config.ui:26
+#. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_fahrenheit)
+#. i18n: file: ../ui/config.ui:59
+#. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_celsius)
+#: rc.js:6 rc.js:21
+msgid "degreeGroup"
+msgstr ""
+
+#. i18n: file: ../ui/config.ui:33
+#. i18n: ectx: property (text), widget (QLabel, label_unit)
+#: rc.js:9
 msgid "Degrees Unit"
 msgstr "度的单位"
 
-#: rc.js:9
+#. i18n: file: ../ui/config.ui:40
+#. i18n: ectx: property (toolTip), widget (QLabel, label_woeid)
+#: rc.js:12
 msgid "Where On Earth ID"
 msgstr ""
 
-#: rc.js:12
+#. i18n: file: ../ui/config.ui:46
+#. i18n: ectx: property (text), widget (QLabel, label_woeid)
+#: rc.js:15
 msgid "WOEID"
 msgstr ""
 
-#: rc.js:15
+#. i18n: file: ../ui/config.ui:53
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_celsius)
+#: rc.js:18
 msgid "Celsius"
 msgstr "摄氏"
 
-#: rc.js:18
+#. i18n: file: ../ui/config.ui:66
+#. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_woeid)
+#: rc.js:24
 msgid ""
 "<html><head/><body><p>To find your city's WOEID.</p><p>Go to http://zourbuth."
 "com/tools/woeid/ <br />Type in your city's zip code or name or landmark.<br /"
@@ -320,12 +340,39 @@ msgstr ""
 "tools/woeid/ <br />输入城市的邮编、名称或者地标。<br />然后点击Lookup.</p></"
 "body></html>"
 
-#: rc.js:19
+#. i18n: file: ../ui/config.ui:85
+#. i18n: ectx: property (text), widget (QLabel, label_sunit)
+#: rc.js:27
+#, fuzzy
+msgid "Speed Unit"
+msgstr "度的单位"
+
+#. i18n: file: ../ui/config.ui:92
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_ms)
+#: rc.js:30
+msgid "m/s"
+msgstr ""
+
+#. i18n: file: ../ui/config.ui:95
+#. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_ms)
+#. i18n: file: ../ui/config.ui:105
+#. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_kmh)
+#: rc.js:33 rc.js:39
+msgid "speedGroup"
+msgstr ""
+
+#. i18n: file: ../ui/config.ui:102
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_kmh)
+#: rc.js:36
+msgid "km/h"
+msgstr ""
+
+#: rc.js:40
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: rc.js:20
+#: rc.js:41
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""

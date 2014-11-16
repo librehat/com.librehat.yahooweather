@@ -6,68 +6,68 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.3\n"
+"Project-Id-Version: 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-16 21:07+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Wilfried Solbach <wsolbach@gmx.de>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2014-10-11 12:00+0100\n"
+"Last-Translator: Dr Boczek <dr.boczek@gmail.com>\n"
+"Language-Team: POLSKI\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../ui/main.qml:99
 msgid "YAHOO! Weather"
-msgstr "YAHOO! Wetter"
+msgstr "Yahoo! Pogoda"
 
 #: ../ui/main.qml:124
 msgid "Sunrise"
-msgstr "Sonnenaufgang"
+msgstr "Wschód"
 
 #: ../ui/main.qml:124
 msgid "Sunset"
-msgstr "Sonnenuntergang"
+msgstr "Zachód"
 
 #: ../ui/main.qml:151
 msgid "Feels like"
-msgstr "Gefühlte"
+msgstr "Odczuwalna"
 
 #: ../ui/main.qml:151
 msgid "Visibility"
-msgstr "Sicht"
+msgstr "Widoczność"
 
 #: ../ui/main.qml:151
 msgid "NULL"
-msgstr "NULL"
+msgstr "BRAK"
 
 #: ../ui/main.qml:157
 msgid "Humidity"
-msgstr "Feuchtigkeit"
+msgstr "Wilgotność"
 
 #: ../ui/main.qml:157
 msgid "Pressure"
-msgstr "Luftdruck"
+msgstr "Ciśnienie"
 
 #: ../ui/main.qml:163
 msgid "UV Index"
-msgstr "UV Index"
+msgstr "Indeks UV"
 
 #: ../ui/main.qml:163
 msgid "Wind"
-msgstr "Wind"
+msgstr "Wiatr"
 
 #: ../ui/main.qml:177
 msgid "Today"
-msgstr "Heute"
+msgstr "Dzisiaj"
 
 #: ../ui/main.qml:184
 msgid "Tomorrow"
-msgstr "Morgen"
+msgstr "Jutro"
 
 #: ../ui/main.qml:352 ../ui/Yahoo.qml:181
 msgid "Error 2. WOEID may be invalid."
-msgstr "Fehler 2. WOEID evtl. ungültig."
+msgstr "Error 2. Niewłaściwy numer WOEID"
 
 #: ../ui/main.qml:452
 msgid "Tornado"
@@ -75,227 +75,225 @@ msgstr "Tornado"
 
 #: ../ui/main.qml:454
 msgid "Tropical Storm"
-msgstr "Tropischer Sturm"
+msgstr "Sztorm tropikalny"
 
 #: ../ui/main.qml:456
 msgid "Hurricane"
-msgstr "Orkan"
+msgstr "Huragan"
 
 #: ../ui/main.qml:458
 msgid "Severe Thunderstorms"
-msgstr "Schwere Gewitter"
+msgstr "Silne burze"
 
 #: ../ui/main.qml:460
 msgid "Thunderstorms"
-msgstr "Gewitter"
+msgstr "Burze"
 
 #: ../ui/main.qml:462
 msgid "Mixed Rain and Snow"
-msgstr "Schneeregen"
+msgstr "Deszcz ze śniegiem"
 
 #: ../ui/main.qml:464
 msgid "Mixed Rain and Sleet"
-msgstr "Graupelschauer"
+msgstr "Deszcz i gołoledź"
 
 #: ../ui/main.qml:466
 msgid "Mixed Snow and Sleet"
-msgstr "Schneematsch"
+msgstr "Śnieg i gołoledź"
 
 #: ../ui/main.qml:468
 msgid "Freezing Drizzle"
-msgstr "Überfrierender Nieselregen"
+msgstr "Ślisko i mżawka"
 
 #: ../ui/main.qml:470
 msgid "Drizzle"
-msgstr "Nieselregen"
+msgstr "Mżawka"
 
 #: ../ui/main.qml:472
 msgid "Freezing Rain"
-msgstr "Gefrierender Regen"
+msgstr "Oblodzenia"
 
 #: ../ui/main.qml:475
 msgid "Showers"
-msgstr "Schauer"
+msgstr "Przelotny deszcz"
 
 #: ../ui/main.qml:477
 msgid "Snow Flurries"
-msgstr "Schneegestöber"
+msgstr "Ulewny deszcz"
 
 #: ../ui/main.qml:479
 msgid "Light Snow Showers"
-msgstr "Leichte Schneeschauer"
+msgstr "Deszczowo z przejaśnieniami"
 
 #: ../ui/main.qml:481
 msgid "Blowing Snow"
-msgstr "Schneetreiben"
+msgstr "Przelotny śnieg"
 
 #: ../ui/main.qml:483
 msgid "Snow"
-msgstr "Schnee"
+msgstr "Śnieg"
 
 #: ../ui/main.qml:485
 msgid "Hail"
-msgstr "Hagel"
+msgstr "Grad"
 
 #: ../ui/main.qml:487
 msgid "Sleet"
-msgstr "Eisregen"
+msgstr "Deszcz ze śniegiem"
 
 #: ../ui/main.qml:489
 msgid "Dust"
-msgstr "Staubdunst"
+msgstr "Zamieć"
 
 #: ../ui/main.qml:491
 msgid "Foggy"
-msgstr "Neblig"
+msgstr "Mgliście"
 
 #: ../ui/main.qml:493
 msgid "Haze"
-msgstr "Dunstig"
+msgstr "Niweleka mgła"
 
 #: ../ui/main.qml:495
 msgid "Smoky"
-msgstr "Rauchdunst"
+msgstr "Widoczność słaba"
 
 #: ../ui/main.qml:497
 msgid "Blustery"
-msgstr "Stürmisch"
+msgstr "Widoczność dobra"
 
 #: ../ui/main.qml:499
 msgid "Windy"
-msgstr "Windig"
+msgstr "Wietrznie"
 
 #: ../ui/main.qml:501
 msgid "Cold"
-msgstr "Kalt"
+msgstr "Zimno"
 
 #: ../ui/main.qml:503
 msgid "Cloudy"
-msgstr "Bedeckt"
+msgstr "Zachurzenie duże"
 
 #: ../ui/main.qml:505
 msgid "Mostly Cloudy (Night)"
-msgstr "Meist bedeckt (nachts)"
+msgstr "Zachmurzenie (noc)"
 
 #: ../ui/main.qml:507
-#, fuzzy
 msgid "Mostly Cloudy (Day)"
-msgstr "Etwas bewölkt (tagsüber)"
+msgstr "Zachmurzenie (dzień)"
 
 #: ../ui/main.qml:509
 msgid "Partly Cloudy (Night)"
-msgstr "Etwas bewölkt (nachts)"
+msgstr "Częściowe zachmurzenie (noc)"
 
 #: ../ui/main.qml:511
 msgid "Partly Cloudy (Day)"
-msgstr "Etwas bewölkt (tagsüber)"
+msgstr "Częściowe zachmurzenie (dzień)"
 
 #: ../ui/main.qml:513
-#, fuzzy
 msgid "Clear (Night)"
-msgstr "Klar (Nacht)"
+msgstr "Noc pogodna"
 
 #: ../ui/main.qml:515
 msgid "Sunny"
-msgstr "Sonnig"
+msgstr "Słonecznie"
 
 #: ../ui/main.qml:517
 msgid "Fair (Night)"
-msgstr "Klar (Nacht)"
+msgstr "Noc pogodna"
 
 #: ../ui/main.qml:519
 msgid "Fair (Day)"
-msgstr "Sonnig (Tag)"
+msgstr "Dzień pogodny"
 
 #: ../ui/main.qml:521
 msgid "Mixed Rain and Hail"
-msgstr "Regen mit Hagel"
+msgstr "Deszcz i silny wiatr"
 
 #: ../ui/main.qml:523
 msgid "Hot"
-msgstr "Heiss"
+msgstr "Gorąco"
 
 #: ../ui/main.qml:525
 msgid "Isolated Thunderstorms"
-msgstr "Örtliche Gewitter"
+msgstr "Miejscowe burze"
 
 #: ../ui/main.qml:528
 msgid "Scattered Thunderstorms"
-msgstr "Vereinzelte Gewitter"
+msgstr "Gdzieniegdzie burze"
 
 #: ../ui/main.qml:530
 msgid "Scattered Showers"
-msgstr "Vereinzelte Schauer"
+msgstr "Częściowe opady"
 
 #: ../ui/main.qml:533
 msgid "Heavy Snow"
-msgstr "Heftige Schneefälle"
+msgstr "Silne opady śniegu"
 
 #: ../ui/main.qml:535
 msgid "Scattered Snow Showers"
-msgstr "Vereinzelte Schneeschauer"
+msgstr "Słabe opady śniegu"
 
 #: ../ui/main.qml:537
 msgid "Partly Cloudy"
-msgstr "Teilweise bewölkt"
+msgstr "Częściowe zachmurzenie"
 
 #: ../ui/main.qml:539
 msgid "Thundershowers"
-msgstr "Gewitterschauer"
+msgstr "Zamieć"
 
 #: ../ui/main.qml:541
 msgid "Snow Showers"
-msgstr "Schneeschauer"
+msgstr "Opady śniegu"
 
 #: ../ui/main.qml:543
 msgid "Isolated Thundershowers"
-msgstr "Vereinzelte Gewitterschauer"
+msgstr "Przelotne opady śniegu"
 
 #: ../ui/main.qml:545
 msgid "Not Available"
-msgstr "Nicht verfügbar"
+msgstr "Brak informacji"
 
 #: ../ui/main.qml:570
 msgid "Yahoo! Weather Widget"
-msgstr "Yahoo! Wetter Widget"
+msgstr "Yahoo! Widżet Pogodowy"
 
 #: ../ui/Yahoo.qml:121
 msgid "Error 1. Please check your network."
-msgstr "Fehler 1: Bitte überprüfen Sie Ihre Netzverbindung."
+msgstr "Error 1. Spradź połączenie sieciowe"
 
 #: ../ui/Yahoo.qml:189
 msgid "Sunday"
-msgstr "Sonntag"
+msgstr "Niedziela"
 
 #: ../ui/Yahoo.qml:191
 msgid "Monday"
-msgstr "Montag"
+msgstr "Poniedziałek"
 
 #: ../ui/Yahoo.qml:193
 msgid "Tuesday"
-msgstr "Dienstag"
+msgstr "Wtorek"
 
 #: ../ui/Yahoo.qml:195
 msgid "Wednesday"
-msgstr "Mittwoch"
+msgstr "Środa"
 
 #: ../ui/Yahoo.qml:197
 msgid "Thursday"
-msgstr "Donnerstag"
+msgstr "Czwartek"
 
 #: ../ui/Yahoo.qml:199
 msgid "Friday"
-msgstr "Freitag"
+msgstr "Piątek"
 
 #: ../ui/Yahoo.qml:201
 msgid "Saturday"
-msgstr "Samstag"
+msgstr "Sobota"
 
 #. i18n: file: ../ui/config.ui:23
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_fahrenheit)
 #: rc.js:3
 msgid "Fahrenheit"
-msgstr "Fahrenheit"
+msgstr "Faranhait"
 
 #. i18n: file: ../ui/config.ui:26
 #. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_fahrenheit)
@@ -309,25 +307,25 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_unit)
 #: rc.js:9
 msgid "Degrees Unit"
-msgstr "Temperatureinheit"
+msgstr "Jednostka stopni"
 
 #. i18n: file: ../ui/config.ui:40
 #. i18n: ectx: property (toolTip), widget (QLabel, label_woeid)
 #: rc.js:12
 msgid "Where On Earth ID"
-msgstr "Where On Earth ID"
+msgstr "Wymagany Earth ID"
 
 #. i18n: file: ../ui/config.ui:46
 #. i18n: ectx: property (text), widget (QLabel, label_woeid)
 #: rc.js:15
 msgid "WOEID"
-msgstr "WOEID"
+msgstr ""
 
 #. i18n: file: ../ui/config.ui:53
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_celsius)
 #: rc.js:18
 msgid "Celsius"
-msgstr "Celsius"
+msgstr "Celcjusza"
 
 #. i18n: file: ../ui/config.ui:66
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_woeid)
@@ -337,17 +335,13 @@ msgid ""
 "com/tools/woeid/ <br />Type in your city's zip code or name or landmark.<br /"
 ">Then click Lookup.</p></body></html>"
 msgstr ""
-"<html><head/><body><p>Um die WOEID Ihres Wohnortes zu finden.</p><p>Gehen "
-"Sie zu http://zourbuth.com/tools/woeid/ <br />Tippen Sie den Zip Code oder "
-"den Namen Ihrer Stadt ein (oder ein spezielles Wahrzeichen).<br />Klicken "
-"Sie dann auf Lookup.</p></body></html>"
 
 #. i18n: file: ../ui/config.ui:85
 #. i18n: ectx: property (text), widget (QLabel, label_sunit)
 #: rc.js:27
 #, fuzzy
 msgid "Speed Unit"
-msgstr "Temperatureinheit"
+msgstr "Jednostka stopni"
 
 #. i18n: file: ../ui/config.ui:92
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_ms)
@@ -378,6 +372,3 @@ msgstr ""
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-
-#~ msgid "Form"
-#~ msgstr "Form"

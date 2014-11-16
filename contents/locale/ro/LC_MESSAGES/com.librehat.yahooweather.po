@@ -3,293 +3,294 @@
 # This file is distributed under the same license as the plasma-applet-yahooweather package.
 #
 #
-#, fuzzy
+# daniel, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.3\n"
+"Project-Id-Version: 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-16 21:07+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Wilfried Solbach <wsolbach@gmx.de>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2014-10-07 16:22+0300\n"
+"Last-Translator: daniel\n"
+"Language-Team: Romanian <kde-i18n-doc@kde.org>\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 1.5\n"
 
 #: ../ui/main.qml:99
 msgid "YAHOO! Weather"
-msgstr "YAHOO! Wetter"
+msgstr "YAHOO!Starea vremii"
 
 #: ../ui/main.qml:124
 msgid "Sunrise"
-msgstr "Sonnenaufgang"
+msgstr "Răsare"
 
 #: ../ui/main.qml:124
 msgid "Sunset"
-msgstr "Sonnenuntergang"
+msgstr "Apune"
 
 #: ../ui/main.qml:151
 msgid "Feels like"
-msgstr "Gefühlte"
+msgstr "Se simte ca"
 
 #: ../ui/main.qml:151
 msgid "Visibility"
-msgstr "Sicht"
+msgstr "Vizibilitate"
 
 #: ../ui/main.qml:151
 msgid "NULL"
-msgstr "NULL"
+msgstr "Zero"
 
 #: ../ui/main.qml:157
 msgid "Humidity"
-msgstr "Feuchtigkeit"
+msgstr "Umiditate"
 
 #: ../ui/main.qml:157
 msgid "Pressure"
-msgstr "Luftdruck"
+msgstr "Presiune"
 
 #: ../ui/main.qml:163
 msgid "UV Index"
-msgstr "UV Index"
+msgstr "Index UV"
 
 #: ../ui/main.qml:163
 msgid "Wind"
-msgstr "Wind"
+msgstr "Vânt"
 
 #: ../ui/main.qml:177
 msgid "Today"
-msgstr "Heute"
+msgstr "Azi"
 
 #: ../ui/main.qml:184
 msgid "Tomorrow"
-msgstr "Morgen"
+msgstr "Mâine"
 
 #: ../ui/main.qml:352 ../ui/Yahoo.qml:181
 msgid "Error 2. WOEID may be invalid."
-msgstr "Fehler 2. WOEID evtl. ungültig."
+msgstr "Eroare. WOEID invalid"
 
 #: ../ui/main.qml:452
 msgid "Tornado"
-msgstr "Tornado"
+msgstr "Tornadă"
 
 #: ../ui/main.qml:454
 msgid "Tropical Storm"
-msgstr "Tropischer Sturm"
+msgstr "Furtună tropicală"
 
 #: ../ui/main.qml:456
 msgid "Hurricane"
-msgstr "Orkan"
+msgstr "Uragan"
 
 #: ../ui/main.qml:458
 msgid "Severe Thunderstorms"
-msgstr "Schwere Gewitter"
+msgstr "Furtună cu decarcari electrice"
 
 #: ../ui/main.qml:460
 msgid "Thunderstorms"
-msgstr "Gewitter"
+msgstr "Descărcări electrice"
 
 #: ../ui/main.qml:462
 msgid "Mixed Rain and Snow"
-msgstr "Schneeregen"
+msgstr "Zloată"
 
 #: ../ui/main.qml:464
 msgid "Mixed Rain and Sleet"
-msgstr "Graupelschauer"
+msgstr "Lapoviță"
 
 #: ../ui/main.qml:466
 msgid "Mixed Snow and Sleet"
-msgstr "Schneematsch"
+msgstr "Lapoviță și ninsoare"
 
 #: ../ui/main.qml:468
 msgid "Freezing Drizzle"
-msgstr "Überfrierender Nieselregen"
+msgstr "Burniță rece"
 
 #: ../ui/main.qml:470
 msgid "Drizzle"
-msgstr "Nieselregen"
+msgstr "Burniță"
 
 #: ../ui/main.qml:472
 msgid "Freezing Rain"
-msgstr "Gefrierender Regen"
+msgstr "Ploaie rece"
 
 #: ../ui/main.qml:475
 msgid "Showers"
-msgstr "Schauer"
+msgstr "Ploaie fină"
 
 #: ../ui/main.qml:477
 msgid "Snow Flurries"
-msgstr "Schneegestöber"
+msgstr "Ninsoare în rafale"
 
 #: ../ui/main.qml:479
 msgid "Light Snow Showers"
-msgstr "Leichte Schneeschauer"
+msgstr "Ninge liniștit"
 
 #: ../ui/main.qml:481
 msgid "Blowing Snow"
-msgstr "Schneetreiben"
+msgstr "Ninge viscolit"
 
 #: ../ui/main.qml:483
 msgid "Snow"
-msgstr "Schnee"
+msgstr "Zăpadă"
 
 #: ../ui/main.qml:485
 msgid "Hail"
-msgstr "Hagel"
+msgstr "Grindină"
 
 #: ../ui/main.qml:487
 msgid "Sleet"
-msgstr "Eisregen"
+msgstr "Lapoviță"
 
 #: ../ui/main.qml:489
 msgid "Dust"
-msgstr "Staubdunst"
+msgstr "Praf"
 
 #: ../ui/main.qml:491
 msgid "Foggy"
-msgstr "Neblig"
+msgstr "Pâclă"
 
 #: ../ui/main.qml:493
 msgid "Haze"
-msgstr "Dunstig"
+msgstr "Brumă"
 
 #: ../ui/main.qml:495
 msgid "Smoky"
-msgstr "Rauchdunst"
+msgstr "Încețoșat"
 
 #: ../ui/main.qml:497
 msgid "Blustery"
-msgstr "Stürmisch"
+msgstr "Vijelie"
 
 #: ../ui/main.qml:499
 msgid "Windy"
-msgstr "Windig"
+msgstr "Vânt"
 
 #: ../ui/main.qml:501
 msgid "Cold"
-msgstr "Kalt"
+msgstr "Rece"
 
 #: ../ui/main.qml:503
 msgid "Cloudy"
-msgstr "Bedeckt"
+msgstr "Noros"
 
 #: ../ui/main.qml:505
 msgid "Mostly Cloudy (Night)"
-msgstr "Meist bedeckt (nachts)"
+msgstr "Mai mult noros (noapte)"
 
 #: ../ui/main.qml:507
-#, fuzzy
 msgid "Mostly Cloudy (Day)"
-msgstr "Etwas bewölkt (tagsüber)"
+msgstr "Mai mult noros (zi)"
 
 #: ../ui/main.qml:509
 msgid "Partly Cloudy (Night)"
-msgstr "Etwas bewölkt (nachts)"
+msgstr "Parțial noros (noapte)"
 
 #: ../ui/main.qml:511
 msgid "Partly Cloudy (Day)"
-msgstr "Etwas bewölkt (tagsüber)"
+msgstr "Parțial noros (zi)"
 
 #: ../ui/main.qml:513
-#, fuzzy
 msgid "Clear (Night)"
-msgstr "Klar (Nacht)"
+msgstr "Senin (noapte)"
 
 #: ../ui/main.qml:515
 msgid "Sunny"
-msgstr "Sonnig"
+msgstr "Însorit"
 
 #: ../ui/main.qml:517
 msgid "Fair (Night)"
-msgstr "Klar (Nacht)"
+msgstr "Frumos (noapte)"
 
 #: ../ui/main.qml:519
 msgid "Fair (Day)"
-msgstr "Sonnig (Tag)"
+msgstr "Frumos (zi)"
 
 #: ../ui/main.qml:521
 msgid "Mixed Rain and Hail"
-msgstr "Regen mit Hagel"
+msgstr "Ploaie și grindină"
 
 #: ../ui/main.qml:523
 msgid "Hot"
-msgstr "Heiss"
+msgstr "Cald"
 
 #: ../ui/main.qml:525
 msgid "Isolated Thunderstorms"
-msgstr "Örtliche Gewitter"
+msgstr "Izolat rafale "
 
 #: ../ui/main.qml:528
 msgid "Scattered Thunderstorms"
-msgstr "Vereinzelte Gewitter"
+msgstr "Rafale izolate"
 
 #: ../ui/main.qml:530
 msgid "Scattered Showers"
-msgstr "Vereinzelte Schauer"
+msgstr "Plouă răzleț"
 
 #: ../ui/main.qml:533
 msgid "Heavy Snow"
-msgstr "Heftige Schneefälle"
+msgstr "Zăpada mare"
 
 #: ../ui/main.qml:535
 msgid "Scattered Snow Showers"
-msgstr "Vereinzelte Schneeschauer"
+msgstr "Ninge izolat"
 
 #: ../ui/main.qml:537
 msgid "Partly Cloudy"
-msgstr "Teilweise bewölkt"
+msgstr "Parțial noros "
 
 #: ../ui/main.qml:539
 msgid "Thundershowers"
-msgstr "Gewitterschauer"
+msgstr "Ploi torențiale"
 
 #: ../ui/main.qml:541
 msgid "Snow Showers"
-msgstr "Schneeschauer"
+msgstr "Ninge"
 
 #: ../ui/main.qml:543
 msgid "Isolated Thundershowers"
-msgstr "Vereinzelte Gewitterschauer"
+msgstr "Plouă izolat"
 
 #: ../ui/main.qml:545
 msgid "Not Available"
-msgstr "Nicht verfügbar"
+msgstr "Indisponibil"
 
 #: ../ui/main.qml:570
 msgid "Yahoo! Weather Widget"
-msgstr "Yahoo! Wetter Widget"
+msgstr "Yahoo! Miniaplicație pentru starea vremii"
 
 #: ../ui/Yahoo.qml:121
 msgid "Error 1. Please check your network."
-msgstr "Fehler 1: Bitte überprüfen Sie Ihre Netzverbindung."
+msgstr "Eroare 1. Verificați rețeaua."
 
 #: ../ui/Yahoo.qml:189
 msgid "Sunday"
-msgstr "Sonntag"
+msgstr "Duminică"
 
 #: ../ui/Yahoo.qml:191
 msgid "Monday"
-msgstr "Montag"
+msgstr "Luni"
 
 #: ../ui/Yahoo.qml:193
 msgid "Tuesday"
-msgstr "Dienstag"
+msgstr "Marți"
 
 #: ../ui/Yahoo.qml:195
 msgid "Wednesday"
-msgstr "Mittwoch"
+msgstr "Miercuri"
 
 #: ../ui/Yahoo.qml:197
 msgid "Thursday"
-msgstr "Donnerstag"
+msgstr "Joi"
 
 #: ../ui/Yahoo.qml:199
 msgid "Friday"
-msgstr "Freitag"
+msgstr "Vineri"
 
 #: ../ui/Yahoo.qml:201
 msgid "Saturday"
-msgstr "Samstag"
+msgstr "Sâmbătă"
 
 #. i18n: file: ../ui/config.ui:23
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_fahrenheit)
@@ -309,13 +310,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_unit)
 #: rc.js:9
 msgid "Degrees Unit"
-msgstr "Temperatureinheit"
+msgstr "Grade"
 
 #. i18n: file: ../ui/config.ui:40
 #. i18n: ectx: property (toolTip), widget (QLabel, label_woeid)
 #: rc.js:12
 msgid "Where On Earth ID"
-msgstr "Where On Earth ID"
+msgstr "ID Locație"
 
 #. i18n: file: ../ui/config.ui:46
 #. i18n: ectx: property (text), widget (QLabel, label_woeid)
@@ -337,17 +338,16 @@ msgid ""
 "com/tools/woeid/ <br />Type in your city's zip code or name or landmark.<br /"
 ">Then click Lookup.</p></body></html>"
 msgstr ""
-"<html><head/><body><p>Um die WOEID Ihres Wohnortes zu finden.</p><p>Gehen "
-"Sie zu http://zourbuth.com/tools/woeid/ <br />Tippen Sie den Zip Code oder "
-"den Namen Ihrer Stadt ein (oder ein spezielles Wahrzeichen).<br />Klicken "
-"Sie dann auf Lookup.</p></body></html>"
+"<html><head/><body><p>Pentru a găsi  WOEID al orașului tău.</p><p>mergi la "
+"http://zourbuth.com/tools/woeid/ <br />Tastează codul sau numele orașului "
+"tău<br />Apoi click Lookup.</p></body></html>"
 
 #. i18n: file: ../ui/config.ui:85
 #. i18n: ectx: property (text), widget (QLabel, label_sunit)
 #: rc.js:27
 #, fuzzy
 msgid "Speed Unit"
-msgstr "Temperatureinheit"
+msgstr "Grade"
 
 #. i18n: file: ../ui/config.ui:92
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_ms)
@@ -372,12 +372,9 @@ msgstr ""
 #: rc.js:40
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Daniel"
 
 #: rc.js:41
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
-
-#~ msgid "Form"
-#~ msgstr "Form"
+msgstr "danielh1029@yahoo.com"
