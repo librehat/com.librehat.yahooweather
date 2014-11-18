@@ -1,5 +1,5 @@
 # plasma-applet-yahooweather language translation file.
-# Copyright (C) 2014 William Wong
+# Copyright (C) 2014 Symeon Huang
 # This file is distributed under the same license as the plasma-applet-yahooweather package.
 #
 #
@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-16 21:07+0000\n"
+"POT-Creation-Date: 2014-11-18 21:40+0000\n"
 "PO-Revision-Date: 2014-03-19 13:59+0800\n"
-"Last-Translator: William Wong <hzwhuang@gmail.com>\n"
+"Last-Translator: Symeon Huang <hzwhuang@gmail.com>\n"
 "Language-Team: Chinese Simplified <>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -307,8 +307,8 @@ msgstr ""
 #. i18n: file: ../ui/config.ui:33
 #. i18n: ectx: property (text), widget (QLabel, label_unit)
 #: rc.js:9
-msgid "Degrees Unit"
-msgstr "度的单位"
+msgid "Temperature Unit"
+msgstr "温度单位"
 
 #. i18n: file: ../ui/config.ui:40
 #. i18n: ectx: property (toolTip), widget (QLabel, label_woeid)
@@ -343,9 +343,8 @@ msgstr ""
 #. i18n: file: ../ui/config.ui:85
 #. i18n: ectx: property (text), widget (QLabel, label_sunit)
 #: rc.js:27
-#, fuzzy
 msgid "Speed Unit"
-msgstr "度的单位"
+msgstr "速度单位"
 
 #. i18n: file: ../ui/config.ui:92
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_ms)
@@ -376,3 +375,4 @@ msgstr ""
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
+

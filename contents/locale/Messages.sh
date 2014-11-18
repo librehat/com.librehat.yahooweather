@@ -5,7 +5,7 @@
 # Modifications for QML plasmoids by:
 # Copyright (C) 2012 Glad Deschrijver <glad.deschrijver@gmail.com>
 # Modifications for gettext-0.18.3 and kdictionary by:
-# Copyright (C) 2013 William Wong <librehat@outlook.com>
+# Copyright (C) 2013 Symeon Huang <librehat@outlook.com>
 
 # Go to script dir
 cd "${0%/*}"
@@ -44,7 +44,7 @@ echo 'i18nc("EMAIL OF TRANSLATORS","Your emails");' >> ./rc.$SCRIPTEXT
 $XGETTEXT ../ui/*.qml rc.$SCRIPTEXT -L JavaScript -o "$NAME.pot"
 sed -e 's/charset=CHARSET/charset=UTF-8/g' -i "$NAME.pot"
 sed -e 's/SOME DESCRIPTIVE TITLE./plasma-applet-yahooweather language translation file./g' -i "$NAME.pot"
-sed -e "s/Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER/Copyright (C) 2014 William Wong/g" -i "$NAME.pot"
+sed -e "s/Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER/Copyright (C) 2014 Symeon Huang/g" -i "$NAME.pot"
 sed -e 's/This file is distributed under the same license as the PACKAGE package./This file is distributed under the same license as the plasma-applet-yahooweather package./g' -i "$NAME.pot"
 sed -e 's/FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.//g' -i "$NAME.pot"
 sed -e "s/Project-Id-Version: PACKAGE VERSION/Project-Id-Version: $VERSION/g" -i "$NAME.pot"

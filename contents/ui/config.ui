@@ -30,7 +30,7 @@
    <item row="2" column="0">
     <widget class="QLabel" name="label_unit">
      <property name="text">
-      <string>Degrees Unit</string>
+      <string>Temperature Unit</string>
      </property>
     </widget>
    </item>
@@ -89,7 +89,7 @@
    <item row="3" column="1">
     <widget class="QRadioButton" name="kcfg_ms">
      <property name="text">
-      <string>m/s</string>
+      <string notr="true">m/s</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">speedGroup</string>
@@ -99,7 +99,7 @@
    <item row="3" column="2">
     <widget class="QRadioButton" name="kcfg_kmh">
      <property name="text">
-      <string>km/h</string>
+      <string notr="true">km/h</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">speedGroup</string>
@@ -123,7 +123,7 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="speedGroup"/>
   <buttongroup name="degreeGroup"/>
+  <buttongroup name="speedGroup"/>
  </buttongroups>
 </ui>
