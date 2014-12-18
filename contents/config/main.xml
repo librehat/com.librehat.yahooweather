@@ -8,6 +8,9 @@
         <entry name="woeid" type="String">
             <default></default>
         </entry>
+        <entry name="interval" type="Int">
+            <default>60</default>
+        </entry>
         <entry name="celsius" type="Bool">
             <default>true</default>
         </entry>

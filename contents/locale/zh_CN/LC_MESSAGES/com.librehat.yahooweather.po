@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.3\n"
+"Project-Id-Version: 0.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-18 21:40+0000\n"
+"POT-Creation-Date: 2014-12-18 17:00+0000\n"
 "PO-Revision-Date: 2014-03-19 13:59+0800\n"
 "Last-Translator: Symeon Huang <hzwhuang@gmail.com>\n"
 "Language-Team: Chinese Simplified <>\n"
@@ -254,7 +254,7 @@ msgstr "偶有雷阵雨"
 msgid "Not Available"
 msgstr "不可用"
 
-#: ../ui/main.qml:570
+#: ../ui/main.qml:571
 msgid "Yahoo! Weather Widget"
 msgstr "雅虎天气小部件"
 
@@ -366,13 +366,28 @@ msgstr ""
 msgid "km/h"
 msgstr ""
 
-#: rc.js:40
+#. i18n: file: ../ui/config.ui:112
+#. i18n: ectx: property (text), widget (QLabel, label_interval)
+#: rc.js:42
+msgid "Update Interval"
+msgstr "更新间隔"
+
+#. i18n: file: ../ui/config.ui:119
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_interval)
+#: rc.js:45
+msgid ""
+"<html><head/><body><p>The frequency of updating weather data.</p><p>Unit: "
+"minute.</p></body></html>"
+msgstr ""
+"<html><head/><body><p>更新天气数据的频率。</p><p>单位： "
+"分钟。</p></body></html>"
+
+#: rc.js:46
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: rc.js:41
+#: rc.js:47
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-

@@ -29,7 +29,7 @@ Item {
 
     property string m_lastBuildDate;
     property string m_link;
-    //property int ttl;//time to live. 60 minutes
+    property int m_interval;//update interval (minute)
     property string m_city;
     property string m_region;
     property string m_country;
@@ -361,7 +361,7 @@ Item {
 
     Timer {
         id: timer
-        interval: 3600000 //1h=3600000ms
+        interval: m_interval * 60000 //1m=60000ms
         running: false
         repeat: true
         onTriggered: yh.query(m_woeid)
@@ -550,6 +550,7 @@ Item {
         timer.running = false;
 
         m_woeid = plasmoid.readConfig("woeid");
+	m_interval = plasmoid.readConfig("interval");
         m_unitCelsius = plasmoid.readConfig("celsius");
         m_unitms = plasmoid.readConfig("ms");
 
