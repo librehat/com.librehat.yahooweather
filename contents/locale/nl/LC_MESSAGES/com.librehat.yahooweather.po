@@ -2,298 +2,300 @@
 # Copyright (C) 2014 Symeon Huang
 # This file is distributed under the same license as the plasma-applet-yahooweather package.
 # 
-#
-#, fuzzy
+# 
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-29 21:43+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2015-01-23 13:56+0100\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
 
 #: ../ui/main.qml:99
 msgid "YAHOO! Weather"
-msgstr ""
+msgstr "YAHOO! Het weer"
 
 #: ../ui/main.qml:124
 msgid "Sunrise"
-msgstr ""
+msgstr "Zon op"
 
 #: ../ui/main.qml:124
 msgid "Sunset"
-msgstr ""
+msgstr "Zon onder"
 
 #: ../ui/main.qml:151
 msgid "Feels like"
-msgstr ""
+msgstr "Voelt als"
 
 #: ../ui/main.qml:151
 msgid "Visibility"
-msgstr ""
+msgstr "Zicht"
 
 #: ../ui/main.qml:151
 msgid "NULL"
-msgstr ""
+msgstr "NULL"
 
 #: ../ui/main.qml:157
 msgid "Humidity"
-msgstr ""
+msgstr "Vochtigheid"
 
 #: ../ui/main.qml:157
 msgid "Pressure"
-msgstr ""
+msgstr "Luchtdruk"
 
 #: ../ui/main.qml:163
 msgid "UV Index"
-msgstr ""
+msgstr "UV-index"
 
 #: ../ui/main.qml:163
 msgid "Wind"
-msgstr ""
+msgstr "Wind"
 
 #: ../ui/main.qml:177
 msgid "Today"
-msgstr ""
+msgstr "Vandaag"
 
 #: ../ui/main.qml:184
 msgid "Tomorrow"
-msgstr ""
+msgstr "Morgen"
 
 #: ../ui/main.qml:352 ../ui/Yahoo.qml:181
 msgid "Error 2. WOEID may be invalid."
-msgstr ""
+msgstr "Fout 2. WOEID kan niet geldig zijn."
 
 #: ../ui/main.qml:452
 msgid "Tornado"
-msgstr ""
+msgstr "Windhoos"
 
 #: ../ui/main.qml:454
 msgid "Tropical Storm"
-msgstr ""
+msgstr "Tropische storm"
 
 #: ../ui/main.qml:456
 msgid "Hurricane"
-msgstr ""
+msgstr "Orkaan"
 
 #: ../ui/main.qml:458
 msgid "Severe Thunderstorms"
-msgstr ""
+msgstr "Zwaar onweer"
 
 #: ../ui/main.qml:460
 msgid "Thunderstorms"
-msgstr ""
+msgstr "Onweer"
 
 #: ../ui/main.qml:462
 msgid "Mixed Rain and Snow"
-msgstr ""
+msgstr "Natte sneeuw"
 
 #: ../ui/main.qml:464
 msgid "Mixed Rain and Sleet"
-msgstr ""
+msgstr "Gemengde regen en ijzel"
 
 #: ../ui/main.qml:466
 msgid "Mixed Snow and Sleet"
-msgstr ""
+msgstr "Gemengde sneeuw en ijzel"
 
 #: ../ui/main.qml:468
 msgid "Freezing Drizzle"
-msgstr ""
+msgstr "Motijzel"
 
 #: ../ui/main.qml:470
 msgid "Drizzle"
-msgstr ""
+msgstr "Motregen"
 
 #: ../ui/main.qml:472
 msgid "Freezing Rain"
-msgstr ""
+msgstr "IJzel"
 
 #: ../ui/main.qml:475
 msgid "Showers"
-msgstr ""
+msgstr "Buien"
 
 #: ../ui/main.qml:477
 msgid "Snow Flurries"
-msgstr ""
+msgstr "Windstoten met sneeuw"
 
 #: ../ui/main.qml:479
 msgid "Light Snow Showers"
-msgstr ""
+msgstr "Lichte sneeuwbuien"
 
 #: ../ui/main.qml:481
 msgid "Blowing Snow"
-msgstr ""
+msgstr "Jachtsneeuw"
 
 #: ../ui/main.qml:483
 msgid "Snow"
-msgstr ""
+msgstr "Sneeuw"
 
 #: ../ui/main.qml:485
 msgid "Hail"
-msgstr ""
+msgstr "Hagel"
 
 #: ../ui/main.qml:487
 msgid "Sleet"
-msgstr ""
+msgstr "Ijzel"
 
 #: ../ui/main.qml:489
 msgid "Dust"
-msgstr ""
+msgstr "Stof"
 
 #: ../ui/main.qml:491
 msgid "Foggy"
-msgstr ""
+msgstr "Mistig"
 
 #: ../ui/main.qml:493
 msgid "Haze"
-msgstr ""
+msgstr "Heiig"
 
 #: ../ui/main.qml:495
 msgid "Smoky"
-msgstr ""
+msgstr "Rokerig"
 
 #: ../ui/main.qml:497
 msgid "Blustery"
-msgstr ""
+msgstr "Zware windstoten"
 
 #: ../ui/main.qml:499
 msgid "Windy"
-msgstr ""
+msgstr "Winderig"
 
 #: ../ui/main.qml:501
 msgid "Cold"
-msgstr ""
+msgstr "Koud"
 
 #: ../ui/main.qml:503
 msgid "Cloudy"
-msgstr ""
+msgstr "Bewolkt"
 
 #: ../ui/main.qml:505
 msgid "Mostly Cloudy (Night)"
-msgstr ""
+msgstr "Meest bewolk (nacht)"
 
 #: ../ui/main.qml:507
 msgid "Mostly Cloudy (Day)"
-msgstr ""
+msgstr "Meest bewolk (dag)"
 
 #: ../ui/main.qml:509
 msgid "Partly Cloudy (Night)"
-msgstr ""
+msgstr "Gedeeltelijk bewolkt (nacht)"
 
 #: ../ui/main.qml:511
 msgid "Partly Cloudy (Day)"
-msgstr ""
+msgstr "Gedeeltelijk bewolkt (dag)"
 
 #: ../ui/main.qml:513
 msgid "Clear (Night)"
-msgstr ""
+msgstr "Helder (nacht)"
 
 #: ../ui/main.qml:515
 msgid "Sunny"
-msgstr ""
+msgstr "Zonnig"
 
 #: ../ui/main.qml:517
 msgid "Fair (Night)"
-msgstr ""
+msgstr "Mooi weer (nacht)"
 
 #: ../ui/main.qml:519
 msgid "Fair (Day)"
-msgstr ""
+msgstr "Mooi weer (dag)"
 
 #: ../ui/main.qml:521
 msgid "Mixed Rain and Hail"
-msgstr ""
+msgstr "Gemengde regen en hagel"
 
 #: ../ui/main.qml:523
 msgid "Hot"
-msgstr ""
+msgstr "Heet"
 
 #: ../ui/main.qml:525
 msgid "Isolated Thunderstorms"
-msgstr ""
+msgstr "Plaatselijk onweer"
 
 #: ../ui/main.qml:528
 msgid "Scattered Thunderstorms"
-msgstr ""
+msgstr "Verspreid onweer"
 
 #: ../ui/main.qml:530
 msgid "Scattered Showers"
-msgstr ""
+msgstr "Verspreide buien"
 
 #: ../ui/main.qml:533
 msgid "Heavy Snow"
-msgstr ""
+msgstr "Zware sneeuw"
 
 #: ../ui/main.qml:535
 msgid "Scattered Snow Showers"
-msgstr ""
+msgstr "Verspreide sneeuwbuien"
 
 #: ../ui/main.qml:537
 msgid "Partly Cloudy"
-msgstr ""
+msgstr "Gedeeltelijk bewolkt"
 
 #: ../ui/main.qml:539
 msgid "Thundershowers"
-msgstr ""
+msgstr "Onweersbuien"
 
 #: ../ui/main.qml:541
 msgid "Snow Showers"
-msgstr ""
+msgstr "Sneeuwbuien"
 
 #: ../ui/main.qml:543
 msgid "Isolated Thundershowers"
-msgstr ""
+msgstr "Plaatselijk onweersbuien"
 
 #: ../ui/main.qml:545
 msgid "Not Available"
-msgstr ""
+msgstr "Niet beschikbaar"
 
 #: ../ui/main.qml:571
 msgid "Yahoo! Weather Widget"
-msgstr ""
+msgstr "Yahoo! Weer-widget"
 
 #: ../ui/Yahoo.qml:121
 msgid "Error 1. Please check your network."
-msgstr ""
+msgstr "Fout 1. Controleer uw netwerk."
 
 #: ../ui/Yahoo.qml:189
 msgid "Sunday"
-msgstr ""
+msgstr "Zondag"
 
 #: ../ui/Yahoo.qml:191
 msgid "Monday"
-msgstr ""
+msgstr "Maandag"
 
 #: ../ui/Yahoo.qml:193
 msgid "Tuesday"
-msgstr ""
+msgstr "Dinsdag"
 
 #: ../ui/Yahoo.qml:195
 msgid "Wednesday"
-msgstr ""
+msgstr "Woensdag"
 
 #: ../ui/Yahoo.qml:197
 msgid "Thursday"
-msgstr ""
+msgstr "Donderdag"
 
 #: ../ui/Yahoo.qml:199
 msgid "Friday"
-msgstr ""
+msgstr "Vrijdag"
 
 #: ../ui/Yahoo.qml:201
 msgid "Saturday"
-msgstr ""
+msgstr "Zaterdag"
 
 #. i18n: file: ../ui/config.ui:23
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_fahrenheit)
 #: rc.js:3
 msgid "Fahrenheit"
-msgstr ""
+msgstr "Fahrenheit"
 
 #. i18n: file: ../ui/config.ui:26
 #. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_fahrenheit)
@@ -301,31 +303,31 @@ msgstr ""
 #. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_celsius)
 #: rc.js:6 rc.js:21
 msgid "degreeGroup"
-msgstr ""
+msgstr "degreeGroup"
 
 #. i18n: file: ../ui/config.ui:33
 #. i18n: ectx: property (text), widget (QLabel, label_unit)
 #: rc.js:9
 msgid "Temperature Unit"
-msgstr ""
+msgstr "Temperatuureenheid"
 
 #. i18n: file: ../ui/config.ui:40
 #. i18n: ectx: property (toolTip), widget (QLabel, label_woeid)
 #: rc.js:12
 msgid "Where On Earth ID"
-msgstr ""
+msgstr "Where On Earth ID (waar op aarde-id)"
 
 #. i18n: file: ../ui/config.ui:46
 #. i18n: ectx: property (text), widget (QLabel, label_woeid)
 #: rc.js:15
 msgid "WOEID"
-msgstr ""
+msgstr "WOEID"
 
 #. i18n: file: ../ui/config.ui:53
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_celsius)
 #: rc.js:18
 msgid "Celsius"
-msgstr ""
+msgstr "Celsius"
 
 #. i18n: file: ../ui/config.ui:66
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_woeid)
@@ -335,18 +337,21 @@ msgid ""
 "com/tools/woeid/ <br />Type in your city's zip code or name or landmark.<br /"
 ">Then click Lookup.</p></body></html>"
 msgstr ""
+"<html><head/><body><p>Om de WOEID van uw plaats te vinden</p><p>ga naar "
+"http://zourbuth.com/tools/woeid/ <br />Voer de post-, zipcode of naam of "
+"landmark in.<br />Klik daarna op Lookup.</p></body></html>"
 
 #. i18n: file: ../ui/config.ui:85
 #. i18n: ectx: property (text), widget (QLabel, label_sunit)
 #: rc.js:27
 msgid "Speed Unit"
-msgstr ""
+msgstr "Snelheidseenheid"
 
 #. i18n: file: ../ui/config.ui:92
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_ms)
 #: rc.js:30
 msgid "m/s"
-msgstr ""
+msgstr "m/s"
 
 #. i18n: file: ../ui/config.ui:95
 #. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_ms)
@@ -354,19 +359,19 @@ msgstr ""
 #. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_kmh)
 #: rc.js:33 rc.js:39
 msgid "speedGroup"
-msgstr ""
+msgstr "speedGroup"
 
 #. i18n: file: ../ui/config.ui:102
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_kmh)
 #: rc.js:36
 msgid "km/h"
-msgstr ""
+msgstr "km/u"
 
 #. i18n: file: ../ui/config.ui:112
 #. i18n: ectx: property (text), widget (QLabel, label_interval)
 #: rc.js:42
 msgid "Update Interval"
-msgstr ""
+msgstr "Bijwerkinterval"
 
 #. i18n: file: ../ui/config.ui:119
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_interval)
@@ -375,13 +380,15 @@ msgid ""
 "<html><head/><body><p>The frequency of updating weather data.</p><p>Unit: "
 "minute.</p></body></html>"
 msgstr ""
+"<html><head/><body><p>De frequentie van het bijwerken van de weergegevens.</"
+"p><p>Eenheid: minuten.</p></body></html>"
 
 #: rc.js:46
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Freek de Kruijf"
 
 #: rc.js:47
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "freekdekruijf@kde.nl"
