@@ -1,18 +1,17 @@
 [Desktop Entry]
 Name=Yahoo! Weather Widget
 Comment=A Simple Weather Monitor and Forecast Widget Written in QML.
-Type=Service
-Icon=weather-clouds
-Keywords=weather;forecast;yahoo;
 Encoding=UTF-8
-X-KDE-PluginInfo-Author=librehat
-X-KDE-PluginInfo-Email=librehat@outlook.com
-X-KDE-PluginInfo-Website=http://en.librehat.com
-X-KDE-PluginInfo-License=GPLv3
+Icon=weather-clouds
+ServiceTypes=Plasma/Applet, Plasma/PopupApplet
+Type=Service
+Keywords=weather;forecast;yahoo;
+X-KDE-PluginInfo-Author=Symeon Huang
+X-KDE-PluginInfo-Email=hzwhuang@gmail.com
 X-KDE-PluginInfo-Name=com.librehat.yahooweather
+X-KDE-PluginInfo-License=GPLv3
 X-KDE-PluginInfo-Category=Environment and Weather
-X-KDE-PluginInfo-Version=0.5.1
-X-KDE-ServiceTypes=Plasma/Applet,Plasma/PopupApplet
+X-KDE-PluginInfo-Version=5.0.0
+X-KDE-PluginInfo-Website=http://en.librehat.com
 X-Plasma-API=declarativeappletscript
-X-Plasma-DefaultSize=250,250
 X-Plasma-MainScript=ui/main.qml

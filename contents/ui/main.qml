@@ -1,6 +1,6 @@
 /*
- *   Authour: William Wong (librehat) <librehat@outlook.com>
- *   Copyright 2014
+ *   Authour: Symeon Huang (librehat) <hzwhuang@gmail.com>
+ *   Copyright 2014-2015
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -8,9 +8,9 @@
  *   (at your option) any later version.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.components 0.1 as PlasmaComponents
-import org.kde.qtextracomponents 0.1 as QtExtraComponents
+import QtQuick 2.2
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
     id: mainWindow
@@ -125,17 +125,17 @@ Item {
             }
         }
 
-        QtExtraComponents.QIconItem {
+        PlasmaCore.IconItem {
             id: conditionIcon
-            icon: determineIcon(m_conditionCode)
+            source: determineIcon(m_conditionCode)
             width: Math.min(conditionCol.height * 1.4, conditionRow.width * 0.5, 256)//don't be too large
             height: width
 
             MouseArea {
                 anchors.fill: parent;
                 hoverEnabled: true;
-                onEntered: { conditionIcon.state = QtExtraComponents.QIconItem.ActiveState; updateToolTip(m_conditionCode); }
-                onExited: { conditionIcon.state = QtExtraComponents.QIconItem.DisabledState; generalTooltip(); }
+                onEntered: { conditionIcon.active = true; updateToolTip(m_conditionCode); }
+                onExited: { conditionIcon.active = false; generalTooltip(); }
             }
         }
     }
@@ -217,73 +217,73 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         spacing: dayscol.spacing
 
-        QtExtraComponents.QIconItem {
+        PlasmaCore.IconItem {
             id: todayIcon
-            icon: determineIcon(m_todayCode)
+            source: determineIcon(m_todayCode)
             width: height
             height: todayLabel.height
 
             MouseArea {
                 anchors.fill: parent;
                 hoverEnabled: true;
-                onEntered: { todayIcon.state = QtExtraComponents.QIconItem.ActiveState; updateToolTip(m_todayCode); }
-                onExited: { todayIcon.state = QtExtraComponents.QIconItem.DisabledState; generalTooltip(); }
+                onEntered: { todayIcon.active = true; updateToolTip(m_todayCode); }
+                onExited: { todayIcon.active = false; generalTooltip(); }
             }
         }
 
-        QtExtraComponents.QIconItem {
+        PlasmaCore.IconItem {
             id: tomorrowIcon
-            icon: determineIcon(m_tomorrowCode)
+            source: determineIcon(m_tomorrowCode)
             width: height
             height: todayLabel.height
 
             MouseArea {
                 anchors.fill: parent;
                 hoverEnabled: true;
-                onEntered: { tomorrowIcon.state = QtExtraComponents.QIconItem.ActiveState; updateToolTip(m_tomorrowCode); }
-                onExited: { tomorrowIcon.state = QtExtraComponents.QIconItem.DisabledState; generalTooltip(); }
+                onEntered: { tomorrowIcon.active = true; updateToolTip(m_tomorrowCode); }
+                onExited: { tomorrowIcon.active = false; generalTooltip(); }
             }
         }
 
-        QtExtraComponents.QIconItem {
+        PlasmaCore.IconItem {
             id: afterTIcon
-            icon: determineIcon(m_afterTCode)
+            source: determineIcon(m_afterTCode)
             width: height
             height: todayLabel.height
 
             MouseArea {
                 anchors.fill: parent;
                 hoverEnabled: true;
-                onEntered: { afterTIcon.state = QtExtraComponents.QIconItem.ActiveState; updateToolTip(m_afterTCode); }
-                onExited: { afterTIcon.state = QtExtraComponents.QIconItem.DisabledState; generalTooltip(); }
+                onEntered: { afterTIcon.active = true; updateToolTip(m_afterTCode); }
+                onExited: { afterTIcon.active = false; generalTooltip(); }
             }
         }
 
-        QtExtraComponents.QIconItem {
+        PlasmaCore.IconItem {
             id: fourIcon
-            icon: determineIcon(m_4Code)
+            source: determineIcon(m_4Code)
             width: height
             height: todayLabel.height
 
             MouseArea {
                 anchors.fill: parent;
                 hoverEnabled: true;
-                onEntered: { fourIcon.state = QtExtraComponents.QIconItem.ActiveState; updateToolTip(m_4Code); }
-                onExited: { fourIcon.state = QtExtraComponents.QIconItem.DisabledState; generalTooltip(); }
+                onEntered: { fourIcon.active = true; updateToolTip(m_4Code); }
+                onExited: { fourIcon.active = false; generalTooltip(); }
             }
         }
 
-        QtExtraComponents.QIconItem {
+        PlasmaCore.IconItem {
             id: fiveIcon
-            icon: determineIcon(m_5Code)
+            source: determineIcon(m_5Code)
             width: height
             height: todayLabel.height
 
             MouseArea {
                 anchors.fill: parent;
                 hoverEnabled: true;
-                onEntered: { fiveIcon.state = QtExtraComponents.QIconItem.ActiveState; updateToolTip(m_5Code); }
-                onExited: { fiveIcon.state = QtExtraComponents.QIconItem.DisabledState; generalTooltip(); }
+                onEntered: { fiveIcon.active = true; updateToolTip(m_5Code); }
+                onExited: { fiveIcon.active = false; generalTooltip(); }
             }
         }
     }
@@ -340,9 +340,9 @@ Item {
         spacing: 6
         anchors { horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter }
 
-        QtExtraComponents.QIconItem {
+        PlasmaCore.IconItem {
             visible: !(hasdata || m_isbusy)
-            icon: "error"
+            source: "error"
             width: 28
             height: 28
         }

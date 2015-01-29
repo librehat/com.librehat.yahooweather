@@ -1,6 +1,6 @@
 /*
- *   Authour: William Wong (librehat) <librehat@outlook.com>
- *   Copyright 2014
+ *   Authour: Symeon Huang (librehat) <hzwhuang@gmail.com>
+ *   Copyright 2014-2015
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -8,7 +8,8 @@
  *   (at your option) any later version.
  */
 
-import QtQuick 1.1
+import QtQuick 2.2
+import QtQuick.XmlListModel 2.0
 
 Item {
     id: yahoo
