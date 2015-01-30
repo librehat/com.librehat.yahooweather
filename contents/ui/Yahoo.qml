@@ -14,7 +14,7 @@ import QtQuick.XmlListModel 2.0
 Item {
     id: yahoo
     
-    property string unitsymbol;
+    property string unitsymbol
     
     XmlListModel {
         id: yhModel
@@ -68,12 +68,12 @@ Item {
         XmlRole { name: 'fivehigh' ; query: 'item/yweather:forecast[5]/@high/string()' }
         XmlRole { name: 'fivecode' ; query: 'item/yweather:forecast[5]/@code/string()' }
         
-        onCountChanged: getweatherinfo();
+        onCountChanged: getweatherinfo()
 
         onStatusChanged: {// include Errorhandling
             if (status === XmlListModel.Error)   {// sh033
-                console.debug("XmlListModel.Error: ", errorString);
-                repeatquery.running = true;
+                console.debug("XmlListModel.Error: ", errorString)
+                repeatquery.running = true
             }
         }
     }
@@ -85,121 +85,121 @@ Item {
         running: false
         repeat: true
         onTriggered: {
-            running = false;
-            console.debug("Reapeat Query.. ");
-            query (mainWindow.m_woeid);
+            running = false
+            console.debug("Reapeat Query.. ")
+            query (plasmoid.configuration.woeid)
         }
     }
     
     function query(woeid) {
-        console.debug("Querying...");
-        yhModel.reload();//remove old data
+        console.debug("Querying...")
+        yhModel.reload()//remove old data
         
-        mainWindow.m_isbusy = true;//set BusyIndicator running and shown
+        mainWindow.m_isbusy = true//set BusyIndicator running and shown
         
         if (woeid == "") {
-            mainWindow.hasdata = false;
-            mainWindow.m_isbusy = false;
-            console.debug("WOEID is empty.");
-            return;//fail silently
+            mainWindow.hasdata = false
+            mainWindow.m_isbusy = false
+            console.debug("WOEID is empty.")
+            return//fail silently
         }
         
-        if (mainWindow.m_unitCelsius) {
-            unitsymbol = "c";
+        if (plasmoid.configuration.celsius) {
+            unitsymbol = "c"
         }
         else {
-            unitsymbol = "f";
+            unitsymbol = "f"
         }
-        yhModel.source = "http://weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol;
+        yhModel.source = "http://weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol
     }
     
     function getweatherinfo() {
-        console.debug("Getting Weather Information...");
-        mainWindow.m_isbusy = false;
+        console.debug("Getting Weather Information...")
+        mainWindow.m_isbusy = false
         
         if (typeof yhModel != "object" || typeof yhModel.get(0) != "object") {
-            mainWindow.hasdata = false;
-            mainWindow.errstring = i18n("Error 1. Please check your network.");
+            mainWindow.hasdata = false
+            mainWindow.errstring = i18n("Error 1. Please check your network.")
             console.debug("yhModel or yhModel.get(0) is not an object.")
-            return;
+            return
         }
         
-        mainWindow.m_lastBuildDate = yhModel.get(0).lastbuilddate;
-        mainWindow.m_link = yhModel.get(0).link;
-        mainWindow.m_city = yhModel.get(0).city;
-        mainWindow.m_region = yhModel.get(0).region;
-        mainWindow.m_country = yhModel.get(0).country;
-        mainWindow.m_unitTemperature = yhModel.get(0).unittemp;
-        mainWindow.m_unitDistance = yhModel.get(0).unitdist;
-        mainWindow.m_unitPressure = yhModel.get(0).unitpressure;     
-        mainWindow.m_windChill = yhModel.get(0).windchill;
-        mainWindow.m_windDirection = yhModel.get(0).winddirection;
-        mainWindow.m_windSpeed = yhModel.get(0).windspeed;
-        if (mainWindow.m_unitms) {
-            mainWindow.m_unitSpeed = "m/s";
-            mainWindow.m_windSpeed = Math.round(mainWindow.m_windSpeed * 1000 / 3600, 3);
+        mainWindow.m_lastBuildDate = yhModel.get(0).lastbuilddate
+        mainWindow.m_link = yhModel.get(0).link
+        mainWindow.m_city = yhModel.get(0).city
+        mainWindow.m_region = yhModel.get(0).region
+        mainWindow.m_country = yhModel.get(0).country
+        mainWindow.m_unitTemperature = yhModel.get(0).unittemp
+        mainWindow.m_unitDistance = yhModel.get(0).unitdist
+        mainWindow.m_unitPressure = yhModel.get(0).unitpressure
+        mainWindow.m_windChill = yhModel.get(0).windchill
+        mainWindow.m_windDirection = yhModel.get(0).winddirection
+        mainWindow.m_windSpeed = yhModel.get(0).windspeed
+        if (plasmoid.configuration.ms) {
+            mainWindow.m_unitSpeed = "m/s"
+            mainWindow.m_windSpeed = Math.round(mainWindow.m_windSpeed * 1000 / 3600, 3)
         }
         else {
-            mainWindow.m_unitSpeed = "km/h";
+            mainWindow.m_unitSpeed = "km/h"
         }
-        mainWindow.m_atmosphereHumidity = yhModel.get(0).atmospherehumidity;
-        mainWindow.m_atmosphereVisibility = yhModel.get(0).atmospherevisibility;
-        mainWindow.m_atmospherePressure = yhModel.get(0).atmospherepressure;
-        mainWindow.m_atmosphereRising = yhModel.get(0).atmosphererising;
-        mainWindow.m_astronomySunrise = yhModel.get(0).astronomysunrise;
-        mainWindow.m_astronomySunset = yhModel.get(0).astronomysunset;
-        mainWindow.m_geoLat = yhModel.get(0).geolat;
-        mainWindow.m_geoLong = yhModel.get(0).geolong;
-        mainWindow.m_conditionCode = parseInt(yhModel.get(0).conditioncode);
-        mainWindow.m_conditionTemp = parseInt(yhModel.get(0).conditiontemp);
-        mainWindow.m_todayDay = getDayLocalisation(yhModel.get(0).todayday);
-        mainWindow.m_todayLow = parseInt(yhModel.get(0).todaylow);
-        mainWindow.m_todayHigh = parseInt(yhModel.get(0).todayhigh);
-        mainWindow.m_todayCode = parseInt(yhModel.get(0).todaycode);
-        mainWindow.m_tomorrowDay = getDayLocalisation(yhModel.get(0).tomorrowday);
-        mainWindow.m_tomorrowLow = parseInt(yhModel.get(0).tomorrowlow);
-        mainWindow.m_tomorrowHigh = parseInt(yhModel.get(0).tomorrowhigh);
-        mainWindow.m_tomorrowCode = parseInt(yhModel.get(0).tomorrowcode);
-        mainWindow.m_afterTDay = getDayLocalisation(yhModel.get(0).afterTday);
-        mainWindow.m_afterTLow = parseInt(yhModel.get(0).afterTlow);
-        mainWindow.m_afterTHigh = parseInt(yhModel.get(0).afterThigh);
-        mainWindow.m_afterTCode = parseInt(yhModel.get(0).afterTcode);
-        mainWindow.m_4Day = getDayLocalisation(yhModel.get(0).fourday);
-        mainWindow.m_4Low = parseInt(yhModel.get(0).fourlow);
-        mainWindow.m_4High = parseInt(yhModel.get(0).fourhigh);
-        mainWindow.m_4Code = parseInt(yhModel.get(0).fourcode);
-        mainWindow.m_5Day = getDayLocalisation(yhModel.get(0).fiveday);
-        mainWindow.m_5Low = parseInt(yhModel.get(0).fivelow);
-        mainWindow.m_5High = parseInt(yhModel.get(0).fivehigh);
-        mainWindow.m_5Code = parseInt(yhModel.get(0).fivecode);
+        mainWindow.m_atmosphereHumidity = yhModel.get(0).atmospherehumidity
+        mainWindow.m_atmosphereVisibility = yhModel.get(0).atmospherevisibility
+        mainWindow.m_atmospherePressure = yhModel.get(0).atmospherepressure
+        mainWindow.m_atmosphereRising = yhModel.get(0).atmosphererising
+        mainWindow.m_astronomySunrise = yhModel.get(0).astronomysunrise
+        mainWindow.m_astronomySunset = yhModel.get(0).astronomysunset
+        mainWindow.m_geoLat = yhModel.get(0).geolat
+        mainWindow.m_geoLong = yhModel.get(0).geolong
+        mainWindow.m_conditionCode = parseInt(yhModel.get(0).conditioncode)
+        mainWindow.m_conditionTemp = parseInt(yhModel.get(0).conditiontemp)
+        mainWindow.m_todayDay = getDayLocalisation(yhModel.get(0).todayday)
+        mainWindow.m_todayLow = parseInt(yhModel.get(0).todaylow)
+        mainWindow.m_todayHigh = parseInt(yhModel.get(0).todayhigh)
+        mainWindow.m_todayCode = parseInt(yhModel.get(0).todaycode)
+        mainWindow.m_tomorrowDay = getDayLocalisation(yhModel.get(0).tomorrowday)
+        mainWindow.m_tomorrowLow = parseInt(yhModel.get(0).tomorrowlow)
+        mainWindow.m_tomorrowHigh = parseInt(yhModel.get(0).tomorrowhigh)
+        mainWindow.m_tomorrowCode = parseInt(yhModel.get(0).tomorrowcode)
+        mainWindow.m_afterTDay = getDayLocalisation(yhModel.get(0).afterTday)
+        mainWindow.m_afterTLow = parseInt(yhModel.get(0).afterTlow)
+        mainWindow.m_afterTHigh = parseInt(yhModel.get(0).afterThigh)
+        mainWindow.m_afterTCode = parseInt(yhModel.get(0).afterTcode)
+        mainWindow.m_4Day = getDayLocalisation(yhModel.get(0).fourday)
+        mainWindow.m_4Low = parseInt(yhModel.get(0).fourlow)
+        mainWindow.m_4High = parseInt(yhModel.get(0).fourhigh)
+        mainWindow.m_4Code = parseInt(yhModel.get(0).fourcode)
+        mainWindow.m_5Day = getDayLocalisation(yhModel.get(0).fiveday)
+        mainWindow.m_5Low = parseInt(yhModel.get(0).fivelow)
+        mainWindow.m_5High = parseInt(yhModel.get(0).fivehigh)
+        mainWindow.m_5Code = parseInt(yhModel.get(0).fivecode)
         
         if (mainWindow.m_city != "") {
-            mainWindow.hasdata = true;
-            console.debug("done.");
+            mainWindow.hasdata = true
+            console.debug("done.")
         }
         else {
-            mainWindow.hasdata = false;
-            mainWindow.errstring = i18n("Error 2. WOEID may be invalid.");
-            console.debug("m_city is empty.");
+            mainWindow.hasdata = false
+            mainWindow.errstring = i18n("Error 2. WOEID may be invalid.")
+            console.debug("m_city is empty.")
         }
     }
     
     function getDayLocalisation(daystring) {
         switch (daystring) {
             case "Sun":
-                return i18n("Sunday");
+                return i18n("Sunday")
             case "Mon":
-                return i18n("Monday");
+                return i18n("Monday")
             case "Tue":
-                return i18n("Tuesday");
+                return i18n("Tuesday")
             case "Wed":
-                return i18n("Wednesday");
+                return i18n("Wednesday")
             case "Thu":
-                return i18n("Thursday");
+                return i18n("Thursday")
             case "Fri":
-                return i18n("Friday");
+                return i18n("Friday")
             case "Sat":
-                return i18n("Saturday");
+                return i18n("Saturday")
         }
     }
 }

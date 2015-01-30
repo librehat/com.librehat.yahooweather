@@ -9,73 +9,68 @@
  */
 
 import QtQuick 2.2
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
     id: mainWindow
-    property int minimumWidth: 250;
-    property int minimumHeight: 250;
+    property int minimumWidth: 250
+    property int minimumHeight: 250
     clip: true
 
-    property bool hasdata: false;
-    property string errstring;//used to display error on widget
-    property bool m_isbusy: false;
+    property bool hasdata: false
+    property string errstring//used to display error on widget
+    property bool m_isbusy: false
 
-    //hold city properties
-    property string m_woeid;//http://developer.yahoo.com/geo/geoplanet/guide/concepts.html
-    property bool m_unitCelsius;//neglect bool fahrenheit
-    property bool m_unitms;//speed unit m/s neglect bool km/h
-
-    property string m_lastBuildDate;
-    property string m_link;
-    property int m_interval;//update interval (minute)
-    property string m_city;
-    property string m_region;
-    property string m_country;
-    property string m_unitTemperature;
-    property string m_unitDistance;
-    property string m_unitPressure;
-    property string m_unitSpeed;
-    property string m_windChill;
-    property string m_windDirection;
-    property string m_windSpeed;
-    property string m_atmosphereHumidity;
-    property string m_atmosphereVisibility;
-    property string m_atmospherePressure;
-    property string m_atmosphereRising;
-    property string m_astronomySunrise;
-    property string m_astronomySunset;
+    property string m_lastBuildDate
+    property string m_link
+    property string m_city
+    property string m_region
+    property string m_country
+    property string m_unitTemperature
+    property string m_unitDistance
+    property string m_unitPressure
+    property string m_unitSpeed
+    property string m_windChill
+    property string m_windDirection
+    property string m_windSpeed
+    property string m_atmosphereHumidity
+    property string m_atmosphereVisibility
+    property string m_atmospherePressure
+    property string m_atmosphereRising
+    property string m_astronomySunrise
+    property string m_astronomySunset
 
     //<item>/<geo:lat> and <geo:long>
-    property string m_geoLat;
-    property string m_geoLong;
+    property string m_geoLat
+    property string m_geoLong
 
     //<yweather:condition>
-    property int m_conditionCode;
-    property int m_conditionTemp;
+    property int m_conditionCode
+    property int m_conditionTemp
 
     //<yweather:forecast>
-    property string m_todayDay;
-    property int m_todayLow;
-    property int m_todayHigh;
-    property int m_todayCode;
-    property string m_tomorrowDay;
-    property int m_tomorrowLow;
-    property int m_tomorrowHigh;
-    property int m_tomorrowCode;
-    property string m_afterTDay;
-    property int m_afterTLow;
-    property int m_afterTHigh;
-    property int m_afterTCode;
-    property string m_4Day;//today is day 1
-    property int m_4Low;
-    property int m_4High;
-    property int m_4Code;
-    property string m_5Day;
-    property int m_5Low;
-    property int m_5High;
-    property int m_5Code;
+    property string m_todayDay
+    property int m_todayLow
+    property int m_todayHigh
+    property int m_todayCode
+    property string m_tomorrowDay
+    property int m_tomorrowLow
+    property int m_tomorrowHigh
+    property int m_tomorrowCode
+    property string m_afterTDay
+    property int m_afterTLow
+    property int m_afterTHigh
+    property int m_afterTCode
+    property string m_4Day//today is day 1
+    property int m_4Low
+    property int m_4High
+    property int m_4Code
+    property string m_5Day
+    property int m_5Low
+    property int m_5High
+    property int m_5Code
 
     //Yahoo.qml implements API
     Yahoo {
@@ -102,7 +97,7 @@ Item {
         font.italic: theme.smallestFont.italic
         font.pointSize: theme.smallestFont.pointSize
         font.weight: theme.smallestFont.weight
-        onLinkActivated: Qt.openUrlExternally(link);
+        onLinkActivated: Qt.openUrlExternally(link)
     }
 
     Row {
@@ -132,10 +127,16 @@ Item {
             height: width
 
             MouseArea {
-                anchors.fill: parent;
-                hoverEnabled: true;
-                onEntered: { conditionIcon.active = true; updateToolTip(m_conditionCode); }
-                onExited: { conditionIcon.active = false; generalTooltip(); }
+                anchors.fill: parent
+                hoverEnabled: true
+                onEntered: {
+                    conditionIcon.active = true
+                    updateToolTip(m_conditionCode)
+                }
+                onExited: {
+                    conditionIcon.active = false
+                    generalTooltip()
+                }
             }
         }
     }
@@ -224,10 +225,16 @@ Item {
             height: todayLabel.height
 
             MouseArea {
-                anchors.fill: parent;
-                hoverEnabled: true;
-                onEntered: { todayIcon.active = true; updateToolTip(m_todayCode); }
-                onExited: { todayIcon.active = false; generalTooltip(); }
+                anchors.fill: parent
+                hoverEnabled: true
+                onEntered: {
+                    todayIcon.active = true
+                    updateToolTip(m_todayCode)
+                }
+                onExited: {
+                    todayIcon.active = false
+                    generalTooltip()
+                }
             }
         }
 
@@ -238,10 +245,16 @@ Item {
             height: todayLabel.height
 
             MouseArea {
-                anchors.fill: parent;
-                hoverEnabled: true;
-                onEntered: { tomorrowIcon.active = true; updateToolTip(m_tomorrowCode); }
-                onExited: { tomorrowIcon.active = false; generalTooltip(); }
+                anchors.fill: parent
+                hoverEnabled: true
+                onEntered: {
+                    tomorrowIcon.active = true
+                    updateToolTip(m_tomorrowCode)
+                }
+                onExited: {
+                    tomorrowIcon.active = false
+                    generalTooltip()
+                }
             }
         }
 
@@ -252,10 +265,16 @@ Item {
             height: todayLabel.height
 
             MouseArea {
-                anchors.fill: parent;
-                hoverEnabled: true;
-                onEntered: { afterTIcon.active = true; updateToolTip(m_afterTCode); }
-                onExited: { afterTIcon.active = false; generalTooltip(); }
+                anchors.fill: parent
+                hoverEnabled: true
+                onEntered: {
+                    afterTIcon.active = true
+                    updateToolTip(m_afterTCode)
+                }
+                onExited: {
+                    afterTIcon.active = false
+                    generalTooltip()
+                }
             }
         }
 
@@ -266,10 +285,16 @@ Item {
             height: todayLabel.height
 
             MouseArea {
-                anchors.fill: parent;
-                hoverEnabled: true;
-                onEntered: { fourIcon.active = true; updateToolTip(m_4Code); }
-                onExited: { fourIcon.active = false; generalTooltip(); }
+                anchors.fill: parent
+                hoverEnabled: true
+                onEntered: {
+                    fourIcon.active = true
+                    updateToolTip(m_4Code)
+                }
+                onExited: {
+                    fourIcon.active = false
+                    generalTooltip()
+                }
             }
         }
 
@@ -280,10 +305,16 @@ Item {
             height: todayLabel.height
 
             MouseArea {
-                anchors.fill: parent;
-                hoverEnabled: true;
-                onEntered: { fiveIcon.active = true; updateToolTip(m_5Code); }
-                onExited: { fiveIcon.active = false; generalTooltip(); }
+                anchors.fill: parent
+                hoverEnabled: true
+                onEntered: {
+                    fiveIcon.active = true
+                    updateToolTip(m_5Code)
+                }
+                onExited: {
+                    fiveIcon.active = false
+                    generalTooltip()
+                }
             }
         }
     }
@@ -361,87 +392,96 @@ Item {
 
     Timer {
         id: timer
-        interval: m_interval * 60000 //1m=60000ms
+        interval: plasmoid.configuration.interval * 60000 //1m=60000ms
         running: false
         repeat: true
-        onTriggered: yh.query(m_woeid)
+        onTriggered: yh.query(plasmoid.configuration.woeid)
+    }
+
+    Connections {
+        target: plasmoid.configuration
+        onWoeidChanged: {
+            timer.running = false
+            timer.running = true
+            yh.query(plasmoid.configuration.woeid)
+        }
     }
 
     function determineIcon(code) {
         if (code <= 4) {
-            return "weather-storm";
+            return "weather-storm"
         }
         else if (code <= 6) {
-            return "weather-snow-rain";
+            return "weather-snow-rain"
         }
         else if (code == 7 ) {
-            return "weather-snow-scattered";
+            return "weather-snow-scattered"
         }
         else if (code == 8 || code == 10) {
-            return "weather-freezing-rain";
+            return "weather-freezing-rain"
         }
         else if (code == 9) {
-            return "weather-showers-scattered";
+            return "weather-showers-scattered"
         }
         else if (code <= 12) {
-            return "weather-showers";
+            return "weather-showers"
         }
         else if (code <= 16) {
-            return "weather-snow";
+            return "weather-snow"
         }
         else if (code == 17) {
-            return "weather-hail";
+            return "weather-hail"
         }
         else if (code == 18) {//sleet
-            return "weather-snow-scattered";
+            return "weather-snow-scattered"
         }
         else if (code <= 22) {
-            return "weather-mist";
+            return "weather-mist"
         }
         else if (code <= 24) {//windy
-            return "weather-clouds";
+            return "weather-clouds"
         }
         else if (code == 25) {//cold
-            return "weather-freezing-rain";
+            return "weather-freezing-rain"
         }
         else if (code == 26) {//cloudy
-            return "weather-clouds";
+            return "weather-clouds"
         }
         else if (code <= 28) {
-            return "weather-many-clouds";
+            return "weather-many-clouds"
         }
         else if (code == 29) {
-            return "weather-few-clouds-night";
+            return "weather-few-clouds-night"
         }
         else if (code == 30) {
-            return "weather-few-clouds";
+            return "weather-few-clouds"
         }
         else if (code == 31 || code == 33) {
-            return "weather-clear-night";
+            return "weather-clear-night"
         }
         else if (code == 32 || code == 34 || code ==36) {
-            return "weather-clear";
+            return "weather-clear"
         }
         else if (code == 35) {
-            return "weather-hail";
+            return "weather-hail"
         }
         else if (code <= 40) {
-            return "weather-storm";
+            return "weather-storm"
         }
         else if (code == 41 || code == 43) {
-            return "weather-snow";
+            return "weather-snow"
         }
         else if (code == 42 || code == 46) {
-            return "weather-snow-rain";
+            return "weather-snow-rain"
         }
         else if (code == 44) {
-            return "weather-few-clouds";
+            return "weather-few-clouds"
         }
         else if (code == 45 || code == 47) {
-            return "weather-storm";
+            return "weather-storm"
         }
         else {
-            return "weather-none-available";
+            return "weather-none-available"
         }
     }
 
@@ -449,133 +489,120 @@ Item {
         //according to http://developer.yahoo.com/weather/#codes
         switch (conCode) {
             case 0:
-                return i18n("Tornado");
+                return i18n("Tornado")
             case 1:
-                return i18n("Tropical Storm");
+                return i18n("Tropical Storm")
             case 2:
-                return i18n("Hurricane");
+                return i18n("Hurricane")
             case 3:
-                return i18n("Severe Thunderstorms");
+                return i18n("Severe Thunderstorms")
             case 4:
-                return i18n("Thunderstorms");
+                return i18n("Thunderstorms")
             case 5:
-                return i18n("Mixed Rain and Snow");
+                return i18n("Mixed Rain and Snow")
             case 6:
-                return i18n("Mixed Rain and Sleet");
+                return i18n("Mixed Rain and Sleet")
             case 7:
-                return i18n("Mixed Snow and Sleet");
+                return i18n("Mixed Snow and Sleet")
             case 8:
-                return i18n("Freezing Drizzle");
+                return i18n("Freezing Drizzle")
             case 9:
-                return i18n("Drizzle");
+                return i18n("Drizzle")
             case 10:
-                return i18n("Freezing Rain");
+                return i18n("Freezing Rain")
             case 11://has same descr with 12
             case 12:
-                return i18n("Showers");
+                return i18n("Showers")
             case 13:
-                return i18n("Snow Flurries");
+                return i18n("Snow Flurries")
             case 14:
-                return i18n("Light Snow Showers");
+                return i18n("Light Snow Showers")
             case 15:
-                return i18n("Blowing Snow");
+                return i18n("Blowing Snow")
             case 16:
-                return i18n("Snow");
+                return i18n("Snow")
             case 17:
-                return i18n("Hail");
+                return i18n("Hail")
             case 18:
-                return i18n("Sleet");
+                return i18n("Sleet")
             case 19:
-                return i18n("Dust");
+                return i18n("Dust")
             case 20:
-                return i18n("Foggy");
+                return i18n("Foggy")
             case 21:
-                return i18n("Haze");
+                return i18n("Haze")
             case 22:
-                return i18n("Smoky");
+                return i18n("Smoky")
             case 23:
-                return i18n("Blustery");
+                return i18n("Blustery")
             case 24:
-                return i18n("Windy");
+                return i18n("Windy")
             case 25:
-                return i18n("Cold");
+                return i18n("Cold")
             case 26:
-                return i18n("Cloudy");
+                return i18n("Cloudy")
             case 27:
-                return i18n("Mostly Cloudy (Night)");
+                return i18n("Mostly Cloudy (Night)")
             case 28:
-                return i18n("Mostly Cloudy (Day)");
+                return i18n("Mostly Cloudy (Day)")
             case 29:
-                return i18n("Partly Cloudy (Night)");
+                return i18n("Partly Cloudy (Night)")
             case 30:
-                return i18n("Partly Cloudy (Day)");
+                return i18n("Partly Cloudy (Day)")
             case 31:
-                return i18n("Clear (Night)");
+                return i18n("Clear (Night)")
             case 32:
-                return i18n("Sunny");
+                return i18n("Sunny")
             case 33:
-                return i18n("Fair (Night)");
+                return i18n("Fair (Night)")
             case 34:
-                return i18n("Fair (Day)");
+                return i18n("Fair (Day)")
             case 35:
-                return i18n("Mixed Rain and Hail");
+                return i18n("Mixed Rain and Hail")
             case 36:
-                return i18n("Hot");
+                return i18n("Hot")
             case 37:
-                return i18n("Isolated Thunderstorms");
+                return i18n("Isolated Thunderstorms")
             case 38://same with 39
             case 39:
-                return i18n("Scattered Thunderstorms");
+                return i18n("Scattered Thunderstorms")
             case 40:
-                return i18n("Scattered Showers");
+                return i18n("Scattered Showers")
             case 41://same with 43
             case 43:
-                return i18n("Heavy Snow");
+                return i18n("Heavy Snow")
             case 42:
-                return i18n("Scattered Snow Showers");
+                return i18n("Scattered Snow Showers")
             case 44:
-                return i18n("Partly Cloudy");
+                return i18n("Partly Cloudy")
             case 45:
-                return i18n("Thundershowers");
+                return i18n("Thundershowers")
             case 46:
-                return i18n("Snow Showers");
+                return i18n("Snow Showers")
             case 47:
-                return i18n("Isolated Thundershowers");
+                return i18n("Isolated Thundershowers")
             default://code 3200
-                return i18n("Not Available");
+                return i18n("Not Available")
         }
     }
 
-    function configChanged() {
-        timer.running = false;
-
-        m_woeid = plasmoid.readConfig("woeid");
-	m_interval = plasmoid.readConfig("interval");
-        m_unitCelsius = plasmoid.readConfig("celsius");
-        m_unitms = plasmoid.readConfig("ms");
-
-        timer.running = true;
-        yh.query(m_woeid);
-    }
-
     function updateToolTip(ttcode) {
-        var toolTip = new Object;
-        toolTip["image"] = determineIcon(ttcode);
-        toolTip["mainText"] = getDescription(ttcode);
-        plasmoid.popupIconToolTip = toolTip;
+        var toolTip = new Object
+        toolTip["image"] = determineIcon(ttcode)
+        toolTip["mainText"] = getDescription(ttcode)
+        plasmoid.popupIconToolTip = toolTip
     }
 
     function generalTooltip() {
-        var toolTip = new Object;
-        toolTip["image"] = "weather-clouds";
-        toolTip["mainText"] = i18n("Yahoo! Weather Widget");
-        plasmoid.popupIconToolTip = toolTip;
+        var toolTip = new Object
+        toolTip["image"] = "weather-clouds"
+        toolTip["mainText"] = i18n("Yahoo! Weather Widget")
+        plasmoid.popupIconToolTip = toolTip
     }
 
     Component.onCompleted: {
-        plasmoid.popupIcon = "weather-clouds";
-        plasmoid.aspectRatioMode = IgnoreAspectRatio;
-        plasmoid.addEventListener("configChanged", mainWindow.configChanged);
-        generalTooltip();
+        plasmoid.popupIcon = "weather-clouds"
+        plasmoid.aspectRatioMode = IgnoreAspectRatio
+        generalTooltip()
     }
 }
