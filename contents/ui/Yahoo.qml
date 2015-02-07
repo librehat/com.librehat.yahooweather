@@ -19,63 +19,65 @@ Item {
     XmlListModel {
         id: yhModel
         query: '/rss/channel'
-        
+
         namespaceDeclarations: "declare namespace yweather='http://xml.weather.yahoo.com/ns/rss/1.0'; declare namespace geo='http://www.w3.org/2003/01/geo/wgs84_pos#';"
         
-        XmlRole { name: 'lastbuilddate'; query: 'lastBuildDate/string()' }
-        XmlRole { name: 'link'; query: 'link/string()' }
-        XmlRole { name: 'city'; query: 'yweather:location/@city/string()' }
-        XmlRole { name: 'region'; query: 'yweather:location/@region/string()' }
-        XmlRole { name: 'country'; query: 'yweather:location/@country/string()' }
-        XmlRole { name: 'unittemp' ; query: 'yweather:units/@temperature/string()' }
-        XmlRole { name: 'unitdist' ; query: 'yweather:units/@distance/string()' }
-        XmlRole { name: 'unitpressure' ; query: 'yweather:units/@pressure/string()' }
-        XmlRole { name: 'unitspeed' ; query: 'yweather:units/@speed/string()' }
-        XmlRole { name: 'windchill' ; query: 'yweather:wind/@chill/string()' }
-        XmlRole { name: 'winddirection' ; query: 'yweather:wind/@direction/string()' }
-        XmlRole { name: 'windspeed' ; query: 'yweather:wind/@speed/string()' }
-        XmlRole { name: 'atmospherehumidity' ; query: 'yweather:atmosphere/@humidity/string()' }
-        XmlRole { name: 'atmospherevisibility' ; query: 'yweather:atmosphere/@visibility/string()' }
-        XmlRole { name: 'atmospherepressure' ; query: 'yweather:atmosphere/@pressure/string()' }
-        XmlRole { name: 'atmosphererising' ; query: 'yweather:atmosphere/@rising/string()' }
-        XmlRole { name: 'astronomysunrise' ; query: 'yweather:astronomy/@sunrise/string()' }
-        XmlRole { name: 'astronomysunset' ; query: 'yweather:astronomy/@sunset/string()' }
+        XmlRole { name: 'lastbuilddate'; 		query: 'lastBuildDate/string()' }
+        XmlRole { name: 'link'; 				query: 'link/string()' }
+        XmlRole { name: 'city'; 				query: 'yweather:location/@city/string()' }
+        XmlRole { name: 'region'; 				query: 'yweather:location/@region/string()' }
+        XmlRole { name: 'country'; 				query: 'yweather:location/@country/string()' }
+        XmlRole { name: 'unittemp' ; 			query: 'yweather:units/@temperature/string()' }
+        XmlRole { name: 'unitdist' ; 			query: 'yweather:units/@distance/string()' }
+        XmlRole { name: 'unitpressure' ; 		query: 'yweather:units/@pressure/string()' }
+        XmlRole { name: 'unitspeed' ; 			query: 'yweather:units/@speed/string()' }
+        XmlRole { name: 'windchill' ; 			query: 'yweather:wind/@chill/string()' }
+        XmlRole { name: 'winddirection' ; 		query: 'yweather:wind/@direction/string()' }
+        XmlRole { name: 'windspeed' ; 			query: 'yweather:wind/@speed/string()' }
+        XmlRole { name: 'atmospherehumidity' ; 	query: 'yweather:atmosphere/@humidity/string()' }
+        XmlRole { name: 'atmospherevisibility' ;query: 'yweather:atmosphere/@visibility/string()' }
+        XmlRole { name: 'atmospherepressure' ; 	query: 'yweather:atmosphere/@pressure/string()' }
+        XmlRole { name: 'atmosphererising' ; 	query: 'yweather:atmosphere/@rising/string()' }
+        XmlRole { name: 'astronomysunrise' ; 	query: 'yweather:astronomy/@sunrise/string()' }
+        XmlRole { name: 'astronomysunset' ; 	query: 'yweather:astronomy/@sunset/string()' }
         
-        XmlRole { name: 'geolat' ; query: 'item/geo:lat/string()' }
-        XmlRole { name: 'geolong' ; query: 'item/geo:long/string()' }
+        XmlRole { name: 'geolat' ; 				query: 'item/geo:lat/string()' }
+        XmlRole { name: 'geolong' ; 			query: 'item/geo:long/string()' }
 
-        XmlRole { name: 'conditioncode'; query: 'item/yweather:condition/@code/string()' }
-        XmlRole { name: 'conditiontemp'; query: 'item/yweather:condition/@temp/string()' }
+        XmlRole { name: 'conditioncode'; 		query: 'item/yweather:condition/@code/string()' }
+        XmlRole { name: 'conditiontemp'; 		query: 'item/yweather:condition/@temp/string()' }
         
-        XmlRole { name: 'todayday' ; query: 'item/yweather:forecast[1]/@day/string()' }
-        XmlRole { name: 'todaylow' ; query: 'item/yweather:forecast[1]/@low/string()' }
-        XmlRole { name: 'todayhigh' ; query: 'item/yweather:forecast[1]/@high/string()' }
-        XmlRole { name: 'todaycode' ; query: 'item/yweather:forecast[1]/@code/string()' }
-        XmlRole { name: 'tomorrowday' ; query: 'item/yweather:forecast[2]/@day/string()' }
-        XmlRole { name: 'tomorrowlow' ; query: 'item/yweather:forecast[2]/@low/string()' }
-        XmlRole { name: 'tomorrowhigh' ; query: 'item/yweather:forecast[2]/@high/string()' }
-        XmlRole { name: 'tomorrowcode' ; query: 'item/yweather:forecast[2]/@code/string()' }
-        XmlRole { name: 'afterTday' ; query: 'item/yweather:forecast[3]/@day/string()' }
-        XmlRole { name: 'afterTlow' ; query: 'item/yweather:forecast[3]/@low/string()' }
-        XmlRole { name: 'afterThigh' ; query: 'item/yweather:forecast[3]/@high/string()' }
-        XmlRole { name: 'afterTcode' ; query: 'item/yweather:forecast[3]/@code/string()' }
-        XmlRole { name: 'fourday' ; query: 'item/yweather:forecast[4]/@day/string()' }
-        XmlRole { name: 'fourlow' ; query: 'item/yweather:forecast[4]/@low/string()' }
-        XmlRole { name: 'fourhigh' ; query: 'item/yweather:forecast[4]/@high/string()' }
-        XmlRole { name: 'fourcode' ; query: 'item/yweather:forecast[4]/@code/string()' }
-        XmlRole { name: 'fiveday' ; query: 'item/yweather:forecast[5]/@day/string()' }
-        XmlRole { name: 'fivelow' ; query: 'item/yweather:forecast[5]/@low/string()' }
-        XmlRole { name: 'fivehigh' ; query: 'item/yweather:forecast[5]/@high/string()' }
-        XmlRole { name: 'fivecode' ; query: 'item/yweather:forecast[5]/@code/string()' }
-        
-        onCountChanged: getweatherinfo()
+        XmlRole { name: 'todayday' ; 			query: 'item/yweather:forecast[1]/@day/string()' }
+        XmlRole { name: 'todaylow' ; 			query: 'item/yweather:forecast[1]/@low/string()' }
+        XmlRole { name: 'todayhigh' ; 			query: 'item/yweather:forecast[1]/@high/string()' }
+        XmlRole { name: 'todaycode' ; 			query: 'item/yweather:forecast[1]/@code/string()' }
+        XmlRole { name: 'tomorrowday' ; 		query: 'item/yweather:forecast[2]/@day/string()' }
+        XmlRole { name: 'tomorrowlow' ; 		query: 'item/yweather:forecast[2]/@low/string()' }
+        XmlRole { name: 'tomorrowhigh' ; 		query: 'item/yweather:forecast[2]/@high/string()' }
+        XmlRole { name: 'tomorrowcode' ; 		query: 'item/yweather:forecast[2]/@code/string()' }
+        XmlRole { name: 'afterTday' ; 			query: 'item/yweather:forecast[3]/@day/string()' }
+        XmlRole { name: 'afterTlow' ; 			query: 'item/yweather:forecast[3]/@low/string()' }
+        XmlRole { name: 'afterThigh' ; 			query: 'item/yweather:forecast[3]/@high/string()' }
+        XmlRole { name: 'afterTcode' ; 			query: 'item/yweather:forecast[3]/@code/string()' }
+        XmlRole { name: 'fourday' ; 			query: 'item/yweather:forecast[4]/@day/string()' }
+        XmlRole { name: 'fourlow' ; 			query: 'item/yweather:forecast[4]/@low/string()' }
+        XmlRole { name: 'fourhigh' ; 			query: 'item/yweather:forecast[4]/@high/string()' }
+        XmlRole { name: 'fourcode' ; 			query: 'item/yweather:forecast[4]/@code/string()' }
+        XmlRole { name: 'fiveday' ; 			query: 'item/yweather:forecast[5]/@day/string()' }
+        XmlRole { name: 'fivelow' ; 			query: 'item/yweather:forecast[5]/@low/string()' }
+        XmlRole { name: 'fivehigh' ; 			query: 'item/yweather:forecast[5]/@high/string()' }
+        XmlRole { name: 'fivecode' ; 			query: 'item/yweather:forecast[5]/@code/string()' }
 
         onStatusChanged: {// include Errorhandling
             if (status === XmlListModel.Error)   {// sh033
                 console.debug("XmlListModel.Error: ", errorString)
                 repeatquery.running = true
             }
-        }
+            else
+            if (status == XmlListModel.Ready) {
+				getweatherinfo()
+			}
+		}
     }
     
     // timer for repeat query from sh033
@@ -91,26 +93,35 @@ Item {
         }
     }
     
+    property variant global_woeid: ""
+    
     function query(woeid) {
         console.debug("Querying...")
-        yhModel.reload()//remove old data
         
-        mainWindow.m_isbusy = true//set BusyIndicator running and shown
+        mainWindow.m_isbusy = true
         
-        if (woeid == "") {
-            mainWindow.hasdata = false
-            mainWindow.m_isbusy = false
-            console.debug("WOEID is empty.")
-            return//fail silently
-        }
+        if(global_woeid != woeid)
+		{
+			console.debug(woeid)
+			if (woeid == "") {
+				mainWindow.hasdata = false
+				mainWindow.m_isbusy = false
+				console.debug("WOEID is empty.")
+				return//fail silently
+			}
         
-        if (plasmoid.configuration.celsius) {
-            unitsymbol = "c"
-        }
-        else {
-            unitsymbol = "f"
-        }
-        yhModel.source = "http://weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol
+			if (plasmoid.configuration.celsius) {
+				unitsymbol = "c"
+			}
+			else {
+				unitsymbol = "f"
+			}
+			yhModel.source = "http://weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol
+			global_woeid = woeid
+		}
+		console.debug(yhModel.source)
+		console.debug("call reload()")
+		yhModel.reload()
     }
     
     function getweatherinfo() {

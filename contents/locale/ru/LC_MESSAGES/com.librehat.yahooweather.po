@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-18 17:00+0000\n"
+"POT-Creation-Date: 2015-02-07 11:19+0200\n"
 "PO-Revision-Date: 2014-04-11 02:35+0200\n"
 "Last-Translator: Kirill Demin <deminkirill@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,379 +17,336 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../ui/main.qml:99
-msgid "YAHOO! Weather"
-msgstr "Погода YAHOO!"
-
-#: ../ui/main.qml:124
-msgid "Sunrise"
-msgstr "Рассвет"
-
-#: ../ui/main.qml:124
-msgid "Sunset"
-msgstr "Закат"
-
-#: ../ui/main.qml:151
-msgid "Feels like"
-msgstr "Ощущается"
-
-#: ../ui/main.qml:151
-msgid "Visibility"
-msgstr "Видимость"
-
-#: ../ui/main.qml:151
-msgid "NULL"
-msgstr "Н/д"
-
-#: ../ui/main.qml:157
-msgid "Humidity"
-msgstr "Влажность"
-
-#: ../ui/main.qml:157
-msgid "Pressure"
-msgstr "Давление"
-
-#: ../ui/main.qml:163
-msgid "UV Index"
-msgstr "УФ Индекс"
-
-#: ../ui/main.qml:163
-msgid "Wind"
-msgstr "Ветер"
-
-#: ../ui/main.qml:177
-msgid "Today"
-msgstr "Сегодня"
-
-#: ../ui/main.qml:184
-msgid "Tomorrow"
-msgstr "Завтра"
-
-#: ../ui/main.qml:352 ../ui/Yahoo.qml:181
-msgid "Error 2. WOEID may be invalid."
-msgstr "Ошибка 2. WOEID может быть неверным"
-
-#: ../ui/main.qml:452
-msgid "Tornado"
-msgstr "Торнадо"
-
-#: ../ui/main.qml:454
-msgid "Tropical Storm"
-msgstr "Тропический шторм"
-
-#: ../ui/main.qml:456
-msgid "Hurricane"
-msgstr "Ураган"
-
-#: ../ui/main.qml:458
-msgid "Severe Thunderstorms"
-msgstr "Сильные грозы"
-
-#: ../ui/main.qml:460
-msgid "Thunderstorms"
-msgstr "Грозы"
-
-#: ../ui/main.qml:462
-msgid "Mixed Rain and Snow"
-msgstr "Дождь со снегом"
-
-#: ../ui/main.qml:464
-msgid "Mixed Rain and Sleet"
-msgstr "Дождь с мокрым снегом"
-
-#: ../ui/main.qml:466
-msgid "Mixed Snow and Sleet"
-msgstr "Снег и мокрый снег"
-
-#: ../ui/main.qml:468
-msgid "Freezing Drizzle"
-msgstr "Изморозь"
-
-#: ../ui/main.qml:470
-msgid "Drizzle"
-msgstr "Мелкий дождь"
-
-#: ../ui/main.qml:472
-msgid "Freezing Rain"
-msgstr "Лёд"
-
-#: ../ui/main.qml:475
-msgid "Showers"
-msgstr "Ливни"
-
-#: ../ui/main.qml:477
-msgid "Snow Flurries"
-msgstr "Снегопады"
-
-#: ../ui/main.qml:479
-msgid "Light Snow Showers"
-msgstr "Небольшой снег"
-
-#: ../ui/main.qml:481
-msgid "Blowing Snow"
-msgstr "Метель"
-
-#: ../ui/main.qml:483
-msgid "Snow"
-msgstr "Снег"
-
-#: ../ui/main.qml:485
-msgid "Hail"
-msgstr "Град"
-
-#: ../ui/main.qml:487
-msgid "Sleet"
-msgstr "Мокрый снег"
-
-#: ../ui/main.qml:489
-msgid "Dust"
-msgstr "Пыль"
-
-#: ../ui/main.qml:491
-msgid "Foggy"
-msgstr "Туман"
-
-#: ../ui/main.qml:493
-msgid "Haze"
-msgstr "Легкий туман"
-
-#: ../ui/main.qml:495
-msgid "Smoky"
-msgstr "Дым"
-
-#: ../ui/main.qml:497
-msgid "Blustery"
-msgstr "Сильный ветер"
-
-#: ../ui/main.qml:499
-msgid "Windy"
-msgstr "Ветрено"
-
-#: ../ui/main.qml:501
-msgid "Cold"
-msgstr "Холодно"
-
-#: ../ui/main.qml:503
-msgid "Cloudy"
-msgstr "Облачно"
-
-#: ../ui/main.qml:505
-msgid "Mostly Cloudy (Night)"
-msgstr "Переменная облачность (Ночь)"
-
-#: ../ui/main.qml:507
-msgid "Mostly Cloudy (Day)"
-msgstr "Переменная облачность (День)"
-
-#: ../ui/main.qml:509
-msgid "Partly Cloudy (Night)"
-msgstr "Небольшая облачность (Ночь)"
-
-#: ../ui/main.qml:511
-msgid "Partly Cloudy (Day)"
-msgstr "Небольшая облачность (День)"
-
-#: ../ui/main.qml:513
-msgid "Clear (Night)"
-msgstr "Безоблачно (Ночь)"
-
-#: ../ui/main.qml:515
-msgid "Sunny"
-msgstr "Солнечно"
-
-#: ../ui/main.qml:517
-msgid "Fair (Night)"
-msgstr "Ясно (Ночь)"
-
-#: ../ui/main.qml:519
-msgid "Fair (Day)"
-msgstr "Ясно (День)"
-
-#: ../ui/main.qml:521
-msgid "Mixed Rain and Hail"
-msgstr "Дождь с градом"
-
-#: ../ui/main.qml:523
-msgid "Hot"
-msgstr "Жарко"
-
-#: ../ui/main.qml:525
-msgid "Isolated Thunderstorms"
-msgstr "Местами грозы"
-
-#: ../ui/main.qml:528
-msgid "Scattered Thunderstorms"
-msgstr "Переменные грозы"
-
-#: ../ui/main.qml:530
-msgid "Scattered Showers"
-msgstr "Дожди"
-
-#: ../ui/main.qml:533
-msgid "Heavy Snow"
-msgstr "Сильный снегопад"
-
-#: ../ui/main.qml:535
-msgid "Scattered Snow Showers"
-msgstr "Переменные снегопады"
-
-#: ../ui/main.qml:537
-msgid "Partly Cloudy"
-msgstr "Небольшая облачность"
-
-#: ../ui/main.qml:539
-msgid "Thundershowers"
-msgstr "Грозовые ливни"
-
-#: ../ui/main.qml:541
-msgid "Snow Showers"
-msgstr "Снегопады"
-
-#: ../ui/main.qml:543
-msgid "Isolated Thundershowers"
-msgstr "Местами грозовые ливни"
-
-#: ../ui/main.qml:545
-msgid "Not Available"
-msgstr "Недоступно"
-
-#: ../ui/main.qml:571
-msgid "Yahoo! Weather Widget"
-msgstr "Погодный виджет Yahoo!"
-
-#: ../ui/Yahoo.qml:121
-msgid "Error 1. Please check your network."
-msgstr "Ошибка 1. Пожалуйста, проверьте Вашу сеть"
-
-#: ../ui/Yahoo.qml:189
-msgid "Sunday"
-msgstr "Воскресенье"
-
-#: ../ui/Yahoo.qml:191
-msgid "Monday"
-msgstr "Понедельник"
-
-#: ../ui/Yahoo.qml:193
-msgid "Tuesday"
-msgstr "Вторник"
-
-#: ../ui/Yahoo.qml:195
-msgid "Wednesday"
-msgstr "Среда"
-
-#: ../ui/Yahoo.qml:197
-msgid "Thursday"
-msgstr "Четверг"
-
-#: ../ui/Yahoo.qml:199
-msgid "Friday"
-msgstr "Пятница"
-
-#: ../ui/Yahoo.qml:201
-msgid "Saturday"
-msgstr "Суббота"
-
-#. i18n: file: ../ui/config.ui:23
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_fahrenheit)
-#: rc.js:3
-msgid "Fahrenheit"
-msgstr "по Фаренгейту"
-
-#. i18n: file: ../ui/config.ui:26
-#. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_fahrenheit)
-#. i18n: file: ../ui/config.ui:59
-#. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_celsius)
-#: rc.js:6 rc.js:21
-msgid "degreeGroup"
+#: ../ui/ConfigGeneral.qml:26
+msgid "WOEID"
+msgstr "Where On Earth ID"
+
+#: ../ui/ConfigGeneral.qml:34
+msgid ""
+"Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
+"to find your city's WOEID"
 msgstr ""
 
-#. i18n: file: ../ui/config.ui:33
-#. i18n: ectx: property (text), widget (QLabel, label_unit)
-#: rc.js:9
+#: ../ui/ConfigGeneral.qml:41
+msgid "Update Interval"
+msgstr ""
+
+#: ../ui/ConfigUnit.qml:27
 #, fuzzy
 msgid "Temperature Unit"
 msgstr "Единицы измерения"
 
-#. i18n: file: ../ui/config.ui:40
-#. i18n: ectx: property (toolTip), widget (QLabel, label_woeid)
-#: rc.js:12
-msgid "Where On Earth ID"
-msgstr ""
-
-#. i18n: file: ../ui/config.ui:46
-#. i18n: ectx: property (text), widget (QLabel, label_woeid)
-#: rc.js:15
-msgid "WOEID"
-msgstr "Where On Earth ID"
-
-#. i18n: file: ../ui/config.ui:53
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_celsius)
-#: rc.js:18
+#: ../ui/ConfigUnit.qml:37
 msgid "Celsius"
 msgstr "по Цельсиусу"
 
-#. i18n: file: ../ui/config.ui:66
-#. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_woeid)
-#: rc.js:24
-msgid ""
-"<html><head/><body><p>To find your city's WOEID.</p><p>Go to http://zourbuth."
-"com/tools/woeid/ <br />Type in your city's zip code or name or landmark.<br /"
-">Then click Lookup.</p></body></html>"
-msgstr ""
-"<html><head/><body><p>Чтобы найти WOEID Вашего города,</p><p> по адресу "
-"http://zourbuth.com/tools/woeid/ <br />Наберите zip-код или название Вашего "
-"города<br />Затем нажмите Lookup.</p></body></html>"
+#: ../ui/ConfigUnit.qml:43
+msgid "Fahrenheit"
+msgstr "по Фаренгейту"
 
-#. i18n: file: ../ui/config.ui:85
-#. i18n: ectx: property (text), widget (QLabel, label_sunit)
-#: rc.js:27
+#: ../ui/ConfigUnit.qml:50
 #, fuzzy
-msgid "Speed Unit"
+msgid "Wind Unit"
 msgstr "Единицы измерения"
 
-#. i18n: file: ../ui/config.ui:92
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_ms)
-#: rc.js:30
+#: ../ui/ConfigUnit.qml:60
 msgid "m/s"
 msgstr ""
 
-#. i18n: file: ../ui/config.ui:95
-#. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_ms)
-#. i18n: file: ../ui/config.ui:105
-#. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_kmh)
-#: rc.js:33 rc.js:39
-msgid "speedGroup"
+#: ../ui/ConfigUnit.qml:66
+msgid "Km/h"
 msgstr ""
 
-#. i18n: file: ../ui/config.ui:102
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_kmh)
-#: rc.js:36
-msgid "km/h"
-msgstr ""
+#: ../ui/main.qml:94
+msgid "YAHOO! Weather"
+msgstr "Погода YAHOO!"
 
-#. i18n: file: ../ui/config.ui:112
-#. i18n: ectx: property (text), widget (QLabel, label_interval)
-#: rc.js:42
-msgid "Update Interval"
-msgstr ""
+#: ../ui/main.qml:119
+msgid "Sunrise"
+msgstr "Рассвет"
 
-#. i18n: file: ../ui/config.ui:119
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_interval)
-#: rc.js:45
-msgid ""
-"<html><head/><body><p>The frequency of updating weather data.</p><p>Unit: "
-"minute.</p></body></html>"
-msgstr ""
+#: ../ui/main.qml:119
+msgid "Sunset"
+msgstr "Закат"
 
-#: rc.js:46
+#: ../ui/main.qml:152
+msgid "Feels like"
+msgstr "Ощущается"
+
+#: ../ui/main.qml:152
+msgid "Visibility"
+msgstr "Видимость"
+
+#: ../ui/main.qml:152
+msgid "NULL"
+msgstr "Н/д"
+
+#: ../ui/main.qml:158
+msgid "Humidity"
+msgstr "Влажность"
+
+#: ../ui/main.qml:158
+msgid "Pressure"
+msgstr "Давление"
+
+#: ../ui/main.qml:164
+msgid "UV Index"
+msgstr "УФ Индекс"
+
+#: ../ui/main.qml:164
+msgid "Wind"
+msgstr "Ветер"
+
+#: ../ui/main.qml:178
+msgid "Today"
+msgstr "Сегодня"
+
+#: ../ui/main.qml:185
+msgid "Tomorrow"
+msgstr "Завтра"
+
+#: ../ui/main.qml:383 ../ui/Yahoo.qml:182
+msgid "Error 2. WOEID may be invalid."
+msgstr "Ошибка 2. WOEID может быть неверным"
+
+#: ../ui/main.qml:492
+msgid "Tornado"
+msgstr "Торнадо"
+
+#: ../ui/main.qml:494
+msgid "Tropical Storm"
+msgstr "Тропический шторм"
+
+#: ../ui/main.qml:496
+msgid "Hurricane"
+msgstr "Ураган"
+
+#: ../ui/main.qml:498
+msgid "Severe Thunderstorms"
+msgstr "Сильные грозы"
+
+#: ../ui/main.qml:500
+msgid "Thunderstorms"
+msgstr "Грозы"
+
+#: ../ui/main.qml:502
+msgid "Mixed Rain and Snow"
+msgstr "Дождь со снегом"
+
+#: ../ui/main.qml:504
+msgid "Mixed Rain and Sleet"
+msgstr "Дождь с мокрым снегом"
+
+#: ../ui/main.qml:506
+msgid "Mixed Snow and Sleet"
+msgstr "Снег и мокрый снег"
+
+#: ../ui/main.qml:508
+msgid "Freezing Drizzle"
+msgstr "Изморозь"
+
+#: ../ui/main.qml:510
+msgid "Drizzle"
+msgstr "Мелкий дождь"
+
+#: ../ui/main.qml:512
+msgid "Freezing Rain"
+msgstr "Лёд"
+
+#: ../ui/main.qml:515
+msgid "Showers"
+msgstr "Ливни"
+
+#: ../ui/main.qml:517
+msgid "Snow Flurries"
+msgstr "Снегопады"
+
+#: ../ui/main.qml:519
+msgid "Light Snow Showers"
+msgstr "Небольшой снег"
+
+#: ../ui/main.qml:521
+msgid "Blowing Snow"
+msgstr "Метель"
+
+#: ../ui/main.qml:523
+msgid "Snow"
+msgstr "Снег"
+
+#: ../ui/main.qml:525
+msgid "Hail"
+msgstr "Град"
+
+#: ../ui/main.qml:527
+msgid "Sleet"
+msgstr "Мокрый снег"
+
+#: ../ui/main.qml:529
+msgid "Dust"
+msgstr "Пыль"
+
+#: ../ui/main.qml:531
+msgid "Foggy"
+msgstr "Туман"
+
+#: ../ui/main.qml:533
+msgid "Haze"
+msgstr "Легкий туман"
+
+#: ../ui/main.qml:535
+msgid "Smoky"
+msgstr "Дым"
+
+#: ../ui/main.qml:537
+msgid "Blustery"
+msgstr "Сильный ветер"
+
+#: ../ui/main.qml:539
+msgid "Windy"
+msgstr "Ветрено"
+
+#: ../ui/main.qml:541
+msgid "Cold"
+msgstr "Холодно"
+
+#: ../ui/main.qml:543
+msgid "Cloudy"
+msgstr "Облачно"
+
+#: ../ui/main.qml:545
+msgid "Mostly Cloudy (Night)"
+msgstr "Переменная облачность (Ночь)"
+
+#: ../ui/main.qml:547
+msgid "Mostly Cloudy (Day)"
+msgstr "Переменная облачность (День)"
+
+#: ../ui/main.qml:549
+msgid "Partly Cloudy (Night)"
+msgstr "Небольшая облачность (Ночь)"
+
+#: ../ui/main.qml:551
+msgid "Partly Cloudy (Day)"
+msgstr "Небольшая облачность (День)"
+
+#: ../ui/main.qml:553
+msgid "Clear (Night)"
+msgstr "Безоблачно (Ночь)"
+
+#: ../ui/main.qml:555
+msgid "Sunny"
+msgstr "Солнечно"
+
+#: ../ui/main.qml:557
+msgid "Fair (Night)"
+msgstr "Ясно (Ночь)"
+
+#: ../ui/main.qml:559
+msgid "Fair (Day)"
+msgstr "Ясно (День)"
+
+#: ../ui/main.qml:561
+msgid "Mixed Rain and Hail"
+msgstr "Дождь с градом"
+
+#: ../ui/main.qml:563
+msgid "Hot"
+msgstr "Жарко"
+
+#: ../ui/main.qml:565
+msgid "Isolated Thunderstorms"
+msgstr "Местами грозы"
+
+#: ../ui/main.qml:568
+msgid "Scattered Thunderstorms"
+msgstr "Переменные грозы"
+
+#: ../ui/main.qml:570
+msgid "Scattered Showers"
+msgstr "Дожди"
+
+#: ../ui/main.qml:573
+msgid "Heavy Snow"
+msgstr "Сильный снегопад"
+
+#: ../ui/main.qml:575
+msgid "Scattered Snow Showers"
+msgstr "Переменные снегопады"
+
+#: ../ui/main.qml:577
+msgid "Partly Cloudy"
+msgstr "Небольшая облачность"
+
+#: ../ui/main.qml:579
+msgid "Thundershowers"
+msgstr "Грозовые ливни"
+
+#: ../ui/main.qml:581
+msgid "Snow Showers"
+msgstr "Снегопады"
+
+#: ../ui/main.qml:583
+msgid "Isolated Thundershowers"
+msgstr "Местами грозовые ливни"
+
+#: ../ui/main.qml:585
+msgid "Not Available"
+msgstr "Недоступно"
+
+#: ../ui/main.qml:599
+msgid "Yahoo! Weather Widget"
+msgstr "Погодный виджет Yahoo!"
+
+#: ../ui/Yahoo.qml:122
+msgid "Error 1. Please check your network."
+msgstr "Ошибка 1. Пожалуйста, проверьте Вашу сеть"
+
+#: ../ui/Yahoo.qml:190
+msgid "Sunday"
+msgstr "Воскресенье"
+
+#: ../ui/Yahoo.qml:192
+msgid "Monday"
+msgstr "Понедельник"
+
+#: ../ui/Yahoo.qml:194
+msgid "Tuesday"
+msgstr "Вторник"
+
+#: ../ui/Yahoo.qml:196
+msgid "Wednesday"
+msgstr "Среда"
+
+#: ../ui/Yahoo.qml:198
+msgid "Thursday"
+msgstr "Четверг"
+
+#: ../ui/Yahoo.qml:200
+msgid "Friday"
+msgstr "Пятница"
+
+#: ../ui/Yahoo.qml:202
+msgid "Saturday"
+msgstr "Суббота"
+
+#: rc.js:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Ваши имена"
 
-#: rc.js:47
+#: rc.js:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Ваши e-mail"
+
+#~ msgid ""
+#~ "<html><head/><body><p>To find your city's WOEID.</p><p>Go to http://"
+#~ "zourbuth.com/tools/woeid/ <br />Type in your city's zip code or name or "
+#~ "landmark.<br />Then click Lookup.</p></body></html>"
+#~ msgstr ""
+#~ "<html><head/><body><p>Чтобы найти WOEID Вашего города,</p><p> по адресу "
+#~ "http://zourbuth.com/tools/woeid/ <br />Наберите zip-код или название "
+#~ "Вашего города<br />Затем нажмите Lookup.</p></body></html>"
 
 #~ msgid "Degrees Unit"
 #~ msgstr "Единицы измерения"

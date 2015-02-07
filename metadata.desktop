@@ -1,6 +1,8 @@
 [Desktop Entry]
 Name=Yahoo! Weather Widget
-Comment=A Simple Weather Monitor and Forecast Widget Written in QML.
+Name[bg]=Yahoo джаджа
+Comment=A Simple Weather Monitor.
+Comment[bg]=Джада за времето
 Encoding=UTF-8
 Icon=weather-clouds
 ServiceTypes=Plasma/Applet, Plasma/PopupApplet

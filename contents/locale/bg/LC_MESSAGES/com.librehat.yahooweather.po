@@ -1,346 +1,340 @@
 # plasma-applet-yahooweather language translation file.
-# Copyright (C) 2014 William Wong
+# Copyright (C) 2014 Symeon Huang
 # This file is distributed under the same license as the plasma-applet-yahooweather package.
-#
+# 
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.3.2\n"
+"Project-Id-Version: 5.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-07 11:19+0200\n"
-"PO-Revision-Date: 2014-10-11 12:00+0100\n"
-"Last-Translator: Dr Boczek <dr.boczek@gmail.com>\n"
-"Language-Team: POLSKI\n"
-"Language: pl\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <bvbfan@abv.bg>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../ui/ConfigGeneral.qml:26
 msgid "WOEID"
-msgstr ""
+msgstr "WOEID"
 
 #: ../ui/ConfigGeneral.qml:34
 msgid ""
 "Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
 "to find your city's WOEID"
 msgstr ""
+"Посетете <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
+", за да видите WOEID на вашият град"
 
 #: ../ui/ConfigGeneral.qml:41
 msgid "Update Interval"
-msgstr ""
+msgstr "Интервал на обновяване"
 
 #: ../ui/ConfigUnit.qml:27
-#, fuzzy
 msgid "Temperature Unit"
-msgstr "Jednostka stopni"
+msgstr "Мерна единица за температура"
 
 #: ../ui/ConfigUnit.qml:37
 msgid "Celsius"
-msgstr "Celcjusza"
+msgstr "Целзии"
 
 #: ../ui/ConfigUnit.qml:43
 msgid "Fahrenheit"
-msgstr "Faranhait"
+msgstr "Фаренхайт"
 
 #: ../ui/ConfigUnit.qml:50
-#, fuzzy
 msgid "Wind Unit"
-msgstr "Jednostka stopni"
+msgstr "Мерна единица за вятър"
 
 #: ../ui/ConfigUnit.qml:60
 msgid "m/s"
-msgstr ""
+msgstr "м/с"
 
 #: ../ui/ConfigUnit.qml:66
 msgid "Km/h"
-msgstr ""
+msgstr "км/ч"
 
 #: ../ui/main.qml:94
 msgid "YAHOO! Weather"
-msgstr "Yahoo! Pogoda"
+msgstr "YAHOO! Weather"
 
 #: ../ui/main.qml:119
 msgid "Sunrise"
-msgstr "Wschód"
+msgstr "Изгрев"
 
 #: ../ui/main.qml:119
 msgid "Sunset"
-msgstr "Zachód"
+msgstr "Залез"
 
 #: ../ui/main.qml:152
 msgid "Feels like"
-msgstr "Odczuwalna"
+msgstr "Усеща се като"
 
 #: ../ui/main.qml:152
 msgid "Visibility"
-msgstr "Widoczność"
+msgstr "Видимост"
 
 #: ../ui/main.qml:152
 msgid "NULL"
-msgstr "BRAK"
+msgstr "Нищо"
 
 #: ../ui/main.qml:158
 msgid "Humidity"
-msgstr "Wilgotność"
+msgstr "Влажност"
 
 #: ../ui/main.qml:158
 msgid "Pressure"
-msgstr "Ciśnienie"
+msgstr "Налягане"
 
 #: ../ui/main.qml:164
 msgid "UV Index"
-msgstr "Indeks UV"
+msgstr "УВ индекс"
 
 #: ../ui/main.qml:164
 msgid "Wind"
-msgstr "Wiatr"
+msgstr "Вятър"
 
 #: ../ui/main.qml:178
 msgid "Today"
-msgstr "Dzisiaj"
+msgstr "Днес"
 
 #: ../ui/main.qml:185
 msgid "Tomorrow"
-msgstr "Jutro"
+msgstr "Утре"
 
 #: ../ui/main.qml:383 ../ui/Yahoo.qml:182
 msgid "Error 2. WOEID may be invalid."
-msgstr "Error 2. Niewłaściwy numer WOEID"
+msgstr "Грешка 2. WOEID не е валиден"
 
 #: ../ui/main.qml:492
 msgid "Tornado"
-msgstr "Tornado"
+msgstr "Торнадо"
 
 #: ../ui/main.qml:494
 msgid "Tropical Storm"
-msgstr "Sztorm tropikalny"
+msgstr "Тропическа буря"
 
 #: ../ui/main.qml:496
 msgid "Hurricane"
-msgstr "Huragan"
+msgstr "Ураган"
 
 #: ../ui/main.qml:498
 msgid "Severe Thunderstorms"
-msgstr "Silne burze"
+msgstr "Сериозни гръмотевици"
 
 #: ../ui/main.qml:500
 msgid "Thunderstorms"
-msgstr "Burze"
+msgstr "Гръмотевици"
 
 #: ../ui/main.qml:502
 msgid "Mixed Rain and Snow"
-msgstr "Deszcz ze śniegiem"
+msgstr "Дъжд примесен със сняг"
 
 #: ../ui/main.qml:504
 msgid "Mixed Rain and Sleet"
-msgstr "Deszcz i gołoledź"
+msgstr "Дъжд примесен със суграшица"
 
 #: ../ui/main.qml:506
 msgid "Mixed Snow and Sleet"
-msgstr "Śnieg i gołoledź"
+msgstr "Сняг примесен със суграшица"
 
 #: ../ui/main.qml:508
 msgid "Freezing Drizzle"
-msgstr "Ślisko i mżawka"
+msgstr "Леден ръмеж"
 
 #: ../ui/main.qml:510
 msgid "Drizzle"
-msgstr "Mżawka"
+msgstr "Ръмеж"
 
 #: ../ui/main.qml:512
 msgid "Freezing Rain"
-msgstr "Oblodzenia"
+msgstr "Леден дъжд"
 
 #: ../ui/main.qml:515
 msgid "Showers"
-msgstr "Przelotny deszcz"
+msgstr "Дъжд"
 
 #: ../ui/main.qml:517
 msgid "Snow Flurries"
-msgstr "Ulewny deszcz"
+msgstr "Снежни вихрушки"
 
 #: ../ui/main.qml:519
 msgid "Light Snow Showers"
-msgstr "Deszczowo z przejaśnieniami"
+msgstr "Леки снежни вихрушки"
 
 #: ../ui/main.qml:521
 msgid "Blowing Snow"
-msgstr "Przelotny śnieg"
+msgstr "Снежна виелица"
 
 #: ../ui/main.qml:523
 msgid "Snow"
-msgstr "Śnieg"
+msgstr "Сняг"
 
 #: ../ui/main.qml:525
 msgid "Hail"
-msgstr "Grad"
+msgstr "Градушка"
 
 #: ../ui/main.qml:527
 msgid "Sleet"
-msgstr "Deszcz ze śniegiem"
+msgstr "Суграшица"
 
 #: ../ui/main.qml:529
 msgid "Dust"
-msgstr "Zamieć"
+msgstr "Прашно"
 
 #: ../ui/main.qml:531
 msgid "Foggy"
-msgstr "Mgliście"
+msgstr "Мъгливо"
 
 #: ../ui/main.qml:533
 msgid "Haze"
-msgstr "Niweleka mgła"
+msgstr "Мараня"
 
 #: ../ui/main.qml:535
 msgid "Smoky"
-msgstr "Widoczność słaba"
+msgstr "Замъглено"
 
 #: ../ui/main.qml:537
 msgid "Blustery"
-msgstr "Widoczność dobra"
+msgstr "Буреносно"
 
 #: ../ui/main.qml:539
 msgid "Windy"
-msgstr "Wietrznie"
+msgstr "Ветровито"
 
 #: ../ui/main.qml:541
 msgid "Cold"
-msgstr "Zimno"
+msgstr "Студено"
 
 #: ../ui/main.qml:543
 msgid "Cloudy"
-msgstr "Zachurzenie duże"
+msgstr "Облачно"
 
 #: ../ui/main.qml:545
 msgid "Mostly Cloudy (Night)"
-msgstr "Zachmurzenie (noc)"
+msgstr "Предимно облачно (нощ)"
 
 #: ../ui/main.qml:547
 msgid "Mostly Cloudy (Day)"
-msgstr "Zachmurzenie (dzień)"
+msgstr "Предимно облачно (ден)"
 
 #: ../ui/main.qml:549
 msgid "Partly Cloudy (Night)"
-msgstr "Częściowe zachmurzenie (noc)"
+msgstr "Разкъсана облачност (нощ)"
 
 #: ../ui/main.qml:551
 msgid "Partly Cloudy (Day)"
-msgstr "Częściowe zachmurzenie (dzień)"
+msgstr "Разкъсана облачност (ден)"
 
 #: ../ui/main.qml:553
 msgid "Clear (Night)"
-msgstr "Noc pogodna"
+msgstr "Ясно (нощ)"
 
 #: ../ui/main.qml:555
 msgid "Sunny"
-msgstr "Słonecznie"
+msgstr "Слънчево"
 
 #: ../ui/main.qml:557
 msgid "Fair (Night)"
-msgstr "Noc pogodna"
+msgstr "Спокойно (нощ)"
 
 #: ../ui/main.qml:559
 msgid "Fair (Day)"
-msgstr "Dzień pogodny"
+msgstr "Спокойно (ден)"
 
 #: ../ui/main.qml:561
 msgid "Mixed Rain and Hail"
-msgstr "Deszcz i silny wiatr"
+msgstr "Дъжд примесен с градушка"
 
 #: ../ui/main.qml:563
 msgid "Hot"
-msgstr "Gorąco"
+msgstr "Горещо"
 
 #: ../ui/main.qml:565
 msgid "Isolated Thunderstorms"
-msgstr "Miejscowe burze"
+msgstr "Изолирани гръмотевични бури"
 
 #: ../ui/main.qml:568
 msgid "Scattered Thunderstorms"
-msgstr "Gdzieniegdzie burze"
+msgstr "Гръмотевични бури"
 
 #: ../ui/main.qml:570
 msgid "Scattered Showers"
-msgstr "Częściowe opady"
+msgstr "Проливни дъждове"
 
 #: ../ui/main.qml:573
 msgid "Heavy Snow"
-msgstr "Silne opady śniegu"
+msgstr "Силен снеговълеж"
 
 #: ../ui/main.qml:575
 msgid "Scattered Snow Showers"
-msgstr "Słabe opady śniegu"
+msgstr "Обилни снеговалежи"
 
 #: ../ui/main.qml:577
 msgid "Partly Cloudy"
-msgstr "Częściowe zachmurzenie"
+msgstr "Разкъсана облачност"
 
 #: ../ui/main.qml:579
 msgid "Thundershowers"
-msgstr "Zamieć"
+msgstr "Превалявания с гръмотевици"
 
 #: ../ui/main.qml:581
 msgid "Snow Showers"
-msgstr "Opady śniegu"
+msgstr "Снеговълеж"
 
 #: ../ui/main.qml:583
 msgid "Isolated Thundershowers"
-msgstr "Przelotne opady śniegu"
+msgstr "Изолирани превалявания с гръмотевици"
 
 #: ../ui/main.qml:585
 msgid "Not Available"
-msgstr "Brak informacji"
+msgstr "Не е налично"
 
 #: ../ui/main.qml:599
 msgid "Yahoo! Weather Widget"
-msgstr "Yahoo! Widżet Pogodowy"
+msgstr "Yahoo! Weather Widget"
 
 #: ../ui/Yahoo.qml:122
 msgid "Error 1. Please check your network."
-msgstr "Error 1. Spradź połączenie sieciowe"
+msgstr "Грешка 1. Моля, проверете интернет връзката."
 
 #: ../ui/Yahoo.qml:190
 msgid "Sunday"
-msgstr "Niedziela"
+msgstr "Неделя"
 
 #: ../ui/Yahoo.qml:192
 msgid "Monday"
-msgstr "Poniedziałek"
+msgstr "Понеделник"
 
 #: ../ui/Yahoo.qml:194
 msgid "Tuesday"
-msgstr "Wtorek"
+msgstr "Вторник"
 
 #: ../ui/Yahoo.qml:196
 msgid "Wednesday"
-msgstr "Środa"
+msgstr "Сряда"
 
 #: ../ui/Yahoo.qml:198
 msgid "Thursday"
-msgstr "Czwartek"
+msgstr "Четвъртък"
 
 #: ../ui/Yahoo.qml:200
 msgid "Friday"
-msgstr "Piątek"
+msgstr "Петък"
 
 #: ../ui/Yahoo.qml:202
 msgid "Saturday"
-msgstr "Sobota"
+msgstr "Събота"
 
 #: rc.js:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Антони Фиерони"
 
 #: rc.js:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
-
-#~ msgid "Where On Earth ID"
-#~ msgstr "Wymagany Earth ID"
-
-#~ msgid "Degrees Unit"
-#~ msgstr "Jednostka stopni"
+msgstr "bvbfan@abv.bg"
