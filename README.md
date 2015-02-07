@@ -6,9 +6,10 @@ This widget is written in pure QML. Enjoy it!
 Dependency
 =====
 
-- KDE >= 4.10
+- plasmashell (plasma 5)
 
 Installation
 =====
 
-Use Plasma Desktop Shell's **Get Hot New Stuff**.
+./mkplasmoid.sh
+plasmapkg2 -i /$HOME/com.librehat.yahooweather-5.0.0.plasmoid

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-18 17:00+0000\n"
+"POT-Creation-Date: 2015-02-07 11:19+0200\n"
 "PO-Revision-Date: 2014-07-05 00:44+0100\n"
 "Last-Translator: spyder <ghostdarkhid@gmail.com>\n"
 "Language-Team: French <kde-i18n-it@kde.org>\n"
@@ -19,380 +19,340 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 1.6.5\n"
 
-#: ../ui/main.qml:99
-msgid "YAHOO! Weather"
-msgstr "YAHOO! Météo"
-
-#: ../ui/main.qml:124
-msgid "Sunrise"
-msgstr "Lever"
-
-#: ../ui/main.qml:124
-msgid "Sunset"
-msgstr "Coucher"
-
-#: ../ui/main.qml:151
-msgid "Feels like"
-msgstr "Indice de chaleur"
-
-#: ../ui/main.qml:151
-msgid "Visibility"
-msgstr "Visibilité"
-
-#: ../ui/main.qml:151
-msgid "NULL"
-msgstr "NULL"
-
-#: ../ui/main.qml:157
-msgid "Humidity"
-msgstr "Humidité"
-
-#: ../ui/main.qml:157
-msgid "Pressure"
-msgstr "Pression"
-
-#: ../ui/main.qml:163
-msgid "UV Index"
-msgstr "Indice UV"
-
-#: ../ui/main.qml:163
-msgid "Wind"
-msgstr "Vent"
-
-#: ../ui/main.qml:177
-msgid "Today"
-msgstr "Aujourd'hui"
-
-#: ../ui/main.qml:184
-msgid "Tomorrow"
-msgstr "Demain"
-
-#: ../ui/main.qml:352 ../ui/Yahoo.qml:181
-msgid "Error 2. WOEID may be invalid."
-msgstr "Erreur 2. L'WOEID peut ne pas être correcte."
-
-#: ../ui/main.qml:452
-msgid "Tornado"
-msgstr "Tornade"
-
-#: ../ui/main.qml:454
-msgid "Tropical Storm"
-msgstr "Tempête Tropicale"
-
-#: ../ui/main.qml:456
-msgid "Hurricane"
-msgstr "Ouragan"
-
-#: ../ui/main.qml:458
-msgid "Severe Thunderstorms"
-msgstr " Forte Tempête"
-
-#: ../ui/main.qml:460
-msgid "Thunderstorms"
-msgstr "Orages"
-
-#: ../ui/main.qml:462
-msgid "Mixed Rain and Snow"
-msgstr "Pluie et neige"
-
-#: ../ui/main.qml:464
-msgid "Mixed Rain and Sleet"
-msgstr "Pluie et Grésil"
-
-#: ../ui/main.qml:466
-msgid "Mixed Snow and Sleet"
-msgstr "Neige et Grésil"
-
-#: ../ui/main.qml:468
-msgid "Freezing Drizzle"
-msgstr "Pluie fine Verglaçante"
-
-#: ../ui/main.qml:470
-msgid "Drizzle"
-msgstr "Pluie fine"
-
-#: ../ui/main.qml:472
-msgid "Freezing Rain"
-msgstr "Pluie Verglaçante"
-
-#: ../ui/main.qml:475
-msgid "Showers"
-msgstr "Averses"
-
-#: ../ui/main.qml:477
-msgid "Snow Flurries"
-msgstr "Neige Fondue"
-
-#: ../ui/main.qml:479
-msgid "Light Snow Showers"
-msgstr "Averses de neige légère"
-
-#: ../ui/main.qml:481
-msgid "Blowing Snow"
-msgstr "Averses de neige"
-
-#: ../ui/main.qml:483
-msgid "Snow"
-msgstr "Neige"
-
-#: ../ui/main.qml:485
-msgid "Hail"
-msgstr "Grêle"
-
-#: ../ui/main.qml:487
-msgid "Sleet"
-msgstr "Neige fondue"
-
-#: ../ui/main.qml:489
-msgid "Dust"
-msgstr "Poussière"
-
-#: ../ui/main.qml:491
-msgid "Foggy"
-msgstr "Brouillard"
-
-#: ../ui/main.qml:493
-msgid "Haze"
-msgstr "Brume"
-
-#: ../ui/main.qml:495
-msgid "Smoky"
-msgstr "Enfumé"
-
-#: ../ui/main.qml:497
-msgid "Blustery"
-msgstr "Orageux"
-
-#: ../ui/main.qml:499
-msgid "Windy"
-msgstr "Venteux"
-
-#: ../ui/main.qml:501
-msgid "Cold"
-msgstr "Froid"
-
-#: ../ui/main.qml:503
-msgid "Cloudy"
-msgstr "Nuageux"
-
-#: ../ui/main.qml:505
-msgid "Mostly Cloudy (Night)"
-msgstr "Très nuageux (nuit)"
-
-#: ../ui/main.qml:507
-msgid "Mostly Cloudy (Day)"
-msgstr "Très nuageux (jour)"
-
-#: ../ui/main.qml:509
-msgid "Partly Cloudy (Night)"
-msgstr "Partiellement nuageux (nuit)"
-
-#: ../ui/main.qml:511
-msgid "Partly Cloudy (Day)"
-msgstr "Partiellement nuageux (jour)"
-
-#: ../ui/main.qml:513
-msgid "Clear (Night)"
-msgstr "Ciel dégagé (Nuit)"
-
-#: ../ui/main.qml:515
-msgid "Sunny"
-msgstr "Ensoleillé"
-
-#: ../ui/main.qml:517
-msgid "Fair (Night)"
-msgstr "Clair (Nuit)"
-
-#: ../ui/main.qml:519
-msgid "Fair (Day)"
-msgstr "Clair (Jour)"
-
-#: ../ui/main.qml:521
-msgid "Mixed Rain and Hail"
-msgstr "Pluie et Grêle"
-
-#: ../ui/main.qml:523
-msgid "Hot"
-msgstr "Chaud"
-
-#: ../ui/main.qml:525
-msgid "Isolated Thunderstorms"
-msgstr "Orages isolés"
-
-#: ../ui/main.qml:528
-msgid "Scattered Thunderstorms"
-msgstr "Nuages épars"
-
-#: ../ui/main.qml:530
-msgid "Scattered Showers"
-msgstr "Averses éparsses"
-
-#: ../ui/main.qml:533
-msgid "Heavy Snow"
-msgstr "Fortes chutes de neige"
-
-#: ../ui/main.qml:535
-msgid "Scattered Snow Showers"
-msgstr "Averses de neige"
-
-#: ../ui/main.qml:537
-msgid "Partly Cloudy"
-msgstr "Partiellement Nuageux"
-
-#: ../ui/main.qml:539
-msgid "Thundershowers"
-msgstr "Averses"
-
-#: ../ui/main.qml:541
-msgid "Snow Showers"
-msgstr "Chute de Neige"
-
-#: ../ui/main.qml:543
-msgid "Isolated Thundershowers"
-msgstr "Averses Isolées"
-
-#: ../ui/main.qml:545
-msgid "Not Available"
-msgstr "Non disponibile"
-
-#: ../ui/main.qml:571
-msgid "Yahoo! Weather Widget"
-msgstr "Yahoo! Widget Météo"
-
-#: ../ui/Yahoo.qml:121
-msgid "Error 1. Please check your network."
-msgstr "Erreur 1. Vérifiez votre connexion"
-
-#: ../ui/Yahoo.qml:189
-msgid "Sunday"
-msgstr "Dimanche"
-
-#: ../ui/Yahoo.qml:191
-msgid "Monday"
-msgstr "Lundi"
-
-#: ../ui/Yahoo.qml:193
-msgid "Tuesday"
-msgstr "Mardi"
-
-#: ../ui/Yahoo.qml:195
-msgid "Wednesday"
-msgstr "Mercredi"
-
-#: ../ui/Yahoo.qml:197
-msgid "Thursday"
-msgstr "Jeudi"
-
-#: ../ui/Yahoo.qml:199
-msgid "Friday"
-msgstr "Vendredi"
-
-#: ../ui/Yahoo.qml:201
-msgid "Saturday"
-msgstr "Samedi"
-
-#. i18n: file: ../ui/config.ui:23
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_fahrenheit)
-#: rc.js:3
-msgid "Fahrenheit"
-msgstr "Fahrenheit"
-
-#. i18n: file: ../ui/config.ui:26
-#. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_fahrenheit)
-#. i18n: file: ../ui/config.ui:59
-#. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_celsius)
-#: rc.js:6 rc.js:21
-msgid "degreeGroup"
+#: ../ui/ConfigGeneral.qml:26
+msgid "WOEID"
+msgstr "WOEID"
+
+#: ../ui/ConfigGeneral.qml:34
+msgid ""
+"Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
+"to find your city's WOEID"
 msgstr ""
 
-#. i18n: file: ../ui/config.ui:33
-#. i18n: ectx: property (text), widget (QLabel, label_unit)
-#: rc.js:9
+#: ../ui/ConfigGeneral.qml:41
+msgid "Update Interval"
+msgstr ""
+
+#: ../ui/ConfigUnit.qml:27
 #, fuzzy
 msgid "Temperature Unit"
 msgstr "Unité Degrés"
 
-#. i18n: file: ../ui/config.ui:40
-#. i18n: ectx: property (toolTip), widget (QLabel, label_woeid)
-#: rc.js:12
-msgid "Where On Earth ID"
-msgstr "Ou se trouve l'ID de localisation"
-
-#. i18n: file: ../ui/config.ui:46
-#. i18n: ectx: property (text), widget (QLabel, label_woeid)
-#: rc.js:15
-msgid "WOEID"
-msgstr "WOEID"
-
-#. i18n: file: ../ui/config.ui:53
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_celsius)
-#: rc.js:18
+#: ../ui/ConfigUnit.qml:37
 msgid "Celsius"
 msgstr "Celsius"
 
-#. i18n: file: ../ui/config.ui:66
-#. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_woeid)
-#: rc.js:24
-msgid ""
-"<html><head/><body><p>To find your city's WOEID.</p><p>Go to http://zourbuth."
-"com/tools/woeid/ <br />Type in your city's zip code or name or landmark.<br /"
-">Then click Lookup.</p></body></html>"
-msgstr ""
-"<html> <head/> <body> <p> Pour trouver le WOEID votre ville: </ p> Aller à "
-"http://zourbuth.com/tools/woeid/» <br /> Entrez votre code postal de votre "
-"ville, ou le nom de la région. <br /> Puis cliquez sur Recherche. </ p> </ "
-"body> </ html>"
+#: ../ui/ConfigUnit.qml:43
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
 
-#. i18n: file: ../ui/config.ui:85
-#. i18n: ectx: property (text), widget (QLabel, label_sunit)
-#: rc.js:27
+#: ../ui/ConfigUnit.qml:50
 #, fuzzy
-msgid "Speed Unit"
+msgid "Wind Unit"
 msgstr "Unité Degrés"
 
-#. i18n: file: ../ui/config.ui:92
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_ms)
-#: rc.js:30
+#: ../ui/ConfigUnit.qml:60
 msgid "m/s"
 msgstr ""
 
-#. i18n: file: ../ui/config.ui:95
-#. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_ms)
-#. i18n: file: ../ui/config.ui:105
-#. i18n: ectx: attribute (buttonGroup), widget (QRadioButton, kcfg_kmh)
-#: rc.js:33 rc.js:39
-msgid "speedGroup"
+#: ../ui/ConfigUnit.qml:66
+msgid "Km/h"
 msgstr ""
 
-#. i18n: file: ../ui/config.ui:102
-#. i18n: ectx: property (text), widget (QRadioButton, kcfg_kmh)
-#: rc.js:36
-msgid "km/h"
-msgstr ""
+#: ../ui/main.qml:94
+msgid "YAHOO! Weather"
+msgstr "YAHOO! Météo"
 
-#. i18n: file: ../ui/config.ui:112
-#. i18n: ectx: property (text), widget (QLabel, label_interval)
-#: rc.js:42
-msgid "Update Interval"
-msgstr ""
+#: ../ui/main.qml:119
+msgid "Sunrise"
+msgstr "Lever"
 
-#. i18n: file: ../ui/config.ui:119
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_interval)
-#: rc.js:45
-msgid ""
-"<html><head/><body><p>The frequency of updating weather data.</p><p>Unit: "
-"minute.</p></body></html>"
-msgstr ""
+#: ../ui/main.qml:119
+msgid "Sunset"
+msgstr "Coucher"
 
-#: rc.js:46
+#: ../ui/main.qml:152
+msgid "Feels like"
+msgstr "Indice de chaleur"
+
+#: ../ui/main.qml:152
+msgid "Visibility"
+msgstr "Visibilité"
+
+#: ../ui/main.qml:152
+msgid "NULL"
+msgstr "NULL"
+
+#: ../ui/main.qml:158
+msgid "Humidity"
+msgstr "Humidité"
+
+#: ../ui/main.qml:158
+msgid "Pressure"
+msgstr "Pression"
+
+#: ../ui/main.qml:164
+msgid "UV Index"
+msgstr "Indice UV"
+
+#: ../ui/main.qml:164
+msgid "Wind"
+msgstr "Vent"
+
+#: ../ui/main.qml:178
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#: ../ui/main.qml:185
+msgid "Tomorrow"
+msgstr "Demain"
+
+#: ../ui/main.qml:383 ../ui/Yahoo.qml:182
+msgid "Error 2. WOEID may be invalid."
+msgstr "Erreur 2. L'WOEID peut ne pas être correcte."
+
+#: ../ui/main.qml:492
+msgid "Tornado"
+msgstr "Tornade"
+
+#: ../ui/main.qml:494
+msgid "Tropical Storm"
+msgstr "Tempête Tropicale"
+
+#: ../ui/main.qml:496
+msgid "Hurricane"
+msgstr "Ouragan"
+
+#: ../ui/main.qml:498
+msgid "Severe Thunderstorms"
+msgstr " Forte Tempête"
+
+#: ../ui/main.qml:500
+msgid "Thunderstorms"
+msgstr "Orages"
+
+#: ../ui/main.qml:502
+msgid "Mixed Rain and Snow"
+msgstr "Pluie et neige"
+
+#: ../ui/main.qml:504
+msgid "Mixed Rain and Sleet"
+msgstr "Pluie et Grésil"
+
+#: ../ui/main.qml:506
+msgid "Mixed Snow and Sleet"
+msgstr "Neige et Grésil"
+
+#: ../ui/main.qml:508
+msgid "Freezing Drizzle"
+msgstr "Pluie fine Verglaçante"
+
+#: ../ui/main.qml:510
+msgid "Drizzle"
+msgstr "Pluie fine"
+
+#: ../ui/main.qml:512
+msgid "Freezing Rain"
+msgstr "Pluie Verglaçante"
+
+#: ../ui/main.qml:515
+msgid "Showers"
+msgstr "Averses"
+
+#: ../ui/main.qml:517
+msgid "Snow Flurries"
+msgstr "Neige Fondue"
+
+#: ../ui/main.qml:519
+msgid "Light Snow Showers"
+msgstr "Averses de neige légère"
+
+#: ../ui/main.qml:521
+msgid "Blowing Snow"
+msgstr "Averses de neige"
+
+#: ../ui/main.qml:523
+msgid "Snow"
+msgstr "Neige"
+
+#: ../ui/main.qml:525
+msgid "Hail"
+msgstr "Grêle"
+
+#: ../ui/main.qml:527
+msgid "Sleet"
+msgstr "Neige fondue"
+
+#: ../ui/main.qml:529
+msgid "Dust"
+msgstr "Poussière"
+
+#: ../ui/main.qml:531
+msgid "Foggy"
+msgstr "Brouillard"
+
+#: ../ui/main.qml:533
+msgid "Haze"
+msgstr "Brume"
+
+#: ../ui/main.qml:535
+msgid "Smoky"
+msgstr "Enfumé"
+
+#: ../ui/main.qml:537
+msgid "Blustery"
+msgstr "Orageux"
+
+#: ../ui/main.qml:539
+msgid "Windy"
+msgstr "Venteux"
+
+#: ../ui/main.qml:541
+msgid "Cold"
+msgstr "Froid"
+
+#: ../ui/main.qml:543
+msgid "Cloudy"
+msgstr "Nuageux"
+
+#: ../ui/main.qml:545
+msgid "Mostly Cloudy (Night)"
+msgstr "Très nuageux (nuit)"
+
+#: ../ui/main.qml:547
+msgid "Mostly Cloudy (Day)"
+msgstr "Très nuageux (jour)"
+
+#: ../ui/main.qml:549
+msgid "Partly Cloudy (Night)"
+msgstr "Partiellement nuageux (nuit)"
+
+#: ../ui/main.qml:551
+msgid "Partly Cloudy (Day)"
+msgstr "Partiellement nuageux (jour)"
+
+#: ../ui/main.qml:553
+msgid "Clear (Night)"
+msgstr "Ciel dégagé (Nuit)"
+
+#: ../ui/main.qml:555
+msgid "Sunny"
+msgstr "Ensoleillé"
+
+#: ../ui/main.qml:557
+msgid "Fair (Night)"
+msgstr "Clair (Nuit)"
+
+#: ../ui/main.qml:559
+msgid "Fair (Day)"
+msgstr "Clair (Jour)"
+
+#: ../ui/main.qml:561
+msgid "Mixed Rain and Hail"
+msgstr "Pluie et Grêle"
+
+#: ../ui/main.qml:563
+msgid "Hot"
+msgstr "Chaud"
+
+#: ../ui/main.qml:565
+msgid "Isolated Thunderstorms"
+msgstr "Orages isolés"
+
+#: ../ui/main.qml:568
+msgid "Scattered Thunderstorms"
+msgstr "Nuages épars"
+
+#: ../ui/main.qml:570
+msgid "Scattered Showers"
+msgstr "Averses éparsses"
+
+#: ../ui/main.qml:573
+msgid "Heavy Snow"
+msgstr "Fortes chutes de neige"
+
+#: ../ui/main.qml:575
+msgid "Scattered Snow Showers"
+msgstr "Averses de neige"
+
+#: ../ui/main.qml:577
+msgid "Partly Cloudy"
+msgstr "Partiellement Nuageux"
+
+#: ../ui/main.qml:579
+msgid "Thundershowers"
+msgstr "Averses"
+
+#: ../ui/main.qml:581
+msgid "Snow Showers"
+msgstr "Chute de Neige"
+
+#: ../ui/main.qml:583
+msgid "Isolated Thundershowers"
+msgstr "Averses Isolées"
+
+#: ../ui/main.qml:585
+msgid "Not Available"
+msgstr "Non disponibile"
+
+#: ../ui/main.qml:599
+msgid "Yahoo! Weather Widget"
+msgstr "Yahoo! Widget Météo"
+
+#: ../ui/Yahoo.qml:122
+msgid "Error 1. Please check your network."
+msgstr "Erreur 1. Vérifiez votre connexion"
+
+#: ../ui/Yahoo.qml:190
+msgid "Sunday"
+msgstr "Dimanche"
+
+#: ../ui/Yahoo.qml:192
+msgid "Monday"
+msgstr "Lundi"
+
+#: ../ui/Yahoo.qml:194
+msgid "Tuesday"
+msgstr "Mardi"
+
+#: ../ui/Yahoo.qml:196
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#: ../ui/Yahoo.qml:198
+msgid "Thursday"
+msgstr "Jeudi"
+
+#: ../ui/Yahoo.qml:200
+msgid "Friday"
+msgstr "Vendredi"
+
+#: ../ui/Yahoo.qml:202
+msgid "Saturday"
+msgstr "Samedi"
+
+#: rc.js:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Spyder"
 
-#: rc.js:47
+#: rc.js:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ghostdarkhid@gmail.com"
+
+#~ msgid "Where On Earth ID"
+#~ msgstr "Ou se trouve l'ID de localisation"
+
+#~ msgid ""
+#~ "<html><head/><body><p>To find your city's WOEID.</p><p>Go to http://"
+#~ "zourbuth.com/tools/woeid/ <br />Type in your city's zip code or name or "
+#~ "landmark.<br />Then click Lookup.</p></body></html>"
+#~ msgstr ""
+#~ "<html> <head/> <body> <p> Pour trouver le WOEID votre ville: </ p> Aller "
+#~ "à http://zourbuth.com/tools/woeid/» <br /> Entrez votre code postal de "
+#~ "votre ville, ou le nom de la région. <br /> Puis cliquez sur Recherche. "
+#~ "</ p> </ body> </ html>"
 
 #~ msgid "Degrees Unit"
 #~ msgstr "Unité Degrés"

@@ -177,7 +177,7 @@ Item {
             id: todayLabel
             text: i18n("Today")
             font.weight: Font.DemiBold
-            height: Math.max((dayscol.height - 24) / 5, paintedHeight, theme.defaultFont.mSize.height * 1.6)
+            height: Math.max((dayscol.height - 24)/5, paintedHeight)
             horizontalAlignment: Text.AlignHCenter
         }
 
