@@ -389,21 +389,35 @@ Item {
             running: m_isbusy
         }
     }
+    
+    Timer {
+		id: actions
+		interval: 0
+		running: true
+		repeat: false
+		onTriggered: { action_reload()
+			plasmoid.setAction("reload", i18n("refresh"), "view-refresh")
+		}
+	}
+	
+	function action_reload () {
+        yh.query(plasmoid.configuration.woeid)
+		updateIcon()
+    }
 
     Timer {
         id: timer
         interval: plasmoid.configuration.interval * 60000 //1m=60000ms
         running: false
         repeat: true
-        onTriggered: yh.query(plasmoid.configuration.woeid)
+        onTriggered: action_reload()
     }
 
     Connections {
         target: plasmoid.configuration
         onWoeidChanged: {
-            timer.running = false
             timer.running = true
-            yh.query(plasmoid.configuration.woeid)
+            action_reload()
         }
     }
 
@@ -595,14 +609,18 @@ Item {
 
     function generalTooltip() {
         var toolTip = new Object
-        toolTip["image"] = "weather-clouds"
-        toolTip["mainText"] = i18n("Yahoo! Weather Widget")
+        toolTip["image"] = determineIcon(m_todayCode)
+        toolTip["mainText"] = mainWindow.m_city + " " +
+								mainWindow.m_todayDay;
         plasmoid.popupIconToolTip = toolTip
     }
+    
+    function updateIcon() {
+		plasmoid.popupIcon = determineIcon(m_todayCode)
+		generalTooltip()
+	}
 
     Component.onCompleted: {
-        plasmoid.popupIcon = "weather-clouds"
-        plasmoid.aspectRatioMode = IgnoreAspectRatio
-        generalTooltip()
+        plasmoid.popupIcon = "weather-none-available"
     }
 }
