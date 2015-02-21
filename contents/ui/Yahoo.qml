@@ -119,8 +119,6 @@ Item {
 			yhModel.source = "http://weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol
 			global_woeid = woeid
 		}
-		console.debug(yhModel.source)
-		console.debug("call reload()")
 		yhModel.reload()
     }
     
