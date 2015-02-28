@@ -1,12 +1,12 @@
 /*
- *   Authour: Symeon Huang (librehat) <hzwhuang@gmail.com>
- *   Copyright 2014-2015
- *
- *   This program is free software; you can redistribute it and/or modify
- *   it under the terms of the GNU Library General Public License as
- *   published by the Free Software Foundation; either version 3 or
- *   (at your option) any later version.
- */
+*   Authour: Symeon Huang (librehat) <hzwhuang@gmail.com>
+*   Copyright 2014-2015
+*
+*   This program is free software; you can redistribute it and/or modify
+*   it under the terms of the GNU Library General Public License as
+*   published by the Free Software Foundation; either version 3 or
+*   (at your option) any later version.
+*/
 
 import QtQuick 2.2
 import org.kde.plasma.plasmoid 2.0
@@ -391,18 +391,55 @@ Item {
     }
     
     Timer {
-		id: actions
-		interval: 0
-		running: true
-		repeat: false
-		onTriggered: { action_reload()
-			plasmoid.setAction("reload", i18n("refresh"), "view-refresh")
-		}
-	}
-	
-	function action_reload () {
+        id: actions
+        interval: 0
+        running: true
+        repeat: false
+        onTriggered: { action_reload()
+            plasmoid.setAction("reload", i18n("refresh"), "view-refresh")
+        }
+    }
+    
+    property bool notify: false
+    
+    PlasmaCore.DataSource {
+        id: notifications
+        engine: "notifications"
+        interval: 6000
+    }
+    
+    Timer {
+        id: iconUpdater
+        interval: 1000
+        running: false
+        repeat: mainWindow.m_isbusy
+        onTriggered: {
+            if(!mainWindow.hasdata) {
+                plasmoid.icon = "weather-none-available"
+                plasmoid.toolTipMainText = ""
+                plasmoid.toolTipSubText = ""
+            }
+            else {
+                notify = false
+                plasmoid.icon = determineIcon(m_conditionCode)
+                plasmoid.toolTipMainText = m_city + " " + m_conditionTemp + "°" + m_unitTemperature
+                plasmoid.toolTipSubText = getDescription(m_conditionCode)
+                if(notify) {
+                    var service = notifications.serviceForSource("notification")
+                    var op = service.operationDescription("createNotification")
+                    op["appIcon"] = plasmoid.icon
+                    op["summary"] = plasmoid.toolTipSubText
+                    op["body"] = plasmoid.toolTipMainText
+                    op["timeout"] = 6000
+                    service.startOperationCall(op)
+                }
+            }
+        }
+    }
+    
+    function action_reload () {
         yh.query(plasmoid.configuration.woeid)
-		updateIcon()
+        iconUpdater.running = true
     }
 
     Timer {
@@ -423,6 +460,7 @@ Item {
 
     function determineIcon(code) {
         if (code <= 4) {
+            notify = true
             return "weather-storm"
         }
         else if (code <= 6) {
@@ -444,6 +482,7 @@ Item {
             return "weather-snow"
         }
         else if (code == 17) {
+            notify = true
             return "weather-hail"
         }
         else if (code == 18) {//sleet
@@ -477,9 +516,11 @@ Item {
             return "weather-clear"
         }
         else if (code == 35) {
+            notify = true
             return "weather-hail"
         }
         else if (code <= 40) {
+            notify = true
             return "weather-storm"
         }
         else if (code == 41 || code == 43) {
@@ -492,6 +533,7 @@ Item {
             return "weather-few-clouds"
         }
         else if (code == 45 || code == 47) {
+            notify = true
             return "weather-storm"
         }
         else {
@@ -503,20 +545,27 @@ Item {
         //according to http://developer.yahoo.com/weather/#codes
         switch (conCode) {
             case 0:
+                notify = true
                 return i18n("Tornado")
             case 1:
+                notify = true
                 return i18n("Tropical Storm")
             case 2:
+                notify = true
                 return i18n("Hurricane")
             case 3:
+                notify = true
                 return i18n("Severe Thunderstorms")
             case 4:
+                notify = true
                 return i18n("Thunderstorms")
             case 5:
                 return i18n("Mixed Rain and Snow")
             case 6:
+                notify = true
                 return i18n("Mixed Rain and Sleet")
             case 7:
+                notify = true
                 return i18n("Mixed Snow and Sleet")
             case 8:
                 return i18n("Freezing Drizzle")
@@ -536,8 +585,10 @@ Item {
             case 16:
                 return i18n("Snow")
             case 17:
+                notify = true
                 return i18n("Hail")
             case 18:
+                notify = true
                 return i18n("Sleet")
             case 19:
                 return i18n("Dust")
@@ -572,28 +623,34 @@ Item {
             case 34:
                 return i18n("Fair (Day)")
             case 35:
+                notify = true
                 return i18n("Mixed Rain and Hail")
             case 36:
                 return i18n("Hot")
             case 37:
+                notify = true
                 return i18n("Isolated Thunderstorms")
             case 38://same with 39
             case 39:
+                notify = true
                 return i18n("Scattered Thunderstorms")
             case 40:
                 return i18n("Scattered Showers")
             case 41://same with 43
             case 43:
+                notify = true
                 return i18n("Heavy Snow")
             case 42:
                 return i18n("Scattered Snow Showers")
             case 44:
                 return i18n("Partly Cloudy")
             case 45:
+                notify = true
                 return i18n("Thundershowers")
             case 46:
                 return i18n("Snow Showers")
             case 47:
+                notify = true
                 return i18n("Isolated Thundershowers")
             default://code 3200
                 return i18n("Not Available")
@@ -610,15 +667,9 @@ Item {
     function generalTooltip() {
         var toolTip = new Object
         toolTip["image"] = determineIcon(m_todayCode)
-        toolTip["mainText"] = mainWindow.m_city + " " +
-								mainWindow.m_todayDay;
+        toolTip["mainText"] = getDescription(m_todayCode)
         plasmoid.popupIconToolTip = toolTip
     }
-    
-    function updateIcon() {
-		plasmoid.popupIcon = determineIcon(m_todayCode)
-		generalTooltip()
-	}
 
     Component.onCompleted: {
         plasmoid.popupIcon = "weather-none-available"
