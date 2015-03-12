@@ -43,7 +43,7 @@ Item {
 
             TextField {
                 id: intervalField
-                inputMask: "999"
+                inputMask: "99"
                 inputMethodHints: Qt.ImhDigitsOnly
             }
         }

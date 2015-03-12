@@ -390,22 +390,11 @@ Item {
         }
     }
     
-    Timer {
-        id: actions
-        interval: 0
-        running: true
-        repeat: false
-        onTriggered: { action_reload()
-            plasmoid.setAction("reload", i18n("refresh"), "view-refresh")
-        }
-    }
-    
     property bool notify: false
     
     PlasmaCore.DataSource {
         id: notifications
         engine: "notifications"
-        interval: 6000
     }
     
     Timer {
@@ -436,26 +425,23 @@ Item {
             }
         }
     }
+
+    Timer {
+        id: timer
+        interval: plasmoid.configuration.interval * 60000 //1m=60000ms
+        running: !mainWindow.m_isbusy
+        repeat: true
+        onTriggered: action_reload()
+    }
     
     function action_reload () {
         yh.query(plasmoid.configuration.woeid)
         iconUpdater.running = true
     }
 
-    Timer {
-        id: timer
-        interval: plasmoid.configuration.interval * 60000 //1m=60000ms
-        running: false
-        repeat: true
-        onTriggered: action_reload()
-    }
-
     Connections {
         target: plasmoid.configuration
-        onWoeidChanged: {
-            timer.running = true
-            action_reload()
-        }
+        onWoeidChanged: action_reload()
     }
 
     function determineIcon(code) {
@@ -672,6 +658,7 @@ Item {
     }
 
     Component.onCompleted: {
-        plasmoid.popupIcon = "weather-none-available"
+        plasmoid.setAction("reload", i18n("refresh"), "view-refresh")
+        action_reload()
     }
 }
