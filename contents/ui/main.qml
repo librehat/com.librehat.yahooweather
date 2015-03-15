@@ -125,19 +125,6 @@ Item {
             source: determineIcon(m_conditionCode)
             width: Math.min(conditionCol.height * 1.4, conditionRow.width * 0.5, 256)//don't be too large
             height: width
-
-            MouseArea {
-                anchors.fill: parent
-                hoverEnabled: true
-                onEntered: {
-                    conditionIcon.active = true
-                    updateToolTip(m_conditionCode)
-                }
-                onExited: {
-                    conditionIcon.active = false
-                    generalTooltip()
-                }
-            }
         }
     }
 
@@ -223,19 +210,6 @@ Item {
             source: determineIcon(m_todayCode)
             width: height
             height: todayLabel.height
-
-            MouseArea {
-                anchors.fill: parent
-                hoverEnabled: true
-                onEntered: {
-                    todayIcon.active = true
-                    updateToolTip(m_todayCode)
-                }
-                onExited: {
-                    todayIcon.active = false
-                    generalTooltip()
-                }
-            }
         }
 
         PlasmaCore.IconItem {
@@ -243,19 +217,6 @@ Item {
             source: determineIcon(m_tomorrowCode)
             width: height
             height: todayLabel.height
-
-            MouseArea {
-                anchors.fill: parent
-                hoverEnabled: true
-                onEntered: {
-                    tomorrowIcon.active = true
-                    updateToolTip(m_tomorrowCode)
-                }
-                onExited: {
-                    tomorrowIcon.active = false
-                    generalTooltip()
-                }
-            }
         }
 
         PlasmaCore.IconItem {
@@ -263,19 +224,6 @@ Item {
             source: determineIcon(m_afterTCode)
             width: height
             height: todayLabel.height
-
-            MouseArea {
-                anchors.fill: parent
-                hoverEnabled: true
-                onEntered: {
-                    afterTIcon.active = true
-                    updateToolTip(m_afterTCode)
-                }
-                onExited: {
-                    afterTIcon.active = false
-                    generalTooltip()
-                }
-            }
         }
 
         PlasmaCore.IconItem {
@@ -283,19 +231,6 @@ Item {
             source: determineIcon(m_4Code)
             width: height
             height: todayLabel.height
-
-            MouseArea {
-                anchors.fill: parent
-                hoverEnabled: true
-                onEntered: {
-                    fourIcon.active = true
-                    updateToolTip(m_4Code)
-                }
-                onExited: {
-                    fourIcon.active = false
-                    generalTooltip()
-                }
-            }
         }
 
         PlasmaCore.IconItem {
@@ -303,19 +238,6 @@ Item {
             source: determineIcon(m_5Code)
             width: height
             height: todayLabel.height
-
-            MouseArea {
-                anchors.fill: parent
-                hoverEnabled: true
-                onEntered: {
-                    fiveIcon.active = true
-                    updateToolTip(m_5Code)
-                }
-                onExited: {
-                    fiveIcon.active = false
-                    generalTooltip()
-                }
-            }
         }
     }
 
@@ -641,20 +563,6 @@ Item {
             default://code 3200
                 return i18n("Not Available")
         }
-    }
-
-    function updateToolTip(ttcode) {
-        var toolTip = new Object
-        toolTip["image"] = determineIcon(ttcode)
-        toolTip["mainText"] = getDescription(ttcode)
-        plasmoid.popupIconToolTip = toolTip
-    }
-
-    function generalTooltip() {
-        var toolTip = new Object
-        toolTip["image"] = determineIcon(m_todayCode)
-        toolTip["mainText"] = getDescription(m_todayCode)
-        plasmoid.popupIconToolTip = toolTip
     }
 
     Component.onCompleted: {
