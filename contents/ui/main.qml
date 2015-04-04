@@ -566,7 +566,7 @@ Item {
     }
 
     Component.onCompleted: {
-        plasmoid.setAction("reload", i18n("refresh"), "view-refresh")
+        plasmoid.setAction("reload", i18n("Refresh"), "view-refresh")
         action_reload()
     }
 }
