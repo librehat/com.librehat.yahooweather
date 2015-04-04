@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-31 20:46+0100\n"
+"POT-Creation-Date: 2015-04-04 17:22+0100\n"
 "PO-Revision-Date: 2015-01-23 13:56+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -295,7 +295,7 @@ msgid "Not Available"
 msgstr "Niet beschikbaar"
 
 #: ../ui/main.qml:569
-msgid "refresh"
+msgid "Refresh"
 msgstr ""
 
 #: ../ui/Yahoo.qml:125

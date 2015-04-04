@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 5.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-31 20:46+0100\n"
+"POT-Creation-Date: 2015-04-04 17:22+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <bvbfan@abv.bg>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -294,7 +294,7 @@ msgid "Not Available"
 msgstr "Не е налично"
 
 #: ../ui/main.qml:569
-msgid "refresh"
+msgid "Refresh"
 msgstr ""
 
 #: ../ui/Yahoo.qml:125

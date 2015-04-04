@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-31 20:46+0100\n"
+"POT-Creation-Date: 2015-04-04 17:22+0100\n"
 "PO-Revision-Date: 2015-03-29 14:18+0300\n"
 "Last-Translator: \n"
 "Language-Team: Romanian <kde-i18n-doc@kde.org>\n"
@@ -296,7 +296,7 @@ msgid "Not Available"
 msgstr "Indisponibil"
 
 #: ../ui/main.qml:569
-msgid "refresh"
+msgid "Refresh"
 msgstr ""
 
 #: ../ui/Yahoo.qml:125
