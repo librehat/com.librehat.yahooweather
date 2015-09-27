@@ -9,6 +9,7 @@ Dependency
 =====
 
 - `plasma5` (Plasma Shell)
+- `qt5-xmllistmodel` (`qml-module-qtquick-xmllistmodel` in Ubuntu)
 
 Installation
 =====
