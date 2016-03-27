@@ -112,7 +112,7 @@ Item {
         else {
             unitsymbol = "f"
         }
-        yhModel.source = "http://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid=" + woeid + " and u='" + unitsymbol + "'&format=xml
+        yhModel.source = "http://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid=" + woeid + " and u='" + unitsymbol + "'&format=xml"
         yhModel.reload()
     }
     
