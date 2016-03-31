@@ -122,6 +122,7 @@ Item {
         
         if (typeof yhModel != "object" || typeof yhModel.get(0) != "object") {
             mainWindow.hasdata = false
+            repeatquery.running = true // try again new api is not stable enough
             mainWindow.errstring = i18n("Error 1. Please check your network.")
             console.debug("yhModel or yhModel.get(0) is not an object.")
             return
