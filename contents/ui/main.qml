@@ -400,7 +400,7 @@ Item {
     Timer {
         id: iconUpdater
         interval: 1000
-        running: false
+        running: mainWindow.m_isbusy
         repeat: mainWindow.m_isbusy
         onTriggered: {
             if(!mainWindow.hasdata) {
@@ -436,7 +436,6 @@ Item {
     
     function action_reload () {
         yh.query(plasmoid.configuration.woeid)
-        iconUpdater.running = true
     }
 
     Connections {
