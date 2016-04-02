@@ -1,7 +1,7 @@
 Yahoo! Weather Widget
 ====
 
-This widget is still under development to port to Plasma 5 properly.
+A simple weather widget that makes use of beloved Yahoo! Weather data. Written in pure QML.
 
 For `KDE SC4`, please checkout `kde4` branch.
 
@@ -9,10 +9,11 @@ Dependency
 =====
 
 - `plasma5` (Plasma Shell)
-- `qt5-xmllistmodel` (`qml-module-qtquick-xmllistmodel` in Ubuntu)
 
 Installation
 =====
+
+Replace the version number as needed.
 
 ```
 ./mkplasmoid.sh
