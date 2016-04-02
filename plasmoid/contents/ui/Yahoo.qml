@@ -1,6 +1,6 @@
 /*
 *   Authour: Symeon Huang (librehat) <hzwhuang@gmail.com>
-*   Copyright 2014-2015
+*   Copyright 2014-2016
 *
 *   This program is free software; you can redistribute it and/or modify
 *   it under the terms of the GNU Library General Public License as
@@ -9,76 +9,68 @@
 */
 
 import QtQuick 2.2
-import QtQuick.XmlListModel 2.0
 
 Item {
     id: yahoo
     
+    property bool hasdata: false
+    //used to display error on widget
+    property string errstring
+    property bool m_isbusy: false
+
+    property string m_lastBuildDate
+    property string m_link
+    property string m_city
+    property string m_region
+    property string m_country
+    property string m_unitTemperature
+    property string m_unitDistance
+    property string m_unitPressure
+    property string m_unitSpeed
+    property string m_windChill
+    property string m_windDirection
+    property string m_windSpeed
+    property string m_atmosphereHumidity
+    property string m_atmosphereVisibility
+    property string m_atmospherePressure
+    property string m_atmosphereRising
+    property string m_astronomySunrise
+    property string m_astronomySunset
+
+    //<item>/<geo:lat> and <geo:long>
+    property string m_geoLat
+    property string m_geoLong
+
+    //<yweather:condition>
+    property int m_conditionCode
+    property int m_conditionTemp
+
+    //<yweather:forecast>
+    property string m_todayDay
+    property int m_todayLow
+    property int m_todayHigh
+    property int m_todayCode
+    property string m_tomorrowDay
+    property int m_tomorrowLow
+    property int m_tomorrowHigh
+    property int m_tomorrowCode
+    property string m_afterTDay
+    property int m_afterTLow
+    property int m_afterTHigh
+    property int m_afterTCode
+    //today is day 1
+    property string m_4Day
+    property int m_4Low
+    property int m_4High
+    property int m_4Code
+    property string m_5Day
+    property int m_5Low
+    property int m_5High
+    property int m_5Code
+
     property string unitsymbol
     
-    XmlListModel {
-        id: yhModel
-        query: '/rss/channel'
-
-        namespaceDeclarations: "declare namespace yweather='http://xml.weather.yahoo.com/ns/rss/1.0'; declare namespace geo='http://www.w3.org/2003/01/geo/wgs84_pos#';"
-        
-        XmlRole { name: 'lastbuilddate'; 		query: 'lastBuildDate/string()' }
-        XmlRole { name: 'link'; 				query: 'link/string()' }
-        XmlRole { name: 'city'; 				query: 'yweather:location/@city/string()' }
-        XmlRole { name: 'region'; 				query: 'yweather:location/@region/string()' }
-        XmlRole { name: 'country'; 				query: 'yweather:location/@country/string()' }
-        XmlRole { name: 'unittemp' ; 			query: 'yweather:units/@temperature/string()' }
-        XmlRole { name: 'unitdist' ; 			query: 'yweather:units/@distance/string()' }
-        XmlRole { name: 'unitpressure' ; 		query: 'yweather:units/@pressure/string()' }
-        XmlRole { name: 'unitspeed' ; 			query: 'yweather:units/@speed/string()' }
-        XmlRole { name: 'windchill' ; 			query: 'yweather:wind/@chill/string()' }
-        XmlRole { name: 'winddirection' ; 		query: 'yweather:wind/@direction/string()' }
-        XmlRole { name: 'windspeed' ; 			query: 'yweather:wind/@speed/string()' }
-        XmlRole { name: 'atmospherehumidity' ; 	query: 'yweather:atmosphere/@humidity/string()' }
-        XmlRole { name: 'atmospherevisibility' ;query: 'yweather:atmosphere/@visibility/string()' }
-        XmlRole { name: 'atmospherepressure' ; 	query: 'yweather:atmosphere/@pressure/string()' }
-        XmlRole { name: 'atmosphererising' ; 	query: 'yweather:atmosphere/@rising/string()' }
-        XmlRole { name: 'astronomysunrise' ; 	query: 'yweather:astronomy/@sunrise/string()' }
-        XmlRole { name: 'astronomysunset' ; 	query: 'yweather:astronomy/@sunset/string()' }
-        
-        XmlRole { name: 'geolat' ; 				query: 'item/geo:lat/string()' }
-        XmlRole { name: 'geolong' ; 			query: 'item/geo:long/string()' }
-
-        XmlRole { name: 'conditioncode'; 		query: 'item/yweather:condition/@code/string()' }
-        XmlRole { name: 'conditiontemp'; 		query: 'item/yweather:condition/@temp/string()' }
-        
-        XmlRole { name: 'todayday' ; 			query: 'item/yweather:forecast[1]/@day/string()' }
-        XmlRole { name: 'todaylow' ; 			query: 'item/yweather:forecast[1]/@low/string()' }
-        XmlRole { name: 'todayhigh' ; 			query: 'item/yweather:forecast[1]/@high/string()' }
-        XmlRole { name: 'todaycode' ; 			query: 'item/yweather:forecast[1]/@code/string()' }
-        XmlRole { name: 'tomorrowday' ; 		query: 'item/yweather:forecast[2]/@day/string()' }
-        XmlRole { name: 'tomorrowlow' ; 		query: 'item/yweather:forecast[2]/@low/string()' }
-        XmlRole { name: 'tomorrowhigh' ; 		query: 'item/yweather:forecast[2]/@high/string()' }
-        XmlRole { name: 'tomorrowcode' ; 		query: 'item/yweather:forecast[2]/@code/string()' }
-        XmlRole { name: 'afterTday' ; 			query: 'item/yweather:forecast[3]/@day/string()' }
-        XmlRole { name: 'afterTlow' ; 			query: 'item/yweather:forecast[3]/@low/string()' }
-        XmlRole { name: 'afterThigh' ; 			query: 'item/yweather:forecast[3]/@high/string()' }
-        XmlRole { name: 'afterTcode' ; 			query: 'item/yweather:forecast[3]/@code/string()' }
-        XmlRole { name: 'fourday' ; 			query: 'item/yweather:forecast[4]/@day/string()' }
-        XmlRole { name: 'fourlow' ; 			query: 'item/yweather:forecast[4]/@low/string()' }
-        XmlRole { name: 'fourhigh' ; 			query: 'item/yweather:forecast[4]/@high/string()' }
-        XmlRole { name: 'fourcode' ; 			query: 'item/yweather:forecast[4]/@code/string()' }
-        XmlRole { name: 'fiveday' ; 			query: 'item/yweather:forecast[5]/@day/string()' }
-        XmlRole { name: 'fivelow' ; 			query: 'item/yweather:forecast[5]/@low/string()' }
-        XmlRole { name: 'fivehigh' ; 			query: 'item/yweather:forecast[5]/@high/string()' }
-        XmlRole { name: 'fivecode' ; 			query: 'item/yweather:forecast[5]/@code/string()' }
-
-        onStatusChanged: {// include Errorhandling
-            if (status === XmlListModel.Error)   {// sh033
-                console.debug("XmlListModel.Error: ", errorString)
-                repeatquery.running = true
-            }
-            else
-            if (status == XmlListModel.Ready) {
-                getweatherinfo()
-            }
-        }
-    }
+    property int failedAttempts: 0
     
     // timer for repeat query from sh033
     Timer {
@@ -89,105 +81,142 @@ Item {
         onTriggered: {
             running = false
             console.debug("Reapeat Query.. ")
-            query (plasmoid.configuration.woeid)
+            query()
         }
     }
     
     function query(woeid) {
         console.debug("Querying...")
         
-        mainWindow.m_isbusy = true
-        
-        console.debug(woeid)
-        if (woeid == "") {
-            mainWindow.hasdata = false
-            mainWindow.m_isbusy = false
+        m_isbusy = true
+        woeid = woeid ? woeid : plasmoid.configuration.woeid
+        if (!woeid) {
+            hasdata = false
+            m_isbusy = false
+            errstring = i18n("Error 3. WOEID is not specified.")
             console.debug("WOEID is empty.")
             return//fail silently
         }
         
         if (plasmoid.configuration.celsius) {
             unitsymbol = "c"
-        }
-        else {
+        } else {
             unitsymbol = "f"
         }
-        yhModel.source = "http://xml.weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol
-        yhModel.reload()
+        
+        var source = "http://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid='" + woeid + "' and u='" + unitsymbol + "'&format=json"
+        console.debug("Source changed to", source)
+        var doc = new XMLHttpRequest()
+        doc.onreadystatechange = function() {
+            if (doc.readyState == XMLHttpRequest.DONE) {
+                getweatherinfo(doc.responseText)
+            }
+        }
+        doc.open("GET", source, true)
+        doc.send()
     }
     
-    function getweatherinfo() {
+    function getweatherinfo(response) {
         console.debug("Getting Weather Information...")
-        mainWindow.m_isbusy = false
-        
-        if (typeof yhModel != "object" || typeof yhModel.get(0) != "object") {
-            mainWindow.hasdata = false
-            mainWindow.errstring = i18n("Error 1. Please check your network.")
-            console.debug("yhModel or yhModel.get(0) is not an object.")
+        if (!response) {
+            console.debug("response is empty.")
             return
         }
         
-        mainWindow.m_lastBuildDate      = yhModel.get(0).lastbuilddate
-        mainWindow.m_link               = yhModel.get(0).link
-        mainWindow.m_city               = yhModel.get(0).city
-        mainWindow.m_region             = yhModel.get(0).region
-        mainWindow.m_country            = yhModel.get(0).country
-        mainWindow.m_unitTemperature    = yhModel.get(0).unittemp
-        mainWindow.m_unitDistance       = yhModel.get(0).unitdist
-        mainWindow.m_unitPressure       = yhModel.get(0).unitpressure
-        mainWindow.m_windChill          = yhModel.get(0).windchill
-        mainWindow.m_windDirection      = yhModel.get(0).winddirection
-        mainWindow.m_windSpeed          = yhModel.get(0).windspeed
-        if (plasmoid.configuration.ms) {
-            mainWindow.m_unitSpeed      = "m/s"
-            mainWindow.m_windSpeed      = Math.round(mainWindow.m_windSpeed * 1000 / 3600, 3)
-        }
-        else {
-            mainWindow.m_unitSpeed      = "km/h"
-        }
-        mainWindow.m_atmosphereHumidity     = yhModel.get(0).atmospherehumidity
-        mainWindow.m_atmosphereVisibility   = yhModel.get(0).atmospherevisibility
-        mainWindow.m_atmospherePressure     = yhModel.get(0).atmospherepressure
-        mainWindow.m_atmosphereRising       = yhModel.get(0).atmosphererising
-        mainWindow.m_astronomySunrise       = yhModel.get(0).astronomysunrise
-        mainWindow.m_astronomySunset        = yhModel.get(0).astronomysunset
-        mainWindow.m_geoLat                 = yhModel.get(0).geolat
-        mainWindow.m_geoLong                = yhModel.get(0).geolong
-        mainWindow.m_conditionCode = parseInt(yhModel.get(0).conditioncode)
-        mainWindow.m_conditionTemp = parseInt(yhModel.get(0).conditiontemp)
-        mainWindow.m_todayDay     = parseDate(yhModel.get(0).todayday)
-        mainWindow.m_todayLow      = parseInt(yhModel.get(0).todaylow)
-        mainWindow.m_todayHigh     = parseInt(yhModel.get(0).todayhigh)
-        mainWindow.m_todayCode     = parseInt(yhModel.get(0).todaycode)
-        mainWindow.m_tomorrowDay  = parseDate(yhModel.get(0).tomorrowday)
-        mainWindow.m_tomorrowLow   = parseInt(yhModel.get(0).tomorrowlow)
-        mainWindow.m_tomorrowHigh  = parseInt(yhModel.get(0).tomorrowhigh)
-        mainWindow.m_tomorrowCode  = parseInt(yhModel.get(0).tomorrowcode)
-        mainWindow.m_afterTDay    = parseDate(yhModel.get(0).afterTday)
-        mainWindow.m_afterTLow     = parseInt(yhModel.get(0).afterTlow)
-        mainWindow.m_afterTHigh    = parseInt(yhModel.get(0).afterThigh)
-        mainWindow.m_afterTCode    = parseInt(yhModel.get(0).afterTcode)
-        mainWindow.m_4Day         = parseDate(yhModel.get(0).fourday)
-        mainWindow.m_4Low          = parseInt(yhModel.get(0).fourlow)
-        mainWindow.m_4High         = parseInt(yhModel.get(0).fourhigh)
-        mainWindow.m_4Code         = parseInt(yhModel.get(0).fourcode)
-        mainWindow.m_5Day         = parseDate(yhModel.get(0).fiveday)
-        mainWindow.m_5Low          = parseInt(yhModel.get(0).fivelow)
-        mainWindow.m_5High         = parseInt(yhModel.get(0).fivehigh)
-        mainWindow.m_5Code         = parseInt(yhModel.get(0).fivecode)
+        var resObj = JSON.parse(response)
+        m_isbusy = false
         
-        if (mainWindow.m_city != "") {
-            mainWindow.hasdata = true
-            console.debug("done.")
+        console.debug(response)
+        
+        if (resObj.error) {
+            hasdata = false
+            errstring = resOjb.error.description
+            return
         }
-        else {
-            mainWindow.hasdata = false
-            mainWindow.errstring = i18n("Error 2. WOEID may be invalid.")
-            console.debug("m_city is empty.")
+        
+        if (!resObj.query) {
+            hasdata = false
+            errstring = i18n("Error 1. Please check your network.")
+            console.debug("query is not a property of response object")
+            repeatquery.running = true
+            return
         }
+        
+        if (resObj.query.count !== 1) {
+            console.debug("Query count:", resObj.query.count)
+            if (resObj.query.count === 0) {
+                if (failedAttempts >= 30) {
+                    hasdata = false
+                    errstring = i18n("Error 2. WOEID may be invalid.")
+                } else {
+                    console.debug("Could be an API issue, try again. Attempts:", failedAttempts)
+                    failedAttempts += 1
+                    query()
+                }
+            } else {
+                hasdata = false
+                errstring = i18n("Error 2. WOEID may be invalid.")
+            }
+            return
+        }
+        
+        var results = resObj.query.results.channel
+        
+        m_lastBuildDate      = results.lastBuildDate
+        m_link               = results.link
+        m_city               = results.location.city
+        m_region             = results.location.region
+        m_country            = results.location.country
+        m_unitTemperature    = results.units.temperature
+        m_unitDistance       = results.units.distance
+        m_unitPressure       = results.units.pressure
+        m_windChill          = results.wind.chill
+        m_windDirection      = results.wind.direction
+        m_windSpeed          = results.wind.speed
+        if (plasmoid.configuration.ms) {
+            m_unitSpeed      = "m/s"
+            m_windSpeed      = Math.round(m_windSpeed * 1000 / 3600, 3)
+        } else {
+            m_unitSpeed      = "km/h"
+        }
+        m_atmosphereHumidity     = results.atmosphere.humidity
+        m_atmosphereVisibility   = results.atmosphere.visibility
+        m_atmospherePressure     = results.atmosphere.pressure
+        m_atmosphereRising       = results.atmosphere.rising
+        m_astronomySunrise       = results.astronomy.sunrise
+        m_astronomySunset        = results.astronomy.sunset
+        m_geoLat                 = results.item.lat
+        m_geoLong                = results.item.long
+        m_conditionCode = parseInt(results.item.condition.code)
+        m_conditionTemp = parseInt(results.item.condition.temp)
+        
+        var forecasts = results.item.forecast
+        m_todayDay      = parseDay(forecasts[0].day)
+        m_todayLow      = parseInt(forecasts[0].low)
+        m_todayHigh     = parseInt(forecasts[0].high)
+        m_todayCode     = parseInt(forecasts[0].code)
+        m_tomorrowDay   = parseDay(forecasts[1].day)
+        m_tomorrowLow   = parseInt(forecasts[1].low)
+        m_tomorrowHigh  = parseInt(forecasts[1].high)
+        m_tomorrowCode  = parseInt(forecasts[1].code)
+        m_afterTDay     = parseDay(forecasts[2].day)
+        m_afterTLow     = parseInt(forecasts[2].low)
+        m_afterTHigh    = parseInt(forecasts[2].high)
+        m_afterTCode    = parseInt(forecasts[2].code)
+        m_4Day          = parseDay(forecasts[3].day)
+        m_4Low          = parseInt(forecasts[3].low)
+        m_4High         = parseInt(forecasts[3].high)
+        m_4Code         = parseInt(forecasts[3].code)
+        m_5Day          = parseDay(forecasts[4].day)
+        m_5Low          = parseInt(forecasts[4].low)
+        m_5High         = parseInt(forecasts[4].high)
+        m_5Code         = parseInt(forecasts[4].code)
+        
+        hasdata = true
+        failedAttempts = 0
     }
     
-    function parseDate(daystring) {
+    function parseDay(daystring) {
         switch (daystring) {
             case "Sun":
                 return i18n("Sunday")
