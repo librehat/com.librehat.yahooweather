@@ -174,14 +174,7 @@ Item {
             running: m_isbusy
         }
     }
-    
-    property bool notify: false
-    
-    PlasmaCore.DataSource {
-        id: notifications
-        engine: "notifications"
-    }
-    
+
     Timer {
         id: iconUpdater
         interval: 1000
@@ -194,19 +187,9 @@ Item {
                 plasmoid.toolTipSubText = ""
             }
             else {
-                notify = false
                 plasmoid.icon = backend.m_conditionIcon
                 plasmoid.toolTipMainText = m_city + " " + m_conditionTemp + "°" + m_unitTemperature
                 plasmoid.toolTipSubText = backend.m_conditionDesc
-                if(notify) {
-                    var service = notifications.serviceForSource("notification")
-                    var op = service.operationDescription("createNotification")
-                    op["appIcon"] = plasmoid.icon
-                    op["summary"] = plasmoid.toolTipSubText
-                    op["body"] = plasmoid.toolTipMainText
-                    op["timeout"] = 6000
-                    service.startOperationCall(op)
-                }
             }
         }
     }
