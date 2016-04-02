@@ -112,7 +112,7 @@ Item {
         else {
             unitsymbol = "f"
         }
-        yhModel.source = "http://weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol
+        yhModel.source = "http://xml.weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol
         yhModel.reload()
     }
     
