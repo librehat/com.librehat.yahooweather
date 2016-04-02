@@ -37,37 +37,18 @@ Item {
     property string m_astronomySunrise
     property string m_astronomySunset
 
-    //<item>/<geo:lat> and <geo:long>
     property string m_geoLat
     property string m_geoLong
 
-    //<yweather:condition>
-    property int m_conditionCode
+    property string m_conditionIcon
+    property string m_conditionDesc
     property int m_conditionTemp
+    property alias dataModel: forecastModel
 
-    //<yweather:forecast>
-    property string m_todayDay
-    property int m_todayLow
-    property int m_todayHigh
-    property int m_todayCode
-    property string m_tomorrowDay
-    property int m_tomorrowLow
-    property int m_tomorrowHigh
-    property int m_tomorrowCode
-    property string m_afterTDay
-    property int m_afterTLow
-    property int m_afterTHigh
-    property int m_afterTCode
-    //today is day 1
-    property string m_4Day
-    property int m_4Low
-    property int m_4High
-    property int m_4Code
-    property string m_5Day
-    property int m_5Low
-    property int m_5High
-    property int m_5Code
-
+    Forecast {
+        id: forecastModel
+    }
+    
     property string unitsymbol
     
     property int failedAttempts: 0
@@ -125,8 +106,6 @@ Item {
         
         var resObj = JSON.parse(response)
         m_isbusy = false
-        
-        console.debug(response)
         
         if (resObj.error) {
             hasdata = false
@@ -187,30 +166,31 @@ Item {
         m_astronomySunset        = results.astronomy.sunset
         m_geoLat                 = results.item.lat
         m_geoLong                = results.item.long
-        m_conditionCode = parseInt(results.item.condition.code)
+        m_conditionIcon = determineIcon(parseInt(results.item.condition.code))
+        m_conditionDesc = getDescription(parseInt(results.item.condition.code))
         m_conditionTemp = parseInt(results.item.condition.temp)
         
         var forecasts = results.item.forecast
-        m_todayDay      = parseDay(forecasts[0].day)
-        m_todayLow      = parseInt(forecasts[0].low)
-        m_todayHigh     = parseInt(forecasts[0].high)
-        m_todayCode     = parseInt(forecasts[0].code)
-        m_tomorrowDay   = parseDay(forecasts[1].day)
-        m_tomorrowLow   = parseInt(forecasts[1].low)
-        m_tomorrowHigh  = parseInt(forecasts[1].high)
-        m_tomorrowCode  = parseInt(forecasts[1].code)
-        m_afterTDay     = parseDay(forecasts[2].day)
-        m_afterTLow     = parseInt(forecasts[2].low)
-        m_afterTHigh    = parseInt(forecasts[2].high)
-        m_afterTCode    = parseInt(forecasts[2].code)
-        m_4Day          = parseDay(forecasts[3].day)
-        m_4Low          = parseInt(forecasts[3].low)
-        m_4High         = parseInt(forecasts[3].high)
-        m_4Code         = parseInt(forecasts[3].code)
-        m_5Day          = parseDay(forecasts[4].day)
-        m_5Low          = parseInt(forecasts[4].low)
-        m_5High         = parseInt(forecasts[4].high)
-        m_5Code         = parseInt(forecasts[4].code)
+        forecastModel.setProperty(0, "day", parseDay(forecasts[0].day))
+        forecastModel.setProperty(0, "low", parseInt(forecasts[0].low))
+        forecastModel.setProperty(0, "high", parseInt(forecasts[0].high))
+        forecastModel.setProperty(0, "icon", determineIcon(parseInt(forecasts[0].code)))
+        forecastModel.setProperty(1, "day", parseDay(forecasts[1].day))
+        forecastModel.setProperty(1, "low", parseInt(forecasts[1].low))
+        forecastModel.setProperty(1, "high", parseInt(forecasts[1].high))
+        forecastModel.setProperty(1, "icon", determineIcon(parseInt(forecasts[1].code)))
+        forecastModel.setProperty(2, "day", parseDay(forecasts[2].day))
+        forecastModel.setProperty(2, "low", parseInt(forecasts[2].low))
+        forecastModel.setProperty(2, "high", parseInt(forecasts[2].high))
+        forecastModel.setProperty(2, "icon", determineIcon(parseInt(forecasts[2].code)))
+        forecastModel.setProperty(3, "day", parseDay(forecasts[3].day))
+        forecastModel.setProperty(3, "low", parseInt(forecasts[3].low))
+        forecastModel.setProperty(3, "high", parseInt(forecasts[3].high))
+        forecastModel.setProperty(3, "icon", determineIcon(parseInt(forecasts[3].code)))
+        forecastModel.setProperty(4, "day", parseDay(forecasts[4].day))
+        forecastModel.setProperty(4, "low", parseInt(forecasts[4].low))
+        forecastModel.setProperty(4, "high", parseInt(forecasts[4].high))
+        forecastModel.setProperty(4, "icon", determineIcon(parseInt(forecasts[4].code)))
         
         hasdata = true
         failedAttempts = 0
@@ -232,6 +212,205 @@ Item {
                 return i18n("Friday")
             case "Sat":
                 return i18n("Saturday")
+        }
+    }
+    
+    function determineIcon(code) {
+        if (code <= 4) {
+            notify = true
+            return "weather-storm"
+        }
+        else if (code <= 6) {
+            return "weather-snow-rain"
+        }
+        else if (code == 7 ) {
+            return "weather-snow-scattered"
+        }
+        else if (code == 8 || code == 10) {
+            return "weather-freezing-rain"
+        }
+        else if (code == 9) {
+            return "weather-showers-scattered"
+        }
+        else if (code <= 12) {
+            return "weather-showers"
+        }
+        else if (code <= 16) {
+            return "weather-snow"
+        }
+        else if (code == 17) {
+            notify = true
+            return "weather-hail"
+        }
+        else if (code == 18) {//sleet
+            return "weather-snow-scattered"
+        }
+        else if (code <= 22) {
+            return "weather-mist"
+        }
+        else if (code <= 24) {//windy
+            return "weather-clouds"
+        }
+        else if (code == 25) {//cold
+            return "weather-freezing-rain"
+        }
+        else if (code == 26) {//cloudy
+            return "weather-clouds"
+        }
+        else if (code <= 28) {
+            return "weather-many-clouds"
+        }
+        else if (code == 29) {
+            return "weather-few-clouds-night"
+        }
+        else if (code == 30) {
+            return "weather-few-clouds"
+        }
+        else if (code == 31 || code == 33) {
+            return "weather-clear-night"
+        }
+        else if (code == 32 || code == 34 || code ==36) {
+            return "weather-clear"
+        }
+        else if (code == 35) {
+            notify = true
+            return "weather-hail"
+        }
+        else if (code <= 40) {
+            notify = true
+            return "weather-storm"
+        }
+        else if (code == 41 || code == 43) {
+            return "weather-snow"
+        }
+        else if (code == 42 || code == 46) {
+            return "weather-snow-rain"
+        }
+        else if (code == 44) {
+            return "weather-few-clouds"
+        }
+        else if (code == 45 || code == 47) {
+            notify = true
+            return "weather-storm"
+        }
+        else {
+            return "weather-none-available"
+        }
+    }
+    
+    function getDescription(conCode) {
+        //according to http://developer.yahoo.com/weather/#codes
+        switch (conCode) {
+            case 0:
+                notify = true
+                return i18n("Tornado")
+            case 1:
+                notify = true
+                return i18n("Tropical Storm")
+            case 2:
+                notify = true
+                return i18n("Hurricane")
+            case 3:
+                notify = true
+                return i18n("Severe Thunderstorms")
+            case 4:
+                notify = true
+                return i18n("Thunderstorms")
+            case 5:
+                return i18n("Mixed Rain and Snow")
+            case 6:
+                notify = true
+                return i18n("Mixed Rain and Sleet")
+            case 7:
+                notify = true
+                return i18n("Mixed Snow and Sleet")
+            case 8:
+                return i18n("Freezing Drizzle")
+            case 9:
+                return i18n("Drizzle")
+            case 10:
+                return i18n("Freezing Rain")
+            case 11://has same descr with 12
+            case 12:
+                return i18n("Showers")
+            case 13:
+                return i18n("Snow Flurries")
+            case 14:
+                return i18n("Light Snow Showers")
+            case 15:
+                return i18n("Blowing Snow")
+            case 16:
+                return i18n("Snow")
+            case 17:
+                notify = true
+                return i18n("Hail")
+            case 18:
+                notify = true
+                return i18n("Sleet")
+            case 19:
+                return i18n("Dust")
+            case 20:
+                return i18n("Foggy")
+            case 21:
+                return i18n("Haze")
+            case 22:
+                return i18n("Smoky")
+            case 23:
+                return i18n("Blustery")
+            case 24:
+                return i18n("Windy")
+            case 25:
+                return i18n("Cold")
+            case 26:
+                return i18n("Cloudy")
+            case 27:
+                return i18n("Mostly Cloudy (Night)")
+            case 28:
+                return i18n("Mostly Cloudy (Day)")
+            case 29:
+                return i18n("Partly Cloudy (Night)")
+            case 30:
+                return i18n("Partly Cloudy (Day)")
+            case 31:
+                return i18n("Clear (Night)")
+            case 32:
+                return i18n("Sunny")
+            case 33:
+                return i18n("Fair (Night)")
+            case 34:
+                return i18n("Fair (Day)")
+            case 35:
+                notify = true
+                return i18n("Mixed Rain and Hail")
+            case 36:
+                return i18n("Hot")
+            case 37:
+                notify = true
+                return i18n("Isolated Thunderstorms")
+            case 38://same with 39
+            case 39:
+                notify = true
+                return i18n("Scattered Thunderstorms")
+            case 40:
+                return i18n("Scattered Showers")
+            case 41://same with 43
+            case 43:
+                notify = true
+                return i18n("Heavy Snow")
+            case 42:
+                return i18n("Scattered Snow Showers")
+            case 44:
+                return i18n("Partly Cloudy")
+            case 45:
+                notify = true
+                return i18n("Thundershowers")
+            case 46:
+                return i18n("Snow Showers")
+            case 47:
+                notify = true
+                return i18n("Isolated Thundershowers")
+            default://code 3200
+                return i18n("Not Available")
         }
     }
 }
