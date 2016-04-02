@@ -1,6 +1,6 @@
 /*
- *   Authour: William Wong (librehat) <librehat@outlook.com>
- *   Copyright 2014
+ *   Authour: Symeon Huang (librehat) <hzwhuang@gmail.com>
+ *   Copyright 2014-2016
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -109,7 +109,7 @@ Item {
         else {
             unitsymbol = "f";
         }
-        yhModel.source = "http://weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol;
+        yhModel.source = "http://xml.weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol;
     }
     
     function getweatherinfo() {
