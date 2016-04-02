@@ -18,7 +18,7 @@ Item {
     
     XmlListModel {
         id: yhModel
-        query: '/query/results/channel'
+        query: '/rss/channel'
 
         namespaceDeclarations: "declare namespace yweather='http://xml.weather.yahoo.com/ns/rss/1.0'; declare namespace geo='http://www.w3.org/2003/01/geo/wgs84_pos#';"
         
@@ -112,7 +112,7 @@ Item {
         else {
             unitsymbol = "f"
         }
-        yhModel.source = "http://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid=" + woeid + " and u='" + unitsymbol + "'&format=xml"
+        yhModel.source = "http://weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol
         yhModel.reload()
     }
     
