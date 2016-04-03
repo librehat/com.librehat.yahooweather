@@ -15,7 +15,6 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Column {
     id: delegate
-    property string unit
     spacing: units.gridUnit
     
     PlasmaComponents.Label {
@@ -33,7 +32,7 @@ Column {
     }
     
     PlasmaComponents.Label {
-        text: low + "~" + high + "°" + unit
+        text: temp
         anchors.horizontalCenter: parent.horizontalCenter
         font: theme.defaultFont
     }

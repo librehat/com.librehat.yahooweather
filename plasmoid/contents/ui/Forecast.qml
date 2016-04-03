@@ -14,32 +14,7 @@ import QtQml.Models 2.1
 ListModel {
     ListElement {
         day: ""
+        temp: ""
         icon: "weather-none-available"
-        high: 0
-        low: 0
-    }
-    ListElement {
-        day: ""
-        icon: "weather-none-available"
-        high: 0
-        low: 0
-    }
-    ListElement {
-        day: ""
-        icon: "weather-none-available"
-        high: 0
-        low: 0
-    }
-    ListElement {
-        day: ""
-        icon: "weather-none-available"
-        high: 0
-        low: 0
-    }
-    ListElement {
-        day: ""
-        icon: "weather-none-available"
-        high: 0
-        low: 0
     }
 }
