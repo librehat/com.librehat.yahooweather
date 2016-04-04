@@ -112,7 +112,8 @@ Item {
         else {
             unitsymbol = "f"
         }
-        yhModel.source = "http://weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol
+        //yhModel.source = "http://weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol
+        yhModel.source = "http://xml.weather.yahoo.com/forecastrss?w=" + woeid + "&u=" + unitsymbol
         yhModel.reload()
     }
     
@@ -138,13 +139,36 @@ Item {
         mainWindow.m_windChill          = yhModel.get(0).windchill
         mainWindow.m_windDirection      = yhModel.get(0).winddirection
         mainWindow.m_windSpeed          = yhModel.get(0).windspeed
-        if (plasmoid.configuration.ms) {
+
+        // Note: When celsius selected, wind speed from yahoo is in km/h
+        //       and when fahrenheit (!celsius) selected, speed is in miles 
+        //       per hour (mph or mi/h).
+        if (plasmoid.configuration.mph) {
+            mainWindow.m_unitSpeed      = "mi/h"
+            if (plasmoid.configuration.celsius) {
+                // convert km/h to mph
+                mainWindow.m_windSpeed = Math.round(mainWindow.m_windSpeed * 0.621371, 3)
+            }
+        }
+        else if (plasmoid.configuration.ms) {
             mainWindow.m_unitSpeed      = "m/s"
-            mainWindow.m_windSpeed      = Math.round(mainWindow.m_windSpeed * 1000 / 3600, 3)
+            if (plasmoid.configuration.celsius) {
+                // convert km/h to m/s
+                mainWindow.m_windSpeed = Math.round(mainWindow.m_windSpeed * 0.277778, 3)
+            }
+            else { // units F configured
+                // convert mph to m/s
+                mainWindow.m_windSpeed = Math.round(mainWindow.m_windSpeed * 0.44704, 3)
+            }
         }
-        else {
+        else { // km/h configured
             mainWindow.m_unitSpeed      = "km/h"
+            if (!plasmoid.configuration.celsius) { // units F configured
+                // convert mph to km/h
+                mainWindow.m_windSpeed = Math.round(mainWindow.m_windSpeed * 1.609344, 4)
+            }
         }
+
         mainWindow.m_atmosphereHumidity     = yhModel.get(0).atmospherehumidity
         mainWindow.m_atmosphereVisibility   = yhModel.get(0).atmospherevisibility
         mainWindow.m_atmospherePressure     = yhModel.get(0).atmospherepressure

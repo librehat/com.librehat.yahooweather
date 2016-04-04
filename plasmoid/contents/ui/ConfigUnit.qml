@@ -21,6 +21,7 @@ Item {
     property alias cfg_fahrenheit: fahrenheitTemp.checked
     property alias cfg_ms: msWind.checked
     property alias cfg_kmh: kmhWind.checked
+    property alias cfg_mph: mphWind.checked
 
     ColumnLayout {
         GroupBox {
@@ -64,6 +65,12 @@ Item {
                 RadioButton {
                     id: kmhWind
                     text: i18n("Km/h")
+                    exclusiveGroup: windGroup
+                }
+
+                RadioButton {
+                    id: mphWind
+                    text: i18n("mi/h")
                     exclusiveGroup: windGroup
                 }
             }

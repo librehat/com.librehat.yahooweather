@@ -23,5 +23,8 @@
         <entry name="kmh" type="Bool">
             <default>true</default>
         </entry>
+        <entry name="mph" type="Bool">
+            <default>false</default>
+        </entry>
     </group>
 </kcfg>
