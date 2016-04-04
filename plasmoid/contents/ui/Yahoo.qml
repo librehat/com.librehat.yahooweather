@@ -1,6 +1,6 @@
 /*
 *   Authour: Symeon Huang (librehat) <hzwhuang@gmail.com>
-*   Copyright 2014-2015
+*   Copyright 2014-2016
 *
 *   This program is free software; you can redistribute it and/or modify
 *   it under the terms of the GNU Library General Public License as
@@ -9,76 +9,49 @@
 */
 
 import QtQuick 2.2
-import QtQuick.XmlListModel 2.0
 
 Item {
     id: yahoo
     
+    property bool hasdata: false
+    //used to display error on widget
+    property string errstring
+    property bool m_isbusy: false
+
+    property string m_lastBuildDate
+    property string m_link
+    property string m_city
+    property string m_region
+    property string m_country
+    property string m_unitTemperature
+    property string m_unitDistance
+    property string m_unitPressure
+    property string m_unitSpeed
+    property string m_windChill
+    property string m_windDirection
+    property string m_windSpeed
+    property string m_atmosphereHumidity
+    property string m_atmosphereVisibility
+    property string m_atmospherePressure
+    property string m_atmosphereRising
+    property string m_astronomySunrise
+    property string m_astronomySunset
+
+    property string m_geoLat
+    property string m_geoLong
+
+    property string m_conditionIcon
+    property string m_conditionDesc
+    property int m_conditionTemp
+    property alias dataModel: forecastModel
+
+    Forecast {
+        id: forecastModel
+    }
+    
     property string unitsymbol
     
-    XmlListModel {
-        id: yhModel
-        query: '/rss/channel'
-
-        namespaceDeclarations: "declare namespace yweather='http://xml.weather.yahoo.com/ns/rss/1.0'; declare namespace geo='http://www.w3.org/2003/01/geo/wgs84_pos#';"
-        
-        XmlRole { name: 'lastbuilddate'; 		query: 'lastBuildDate/string()' }
-        XmlRole { name: 'link'; 				query: 'link/string()' }
-        XmlRole { name: 'city'; 				query: 'yweather:location/@city/string()' }
-        XmlRole { name: 'region'; 				query: 'yweather:location/@region/string()' }
-        XmlRole { name: 'country'; 				query: 'yweather:location/@country/string()' }
-        XmlRole { name: 'unittemp' ; 			query: 'yweather:units/@temperature/string()' }
-        XmlRole { name: 'unitdist' ; 			query: 'yweather:units/@distance/string()' }
-        XmlRole { name: 'unitpressure' ; 		query: 'yweather:units/@pressure/string()' }
-        XmlRole { name: 'unitspeed' ; 			query: 'yweather:units/@speed/string()' }
-        XmlRole { name: 'windchill' ; 			query: 'yweather:wind/@chill/string()' }
-        XmlRole { name: 'winddirection' ; 		query: 'yweather:wind/@direction/string()' }
-        XmlRole { name: 'windspeed' ; 			query: 'yweather:wind/@speed/string()' }
-        XmlRole { name: 'atmospherehumidity' ; 	query: 'yweather:atmosphere/@humidity/string()' }
-        XmlRole { name: 'atmospherevisibility' ;query: 'yweather:atmosphere/@visibility/string()' }
-        XmlRole { name: 'atmospherepressure' ; 	query: 'yweather:atmosphere/@pressure/string()' }
-        XmlRole { name: 'atmosphererising' ; 	query: 'yweather:atmosphere/@rising/string()' }
-        XmlRole { name: 'astronomysunrise' ; 	query: 'yweather:astronomy/@sunrise/string()' }
-        XmlRole { name: 'astronomysunset' ; 	query: 'yweather:astronomy/@sunset/string()' }
-        
-        XmlRole { name: 'geolat' ; 				query: 'item/geo:lat/string()' }
-        XmlRole { name: 'geolong' ; 			query: 'item/geo:long/string()' }
-
-        XmlRole { name: 'conditioncode'; 		query: 'item/yweather:condition/@code/string()' }
-        XmlRole { name: 'conditiontemp'; 		query: 'item/yweather:condition/@temp/string()' }
-        
-        XmlRole { name: 'todayday' ; 			query: 'item/yweather:forecast[1]/@day/string()' }
-        XmlRole { name: 'todaylow' ; 			query: 'item/yweather:forecast[1]/@low/string()' }
-        XmlRole { name: 'todayhigh' ; 			query: 'item/yweather:forecast[1]/@high/string()' }
-        XmlRole { name: 'todaycode' ; 			query: 'item/yweather:forecast[1]/@code/string()' }
-        XmlRole { name: 'tomorrowday' ; 		query: 'item/yweather:forecast[2]/@day/string()' }
-        XmlRole { name: 'tomorrowlow' ; 		query: 'item/yweather:forecast[2]/@low/string()' }
-        XmlRole { name: 'tomorrowhigh' ; 		query: 'item/yweather:forecast[2]/@high/string()' }
-        XmlRole { name: 'tomorrowcode' ; 		query: 'item/yweather:forecast[2]/@code/string()' }
-        XmlRole { name: 'afterTday' ; 			query: 'item/yweather:forecast[3]/@day/string()' }
-        XmlRole { name: 'afterTlow' ; 			query: 'item/yweather:forecast[3]/@low/string()' }
-        XmlRole { name: 'afterThigh' ; 			query: 'item/yweather:forecast[3]/@high/string()' }
-        XmlRole { name: 'afterTcode' ; 			query: 'item/yweather:forecast[3]/@code/string()' }
-        XmlRole { name: 'fourday' ; 			query: 'item/yweather:forecast[4]/@day/string()' }
-        XmlRole { name: 'fourlow' ; 			query: 'item/yweather:forecast[4]/@low/string()' }
-        XmlRole { name: 'fourhigh' ; 			query: 'item/yweather:forecast[4]/@high/string()' }
-        XmlRole { name: 'fourcode' ; 			query: 'item/yweather:forecast[4]/@code/string()' }
-        XmlRole { name: 'fiveday' ; 			query: 'item/yweather:forecast[5]/@day/string()' }
-        XmlRole { name: 'fivelow' ; 			query: 'item/yweather:forecast[5]/@low/string()' }
-        XmlRole { name: 'fivehigh' ; 			query: 'item/yweather:forecast[5]/@high/string()' }
-        XmlRole { name: 'fivecode' ; 			query: 'item/yweather:forecast[5]/@code/string()' }
-
-        onStatusChanged: {// include Errorhandling
-            if (status === XmlListModel.Error)   {// sh033
-                console.debug("XmlListModel.Error: ", errorString)
-                repeatquery.running = true
-            }
-            else
-            if (status == XmlListModel.Ready) {
-                getweatherinfo()
-            }
-        }
-    }
+    property int failedAttempts: 0
     
     // timer for repeat query from sh033
     Timer {
@@ -89,45 +62,58 @@ Item {
         onTriggered: {
             running = false
             console.debug("Reapeat Query.. ")
-            query (plasmoid.configuration.woeid)
+            query()
         }
     }
     
     function query(woeid) {
         console.debug("Querying...")
         
-        mainWindow.m_isbusy = true
-        
-        console.debug(woeid)
-        if (woeid == "") {
-            mainWindow.hasdata = false
-            mainWindow.m_isbusy = false
+        m_isbusy = true
+        woeid = woeid ? woeid : plasmoid.configuration.woeid
+        if (!woeid) {
+            hasdata = false
+            m_isbusy = false
+            errstring = i18n("Error 3. WOEID is not specified.")
             console.debug("WOEID is empty.")
             return//fail silently
         }
         
         if (plasmoid.configuration.celsius) {
             unitsymbol = "c"
-        }
-        else {
+        } else {
             unitsymbol = "f"
         }
-        //yhModel.source = "http://weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol
-        yhModel.source = "http://xml.weather.yahoo.com/forecastrss?w=" + woeid + "&u=" + unitsymbol
-        yhModel.reload()
+        
+        var source = "http://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid='" + woeid + "' and u='" + unitsymbol + "'&format=json"
+        console.debug("Source changed to", source)
+        var doc = new XMLHttpRequest()
+        doc.onreadystatechange = function() {
+            if (doc.readyState == XMLHttpRequest.DONE) {
+                getweatherinfo(doc.responseText)
+            }
+        }
+        doc.open("GET", source, true)
+        doc.send()
     }
     
-    function getweatherinfo() {
+    function getweatherinfo(response) {
         console.debug("Getting Weather Information...")
-        mainWindow.m_isbusy = false
-        
-        if (typeof yhModel != "object" || typeof yhModel.get(0) != "object") {
-            mainWindow.hasdata = false
-            mainWindow.errstring = i18n("Error 1. Please check your network.")
-            console.debug("yhModel or yhModel.get(0) is not an object.")
+        if (!response) {
+            console.debug("response is empty.")
             return
         }
         
+        var resObj = JSON.parse(response)
+        m_isbusy = false
+        
+        if (resObj.error) {
+            hasdata = false
+            errstring = resOjb.error.description
+            return
+        }
+        
+<<<<<<< HEAD
         mainWindow.m_lastBuildDate      = yhModel.get(0).lastbuilddate
         mainWindow.m_link               = yhModel.get(0).link
         mainWindow.m_city               = yhModel.get(0).city
@@ -199,19 +185,105 @@ Item {
         mainWindow.m_5Low          = parseInt(yhModel.get(0).fivelow)
         mainWindow.m_5High         = parseInt(yhModel.get(0).fivehigh)
         mainWindow.m_5Code         = parseInt(yhModel.get(0).fivecode)
+=======
+        if (!resObj.query) {
+            hasdata = false
+            errstring = i18n("Error 1. Please check your network.")
+            console.debug("query is not a property of response object")
+            repeatquery.running = true
+            return
+        }
+>>>>>>> master
         
-        if (mainWindow.m_city != "") {
-            mainWindow.hasdata = true
-            console.debug("done.")
+        if (resObj.query.count !== 1) {
+            console.debug("Query count:", resObj.query.count)
+            if (resObj.query.count === 0) {
+                if (failedAttempts >= 30) {
+                    hasdata = false
+                    errstring = i18n("Error 2. WOEID may be invalid.")
+                } else {
+                    console.debug("Could be an API issue, try again. Attempts:", failedAttempts)
+                    failedAttempts += 1
+                    query()
+                }
+            } else {
+                hasdata = false
+                errstring = i18n("Error 2. WOEID may be invalid.")
+            }
+            return
         }
-        else {
-            mainWindow.hasdata = false
-            mainWindow.errstring = i18n("Error 2. WOEID may be invalid.")
-            console.debug("m_city is empty.")
+        
+        var results = resObj.query.results.channel
+        
+        m_lastBuildDate      = results.lastBuildDate
+        m_link               = results.link
+        m_city               = results.location.city
+        m_region             = results.location.region
+        m_country            = results.location.country
+        m_unitTemperature    = results.units.temperature
+        m_unitDistance       = results.units.distance
+        m_unitPressure       = results.units.pressure
+        m_windChill          = results.wind.chill
+        m_windDirection      = results.wind.direction
+        m_windSpeed          = results.wind.speed
+
+        // Note: When celsius selected, wind speed from yahoo is in km/h
+        //       and when fahrenheit (!celsius) selected, speed is in miles 
+        //       per hour (mph or mi/h).
+        if (plasmoid.configuration.mph) {
+            m_unitSpeed      = "mi/h"
+            if (plasmoid.configuration.celsius) {
+                // convert km/h to mph
+                m_windSpeed = Math.round(m_windSpeed * 0.621371, 3)
+            }
         }
+        else if (plasmoid.configuration.ms) {
+            m_unitSpeed      = "m/s"
+            if (plasmoid.configuration.celsius) { // units C configured
+                // convert km/h to m/s
+                m_windSpeed = Math.round(m_windSpeed * 0.277778, 3)
+            }
+            else { // units F configured
+                // convert mph to m/s
+                m_windSpeed = Math.round(m_windSpeed * 0.44704, 3)
+            }
+        }
+        else { // km/h configured
+            m_unitSpeed      = "km/h"
+            if (!plasmoid.configuration.celsius) { // units F configured
+                // convert mph to km/h
+                m_windSpeed = Math.round(m_windSpeed * 1.609344, 4)
+            }
+        }
+
+        m_atmosphereHumidity     = results.atmosphere.humidity
+        m_atmosphereVisibility   = results.atmosphere.visibility
+        m_atmospherePressure     = results.atmosphere.pressure
+        m_atmosphereRising       = results.atmosphere.rising
+        m_astronomySunrise       = results.astronomy.sunrise
+        m_astronomySunset        = results.astronomy.sunset
+        m_geoLat                 = results.item.lat
+        m_geoLong                = results.item.long
+        m_conditionIcon = determineIcon(parseInt(results.item.condition.code))
+        m_conditionDesc = getDescription(parseInt(results.item.condition.code))
+        m_conditionTemp = parseInt(results.item.condition.temp)
+
+        var forecasts = results.item.forecast
+        forecastModel.clear()
+        for (var i = 0; i < forecasts.length; ++i) {
+            forecastModel.append({
+                "day": parseDay(forecasts[i].day),
+                "temp": forecasts[i].low + "~" + forecasts[i].high + "°" + m_unitTemperature,
+                "icon": determineIcon(parseInt(forecasts[i].code))
+            })
+        }
+        console.debug(forecasts.length, "days forecast")
+
+        hasdata = true
+        failedAttempts = 0
     }
     
-    function parseDate(daystring) {
+    function parseDay(daystring) {
         switch (daystring) {
             case "Sun":
                 return i18n("Sunday")
@@ -227,6 +299,205 @@ Item {
                 return i18n("Friday")
             case "Sat":
                 return i18n("Saturday")
+        }
+    }
+    
+    function determineIcon(code) {
+        if (code <= 4) {
+//             notify = true
+            return "weather-storm"
+        }
+        else if (code <= 6) {
+            return "weather-snow-rain"
+        }
+        else if (code == 7 ) {
+            return "weather-snow-scattered"
+        }
+        else if (code == 8 || code == 10) {
+            return "weather-freezing-rain"
+        }
+        else if (code == 9) {
+            return "weather-showers-scattered"
+        }
+        else if (code <= 12) {
+            return "weather-showers"
+        }
+        else if (code <= 16) {
+            return "weather-snow"
+        }
+        else if (code == 17) {
+//             notify = true
+            return "weather-hail"
+        }
+        else if (code == 18) {//sleet
+            return "weather-snow-scattered"
+        }
+        else if (code <= 22) {
+            return "weather-mist"
+        }
+        else if (code <= 24) {//windy
+            return "weather-clouds"
+        }
+        else if (code == 25) {//cold
+            return "weather-freezing-rain"
+        }
+        else if (code == 26) {//cloudy
+            return "weather-clouds"
+        }
+        else if (code <= 28) {
+            return "weather-many-clouds"
+        }
+        else if (code == 29) {
+            return "weather-few-clouds-night"
+        }
+        else if (code == 30) {
+            return "weather-few-clouds"
+        }
+        else if (code == 31 || code == 33) {
+            return "weather-clear-night"
+        }
+        else if (code == 32 || code == 34 || code ==36) {
+            return "weather-clear"
+        }
+        else if (code == 35) {
+//             notify = true
+            return "weather-hail"
+        }
+        else if (code <= 40) {
+//             notify = true
+            return "weather-storm"
+        }
+        else if (code == 41 || code == 43) {
+            return "weather-snow"
+        }
+        else if (code == 42 || code == 46) {
+            return "weather-snow-rain"
+        }
+        else if (code == 44) {
+            return "weather-few-clouds"
+        }
+        else if (code == 45 || code == 47) {
+//             notify = true
+            return "weather-storm"
+        }
+        else {
+            return "weather-none-available"
+        }
+    }
+    
+    function getDescription(conCode) {
+        //according to http://developer.yahoo.com/weather/#codes
+        switch (conCode) {
+            case 0:
+//                 notify = true
+                return i18n("Tornado")
+            case 1:
+//                 notify = true
+                return i18n("Tropical Storm")
+            case 2:
+//                 notify = true
+                return i18n("Hurricane")
+            case 3:
+//                 notify = true
+                return i18n("Severe Thunderstorms")
+            case 4:
+//                 notify = true
+                return i18n("Thunderstorms")
+            case 5:
+                return i18n("Mixed Rain and Snow")
+            case 6:
+//                 notify = true
+                return i18n("Mixed Rain and Sleet")
+            case 7:
+//                 notify = true
+                return i18n("Mixed Snow and Sleet")
+            case 8:
+                return i18n("Freezing Drizzle")
+            case 9:
+                return i18n("Drizzle")
+            case 10:
+                return i18n("Freezing Rain")
+            case 11://has same descr with 12
+            case 12:
+                return i18n("Showers")
+            case 13:
+                return i18n("Snow Flurries")
+            case 14:
+                return i18n("Light Snow Showers")
+            case 15:
+                return i18n("Blowing Snow")
+            case 16:
+                return i18n("Snow")
+            case 17:
+//                 notify = true
+                return i18n("Hail")
+            case 18:
+//                 notify = true
+                return i18n("Sleet")
+            case 19:
+                return i18n("Dust")
+            case 20:
+                return i18n("Foggy")
+            case 21:
+                return i18n("Haze")
+            case 22:
+                return i18n("Smoky")
+            case 23:
+                return i18n("Blustery")
+            case 24:
+                return i18n("Windy")
+            case 25:
+                return i18n("Cold")
+            case 26:
+                return i18n("Cloudy")
+            case 27:
+                return i18n("Mostly Cloudy (Night)")
+            case 28:
+                return i18n("Mostly Cloudy (Day)")
+            case 29:
+                return i18n("Partly Cloudy (Night)")
+            case 30:
+                return i18n("Partly Cloudy (Day)")
+            case 31:
+                return i18n("Clear (Night)")
+            case 32:
+                return i18n("Sunny")
+            case 33:
+                return i18n("Fair (Night)")
+            case 34:
+                return i18n("Fair (Day)")
+            case 35:
+//                 notify = true
+                return i18n("Mixed Rain and Hail")
+            case 36:
+                return i18n("Hot")
+            case 37:
+//                 notify = true
+                return i18n("Isolated Thunderstorms")
+            case 38://same with 39
+            case 39:
+//                 notify = true
+                return i18n("Scattered Thunderstorms")
+            case 40:
+                return i18n("Scattered Showers")
+            case 41://same with 43
+            case 43:
+//                 notify = true
+                return i18n("Heavy Snow")
+            case 42:
+                return i18n("Scattered Snow Showers")
+            case 44:
+                return i18n("Partly Cloudy")
+            case 45:
+//                 notify = true
+                return i18n("Thundershowers")
+            case 46:
+                return i18n("Snow Showers")
+            case 47:
+//                 notify = true
+                return i18n("Isolated Thundershowers")
+            default://code 3200
+                return i18n("Not Available")
         }
     }
 }

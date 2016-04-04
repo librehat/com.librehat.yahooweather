@@ -1,6 +1,6 @@
 /*
 *   Author: Symeon Huang (librehat) <hzwhuang@gmail.com>
-*   Copyright 2014-2016
+*   Copyright 2016
 *
 *   This program is free software; you can redistribute it and/or modify
 *   it under the terms of the GNU Library General Public License as
@@ -9,13 +9,12 @@
 */
 
 import QtQuick 2.2
-import org.kde.plasma.plasmoid 2.0
+import QtQml.Models 2.1
 
-Item {
-    Plasmoid.switchWidth: units.gridUnit * 12
-    Plasmoid.switchHeight: units.gridUnit * 12
-
-    property int formFactor: plasmoid.formFactor
-    
-    Plasmoid.fullRepresentation: Weather { }
+ListModel {
+    ListElement {
+        day: ""
+        temp: ""
+        icon: "weather-none-available"
+    }
 }

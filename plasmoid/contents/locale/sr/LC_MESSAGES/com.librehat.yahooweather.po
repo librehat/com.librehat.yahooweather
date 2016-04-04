@@ -1,103 +1,103 @@
 # plasma-applet-yahooweather language translation file.
-# Copyright (C) 2014 Symeon Huang
+# Copyright (C) 2014 William Wong
 # This file is distributed under the same license as the plasma-applet-yahooweather package.
 #
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.5\n"
+"Project-Id-Version: 0.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-02 16:06+0100\n"
-"PO-Revision-Date: 2014-03-19 13:59+0800\n"
-"Last-Translator: Symeon Huang <hzwhuang@gmail.com>\n"
-"Language-Team: Chinese Simplified <>\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2016-03-24 14:40+0100\n"
+"Last-Translator: \n"
+"Language-Team: serbian <trifunovic@openmailbox.org>\n"
+"Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Poedit 1.6.10\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../ui/ConfigGeneral.qml:26
 msgid "WOEID"
-msgstr ""
+msgstr "Где на земљи ИД"
 
 #: ../ui/ConfigGeneral.qml:34
 msgid ""
 "Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
 "to find your city's WOEID"
 msgstr ""
-"访问 <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> 来"
-"找到您所在城市的WOEID"
+"Посетите <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID сервис</"
+"a> да пронађете ваш град  на WOEID"
 
 #: ../ui/ConfigGeneral.qml:41
 msgid "Update Interval"
-msgstr "更新间隔"
+msgstr "Учесталост ажурирања"
 
 #: ../ui/ConfigUnit.qml:27
 msgid "Temperature Unit"
-msgstr "温度单位"
+msgstr "Јединица температуре"
 
 #: ../ui/ConfigUnit.qml:37
 msgid "Celsius"
-msgstr "摄氏"
+msgstr "Целзијус"
 
 #: ../ui/ConfigUnit.qml:43
 msgid "Fahrenheit"
-msgstr "华氏"
+msgstr "Фаренхајт"
 
 #: ../ui/ConfigUnit.qml:50
-#, fuzzy
 msgid "Wind Unit"
-msgstr "速度单位"
+msgstr "Јединица ветра"
 
 #: ../ui/ConfigUnit.qml:60
 msgid "m/s"
-msgstr ""
+msgstr "м/с"
 
 #: ../ui/ConfigUnit.qml:66
 msgid "Km/h"
-msgstr ""
+msgstr "Км/ч"
 
 #: ../ui/Weather.qml:71
 msgid "YAHOO! Weather"
-msgstr "雅虎天气"
+msgstr "Време YAHOO!"
 
 #: ../ui/Weather.qml:102
 msgid "Sunrise"
-msgstr "日出"
+msgstr "Излазак"
 
 #: ../ui/Weather.qml:102
 msgid "Sunset"
-msgstr "日落"
+msgstr "Залазак"
 
 #: ../ui/Weather.qml:124
 msgid "Feels like"
-msgstr "体感温度"
+msgstr "Осећа се као"
 
 #: ../ui/Weather.qml:124
 msgid "Visibility"
-msgstr "能见度"
+msgstr "Видљивост"
 
 #: ../ui/Weather.qml:124
 msgid "NULL"
-msgstr "无数据"
+msgstr "Н/д"
 
 #: ../ui/Weather.qml:130
 msgid "Humidity"
-msgstr "湿度"
+msgstr "Влажност"
 
 #: ../ui/Weather.qml:130
 msgid "Pressure"
-msgstr "气压"
+msgstr "Притисак"
 
 #: ../ui/Weather.qml:136
 msgid "UV Index"
-msgstr "紫外线指数"
+msgstr "УВ индекс"
 
 #: ../ui/Weather.qml:136
 msgid "Wind"
-msgstr "风速"
+msgstr "Ветар"
 
 #: ../ui/Weather.qml:168
 msgid "Unknown Error."
@@ -105,244 +105,263 @@ msgstr ""
 
 #: ../ui/Weather.qml:233
 msgid "Refresh"
-msgstr "刷新"
+msgstr "Освежи"
 
 #: ../ui/Yahoo.qml:77
+#, fuzzy
 msgid "Error 3. WOEID is not specified."
-msgstr ""
+msgstr "Грешка 2. WOEID је можда неисправан."
 
 #: ../ui/Yahoo.qml:118
 msgid "Error 1. Please check your network."
-msgstr "错误1。请检查您的网络。"
+msgstr "Грешка 1. Молим проверите вашу мрежу."
 
 #: ../ui/Yahoo.qml:129 ../ui/Yahoo.qml:137
 msgid "Error 2. WOEID may be invalid."
-msgstr "错误2。WOEID或许无效。"
+msgstr "Грешка 2. WOEID је можда неисправан."
 
 #: ../ui/Yahoo.qml:202
 msgid "Sunday"
-msgstr "星期日"
+msgstr "Недеља"
 
 #: ../ui/Yahoo.qml:204
 msgid "Monday"
-msgstr "星期一"
+msgstr "Понедељак"
 
 #: ../ui/Yahoo.qml:206
 msgid "Tuesday"
-msgstr "星期二"
+msgstr "Уторак"
 
 #: ../ui/Yahoo.qml:208
 msgid "Wednesday"
-msgstr "星期三"
+msgstr "Среда"
 
 #: ../ui/Yahoo.qml:210
 msgid "Thursday"
-msgstr "星期四"
+msgstr "Четвртак"
 
 #: ../ui/Yahoo.qml:212
 msgid "Friday"
-msgstr "星期五"
+msgstr "Петак"
 
 #: ../ui/Yahoo.qml:214
 msgid "Saturday"
-msgstr "星期六"
+msgstr "Субота"
 
 #: ../ui/Yahoo.qml:306
 msgid "Tornado"
-msgstr "龙卷风"
+msgstr "Торнадо"
 
 #: ../ui/Yahoo.qml:309
 msgid "Tropical Storm"
-msgstr "热带风暴"
+msgstr "Тропска олуја"
 
 #: ../ui/Yahoo.qml:312
 msgid "Hurricane"
-msgstr "飓风"
+msgstr "Ураган"
 
 #: ../ui/Yahoo.qml:315
 msgid "Severe Thunderstorms"
-msgstr "猛烈雷暴"
+msgstr "Јака грмљавина"
 
 #: ../ui/Yahoo.qml:318
 msgid "Thunderstorms"
-msgstr "雷暴"
+msgstr "Грмљавина"
 
 #: ../ui/Yahoo.qml:320
 msgid "Mixed Rain and Snow"
-msgstr "雨夹雪"
+msgstr "Киша са снегом"
 
 #: ../ui/Yahoo.qml:323
 msgid "Mixed Rain and Sleet"
-msgstr "雨夹冰雹"
+msgstr "Киша са суснежицом"
 
 #: ../ui/Yahoo.qml:326
 msgid "Mixed Snow and Sleet"
-msgstr "雪夹冰雹"
+msgstr "Снег и суснежица"
 
 #: ../ui/Yahoo.qml:328
 msgid "Freezing Drizzle"
-msgstr "冻毛毛雨"
+msgstr "Сипећа киша са мразон"
 
 #: ../ui/Yahoo.qml:330
 msgid "Drizzle"
-msgstr "毛毛雨"
+msgstr "Сипећа киша"
 
 #: ../ui/Yahoo.qml:332
 msgid "Freezing Rain"
-msgstr "冻雨"
+msgstr "Ледена киша"
 
 #: ../ui/Yahoo.qml:335
 msgid "Showers"
-msgstr "阵雨"
+msgstr "Пљусак"
 
 #: ../ui/Yahoo.qml:337
 msgid "Snow Flurries"
-msgstr "小雪"
+msgstr "Снежне падавине"
 
 #: ../ui/Yahoo.qml:339
 msgid "Light Snow Showers"
-msgstr "偶有小雪"
+msgstr "Слаб снег"
 
 #: ../ui/Yahoo.qml:341
 msgid "Blowing Snow"
-msgstr "飞雪"
+msgstr "Мећава"
 
 #: ../ui/Yahoo.qml:343
 msgid "Snow"
-msgstr "雪"
+msgstr "Снег"
 
 #: ../ui/Yahoo.qml:346
 msgid "Hail"
-msgstr "冰雹"
+msgstr "Град"
 
 #: ../ui/Yahoo.qml:349
 msgid "Sleet"
-msgstr "雨凇"
+msgstr "Суснежица"
 
 #: ../ui/Yahoo.qml:351
 msgid "Dust"
-msgstr "灰尘"
+msgstr "Прашина"
 
 #: ../ui/Yahoo.qml:353
 msgid "Foggy"
-msgstr "浓雾"
+msgstr "Магловито"
 
 #: ../ui/Yahoo.qml:355
 msgid "Haze"
-msgstr "阴霾"
+msgstr "Измаглица"
 
 #: ../ui/Yahoo.qml:357
 msgid "Smoky"
-msgstr "烟雾"
+msgstr "Задимљено"
 
 #: ../ui/Yahoo.qml:359
 msgid "Blustery"
-msgstr "狂风"
+msgstr "Јак ветар"
 
 #: ../ui/Yahoo.qml:361
 msgid "Windy"
-msgstr "有风"
+msgstr "Ветровито"
 
 #: ../ui/Yahoo.qml:363
 msgid "Cold"
-msgstr "寒冷"
+msgstr "Хладно"
 
 #: ../ui/Yahoo.qml:365
 msgid "Cloudy"
-msgstr "多云"
+msgstr "Облачно"
 
 #: ../ui/Yahoo.qml:367
 msgid "Mostly Cloudy (Night)"
-msgstr "大部份地区多云 （夜晚）"
+msgstr "Претежно облачно (ноћ)"
 
 #: ../ui/Yahoo.qml:369
 msgid "Mostly Cloudy (Day)"
-msgstr "大部分地区多云 （白天）"
+msgstr "Претежно облачно (дан)"
 
 #: ../ui/Yahoo.qml:371
 msgid "Partly Cloudy (Night)"
-msgstr "部分地区多云 （夜晚）"
+msgstr "Претежно облачно (ноћ)"
 
 #: ../ui/Yahoo.qml:373
 msgid "Partly Cloudy (Day)"
-msgstr "部分地区多云 （白天）"
+msgstr "Претежно облачно (дан)"
 
 #: ../ui/Yahoo.qml:375
 msgid "Clear (Night)"
-msgstr "晴朗 （夜晚）"
+msgstr "Без облака (Ноћ)"
 
 #: ../ui/Yahoo.qml:377
 msgid "Sunny"
-msgstr "晴朗"
+msgstr "Сунчано"
 
 #: ../ui/Yahoo.qml:379
 msgid "Fair (Night)"
-msgstr "晴朗 （夜晚）"
+msgstr "Ведро (ноћ)"
 
 #: ../ui/Yahoo.qml:381
 msgid "Fair (Day)"
-msgstr "晴朗 （白天）"
+msgstr "Ведро (дан)"
 
 #: ../ui/Yahoo.qml:384
 msgid "Mixed Rain and Hail"
-msgstr "雨夹冰雹"
+msgstr "Киша са градом"
 
 #: ../ui/Yahoo.qml:386
 msgid "Hot"
-msgstr "热"
+msgstr "Топло"
 
 #: ../ui/Yahoo.qml:389
 msgid "Isolated Thunderstorms"
-msgstr "局部雷暴"
+msgstr "Местимично грмљавина"
 
 #: ../ui/Yahoo.qml:393
 msgid "Scattered Thunderstorms"
-msgstr "偶有雷暴"
+msgstr "Повремено грмљавина"
 
 #: ../ui/Yahoo.qml:395
 msgid "Scattered Showers"
-msgstr "偶有阵雨"
+msgstr "Повремено падавине"
 
 #: ../ui/Yahoo.qml:399
 msgid "Heavy Snow"
-msgstr "大雪"
+msgstr "Јак снег"
 
 #: ../ui/Yahoo.qml:401
 msgid "Scattered Snow Showers"
-msgstr "偶有阵雪"
+msgstr "Повремени снег"
 
 #: ../ui/Yahoo.qml:403
 msgid "Partly Cloudy"
-msgstr "部分地区多云"
+msgstr "Делимично облачно"
 
 #: ../ui/Yahoo.qml:406
 msgid "Thundershowers"
-msgstr "雷阵雨"
+msgstr "Падавине са грмљавином"
 
 #: ../ui/Yahoo.qml:408
 msgid "Snow Showers"
-msgstr "阵雪"
+msgstr "Снежне падавине"
 
 #: ../ui/Yahoo.qml:411
 msgid "Isolated Thundershowers"
-msgstr "偶有雷阵雨"
+msgstr "Местимично грмљавина"
 
 #: ../ui/Yahoo.qml:413
 msgid "Not Available"
-msgstr "不可用"
+msgstr "Недоступно"
 
 #: rc.js:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Радомир Трифуновић"
 
 #: rc.js:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "trifunovic@openmailbox.org"
 
 #~ msgid "Today"
-#~ msgstr "今天"
+#~ msgstr "Данас"
 
 #~ msgid "Tomorrow"
-#~ msgstr "明天"
+#~ msgstr "Сутра"
+
+#~ msgid "Yahoo! Weather Widget"
+#~ msgstr "Yahoo! временска прогноза"
+
+#~ msgid ""
+#~ "<html><head/><body><p>To find your city's WOEID.</p><p>Go to http://"
+#~ "zourbuth.com/tools/woeid/ <br />Type in your city's zip code or name or "
+#~ "landmark.<br />Then click Lookup.</p></body></html>"
+#~ msgstr ""
+#~ "<html><head/><body><p>Да пронађете ваш град на WOEID,</p><p>идите на "
+#~ "http://zourbuth.com/tools/woeid/ <br />Унесите зип код или име вашег "
+#~ "града.<br />Онда кликните на Lookup.</p></body></html>"
+
+#~ msgid "Degrees Unit"
+#~ msgstr "Мерна јединица"
+
+#~ msgid "Form"
+#~ msgstr "Форма"

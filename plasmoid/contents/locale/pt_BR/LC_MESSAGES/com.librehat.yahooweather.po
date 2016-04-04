@@ -1,13 +1,13 @@
 # plasma-applet-yahooweather language translation file.
 # Copyright (C) 2014 Symeon Huang
 # This file is distributed under the same license as the plasma-applet-yahooweather package.
-##
+# #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: 5.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-04 17:24+0100\n"
+"POT-Creation-Date: 2016-04-02 16:06+0100\n"
 "PO-Revision-Date: 2015-04-04 20:34-0300\n"
 "Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
@@ -58,277 +58,278 @@ msgstr "m/s"
 msgid "Km/h"
 msgstr "km/h"
 
-#: ../ui/main.qml:94
+#: ../ui/Weather.qml:71
 msgid "YAHOO! Weather"
 msgstr "YAHOO! Tempo"
 
-#: ../ui/main.qml:119
+#: ../ui/Weather.qml:102
 msgid "Sunrise"
 msgstr "Nascer do Sol"
 
-#: ../ui/main.qml:119
+#: ../ui/Weather.qml:102
 msgid "Sunset"
 msgstr "Pôr do Sol"
 
-#: ../ui/main.qml:139
+#: ../ui/Weather.qml:124
 msgid "Feels like"
 msgstr "Parece como"
 
-#: ../ui/main.qml:139
+#: ../ui/Weather.qml:124
 msgid "Visibility"
 msgstr "Visibilidade"
 
-#: ../ui/main.qml:139
+#: ../ui/Weather.qml:124
 msgid "NULL"
 msgstr "NULO"
 
-#: ../ui/main.qml:145
+#: ../ui/Weather.qml:130
 msgid "Humidity"
 msgstr "Umidade"
 
-#: ../ui/main.qml:145
+#: ../ui/Weather.qml:130
 msgid "Pressure"
 msgstr "Pressão"
 
-#: ../ui/main.qml:151
+#: ../ui/Weather.qml:136
 msgid "UV Index"
 msgstr "Índice UV"
 
-#: ../ui/main.qml:151
+#: ../ui/Weather.qml:136
 msgid "Wind"
 msgstr "Vento"
 
-#: ../ui/main.qml:165
-msgid "Today"
-msgstr "Hoje"
+#: ../ui/Weather.qml:168
+msgid "Unknown Error."
+msgstr ""
 
-#: ../ui/main.qml:172
-msgid "Tomorrow"
-msgstr "Amanhã"
-
-#: ../ui/main.qml:305 ../ui/Yahoo.qml:185
-msgid "Error 2. WOEID may be invalid."
-msgstr "Erro 2. WOEID pode ser inválido."
-
-#: ../ui/main.qml:457
-msgid "Tornado"
-msgstr "Tornado"
-
-#: ../ui/main.qml:460
-msgid "Tropical Storm"
-msgstr "Tempestade tropical"
-
-#: ../ui/main.qml:463
-msgid "Hurricane"
-msgstr "Furacão"
-
-#: ../ui/main.qml:466
-msgid "Severe Thunderstorms"
-msgstr "Tempestades fortes"
-
-#: ../ui/main.qml:469
-msgid "Thunderstorms"
-msgstr "Tempestades"
-
-#: ../ui/main.qml:471
-msgid "Mixed Rain and Snow"
-msgstr "Chuva e neve misturadas"
-
-#: ../ui/main.qml:474
-msgid "Mixed Rain and Sleet"
-msgstr "Chuva e neve misturados"
-
-#: ../ui/main.qml:477
-msgid "Mixed Snow and Sleet"
-msgstr "Neve e granizo misturados"
-
-#: ../ui/main.qml:479
-msgid "Freezing Drizzle"
-msgstr "Garoa congelada"
-
-#: ../ui/main.qml:481
-msgid "Drizzle"
-msgstr "Garoa"
-
-#: ../ui/main.qml:483
-msgid "Freezing Rain"
-msgstr "Chuva congelada"
-
-#: ../ui/main.qml:486
-msgid "Showers"
-msgstr "Pancadas de chuva"
-
-#: ../ui/main.qml:488
-msgid "Snow Flurries"
-msgstr "Flocos de neve"
-
-#: ../ui/main.qml:490
-msgid "Light Snow Showers"
-msgstr "Pancadas de chuva e neve fraca"
-
-#: ../ui/main.qml:492
-msgid "Blowing Snow"
-msgstr "Rajadas de neve"
-
-#: ../ui/main.qml:494
-msgid "Snow"
-msgstr "Neve"
-
-#: ../ui/main.qml:497
-msgid "Hail"
-msgstr "Granizo"
-
-#: ../ui/main.qml:500
-msgid "Sleet"
-msgstr "Neve derretida"
-
-#: ../ui/main.qml:502
-msgid "Dust"
-msgstr "Poeira"
-
-#: ../ui/main.qml:504
-msgid "Foggy"
-msgstr "Nebuloso"
-
-#: ../ui/main.qml:506
-msgid "Haze"
-msgstr "Neblina"
-
-#: ../ui/main.qml:508
-msgid "Smoky"
-msgstr "Enfumaçado"
-
-#: ../ui/main.qml:510
-msgid "Blustery"
-msgstr "Rajadas"
-
-#: ../ui/main.qml:512
-msgid "Windy"
-msgstr "Com ventos"
-
-#: ../ui/main.qml:514
-msgid "Cold"
-msgstr "Frio"
-
-#: ../ui/main.qml:516
-msgid "Cloudy"
-msgstr "Nublado"
-
-#: ../ui/main.qml:518
-msgid "Mostly Cloudy (Night)"
-msgstr "Nublado na maior parte do tempo (noite)"
-
-#: ../ui/main.qml:520
-msgid "Mostly Cloudy (Day)"
-msgstr "Nublado na maior parte do tempo (dia)"
-
-#: ../ui/main.qml:522
-msgid "Partly Cloudy (Night)"
-msgstr "Parcialmente nublado (noite)"
-
-#: ../ui/main.qml:524
-msgid "Partly Cloudy (Day)"
-msgstr "Parcialmente nublado (dia)"
-
-#: ../ui/main.qml:526
-msgid "Clear (Night)"
-msgstr "Noite clara"
-
-#: ../ui/main.qml:528
-msgid "Sunny"
-msgstr "Ensolarado"
-
-#: ../ui/main.qml:530
-msgid "Fair (Night)"
-msgstr "Bom (noite)"
-
-#: ../ui/main.qml:532
-msgid "Fair (Day)"
-msgstr "Bom (dia)"
-
-#: ../ui/main.qml:535
-msgid "Mixed Rain and Hail"
-msgstr "Chuva e granizo misturados"
-
-#: ../ui/main.qml:537
-msgid "Hot"
-msgstr "Quente"
-
-#: ../ui/main.qml:540
-msgid "Isolated Thunderstorms"
-msgstr "Tempestades isoladas"
-
-#: ../ui/main.qml:544
-msgid "Scattered Thunderstorms"
-msgstr "Trovoadas"
-
-#: ../ui/main.qml:546
-msgid "Scattered Showers"
-msgstr "Períodos de chuva"
-
-#: ../ui/main.qml:550
-msgid "Heavy Snow"
-msgstr "Neve forte"
-
-#: ../ui/main.qml:552
-msgid "Scattered Snow Showers"
-msgstr "Tempestade de neve isolada"
-
-#: ../ui/main.qml:554
-msgid "Partly Cloudy"
-msgstr "Parcialmente nublado"
-
-#: ../ui/main.qml:557
-msgid "Thundershowers"
-msgstr "Trovoadas"
-
-#: ../ui/main.qml:559
-msgid "Snow Showers"
-msgstr "Precipitação de neve"
-
-#: ../ui/main.qml:562
-msgid "Isolated Thundershowers"
-msgstr "Trovoadas isoladas"
-
-#: ../ui/main.qml:564
-msgid "Not Available"
-msgstr "Indisponível"
-
-#: ../ui/main.qml:569
+#: ../ui/Weather.qml:233
 msgid "Refresh"
 msgstr "Atualizar"
 
-#: ../ui/Yahoo.qml:125
+#: ../ui/Yahoo.qml:77
+#, fuzzy
+msgid "Error 3. WOEID is not specified."
+msgstr "Erro 2. WOEID pode ser inválido."
+
+#: ../ui/Yahoo.qml:118
 msgid "Error 1. Please check your network."
 msgstr "Erro 1. Verifique a conexão de rede."
 
-#: ../ui/Yahoo.qml:193
+#: ../ui/Yahoo.qml:129 ../ui/Yahoo.qml:137
+msgid "Error 2. WOEID may be invalid."
+msgstr "Erro 2. WOEID pode ser inválido."
+
+#: ../ui/Yahoo.qml:202
 msgid "Sunday"
 msgstr "Domingo"
 
-#: ../ui/Yahoo.qml:195
+#: ../ui/Yahoo.qml:204
 msgid "Monday"
 msgstr "Segunda-feira"
 
-#: ../ui/Yahoo.qml:197
+#: ../ui/Yahoo.qml:206
 msgid "Tuesday"
 msgstr "Terça-feira"
 
-#: ../ui/Yahoo.qml:199
+#: ../ui/Yahoo.qml:208
 msgid "Wednesday"
 msgstr "Quarta-feira"
 
-#: ../ui/Yahoo.qml:201
+#: ../ui/Yahoo.qml:210
 msgid "Thursday"
 msgstr "Quinta-feira"
 
-#: ../ui/Yahoo.qml:203
+#: ../ui/Yahoo.qml:212
 msgid "Friday"
 msgstr "Sexta-feira"
 
-#: ../ui/Yahoo.qml:205
+#: ../ui/Yahoo.qml:214
 msgid "Saturday"
 msgstr "Sábado"
+
+#: ../ui/Yahoo.qml:306
+msgid "Tornado"
+msgstr "Tornado"
+
+#: ../ui/Yahoo.qml:309
+msgid "Tropical Storm"
+msgstr "Tempestade tropical"
+
+#: ../ui/Yahoo.qml:312
+msgid "Hurricane"
+msgstr "Furacão"
+
+#: ../ui/Yahoo.qml:315
+msgid "Severe Thunderstorms"
+msgstr "Tempestades fortes"
+
+#: ../ui/Yahoo.qml:318
+msgid "Thunderstorms"
+msgstr "Tempestades"
+
+#: ../ui/Yahoo.qml:320
+msgid "Mixed Rain and Snow"
+msgstr "Chuva e neve misturadas"
+
+#: ../ui/Yahoo.qml:323
+msgid "Mixed Rain and Sleet"
+msgstr "Chuva e neve misturados"
+
+#: ../ui/Yahoo.qml:326
+msgid "Mixed Snow and Sleet"
+msgstr "Neve e granizo misturados"
+
+#: ../ui/Yahoo.qml:328
+msgid "Freezing Drizzle"
+msgstr "Garoa congelada"
+
+#: ../ui/Yahoo.qml:330
+msgid "Drizzle"
+msgstr "Garoa"
+
+#: ../ui/Yahoo.qml:332
+msgid "Freezing Rain"
+msgstr "Chuva congelada"
+
+#: ../ui/Yahoo.qml:335
+msgid "Showers"
+msgstr "Pancadas de chuva"
+
+#: ../ui/Yahoo.qml:337
+msgid "Snow Flurries"
+msgstr "Flocos de neve"
+
+#: ../ui/Yahoo.qml:339
+msgid "Light Snow Showers"
+msgstr "Pancadas de chuva e neve fraca"
+
+#: ../ui/Yahoo.qml:341
+msgid "Blowing Snow"
+msgstr "Rajadas de neve"
+
+#: ../ui/Yahoo.qml:343
+msgid "Snow"
+msgstr "Neve"
+
+#: ../ui/Yahoo.qml:346
+msgid "Hail"
+msgstr "Granizo"
+
+#: ../ui/Yahoo.qml:349
+msgid "Sleet"
+msgstr "Neve derretida"
+
+#: ../ui/Yahoo.qml:351
+msgid "Dust"
+msgstr "Poeira"
+
+#: ../ui/Yahoo.qml:353
+msgid "Foggy"
+msgstr "Nebuloso"
+
+#: ../ui/Yahoo.qml:355
+msgid "Haze"
+msgstr "Neblina"
+
+#: ../ui/Yahoo.qml:357
+msgid "Smoky"
+msgstr "Enfumaçado"
+
+#: ../ui/Yahoo.qml:359
+msgid "Blustery"
+msgstr "Rajadas"
+
+#: ../ui/Yahoo.qml:361
+msgid "Windy"
+msgstr "Com ventos"
+
+#: ../ui/Yahoo.qml:363
+msgid "Cold"
+msgstr "Frio"
+
+#: ../ui/Yahoo.qml:365
+msgid "Cloudy"
+msgstr "Nublado"
+
+#: ../ui/Yahoo.qml:367
+msgid "Mostly Cloudy (Night)"
+msgstr "Nublado na maior parte do tempo (noite)"
+
+#: ../ui/Yahoo.qml:369
+msgid "Mostly Cloudy (Day)"
+msgstr "Nublado na maior parte do tempo (dia)"
+
+#: ../ui/Yahoo.qml:371
+msgid "Partly Cloudy (Night)"
+msgstr "Parcialmente nublado (noite)"
+
+#: ../ui/Yahoo.qml:373
+msgid "Partly Cloudy (Day)"
+msgstr "Parcialmente nublado (dia)"
+
+#: ../ui/Yahoo.qml:375
+msgid "Clear (Night)"
+msgstr "Noite clara"
+
+#: ../ui/Yahoo.qml:377
+msgid "Sunny"
+msgstr "Ensolarado"
+
+#: ../ui/Yahoo.qml:379
+msgid "Fair (Night)"
+msgstr "Bom (noite)"
+
+#: ../ui/Yahoo.qml:381
+msgid "Fair (Day)"
+msgstr "Bom (dia)"
+
+#: ../ui/Yahoo.qml:384
+msgid "Mixed Rain and Hail"
+msgstr "Chuva e granizo misturados"
+
+#: ../ui/Yahoo.qml:386
+msgid "Hot"
+msgstr "Quente"
+
+#: ../ui/Yahoo.qml:389
+msgid "Isolated Thunderstorms"
+msgstr "Tempestades isoladas"
+
+#: ../ui/Yahoo.qml:393
+msgid "Scattered Thunderstorms"
+msgstr "Trovoadas"
+
+#: ../ui/Yahoo.qml:395
+msgid "Scattered Showers"
+msgstr "Períodos de chuva"
+
+#: ../ui/Yahoo.qml:399
+msgid "Heavy Snow"
+msgstr "Neve forte"
+
+#: ../ui/Yahoo.qml:401
+msgid "Scattered Snow Showers"
+msgstr "Tempestade de neve isolada"
+
+#: ../ui/Yahoo.qml:403
+msgid "Partly Cloudy"
+msgstr "Parcialmente nublado"
+
+#: ../ui/Yahoo.qml:406
+msgid "Thundershowers"
+msgstr "Trovoadas"
+
+#: ../ui/Yahoo.qml:408
+msgid "Snow Showers"
+msgstr "Precipitação de neve"
+
+#: ../ui/Yahoo.qml:411
+msgid "Isolated Thundershowers"
+msgstr "Trovoadas isoladas"
+
+#: ../ui/Yahoo.qml:413
+msgid "Not Available"
+msgstr "Indisponível"
 
 #: rc.js:1
 msgctxt "NAME OF TRANSLATORS"
@@ -339,3 +340,9 @@ msgstr "André Marcelo Alvarenga"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "alvarenga@kde.org"
+
+#~ msgid "Today"
+#~ msgstr "Hoje"
+
+#~ msgid "Tomorrow"
+#~ msgstr "Amanhã"

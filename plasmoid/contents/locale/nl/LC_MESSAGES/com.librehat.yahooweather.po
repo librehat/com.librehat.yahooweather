@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-04 17:22+0100\n"
+"POT-Creation-Date: 2016-04-02 16:06+0100\n"
 "PO-Revision-Date: 2015-01-23 13:56+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -58,277 +58,278 @@ msgstr "m/s"
 msgid "Km/h"
 msgstr ""
 
-#: ../ui/main.qml:94
+#: ../ui/Weather.qml:71
 msgid "YAHOO! Weather"
 msgstr "YAHOO! Het weer"
 
-#: ../ui/main.qml:119
+#: ../ui/Weather.qml:102
 msgid "Sunrise"
 msgstr "Zon op"
 
-#: ../ui/main.qml:119
+#: ../ui/Weather.qml:102
 msgid "Sunset"
 msgstr "Zon onder"
 
-#: ../ui/main.qml:139
+#: ../ui/Weather.qml:124
 msgid "Feels like"
 msgstr "Voelt als"
 
-#: ../ui/main.qml:139
+#: ../ui/Weather.qml:124
 msgid "Visibility"
 msgstr "Zicht"
 
-#: ../ui/main.qml:139
+#: ../ui/Weather.qml:124
 msgid "NULL"
 msgstr "NULL"
 
-#: ../ui/main.qml:145
+#: ../ui/Weather.qml:130
 msgid "Humidity"
 msgstr "Vochtigheid"
 
-#: ../ui/main.qml:145
+#: ../ui/Weather.qml:130
 msgid "Pressure"
 msgstr "Luchtdruk"
 
-#: ../ui/main.qml:151
+#: ../ui/Weather.qml:136
 msgid "UV Index"
 msgstr "UV-index"
 
-#: ../ui/main.qml:151
+#: ../ui/Weather.qml:136
 msgid "Wind"
 msgstr "Wind"
 
-#: ../ui/main.qml:165
-msgid "Today"
-msgstr "Vandaag"
+#: ../ui/Weather.qml:168
+msgid "Unknown Error."
+msgstr ""
 
-#: ../ui/main.qml:172
-msgid "Tomorrow"
-msgstr "Morgen"
-
-#: ../ui/main.qml:305 ../ui/Yahoo.qml:185
-msgid "Error 2. WOEID may be invalid."
-msgstr "Fout 2. WOEID kan niet geldig zijn."
-
-#: ../ui/main.qml:457
-msgid "Tornado"
-msgstr "Windhoos"
-
-#: ../ui/main.qml:460
-msgid "Tropical Storm"
-msgstr "Tropische storm"
-
-#: ../ui/main.qml:463
-msgid "Hurricane"
-msgstr "Orkaan"
-
-#: ../ui/main.qml:466
-msgid "Severe Thunderstorms"
-msgstr "Zwaar onweer"
-
-#: ../ui/main.qml:469
-msgid "Thunderstorms"
-msgstr "Onweer"
-
-#: ../ui/main.qml:471
-msgid "Mixed Rain and Snow"
-msgstr "Natte sneeuw"
-
-#: ../ui/main.qml:474
-msgid "Mixed Rain and Sleet"
-msgstr "Gemengde regen en ijzel"
-
-#: ../ui/main.qml:477
-msgid "Mixed Snow and Sleet"
-msgstr "Gemengde sneeuw en ijzel"
-
-#: ../ui/main.qml:479
-msgid "Freezing Drizzle"
-msgstr "Motijzel"
-
-#: ../ui/main.qml:481
-msgid "Drizzle"
-msgstr "Motregen"
-
-#: ../ui/main.qml:483
-msgid "Freezing Rain"
-msgstr "IJzel"
-
-#: ../ui/main.qml:486
-msgid "Showers"
-msgstr "Buien"
-
-#: ../ui/main.qml:488
-msgid "Snow Flurries"
-msgstr "Windstoten met sneeuw"
-
-#: ../ui/main.qml:490
-msgid "Light Snow Showers"
-msgstr "Lichte sneeuwbuien"
-
-#: ../ui/main.qml:492
-msgid "Blowing Snow"
-msgstr "Jachtsneeuw"
-
-#: ../ui/main.qml:494
-msgid "Snow"
-msgstr "Sneeuw"
-
-#: ../ui/main.qml:497
-msgid "Hail"
-msgstr "Hagel"
-
-#: ../ui/main.qml:500
-msgid "Sleet"
-msgstr "Ijzel"
-
-#: ../ui/main.qml:502
-msgid "Dust"
-msgstr "Stof"
-
-#: ../ui/main.qml:504
-msgid "Foggy"
-msgstr "Mistig"
-
-#: ../ui/main.qml:506
-msgid "Haze"
-msgstr "Heiig"
-
-#: ../ui/main.qml:508
-msgid "Smoky"
-msgstr "Rokerig"
-
-#: ../ui/main.qml:510
-msgid "Blustery"
-msgstr "Zware windstoten"
-
-#: ../ui/main.qml:512
-msgid "Windy"
-msgstr "Winderig"
-
-#: ../ui/main.qml:514
-msgid "Cold"
-msgstr "Koud"
-
-#: ../ui/main.qml:516
-msgid "Cloudy"
-msgstr "Bewolkt"
-
-#: ../ui/main.qml:518
-msgid "Mostly Cloudy (Night)"
-msgstr "Meest bewolk (nacht)"
-
-#: ../ui/main.qml:520
-msgid "Mostly Cloudy (Day)"
-msgstr "Meest bewolk (dag)"
-
-#: ../ui/main.qml:522
-msgid "Partly Cloudy (Night)"
-msgstr "Gedeeltelijk bewolkt (nacht)"
-
-#: ../ui/main.qml:524
-msgid "Partly Cloudy (Day)"
-msgstr "Gedeeltelijk bewolkt (dag)"
-
-#: ../ui/main.qml:526
-msgid "Clear (Night)"
-msgstr "Helder (nacht)"
-
-#: ../ui/main.qml:528
-msgid "Sunny"
-msgstr "Zonnig"
-
-#: ../ui/main.qml:530
-msgid "Fair (Night)"
-msgstr "Mooi weer (nacht)"
-
-#: ../ui/main.qml:532
-msgid "Fair (Day)"
-msgstr "Mooi weer (dag)"
-
-#: ../ui/main.qml:535
-msgid "Mixed Rain and Hail"
-msgstr "Gemengde regen en hagel"
-
-#: ../ui/main.qml:537
-msgid "Hot"
-msgstr "Heet"
-
-#: ../ui/main.qml:540
-msgid "Isolated Thunderstorms"
-msgstr "Plaatselijk onweer"
-
-#: ../ui/main.qml:544
-msgid "Scattered Thunderstorms"
-msgstr "Verspreid onweer"
-
-#: ../ui/main.qml:546
-msgid "Scattered Showers"
-msgstr "Verspreide buien"
-
-#: ../ui/main.qml:550
-msgid "Heavy Snow"
-msgstr "Zware sneeuw"
-
-#: ../ui/main.qml:552
-msgid "Scattered Snow Showers"
-msgstr "Verspreide sneeuwbuien"
-
-#: ../ui/main.qml:554
-msgid "Partly Cloudy"
-msgstr "Gedeeltelijk bewolkt"
-
-#: ../ui/main.qml:557
-msgid "Thundershowers"
-msgstr "Onweersbuien"
-
-#: ../ui/main.qml:559
-msgid "Snow Showers"
-msgstr "Sneeuwbuien"
-
-#: ../ui/main.qml:562
-msgid "Isolated Thundershowers"
-msgstr "Plaatselijk onweersbuien"
-
-#: ../ui/main.qml:564
-msgid "Not Available"
-msgstr "Niet beschikbaar"
-
-#: ../ui/main.qml:569
+#: ../ui/Weather.qml:233
 msgid "Refresh"
 msgstr ""
 
-#: ../ui/Yahoo.qml:125
+#: ../ui/Yahoo.qml:77
+#, fuzzy
+msgid "Error 3. WOEID is not specified."
+msgstr "Fout 2. WOEID kan niet geldig zijn."
+
+#: ../ui/Yahoo.qml:118
 msgid "Error 1. Please check your network."
 msgstr "Fout 1. Controleer uw netwerk."
 
-#: ../ui/Yahoo.qml:193
+#: ../ui/Yahoo.qml:129 ../ui/Yahoo.qml:137
+msgid "Error 2. WOEID may be invalid."
+msgstr "Fout 2. WOEID kan niet geldig zijn."
+
+#: ../ui/Yahoo.qml:202
 msgid "Sunday"
 msgstr "Zondag"
 
-#: ../ui/Yahoo.qml:195
+#: ../ui/Yahoo.qml:204
 msgid "Monday"
 msgstr "Maandag"
 
-#: ../ui/Yahoo.qml:197
+#: ../ui/Yahoo.qml:206
 msgid "Tuesday"
 msgstr "Dinsdag"
 
-#: ../ui/Yahoo.qml:199
+#: ../ui/Yahoo.qml:208
 msgid "Wednesday"
 msgstr "Woensdag"
 
-#: ../ui/Yahoo.qml:201
+#: ../ui/Yahoo.qml:210
 msgid "Thursday"
 msgstr "Donderdag"
 
-#: ../ui/Yahoo.qml:203
+#: ../ui/Yahoo.qml:212
 msgid "Friday"
 msgstr "Vrijdag"
 
-#: ../ui/Yahoo.qml:205
+#: ../ui/Yahoo.qml:214
 msgid "Saturday"
 msgstr "Zaterdag"
+
+#: ../ui/Yahoo.qml:306
+msgid "Tornado"
+msgstr "Windhoos"
+
+#: ../ui/Yahoo.qml:309
+msgid "Tropical Storm"
+msgstr "Tropische storm"
+
+#: ../ui/Yahoo.qml:312
+msgid "Hurricane"
+msgstr "Orkaan"
+
+#: ../ui/Yahoo.qml:315
+msgid "Severe Thunderstorms"
+msgstr "Zwaar onweer"
+
+#: ../ui/Yahoo.qml:318
+msgid "Thunderstorms"
+msgstr "Onweer"
+
+#: ../ui/Yahoo.qml:320
+msgid "Mixed Rain and Snow"
+msgstr "Natte sneeuw"
+
+#: ../ui/Yahoo.qml:323
+msgid "Mixed Rain and Sleet"
+msgstr "Gemengde regen en ijzel"
+
+#: ../ui/Yahoo.qml:326
+msgid "Mixed Snow and Sleet"
+msgstr "Gemengde sneeuw en ijzel"
+
+#: ../ui/Yahoo.qml:328
+msgid "Freezing Drizzle"
+msgstr "Motijzel"
+
+#: ../ui/Yahoo.qml:330
+msgid "Drizzle"
+msgstr "Motregen"
+
+#: ../ui/Yahoo.qml:332
+msgid "Freezing Rain"
+msgstr "IJzel"
+
+#: ../ui/Yahoo.qml:335
+msgid "Showers"
+msgstr "Buien"
+
+#: ../ui/Yahoo.qml:337
+msgid "Snow Flurries"
+msgstr "Windstoten met sneeuw"
+
+#: ../ui/Yahoo.qml:339
+msgid "Light Snow Showers"
+msgstr "Lichte sneeuwbuien"
+
+#: ../ui/Yahoo.qml:341
+msgid "Blowing Snow"
+msgstr "Jachtsneeuw"
+
+#: ../ui/Yahoo.qml:343
+msgid "Snow"
+msgstr "Sneeuw"
+
+#: ../ui/Yahoo.qml:346
+msgid "Hail"
+msgstr "Hagel"
+
+#: ../ui/Yahoo.qml:349
+msgid "Sleet"
+msgstr "Ijzel"
+
+#: ../ui/Yahoo.qml:351
+msgid "Dust"
+msgstr "Stof"
+
+#: ../ui/Yahoo.qml:353
+msgid "Foggy"
+msgstr "Mistig"
+
+#: ../ui/Yahoo.qml:355
+msgid "Haze"
+msgstr "Heiig"
+
+#: ../ui/Yahoo.qml:357
+msgid "Smoky"
+msgstr "Rokerig"
+
+#: ../ui/Yahoo.qml:359
+msgid "Blustery"
+msgstr "Zware windstoten"
+
+#: ../ui/Yahoo.qml:361
+msgid "Windy"
+msgstr "Winderig"
+
+#: ../ui/Yahoo.qml:363
+msgid "Cold"
+msgstr "Koud"
+
+#: ../ui/Yahoo.qml:365
+msgid "Cloudy"
+msgstr "Bewolkt"
+
+#: ../ui/Yahoo.qml:367
+msgid "Mostly Cloudy (Night)"
+msgstr "Meest bewolk (nacht)"
+
+#: ../ui/Yahoo.qml:369
+msgid "Mostly Cloudy (Day)"
+msgstr "Meest bewolk (dag)"
+
+#: ../ui/Yahoo.qml:371
+msgid "Partly Cloudy (Night)"
+msgstr "Gedeeltelijk bewolkt (nacht)"
+
+#: ../ui/Yahoo.qml:373
+msgid "Partly Cloudy (Day)"
+msgstr "Gedeeltelijk bewolkt (dag)"
+
+#: ../ui/Yahoo.qml:375
+msgid "Clear (Night)"
+msgstr "Helder (nacht)"
+
+#: ../ui/Yahoo.qml:377
+msgid "Sunny"
+msgstr "Zonnig"
+
+#: ../ui/Yahoo.qml:379
+msgid "Fair (Night)"
+msgstr "Mooi weer (nacht)"
+
+#: ../ui/Yahoo.qml:381
+msgid "Fair (Day)"
+msgstr "Mooi weer (dag)"
+
+#: ../ui/Yahoo.qml:384
+msgid "Mixed Rain and Hail"
+msgstr "Gemengde regen en hagel"
+
+#: ../ui/Yahoo.qml:386
+msgid "Hot"
+msgstr "Heet"
+
+#: ../ui/Yahoo.qml:389
+msgid "Isolated Thunderstorms"
+msgstr "Plaatselijk onweer"
+
+#: ../ui/Yahoo.qml:393
+msgid "Scattered Thunderstorms"
+msgstr "Verspreid onweer"
+
+#: ../ui/Yahoo.qml:395
+msgid "Scattered Showers"
+msgstr "Verspreide buien"
+
+#: ../ui/Yahoo.qml:399
+msgid "Heavy Snow"
+msgstr "Zware sneeuw"
+
+#: ../ui/Yahoo.qml:401
+msgid "Scattered Snow Showers"
+msgstr "Verspreide sneeuwbuien"
+
+#: ../ui/Yahoo.qml:403
+msgid "Partly Cloudy"
+msgstr "Gedeeltelijk bewolkt"
+
+#: ../ui/Yahoo.qml:406
+msgid "Thundershowers"
+msgstr "Onweersbuien"
+
+#: ../ui/Yahoo.qml:408
+msgid "Snow Showers"
+msgstr "Sneeuwbuien"
+
+#: ../ui/Yahoo.qml:411
+msgid "Isolated Thundershowers"
+msgstr "Plaatselijk onweersbuien"
+
+#: ../ui/Yahoo.qml:413
+msgid "Not Available"
+msgstr "Niet beschikbaar"
 
 #: rc.js:1
 msgctxt "NAME OF TRANSLATORS"
@@ -339,6 +340,12 @@ msgstr "Freek de Kruijf"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
+
+#~ msgid "Today"
+#~ msgstr "Vandaag"
+
+#~ msgid "Tomorrow"
+#~ msgstr "Morgen"
 
 #~ msgid "Yahoo! Weather Widget"
 #~ msgstr "Yahoo! Weer-widget"
