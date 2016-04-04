@@ -113,79 +113,6 @@ Item {
             return
         }
         
-<<<<<<< HEAD
-        mainWindow.m_lastBuildDate      = yhModel.get(0).lastbuilddate
-        mainWindow.m_link               = yhModel.get(0).link
-        mainWindow.m_city               = yhModel.get(0).city
-        mainWindow.m_region             = yhModel.get(0).region
-        mainWindow.m_country            = yhModel.get(0).country
-        mainWindow.m_unitTemperature    = yhModel.get(0).unittemp
-        mainWindow.m_unitDistance       = yhModel.get(0).unitdist
-        mainWindow.m_unitPressure       = yhModel.get(0).unitpressure
-        mainWindow.m_windChill          = yhModel.get(0).windchill
-        mainWindow.m_windDirection      = yhModel.get(0).winddirection
-        mainWindow.m_windSpeed          = yhModel.get(0).windspeed
-
-        // Note: When celsius selected, wind speed from yahoo is in km/h
-        //       and when fahrenheit (!celsius) selected, speed is in miles 
-        //       per hour (mph or mi/h).
-        if (plasmoid.configuration.mph) {
-            mainWindow.m_unitSpeed      = "mi/h"
-            if (plasmoid.configuration.celsius) {
-                // convert km/h to mph
-                mainWindow.m_windSpeed = Math.round(mainWindow.m_windSpeed * 0.621371, 3)
-            }
-        }
-        else if (plasmoid.configuration.ms) {
-            mainWindow.m_unitSpeed      = "m/s"
-            if (plasmoid.configuration.celsius) {
-                // convert km/h to m/s
-                mainWindow.m_windSpeed = Math.round(mainWindow.m_windSpeed * 0.277778, 3)
-            }
-            else { // units F configured
-                // convert mph to m/s
-                mainWindow.m_windSpeed = Math.round(mainWindow.m_windSpeed * 0.44704, 3)
-            }
-        }
-        else { // km/h configured
-            mainWindow.m_unitSpeed      = "km/h"
-            if (!plasmoid.configuration.celsius) { // units F configured
-                // convert mph to km/h
-                mainWindow.m_windSpeed = Math.round(mainWindow.m_windSpeed * 1.609344, 4)
-            }
-        }
-
-        mainWindow.m_atmosphereHumidity     = yhModel.get(0).atmospherehumidity
-        mainWindow.m_atmosphereVisibility   = yhModel.get(0).atmospherevisibility
-        mainWindow.m_atmospherePressure     = yhModel.get(0).atmospherepressure
-        mainWindow.m_atmosphereRising       = yhModel.get(0).atmosphererising
-        mainWindow.m_astronomySunrise       = yhModel.get(0).astronomysunrise
-        mainWindow.m_astronomySunset        = yhModel.get(0).astronomysunset
-        mainWindow.m_geoLat                 = yhModel.get(0).geolat
-        mainWindow.m_geoLong                = yhModel.get(0).geolong
-        mainWindow.m_conditionCode = parseInt(yhModel.get(0).conditioncode)
-        mainWindow.m_conditionTemp = parseInt(yhModel.get(0).conditiontemp)
-        mainWindow.m_todayDay     = parseDate(yhModel.get(0).todayday)
-        mainWindow.m_todayLow      = parseInt(yhModel.get(0).todaylow)
-        mainWindow.m_todayHigh     = parseInt(yhModel.get(0).todayhigh)
-        mainWindow.m_todayCode     = parseInt(yhModel.get(0).todaycode)
-        mainWindow.m_tomorrowDay  = parseDate(yhModel.get(0).tomorrowday)
-        mainWindow.m_tomorrowLow   = parseInt(yhModel.get(0).tomorrowlow)
-        mainWindow.m_tomorrowHigh  = parseInt(yhModel.get(0).tomorrowhigh)
-        mainWindow.m_tomorrowCode  = parseInt(yhModel.get(0).tomorrowcode)
-        mainWindow.m_afterTDay    = parseDate(yhModel.get(0).afterTday)
-        mainWindow.m_afterTLow     = parseInt(yhModel.get(0).afterTlow)
-        mainWindow.m_afterTHigh    = parseInt(yhModel.get(0).afterThigh)
-        mainWindow.m_afterTCode    = parseInt(yhModel.get(0).afterTcode)
-        mainWindow.m_4Day         = parseDate(yhModel.get(0).fourday)
-        mainWindow.m_4Low          = parseInt(yhModel.get(0).fourlow)
-        mainWindow.m_4High         = parseInt(yhModel.get(0).fourhigh)
-        mainWindow.m_4Code         = parseInt(yhModel.get(0).fourcode)
-        mainWindow.m_5Day         = parseDate(yhModel.get(0).fiveday)
-        mainWindow.m_5Low          = parseInt(yhModel.get(0).fivelow)
-        mainWindow.m_5High         = parseInt(yhModel.get(0).fivehigh)
-        mainWindow.m_5Code         = parseInt(yhModel.get(0).fivecode)
-=======
         if (!resObj.query) {
             hasdata = false
             errstring = i18n("Error 1. Please check your network.")
@@ -193,7 +120,6 @@ Item {
             repeatquery.running = true
             return
         }
->>>>>>> master
         
         if (resObj.query.count !== 1) {
             console.debug("Query count:", resObj.query.count)
