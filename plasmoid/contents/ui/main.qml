@@ -15,7 +15,7 @@ Item {
     Plasmoid.switchWidth: units.gridUnit * 12
     Plasmoid.switchHeight: units.gridUnit * 12
 
-    property int formFactor: plasmoid.formFactor
-    
+    //property int formFactor: plasmoid.formFactor
+
     Plasmoid.fullRepresentation: Weather { }
 }
