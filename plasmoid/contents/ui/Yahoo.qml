@@ -206,7 +206,6 @@ Item {
     
     function determineIcon(code) {
         if (code <= 4) {
-//             notify = true
             return "weather-storm"
         }
         else if (code <= 6) {
@@ -228,7 +227,6 @@ Item {
             return "weather-snow"
         }
         else if (code == 17) {
-//             notify = true
             return "weather-hail"
         }
         else if (code == 18) {//sleet
@@ -262,11 +260,9 @@ Item {
             return "weather-clear"
         }
         else if (code == 35) {
-//             notify = true
             return "weather-hail"
         }
         else if (code <= 40) {
-//             notify = true
             return "weather-storm"
         }
         else if (code == 41 || code == 43) {
@@ -279,7 +275,6 @@ Item {
             return "weather-few-clouds"
         }
         else if (code == 45 || code == 47) {
-//             notify = true
             return "weather-storm"
         }
         else {
@@ -291,27 +286,20 @@ Item {
         //according to http://developer.yahoo.com/weather/#codes
         switch (conCode) {
             case 0:
-//                 notify = true
                 return i18n("Tornado")
             case 1:
-//                 notify = true
                 return i18n("Tropical Storm")
             case 2:
-//                 notify = true
                 return i18n("Hurricane")
             case 3:
-//                 notify = true
                 return i18n("Severe Thunderstorms")
             case 4:
-//                 notify = true
                 return i18n("Thunderstorms")
             case 5:
                 return i18n("Mixed Rain and Snow")
             case 6:
-//                 notify = true
                 return i18n("Mixed Rain and Sleet")
             case 7:
-//                 notify = true
                 return i18n("Mixed Snow and Sleet")
             case 8:
                 return i18n("Freezing Drizzle")
@@ -331,10 +319,8 @@ Item {
             case 16:
                 return i18n("Snow")
             case 17:
-//                 notify = true
                 return i18n("Hail")
             case 18:
-//                 notify = true
                 return i18n("Sleet")
             case 19:
                 return i18n("Dust")
@@ -369,34 +355,28 @@ Item {
             case 34:
                 return i18n("Fair (Day)")
             case 35:
-//                 notify = true
                 return i18n("Mixed Rain and Hail")
             case 36:
                 return i18n("Hot")
             case 37:
-//                 notify = true
                 return i18n("Isolated Thunderstorms")
             case 38://same with 39
             case 39:
-//                 notify = true
                 return i18n("Scattered Thunderstorms")
             case 40:
                 return i18n("Scattered Showers")
             case 41://same with 43
             case 43:
-//                 notify = true
                 return i18n("Heavy Snow")
             case 42:
                 return i18n("Scattered Snow Showers")
             case 44:
                 return i18n("Partly Cloudy")
             case 45:
-//                 notify = true
                 return i18n("Thundershowers")
             case 46:
                 return i18n("Snow Showers")
             case 47:
-//                 notify = true
                 return i18n("Isolated Thundershowers")
             default://code 3200
                 return i18n("Not Available")
