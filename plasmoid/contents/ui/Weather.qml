@@ -191,4 +191,8 @@ Item {
         target: plasmoid.configuration
         onWoeidChanged: action_reload()
     }
+    
+    Component.onCompleted: {
+        action_reload()
+    }
 }
