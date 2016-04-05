@@ -16,7 +16,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
-    Layout.minimumWidth: units.gridUnit * 15
+    Layout.minimumWidth: units.gridUnit * 18
     Layout.minimumHeight: units.gridUnit * 20
     clip: true
 
@@ -38,11 +38,19 @@ Item {
         text: "<strong>" + backend.m_city + "</strong><br />" + (backend.m_region ? backend.m_region + ", " : "") + backend.m_country
     }
 
+    PlasmaComponents.Button {
+        id: refresh_button
+        anchors { top: parent.top; right: parent.right }
+        iconSource: "view-refresh"
+        tooltip: i18n("Refresh")
+        onClicked: action_reload()
+    }
+    
     PlasmaComponents.Label {
         //top-right
         id: yahoo_n_date
         visible: hasdata
-        anchors { top: parent.top; right: parent.right }
+        anchors { top: parent.top; right: refresh_button.left; rightMargin: units.gridUnit }
         text: backend.m_lastBuildDate + "<br /><a href='" + backend.m_link + "'>" + i18n("YAHOO! Weather") + "</a>"
         horizontalAlignment: Text.AlignRight
         font: theme.smallestFont
@@ -84,7 +92,6 @@ Item {
             height: Math.min(conditionCol.height, 256)
             width: height
             anchors.verticalCenter: conditionCol.verticalCenter
-            usesPlasmaTheme: true
         }
     }
 
@@ -134,7 +141,6 @@ Item {
             source: "dialog-error"
             width: theme.mediumIconSize
             height: width
-            usesPlasmaTheme: true
         }
 
         PlasmaComponents.Label {
@@ -180,14 +186,9 @@ Item {
         backend.query()
         iconUpdater.running = true
     }
-
+    
     Connections {
         target: plasmoid.configuration
         onWoeidChanged: action_reload()
-    }
-
-    Component.onCompleted: {
-        plasmoid.setAction("reload", i18n("Refresh"), "view-refresh")
-        action_reload()
     }
 }

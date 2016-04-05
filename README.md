@@ -8,7 +8,9 @@ For `KDE SC4`, please checkout `kde4` branch.
 Dependency
 =====
 
-- `plasma5` (Plasma Shell)
+- Plasma 5 (Plasma Shell)
+- Qt >= 5.4
+- QML Models 2 (`qml-module-qtqml-models2` on Ubuntu)
 
 Installation
 =====
