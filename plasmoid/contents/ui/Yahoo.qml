@@ -89,8 +89,14 @@ Item {
         console.debug("Source changed to", source)
         var doc = new XMLHttpRequest()
         doc.onreadystatechange = function() {
-            if (doc.readyState == XMLHttpRequest.DONE) {
-                getweatherinfo(doc.responseText)
+            if (doc.readyState === XMLHttpRequest.DONE) {
+                if (doc.status === 200) {
+                    getweatherinfo(doc.responseText)
+                } else {
+                    errstring = i18n("Error 1. Please check your network.")
+                    console.debug("HTTP request failed, try again.")
+                    repeatquery.running = true
+                }
             }
         }
         doc.open("GET", source, true)
@@ -98,29 +104,27 @@ Item {
     }
     
     function getweatherinfo(response) {
-        console.debug("Getting Weather Information...")
+        console.debug("getweatherinfo() is called. Getting Weather Information...")
         if (!response) {
-            console.debug("response is empty.")
+            console.error("Unexpected: response is empty.")
             return
         }
-        
+
         var resObj = JSON.parse(response)
         m_isbusy = false
-        
+
+        if (!resObj) {
+            hasdata = false
+            console.error("Cannot parse response")
+            return
+        }
+
         if (resObj.error) {
             hasdata = false
             errstring = resOjb.error.description
             return
         }
-        
-        if (!resObj.query) {
-            hasdata = false
-            errstring = i18n("Error 1. Please check your network.")
-            console.debug("query is not a property of response object")
-            repeatquery.running = true
-            return
-        }
-        
+
         if (resObj.query.count !== 1) {
             console.debug("Query count:", resObj.query.count)
             if (resObj.query.count === 0) {
