@@ -109,7 +109,7 @@ Item {
         else {
             unitsymbol = "f";
         }
-        yhModel.source = "http://xml.weather.yahooapis.com/forecastrss?w=" + woeid + "&u=" + unitsymbol;
+        yhModel.source = "http://xml.weather.yahoo.com/forecastrss?w=" + woeid + "&u=" + unitsymbol;
     }
     
     function getweatherinfo() {
