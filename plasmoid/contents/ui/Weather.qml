@@ -9,7 +9,7 @@
  */
 
 import QtQuick 2.2
-import QtQuick.Layouts 1.2
+import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.2
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -190,5 +190,9 @@ Item {
     Connections {
         target: plasmoid.configuration
         onWoeidChanged: action_reload()
+    }
+    
+    Component.onCompleted: {
+        action_reload()
     }
 }
