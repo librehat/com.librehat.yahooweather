@@ -1,0 +1,343 @@
+# plasma-applet-yahooweather language translation file.
+# Copyright (C) 2014 Symeon Huang
+# This file is distributed under the same license as the plasma-applet-yahooweather package.
+#
+#
+# Jeff Huang <s8321414@gmail.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: 5.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-02 16:07+0100\n"
+"PO-Revision-Date: 2016-04-07 13:02+0800\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
+"Language-Team: Chinese <chinese-l10n@googlegroups.com>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: ../ui/ConfigGeneral.qml:26
+msgid "WOEID"
+msgstr "WOEID"
+
+#: ../ui/ConfigGeneral.qml:34
+msgid ""
+"Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
+"to find your city's WOEID"
+msgstr ""
+"請見 <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
+"來找到您所在城市的 WOEID"
+
+#: ../ui/ConfigGeneral.qml:41
+msgid "Update Interval"
+msgstr "更新間隔"
+
+#: ../ui/ConfigUnit.qml:27
+msgid "Temperature Unit"
+msgstr "溫度單位"
+
+#: ../ui/ConfigUnit.qml:37
+msgid "Celsius"
+msgstr "攝氏"
+
+#: ../ui/ConfigUnit.qml:43
+msgid "Fahrenheit"
+msgstr "華氏"
+
+#: ../ui/ConfigUnit.qml:50
+msgid "Wind Unit"
+msgstr "風速單位"
+
+#: ../ui/ConfigUnit.qml:60
+msgid "m/s"
+msgstr "公尺／秒"
+
+#: ../ui/ConfigUnit.qml:66
+msgid "Km/h"
+msgstr "公里／小時"
+
+#: ../ui/Weather.qml:71
+msgid "YAHOO! Weather"
+msgstr "YAHOO! 天氣"
+
+#: ../ui/Weather.qml:102
+msgid "Sunrise"
+msgstr "日出"
+
+#: ../ui/Weather.qml:102
+msgid "Sunset"
+msgstr "日落"
+
+#: ../ui/Weather.qml:124
+msgid "Feels like"
+msgstr "體感溫度"
+
+#: ../ui/Weather.qml:124
+msgid "Visibility"
+msgstr "能見度"
+
+#: ../ui/Weather.qml:124
+msgid "NULL"
+msgstr "NULL"
+
+#: ../ui/Weather.qml:130
+msgid "Humidity"
+msgstr "濕度"
+
+#: ../ui/Weather.qml:130
+msgid "Pressure"
+msgstr "氣壓"
+
+#: ../ui/Weather.qml:136
+msgid "UV Index"
+msgstr "紫外線指數"
+
+#: ../ui/Weather.qml:136
+msgid "Wind"
+msgstr "風"
+
+#: ../ui/Weather.qml:168
+msgid "Unknown Error."
+msgstr "未知的錯誤"
+
+#: ../ui/Weather.qml:233
+msgid "Refresh"
+msgstr "重新整理"
+
+#: ../ui/Yahoo.qml:77
+msgid "Error 3. WOEID is not specified."
+msgstr "錯誤 3. WOEID 未指定"
+
+#: ../ui/Yahoo.qml:118
+msgid "Error 1. Please check your network."
+msgstr "請檢查您的網路連線"
+
+#: ../ui/Yahoo.qml:129 ../ui/Yahoo.qml:137
+msgid "Error 2. WOEID may be invalid."
+msgstr "錯誤 2. WOEID 可能無效"
+
+#: ../ui/Yahoo.qml:202
+msgid "Sunday"
+msgstr "星期日"
+
+#: ../ui/Yahoo.qml:204
+msgid "Monday"
+msgstr "星期一"
+
+#: ../ui/Yahoo.qml:206
+msgid "Tuesday"
+msgstr "星期二"
+
+#: ../ui/Yahoo.qml:208
+msgid "Wednesday"
+msgstr "星期三"
+
+#: ../ui/Yahoo.qml:210
+msgid "Thursday"
+msgstr "星期四"
+
+#: ../ui/Yahoo.qml:212
+msgid "Friday"
+msgstr "星期五"
+
+#: ../ui/Yahoo.qml:214
+msgid "Saturday"
+msgstr "星期六"
+
+#: ../ui/Yahoo.qml:306
+msgid "Tornado"
+msgstr "龍捲風"
+
+#: ../ui/Yahoo.qml:309
+msgid "Tropical Storm"
+msgstr "熱帶風暴"
+
+#: ../ui/Yahoo.qml:312
+msgid "Hurricane"
+msgstr "颶風"
+
+#: ../ui/Yahoo.qml:315
+msgid "Severe Thunderstorms"
+msgstr "雷雨"
+
+#: ../ui/Yahoo.qml:318
+msgid "Thunderstorms"
+msgstr "大雷雨"
+
+#: ../ui/Yahoo.qml:320
+msgid "Mixed Rain and Snow"
+msgstr "雨夾雪"
+
+#: ../ui/Yahoo.qml:323
+msgid "Mixed Rain and Sleet"
+msgstr "雨與冰雹混合"
+
+#: ../ui/Yahoo.qml:326
+msgid "Mixed Snow and Sleet"
+msgstr "雪與冰雹混合"
+
+#: ../ui/Yahoo.qml:328
+msgid "Freezing Drizzle"
+msgstr "冰凍細雨"
+
+#: ../ui/Yahoo.qml:330
+msgid "Drizzle"
+msgstr "毛毛雨"
+
+#: ../ui/Yahoo.qml:332
+msgid "Freezing Rain"
+msgstr "凍雨"
+
+#: ../ui/Yahoo.qml:335
+msgid "Showers"
+msgstr "陣雨"
+
+#: ../ui/Yahoo.qml:337
+msgid "Snow Flurries"
+msgstr "Snow Flurries"
+
+#: ../ui/Yahoo.qml:339
+msgid "Light Snow Showers"
+msgstr "陣雪"
+
+#: ../ui/Yahoo.qml:341
+msgid "Blowing Snow"
+msgstr "吹雪"
+
+#: ../ui/Yahoo.qml:343
+msgid "Snow"
+msgstr "雪"
+
+#: ../ui/Yahoo.qml:346
+msgid "Hail"
+msgstr "冰雹"
+
+#: ../ui/Yahoo.qml:349
+msgid "Sleet"
+msgstr "冰珠"
+
+#: ../ui/Yahoo.qml:351
+msgid "Dust"
+msgstr "鑽石塵"
+
+#: ../ui/Yahoo.qml:353
+msgid "Foggy"
+msgstr "霧"
+
+#: ../ui/Yahoo.qml:355
+msgid "Haze"
+msgstr "霾"
+
+#: ../ui/Yahoo.qml:357
+msgid "Smoky"
+msgstr "煙霧彌漫"
+
+#: ../ui/Yahoo.qml:359
+msgid "Blustery"
+msgstr "狂風大作"
+
+#: ../ui/Yahoo.qml:361
+msgid "Windy"
+msgstr "多風"
+
+#: ../ui/Yahoo.qml:363
+msgid "Cold"
+msgstr "寒冷"
+
+#: ../ui/Yahoo.qml:365
+msgid "Cloudy"
+msgstr "多雲"
+
+#: ../ui/Yahoo.qml:367
+msgid "Mostly Cloudy (Night)"
+msgstr "晴時多雲（夜間）"
+
+#: ../ui/Yahoo.qml:369
+msgid "Mostly Cloudy (Day)"
+msgstr "晴時多雲（日間）"
+
+#: ../ui/Yahoo.qml:371
+msgid "Partly Cloudy (Night)"
+msgstr "多雲時晴（夜間）"
+
+#: ../ui/Yahoo.qml:373
+msgid "Partly Cloudy (Day)"
+msgstr "多雲時晴（日間）"
+
+#: ../ui/Yahoo.qml:375
+msgid "Clear (Night)"
+msgstr "晴朗（夜間）"
+
+#: ../ui/Yahoo.qml:377
+msgid "Sunny"
+msgstr "陽光普照"
+
+#: ../ui/Yahoo.qml:379
+msgid "Fair (Night)"
+msgstr "晴朗（夜間）"
+
+#: ../ui/Yahoo.qml:381
+msgid "Fair (Day)"
+msgstr "晴朗（日間）"
+
+#: ../ui/Yahoo.qml:384
+msgid "Mixed Rain and Hail"
+msgstr "雨與冰雹混合"
+
+#: ../ui/Yahoo.qml:386
+msgid "Hot"
+msgstr "炎熱"
+
+#: ../ui/Yahoo.qml:389
+msgid "Isolated Thunderstorms"
+msgstr "地區性雷雨"
+
+#: ../ui/Yahoo.qml:393
+msgid "Scattered Thunderstorms"
+msgstr "零星雷雨"
+
+#: ../ui/Yahoo.qml:395
+msgid "Scattered Showers"
+msgstr "零星陣雨"
+
+#: ../ui/Yahoo.qml:399
+msgid "Heavy Snow"
+msgstr "大雪"
+
+#: ../ui/Yahoo.qml:401
+msgid "Scattered Snow Showers"
+msgstr "零星陣雪"
+
+#: ../ui/Yahoo.qml:403
+msgid "Partly Cloudy"
+msgstr "多雲時晴"
+
+#: ../ui/Yahoo.qml:406
+msgid "Thundershowers"
+msgstr "雷陣雨"
+
+#: ../ui/Yahoo.qml:408
+msgid "Snow Showers"
+msgstr "陣雪"
+
+#: ../ui/Yahoo.qml:411
+msgid "Isolated Thundershowers"
+msgstr "地區性雷陣雨"
+
+#: ../ui/Yahoo.qml:413
+msgid "Not Available"
+msgstr "不可用"
+
+#: rc.js:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Jeff Huang"
+
+#: rc.js:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "s8321414@gmail.com"
+
