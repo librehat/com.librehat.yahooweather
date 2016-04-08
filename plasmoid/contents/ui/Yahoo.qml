@@ -156,15 +156,76 @@ Item {
         m_windChill          = results.wind.chill
         m_windDirection      = results.wind.direction
         m_windSpeed          = results.wind.speed
-        if (plasmoid.configuration.ms) {
-            m_unitSpeed      = "m/s"
-            m_windSpeed      = Math.round(m_windSpeed * 1000 / 3600, 3)
-        } else {
-            m_unitSpeed      = "km/h"
-        }
         m_atmosphereHumidity     = results.atmosphere.humidity
         m_atmosphereVisibility   = results.atmosphere.visibility
         m_atmospherePressure     = results.atmosphere.pressure
+
+        // Note: this works around BUGs in values returned from yahoo. 
+        // If and when yahoo fixes these issues then most of this block of code 
+        // can be removed
+        // This also supports a needed feature that allows display of wind speed in mi/h
+        // 
+        if (plasmoid.configuration.mph) {
+            m_unitSpeed      = "mi/h"
+            if (plasmoid.configuration.celsius) { // units C configured
+                // BUG in yahoo: Speed and distance in km too large by factor of 1.609344 
+                // convert km*(1.609344)/h to mph
+                m_windSpeed = (m_windSpeed / (1.609344 * 1.609344)).toFixed(1)
+            }
+            else { // units F configured
+                // BUG in yahoo: Speed and distance returned in km 
+                // convert km/h to mph
+                m_windSpeed = (m_windSpeed / 1.609344).toFixed(1)
+            }
+        }
+        else if (plasmoid.configuration.ms) {
+            m_unitSpeed      = "m/s"
+            if (plasmoid.configuration.celsius) { // units C configured
+                // BUG in yahoo: Speed and distance in km too large by factor of 1.609344 
+                // convert km*(1.609344)/h to mph
+                m_windSpeed = m_windSpeed / (1.609344 * 1.609344)
+                // then convert km/h to m/s
+                m_windSpeed = (m_windSpeed * 0.277778).toFixed(1)
+            }
+            else { // units F configured
+                // BUG in yahoo: Speed and distance returned in km 
+                // convert km/h to mph
+                m_windSpeed = m_windSpeed / 1.609344
+                // then convert mph to m/s
+                m_windSpeed = (m_windSpeed * 0.44704).toFixed(1)
+            }
+        }
+        else { // km/h configured
+            m_unitSpeed      = "km/h"
+            if (plasmoid.configuration.celsius) { // units C configured
+                // BUG in yahoo: Speed and distance in km too large by factor of 1.609344 
+                // convert km*(1.609344)/h to km/h 
+                m_windSpeed = (m_windSpeed / 1.609344).toFixed(1)
+            }
+            else { // units F configured
+                // BUG in yahoo: Speed and distance returned in km 
+                // so is now OK since want results in km. Do nothing. 
+            }
+        }
+        // Note: for some items the same fix occurs below regardless of C or F
+        // units selection, but showing both conditions for illustration.
+        if (plasmoid.configuration.celsius) { // units C configured
+            // BUG in yahoo: visibility in km too large by factor of 1.609344
+            // convert km*(1.609344) to km 
+            m_atmosphereVisibility = Math.round(m_atmosphereVisibility / 1.6093441)
+            // BUG in yahoo: pressure returned in mb/0.0295301, convert to mb 
+            m_atmospherePressure = (m_atmospherePressure * 0.0295301).toFixed(1)
+            // BUG in yahoo: "Feels like" (chill) value returned in F, convert to C
+            m_windChill = Math.round((m_windChill-32)*5/9)
+        }
+        else { // units F configured
+            // BUG in yahoo: visibility in km, convert to miles
+            m_atmosphereVisibility = Math.round(m_atmosphereVisibility / 1.609344)
+            // BUG in yahoo: pressure returned in mb, convert to inches-hg
+            m_atmospherePressure = (m_atmospherePressure * 0.0295301).toFixed(2)
+        }
+        // end yahoo BUGs work around
+
         m_atmosphereRising       = results.atmosphere.rising
         m_astronomySunrise       = results.astronomy.sunrise
         m_astronomySunset        = results.astronomy.sunset
