@@ -44,6 +44,9 @@ Item {
     property string m_conditionDesc
     property int m_conditionTemp
     property alias dataModel: forecastModel
+    
+    // don't use m_response outside this file!
+    property string m_response
 
     Forecast {
         id: forecastModel
@@ -143,6 +146,10 @@ Item {
             return
         }
         
+        // store successful response in case user needs to change units
+        // then we can parse the response text without querying again
+        m_response = response
+
         var results = resObj.query.results.channel
         
         m_lastBuildDate      = results.lastBuildDate
@@ -166,7 +173,7 @@ Item {
         
         m_conditionIcon = determineIcon(parseInt(results.item.condition.code))
         m_conditionDesc = getDescription(parseInt(results.item.condition.code))
-        m_conditionTemp = results.item.condition.temp
+        m_conditionTemp = parseInt(results.item.condition.temp)
         
         // Unit conversions
         if (plasmoid.configuration.celsius) {
@@ -222,7 +229,14 @@ Item {
         hasdata = true
         failedAttempts = 0
     }
-    
+
+    // used to parse stored response again (refresh units)
+    function reparse() {
+        if (m_response) {
+            getweatherinfo(m_response)
+        }
+    }
+
     function parseDay(daystring) {
         switch (daystring) {
             case "Sun":
