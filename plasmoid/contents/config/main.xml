@@ -17,10 +17,28 @@
         <entry name="fahrenheit" type="Bool">
             <default>false</default>
         </entry>
+        <entry name="mph" type="Bool">
+            <default>false</default>
+        </entry>
         <entry name="ms" type="Bool">
             <default>false</default>
         </entry>
         <entry name="kmh" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="mi" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="km" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="in" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="atm" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="pa" type="Bool">
             <default>true</default>
         </entry>
     </group>

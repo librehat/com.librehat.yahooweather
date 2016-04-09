@@ -85,7 +85,7 @@ Item {
             unitsymbol = "f"
         }
         
-        var source = "http://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid='" + woeid + "' and u='" + unitsymbol + "'&format=json"
+        var source = "http://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid='" + woeid + "' and u='f'&format=json"
         console.debug("Source changed to", source)
         var doc = new XMLHttpRequest()
         doc.onreadystatechange = function() {
@@ -150,18 +150,11 @@ Item {
         m_city               = results.location.city
         m_region             = results.location.region
         m_country            = results.location.country
-        m_unitTemperature    = results.units.temperature
         m_unitDistance       = results.units.distance
         m_unitPressure       = results.units.pressure
         m_windChill          = results.wind.chill
         m_windDirection      = results.wind.direction
         m_windSpeed          = results.wind.speed
-        if (plasmoid.configuration.ms) {
-            m_unitSpeed      = "m/s"
-            m_windSpeed      = Math.round(m_windSpeed * 1000 / 3600, 3)
-        } else {
-            m_unitSpeed      = "km/h"
-        }
         m_atmosphereHumidity     = results.atmosphere.humidity
         m_atmosphereVisibility   = results.atmosphere.visibility
         m_atmospherePressure     = results.atmosphere.pressure
@@ -170,16 +163,57 @@ Item {
         m_astronomySunset        = results.astronomy.sunset
         m_geoLat                 = results.item.lat
         m_geoLong                = results.item.long
+        
         m_conditionIcon = determineIcon(parseInt(results.item.condition.code))
         m_conditionDesc = getDescription(parseInt(results.item.condition.code))
-        m_conditionTemp = parseInt(results.item.condition.temp)
+        m_conditionTemp = results.item.condition.temp
+        
+        // Unit conversions
+        if (plasmoid.configuration.celsius) {
+            m_unitTemperature = "C"
+            m_windChill = fahrenheitToCelsius(m_windChill)
+            m_conditionTemp = fahrenheitToCelsius(m_conditionTemp)
+        } else {
+            m_unitTemperature = "F"
+        }
+        if (plasmoid.configuration.ms) {
+            m_unitSpeed = "m/s"
+            m_windSpeed = mphToMs(m_windSpeed)
+        } else if (plasmoid.configuration.kmh) {
+            m_unitSpeed = "km/h"
+            m_windSpeed = mphToKmh(m_windSpeed)
+        } else {
+            m_unitSpeed = "mph"
+        }
+        if (plasmoid.configuration.km) {
+            m_atmosphereVisibility = miToKm(m_atmosphereVisibility)
+            m_unitDistance = "km"
+        } else {
+            m_unitDistance = "mi"
+        }
+        if (plasmoid.configuration.atm) {
+            m_atmospherePressure = inToAtm(m_atmospherePressure)
+            m_unitPressure = "atm"
+        } else if (plasmoid.configuration.pa) {
+            m_atmospherePressure = inToPascal(m_atmospherePressure)
+            m_unitPressure = "pa"
+        } else {
+            m_unitDistance = "inHg"
+        }
 
         var forecasts = results.item.forecast
         forecastModel.clear()
         for (var i = 0; i < forecasts.length; ++i) {
+            var low = forecasts[i].low
+            var high = forecasts[i].high
+            if (plasmoid.configuration.celsius) {
+                low = fahrenheitToCelsius(low)
+                high = fahrenheitToCelsius(high)
+            }
+
             forecastModel.append({
                 "day": parseDay(forecasts[i].day),
-                "temp": forecasts[i].low + "~" + forecasts[i].high + "°" + m_unitTemperature,
+                "temp": low + "~" + high + "°" + m_unitTemperature,
                 "icon": determineIcon(parseInt(forecasts[i].code))
             })
         }
@@ -385,5 +419,77 @@ Item {
             default://code 3200
                 return i18n("Not Available")
         }
+    }
+    
+    // convert fahrenheit to celsius
+    function fahrenheitToCelsius(f) {
+        if (!f) {
+            return undefined
+        }
+        if (typeof f !== "number") {
+            f = parseInt(f)
+        }
+        var c = (f - 32) * 5 / 9
+        return c.toFixed(0)
+    }
+    
+    // convert mph to km/h
+    function mphToKmh(m) {
+        if (!m) {
+            return undefined
+        }
+        if (typeof m !== "number") {
+            m = parseInt(m)
+        }
+        var k = m * 1.609344
+        return k.toFixed(2)
+    }
+
+    // convert mph to m/s
+    function mphToMs(m) {
+        if (!m) {
+            return undefined
+        }
+        if (typeof m !== "number") {
+            m = parseInt(m)
+        }
+        var k = m * 0.44704
+        return k.toFixed(2)
+    }
+    
+    // convert mile to kilometre
+    function miToKm(m) {
+        if (!m) {
+            return undefined
+        }
+        if (typeof m !== "number") {
+            m = parseInt(m)
+        }
+        var k = m * 1.60934
+        return k.toFixed(2)
+    }
+    
+    // convert inch of mercury to atmosphere
+    function inToAtm(m) {
+        if (!m) {
+            return undefined
+        }
+        if (typeof m !== "number") {
+            m = parseInt(m)
+        }
+        var k = m * 0.0334211
+        return k.toFixed(2)
+    }
+    
+    // convert inch of mercury to pascal
+    function inToPascal(m) {
+        if (!m) {
+            return undefined
+        }
+        if (typeof m !== "number") {
+            m = parseInt(m)
+        }
+        var k = m * 3386.39
+        return k.toFixed(0)
     }
 }

@@ -19,8 +19,14 @@ Item {
 
     property alias cfg_celsius: celsiusTemp.checked
     property alias cfg_fahrenheit: fahrenheitTemp.checked
-    property alias cfg_ms: msWind.checked
-    property alias cfg_kmh: kmhWind.checked
+    property alias cfg_ms: msSpeed.checked
+    property alias cfg_kmh: kmhSpeed.checked
+    property alias cfg_mph: mphSpeed.checked
+    property alias cfg_mi: miDistance.checked
+    property alias cfg_km: kmDistance.checked
+    property alias cfg_in: inPressure.checked
+    property alias cfg_atm: atmPressure.checked
+    property alias cfg_pa: paPressure.checked
 
     ColumnLayout {
         GroupBox {
@@ -33,38 +39,96 @@ Item {
                 }
 
                 RadioButton {
-                    id: celsiusTemp
-                    text: i18n("Celsius")
+                    id: fahrenheitTemp
+                    text: i18n("Fahrenheit")
                     exclusiveGroup: tempGroup
                 }
 
                 RadioButton {
-                    id: fahrenheitTemp
-                    text: i18n("Fahrenheit")
+                    id: celsiusTemp
+                    text: i18n("Celsius")
                     exclusiveGroup: tempGroup
                 }
             }
         }
 
         GroupBox {
-            title: i18n("Wind Unit")
+            title: i18n("Speed Unit")
             flat: true
             
             ColumnLayout {
                 ExclusiveGroup {
-                    id: windGroup
+                    id: speedGroup
                 }
 
                 RadioButton {
-                    id: msWind
-                    text: i18n("m/s")
-                    exclusiveGroup: windGroup
+                    id: mphSpeed
+                    text: i18n("Miles per hour")
+                    exclusiveGroup: speedGroup
                 }
 
                 RadioButton {
-                    id: kmhWind
-                    text: i18n("Km/h")
-                    exclusiveGroup: windGroup
+                    id: msSpeed
+                    text: i18n("Metre per second")
+                    exclusiveGroup: speedGroup
+                }
+
+                RadioButton {
+                    id: kmhSpeed
+                    text: i18n("Kilometre per hour")
+                    exclusiveGroup: speedGroup
+                }
+            }
+        }
+        
+        GroupBox {
+            title: i18n("Distance Unit")
+            flat: true
+            
+            ColumnLayout {
+                ExclusiveGroup {
+                    id: distanceGroup
+                }
+
+                RadioButton {
+                    id: miDistance
+                    text: i18n("Mile")
+                    exclusiveGroup: distanceGroup
+                }
+
+                RadioButton {
+                    id: kmDistance
+                    text: i18n("Kilometre")
+                    exclusiveGroup: distanceGroup
+                }
+            }
+        }
+        
+        GroupBox {
+            title: i18n("Pressure Unit")
+            flat: true
+
+            ColumnLayout {
+                ExclusiveGroup {
+                    id: pressureGroup
+                }
+
+                RadioButton {
+                    id: inPressure
+                    text: i18n("Inch of mercury")
+                    exclusiveGroup: pressureGroup
+                }
+                
+                RadioButton {
+                    id: atmPressure
+                    text: i18n("Atmosphere")
+                    exclusiveGroup: pressureGroup
+                }
+                
+                RadioButton {
+                    id: paPressure
+                    text: i18n("Pascal")
+                    exclusiveGroup: pressureGroup
                 }
             }
         }
