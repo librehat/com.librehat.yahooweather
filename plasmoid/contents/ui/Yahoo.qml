@@ -161,10 +161,10 @@ Item {
         m_unitPressure       = results.units.pressure
         m_windChill          = results.wind.chill
         m_windDirection      = results.wind.direction
-        m_windSpeed          = results.wind.speed
+        m_windSpeed          = kmToMi(results.wind.speed)                // Need for yahoo bug fix
         m_atmosphereHumidity     = results.atmosphere.humidity
-        m_atmosphereVisibility   = results.atmosphere.visibility
-        m_atmospherePressure     = results.atmosphere.pressure
+        m_atmosphereVisibility   = kmToMi(results.atmosphere.visibility) // Need for yahoo bug fix
+        m_atmospherePressure     = mbToIn(results.atmosphere.pressure)   // Need for yahoo bug fix
         m_atmosphereRising       = results.atmosphere.rising
         m_astronomySunrise       = results.astronomy.sunrise
         m_astronomySunset        = results.astronomy.sunset
@@ -190,12 +190,14 @@ Item {
             m_unitSpeed = "km/h"
             m_windSpeed = mphToKmh(m_windSpeed)
         } else {
+            m_windSpeed = (m_windSpeed * 1.0).toFixed(1) // Need for yahoo bug fix I think
             m_unitSpeed = "mph"
         }
         if (plasmoid.configuration.km) {
             m_atmosphereVisibility = miToKm(m_atmosphereVisibility)
             m_unitDistance = "km"
         } else {
+            m_atmosphereVisibility = (m_atmosphereVisibility * 1.0).toFixed(1) // Need for yahoo bug fix I think
             m_unitDistance = "mi"
         }
         if (plasmoid.configuration.atm) {
@@ -205,7 +207,8 @@ Item {
             m_atmospherePressure = inToPascal(m_atmospherePressure)
             m_unitPressure = "pa"
         } else {
-            m_unitDistance = "inHg"
+            m_atmospherePressure = (m_atmospherePressure * 1.0).toFixed(2) // Need for yahoo bug fix I think
+            m_unitPressure = "inHg"
         }
 
         var forecasts = results.item.forecast
@@ -441,7 +444,7 @@ Item {
             return undefined
         }
         if (typeof f !== "number") {
-            f = parseInt(f)
+            f = parseFloat(f)
         }
         var c = (f - 32) * 5 / 9
         return c.toFixed(0)
@@ -453,7 +456,7 @@ Item {
             return undefined
         }
         if (typeof m !== "number") {
-            m = parseInt(m)
+            m = parseFloat(m)
         }
         var k = m * 1.609344
         return k.toFixed(2)
@@ -465,7 +468,7 @@ Item {
             return undefined
         }
         if (typeof m !== "number") {
-            m = parseInt(m)
+            m = parseFloat(m)
         }
         var k = m * 0.44704
         return k.toFixed(2)
@@ -477,7 +480,7 @@ Item {
             return undefined
         }
         if (typeof m !== "number") {
-            m = parseInt(m)
+            m = parseFloat(m)
         }
         var k = m * 1.60934
         return k.toFixed(2)
@@ -489,7 +492,7 @@ Item {
             return undefined
         }
         if (typeof m !== "number") {
-            m = parseInt(m)
+            m = parseFloat(m)
         }
         var k = m * 0.0334211
         return k.toFixed(2)
@@ -501,9 +504,40 @@ Item {
             return undefined
         }
         if (typeof m !== "number") {
-            m = parseInt(m)
+            m = parseFloat(m)
         }
         var k = m * 3386.39
         return k.toFixed(0)
     }
+
+    // Need for yahoo bug fix: convert kilometre to mile (or km/h to mi/h)
+    // Yahoo bug is that when units F specified, wind speed and visibility
+    // are not returned in mi/h and mi but in km/h and km respectively. 
+    function kmToMi(m) {
+        if (!m) {
+            return undefined
+        }
+        if (typeof m !== "number") {
+            m = parseFloat(m)
+        }
+        var k = m / 1.609344
+        // return with full precision since this is not always displayed
+        return k
+    }
+
+    // Need for yahoo bug fix: convert millibar to in-hg 
+    // Yahoo bug is that when units F specified, pressure returned in
+    // millibars (mb) and not the expected inches of mercury. 
+    function mbToIn(m) {
+        if (!m) {
+            return undefined
+        }
+        if (typeof m !== "number") {
+            m = parseFloat(m)
+        }
+        var k = m * 0.0295301
+        // return with full precision since this is not always displayed
+        return k
+    }
 }
+
