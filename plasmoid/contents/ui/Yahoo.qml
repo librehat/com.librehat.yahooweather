@@ -506,7 +506,7 @@ Item {
         if (typeof m !== "number") {
             m = parseFloat(m)
         }
-        var k = m * 3386.39
+        var k = m * 33.8639
         return k.toFixed(0)
     }
 
