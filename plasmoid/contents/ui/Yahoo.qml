@@ -205,7 +205,7 @@ Item {
             m_unitPressure = "atm"
         } else if (plasmoid.configuration.pa) {
             m_atmospherePressure = inToPascal(m_atmospherePressure)
-            m_unitPressure = "pa"
+            m_unitPressure = "Pa"
         } else {
             m_atmospherePressure = (m_atmospherePressure * 1.0).toFixed(2) // Need for yahoo bug fix I think
             m_unitPressure = "inHg"
