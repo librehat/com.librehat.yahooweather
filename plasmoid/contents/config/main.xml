@@ -38,7 +38,7 @@
         <entry name="atm" type="Bool">
             <default>false</default>
         </entry>
-        <entry name="pa" type="Bool">
+        <entry name="hpa" type="Bool">
             <default>true</default>
         </entry>
     </group>
