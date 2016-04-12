@@ -203,9 +203,9 @@ Item {
         if (plasmoid.configuration.atm) {
             m_atmospherePressure = inToAtm(m_atmospherePressure)
             m_unitPressure = "atm"
-        } else if (plasmoid.configuration.pa) {
+        } else if (plasmoid.configuration.hpa) {
             m_atmospherePressure = inToPascal(m_atmospherePressure)
-            m_unitPressure = "Pa"
+            m_unitPressure = "hPa"
         } else {
             m_atmospherePressure = (m_atmospherePressure * 1.0).toFixed(2) // Need for yahoo bug fix I think
             m_unitPressure = "inHg"
@@ -506,7 +506,7 @@ Item {
         if (typeof m !== "number") {
             m = parseFloat(m)
         }
-        var k = m * 3386.39
+        var k = m * 33.8639
         return k.toFixed(0)
     }
 

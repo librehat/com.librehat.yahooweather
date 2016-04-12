@@ -26,7 +26,7 @@ Item {
     property alias cfg_km: kmDistance.checked
     property alias cfg_in: inPressure.checked
     property alias cfg_atm: atmPressure.checked
-    property alias cfg_pa: paPressure.checked
+    property alias cfg_hpa: hpaPressure.checked
 
     ColumnLayout {
         GroupBox {
@@ -126,8 +126,8 @@ Item {
                 }
                 
                 RadioButton {
-                    id: paPressure
-                    text: i18n("Pascal")
+                    id: hpaPressure
+                    text: i18n("Hectopascal")
                     exclusiveGroup: pressureGroup
                 }
             }
