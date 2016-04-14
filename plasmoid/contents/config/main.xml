@@ -32,7 +32,7 @@
         <entry name="km" type="Bool">
             <default>true</default>
         </entry>
-        <entry name="in" type="Bool">
+        <entry name="inhg" type="Bool">
             <default>false</default>
         </entry>
         <entry name="atm" type="Bool">

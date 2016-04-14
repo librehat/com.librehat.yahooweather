@@ -24,7 +24,7 @@ Item {
     property alias cfg_mph: mphSpeed.checked
     property alias cfg_mi: miDistance.checked
     property alias cfg_km: kmDistance.checked
-    property alias cfg_in: inPressure.checked
+    property alias cfg_inhg: inPressure.checked
     property alias cfg_atm: atmPressure.checked
     property alias cfg_hpa: hpaPressure.checked
     property alias cfg_mbr: mbrPressure.checked

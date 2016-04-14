@@ -125,6 +125,7 @@ Item {
         if (resObj.error) {
             hasdata = false
             errstring = resOjb.error.description
+            console.error("Error message from API:", errstring)
             return
         }
 
@@ -151,14 +152,12 @@ Item {
         m_response = response
 
         var results = resObj.query.results.channel
-        
+
         m_lastBuildDate      = results.lastBuildDate
         m_link               = results.link
         m_city               = results.location.city
         m_region             = results.location.region
         m_country            = results.location.country
-        m_unitDistance       = results.units.distance
-        m_unitPressure       = results.units.pressure
         m_windChill          = results.wind.chill
         m_windDirection      = results.wind.direction
         m_windSpeed          = results.wind.speed
@@ -183,6 +182,7 @@ Item {
         } else {
             m_unitTemperature = "F"
         }
+        
         if (plasmoid.configuration.ms) {
             m_unitSpeed = "m/s"
             m_windSpeed = kmhToMs(m_windSpeed)
@@ -192,21 +192,23 @@ Item {
         } else {
             m_unitSpeed = "km/h"
         }
+        
         if (plasmoid.configuration.mi) {
             m_atmosphereVisibility = kmToMi(m_atmosphereVisibility)
             m_unitDistance = "mi"
         } else {
             m_unitDistance = "km"
         }
-        if (plasmoid.configuration.in) {
+        
+        if (plasmoid.configuration.inhg) {
             m_atmospherePressure = mbarToIn(m_atmospherePressure)
             m_unitPressure = "inHg"
-        } if (plasmoid.configuration.atm) {
+        } else if (plasmoid.configuration.atm) {
             m_atmospherePressure = mbarToAtm(m_atmospherePressure)
             m_unitPressure = "atm"
         } else if (plasmoid.configuration.hpa) {
             m_unitPressure = "hPa"
-        } else if (plasmoid.configuration.mbr) {
+        } else {
             m_unitPressure = "mbar"
         }
 
@@ -443,7 +445,7 @@ Item {
             return undefined
         }
         if (typeof f !== "number") {
-            f = parseFloat(f)
+            f = parseInt(f)
         }
         var c = (f - 32) * 5 / 9
         return c.toFixed(0)

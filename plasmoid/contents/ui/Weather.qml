@@ -190,13 +190,10 @@ Item {
     Connections {
         target: plasmoid.configuration
         onWoeidChanged: action_reload()
-    }
-    
-    Connections {
-        target: plasmoid.configuration
+
         //this signal is emitted when any unit checkbox changes
         //binding multiple unit changed signals will cause a segfault
-        onCelsiusChanged: backend.reparse()
+        onMbrChanged: backend.reparse()
     }
 
     Component.onCompleted: {
