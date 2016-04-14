@@ -161,10 +161,10 @@ Item {
         m_unitPressure       = results.units.pressure
         m_windChill          = results.wind.chill
         m_windDirection      = results.wind.direction
-        m_windSpeed          = kmToMi(results.wind.speed)                // Need for yahoo bug fix
+        m_windSpeed          = results.wind.speed
         m_atmosphereHumidity     = results.atmosphere.humidity
-        m_atmosphereVisibility   = kmToMi(results.atmosphere.visibility) // Need for yahoo bug fix
-        m_atmospherePressure     = mbToIn(results.atmosphere.pressure)   // Need for yahoo bug fix
+        m_atmosphereVisibility   = results.atmosphere.visibility
+        m_atmospherePressure     = results.atmosphere.pressure
         m_atmosphereRising       = results.atmosphere.rising
         m_astronomySunrise       = results.astronomy.sunrise
         m_astronomySunset        = results.astronomy.sunset
@@ -185,30 +185,29 @@ Item {
         }
         if (plasmoid.configuration.ms) {
             m_unitSpeed = "m/s"
-            m_windSpeed = mphToMs(m_windSpeed)
-        } else if (plasmoid.configuration.kmh) {
-            m_unitSpeed = "km/h"
-            m_windSpeed = mphToKmh(m_windSpeed)
-        } else {
-            m_windSpeed = (m_windSpeed * 1.0).toFixed(1) // Need for yahoo bug fix I think
+            m_windSpeed = kmhToMs(m_windSpeed)
+        } else if (plasmoid.configuration.mph) {
             m_unitSpeed = "mph"
-        }
-        if (plasmoid.configuration.km) {
-            m_atmosphereVisibility = miToKm(m_atmosphereVisibility)
-            m_unitDistance = "km"
+            m_windSpeed = kmToMi(m_windSpeed)
         } else {
-            m_atmosphereVisibility = (m_atmosphereVisibility * 1.0).toFixed(1) // Need for yahoo bug fix I think
-            m_unitDistance = "mi"
+            m_unitSpeed = "km/h"
         }
-        if (plasmoid.configuration.atm) {
-            m_atmospherePressure = inToAtm(m_atmospherePressure)
+        if (plasmoid.configuration.mi) {
+            m_atmosphereVisibility = kmToMi(m_atmosphereVisibility)
+            m_unitDistance = "mi"
+        } else {
+            m_unitDistance = "km"
+        }
+        if (plasmoid.configuration.in) {
+            m_atmospherePressure = mbarToIn(m_atmospherePressure)
+            m_unitPressure = "inHg"
+        } if (plasmoid.configuration.atm) {
+            m_atmospherePressure = mbarToAtm(m_atmospherePressure)
             m_unitPressure = "atm"
         } else if (plasmoid.configuration.hpa) {
-            m_atmospherePressure = inToPascal(m_atmospherePressure)
             m_unitPressure = "hPa"
-        } else {
-            m_atmospherePressure = (m_atmospherePressure * 1.0).toFixed(2) // Need for yahoo bug fix I think
-            m_unitPressure = "inHg"
+        } else if (plasmoid.configuration.mbr) {
+            m_unitPressure = "mbar"
         }
 
         var forecasts = results.item.forecast
@@ -449,70 +448,20 @@ Item {
         var c = (f - 32) * 5 / 9
         return c.toFixed(0)
     }
-    
-    // convert mph to km/h
-    function mphToKmh(m) {
+
+    // convert km/h to m/s
+    function kmhToMs(m) {
         if (!m) {
             return undefined
         }
         if (typeof m !== "number") {
             m = parseFloat(m)
         }
-        var k = m * 1.609344
+        var k = m / 3.6
         return k.toFixed(2)
     }
 
-    // convert mph to m/s
-    function mphToMs(m) {
-        if (!m) {
-            return undefined
-        }
-        if (typeof m !== "number") {
-            m = parseFloat(m)
-        }
-        var k = m * 0.44704
-        return k.toFixed(2)
-    }
-    
-    // convert mile to kilometre
-    function miToKm(m) {
-        if (!m) {
-            return undefined
-        }
-        if (typeof m !== "number") {
-            m = parseFloat(m)
-        }
-        var k = m * 1.60934
-        return k.toFixed(2)
-    }
-    
-    // convert inch of mercury to atmosphere
-    function inToAtm(m) {
-        if (!m) {
-            return undefined
-        }
-        if (typeof m !== "number") {
-            m = parseFloat(m)
-        }
-        var k = m * 0.0334211
-        return k.toFixed(2)
-    }
-    
-    // convert inch of mercury to pascal
-    function inToPascal(m) {
-        if (!m) {
-            return undefined
-        }
-        if (typeof m !== "number") {
-            m = parseFloat(m)
-        }
-        var k = m * 33.8639
-        return k.toFixed(0)
-    }
-
-    // Need for yahoo bug fix: convert kilometre to mile (or km/h to mi/h)
-    // Yahoo bug is that when units F specified, wind speed and visibility
-    // are not returned in mi/h and mi but in km/h and km respectively. 
+    // convert kilometre to mile
     function kmToMi(m) {
         if (!m) {
             return undefined
@@ -521,23 +470,31 @@ Item {
             m = parseFloat(m)
         }
         var k = m / 1.609344
-        // return with full precision since this is not always displayed
-        return k
+        return k.toFixed(2)
     }
-
-    // Need for yahoo bug fix: convert millibar to in-hg 
-    // Yahoo bug is that when units F specified, pressure returned in
-    // millibars (mb) and not the expected inches of mercury. 
-    function mbToIn(m) {
+    
+    // convert mbar to inch of mercury
+    function mbarToIn(m) {
         if (!m) {
             return undefined
         }
         if (typeof m !== "number") {
             m = parseFloat(m)
         }
-        var k = m * 0.0295301
-        // return with full precision since this is not always displayed
-        return k
+        var k = m / 33.8638867
+        return k.toFixed(2)
+    }
+    
+    // convert mbar to atmosphere
+    function mbarToAtm(m) {
+        if (!m) {
+            return undefined
+        }
+        if (typeof m !== "number") {
+            m = parseFloat(m)
+        }
+        var k = m / 1013.25
+        return k.toFixed(0)
     }
 }
 

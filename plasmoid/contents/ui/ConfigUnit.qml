@@ -27,6 +27,7 @@ Item {
     property alias cfg_in: inPressure.checked
     property alias cfg_atm: atmPressure.checked
     property alias cfg_hpa: hpaPressure.checked
+    property alias cfg_mbr: mbrPressure.checked
 
     ColumnLayout {
         GroupBox {
@@ -128,6 +129,12 @@ Item {
                 RadioButton {
                     id: hpaPressure
                     text: i18n("Hectopascal")
+                    exclusiveGroup: pressureGroup
+                }
+                
+                RadioButton {
+                    id: mbrPressure
+                    text: i18n("Millibar")
                     exclusiveGroup: pressureGroup
                 }
             }
