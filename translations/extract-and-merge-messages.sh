@@ -7,15 +7,13 @@ WDIR=`pwd`                            # working dir
 BASEDIR="$WDIR/.."                    # root of translatable sources
 
 
-echo "Preparing rc files"
+echo "Preparing rc file"
 cd "${BASEDIR}"
-# we use simple sorting to make sure the lines do not jump around too much from system to system
-find . -name '*.rc' -o -name '*.ui' -o -name '*.kcfg' -o -name '*.js'| sort > ${WDIR}/rcfiles.list
 # additional string for KAboutData
 echo 'i18nc("NAME OF TRANSLATORS","Your names");' >> ${WDIR}/rc.cpp
 echo 'i18nc("EMAIL OF TRANSLATORS","Your emails");' >> ${WDIR}/rc.cpp
 echo 'i18nc("HOMEPAGE OF TRANSLATORS","Your homepages");' >> ${WDIR}/rc.cpp
-echo "Done preparing rc files"
+echo "Done preparing rc file"
 
 
 echo "Extracting messages"
@@ -42,7 +40,6 @@ echo "Done merging translations"
 
 echo "Cleaning up"
 cd "${WDIR}"
-rm rcfiles.list
 rm infiles.list
 rm rc.cpp
 echo "Done"
