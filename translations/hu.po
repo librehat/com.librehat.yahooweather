@@ -22,12 +22,11 @@ msgstr ""
 
 #: plasmoid/contents/config/config.qml:16
 msgid "General"
-msgstr ""
+msgstr "Általános"
 
 #: plasmoid/contents/config/config.qml:22
-#, fuzzy
 msgid "Unit"
-msgstr "Szélsebesség mértékegység"
+msgstr "Mértékegység"
 
 #: plasmoid/contents/ui/ConfigGeneral.qml:26
 msgid "WOEID"
@@ -58,51 +57,49 @@ msgid "Celsius"
 msgstr "Celsius"
 
 #: plasmoid/contents/ui/ConfigUnit.qml:56
-#, fuzzy
 msgid "Speed Unit"
-msgstr "Szélsebesség mértékegység"
+msgstr "Sebesség mértékegység"
 
 #: plasmoid/contents/ui/ConfigUnit.qml:66
 msgid "Miles per hour"
-msgstr ""
+msgstr "Mérföld/óra"
 
 #: plasmoid/contents/ui/ConfigUnit.qml:72
 msgid "Metre per second"
-msgstr ""
+msgstr "Méter/másodperc"
 
 #: plasmoid/contents/ui/ConfigUnit.qml:78
 msgid "Kilometre per hour"
-msgstr ""
+msgstr "Kilométer/óra"
 
 #: plasmoid/contents/ui/ConfigUnit.qml:85
-#, fuzzy
 msgid "Distance Unit"
-msgstr "Szélsebesség mértékegység"
+msgstr "Távolság mértékegység"
 
 #: plasmoid/contents/ui/ConfigUnit.qml:95
 msgid "Mile"
-msgstr ""
+msgstr "Mérföld"
 
 #: plasmoid/contents/ui/ConfigUnit.qml:101
 msgid "Kilometre"
-msgstr ""
+msgstr "Kilométer"
 
 #: plasmoid/contents/ui/ConfigUnit.qml:108
-#, fuzzy
 msgid "Pressure Unit"
-msgstr "Légnyomás"
+msgstr "Légnyomás mértékegység"
 
+# https://hu.wikipedia.org/wiki/L%C3%A9gnyom%C3%A1s
 #: plasmoid/contents/ui/ConfigUnit.qml:118
 msgid "Inch of mercury"
-msgstr ""
+msgstr "Higanyhüvelyk"
 
 #: plasmoid/contents/ui/ConfigUnit.qml:124
 msgid "Atmosphere"
-msgstr ""
+msgstr "Atmoszféra"
 
 #: plasmoid/contents/ui/ConfigUnit.qml:130
 msgid "Hectopascal"
-msgstr ""
+msgstr "Hektopascal"
 
 #: plasmoid/contents/ui/Weather.qml:45
 msgid "Refresh"
@@ -110,7 +107,7 @@ msgstr "Frissítés"
 
 #: plasmoid/contents/ui/Weather.qml:54
 msgid "YAHOO! Weather"
-msgstr ""
+msgstr "YAHOO! Időjárás"
 
 #: plasmoid/contents/ui/Weather.qml:85
 msgid "Sunrise"
@@ -130,7 +127,7 @@ msgstr "Látástávolság"
 
 #: plasmoid/contents/ui/Weather.qml:106
 msgid "NULL"
-msgstr ""
+msgstr "NULL"
 
 #: plasmoid/contents/ui/Weather.qml:112
 msgid "Humidity"
@@ -388,7 +385,6 @@ msgid "Your emails"
 msgstr "kikadf.01@gmail.com"
 
 #: translations/rc.cpp:3 rc.cpp:3
-#, fuzzy
 msgctxt "HOMEPAGE OF TRANSLATORS"
 msgid "Your homepages"
-msgstr "kikadf"
+msgstr "-"
