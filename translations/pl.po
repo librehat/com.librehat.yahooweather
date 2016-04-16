@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-02 16:06+0100\n"
+"POT-Creation-Date: 2016-04-15 10:06+0200\n"
 "PO-Revision-Date: 2014-10-11 12:00+0100\n"
 "Last-Translator: Dr Boczek <dr.boczek@gmail.com>\n"
 "Language-Team: POLSKI\n"
@@ -17,327 +17,375 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../ui/ConfigGeneral.qml:26
+#: plasmoid/contents/config/config.qml:16
+msgid "General"
+msgstr ""
+
+#: plasmoid/contents/config/config.qml:22
+#, fuzzy
+msgid "Unit"
+msgstr "Jednostka stopni"
+
+#: plasmoid/contents/ui/ConfigGeneral.qml:26
 msgid "WOEID"
 msgstr ""
 
-#: ../ui/ConfigGeneral.qml:34
+#: plasmoid/contents/ui/ConfigGeneral.qml:34
 msgid ""
 "Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
 "to find your city's WOEID"
 msgstr ""
 
-#: ../ui/ConfigGeneral.qml:41
+#: plasmoid/contents/ui/ConfigGeneral.qml:41
 msgid "Update Interval"
 msgstr ""
 
-#: ../ui/ConfigUnit.qml:27
+#: plasmoid/contents/ui/ConfigUnit.qml:33
 #, fuzzy
 msgid "Temperature Unit"
 msgstr "Jednostka stopni"
 
-#: ../ui/ConfigUnit.qml:37
-msgid "Celsius"
-msgstr "Celcjusza"
-
-#: ../ui/ConfigUnit.qml:43
+#: plasmoid/contents/ui/ConfigUnit.qml:43
 msgid "Fahrenheit"
 msgstr "Faranhait"
 
-#: ../ui/ConfigUnit.qml:50
+#: plasmoid/contents/ui/ConfigUnit.qml:49
+msgid "Celsius"
+msgstr "Celcjusza"
+
+#: plasmoid/contents/ui/ConfigUnit.qml:56
 #, fuzzy
-msgid "Wind Unit"
+msgid "Speed Unit"
 msgstr "Jednostka stopni"
 
-#: ../ui/ConfigUnit.qml:60
-msgid "m/s"
+#: plasmoid/contents/ui/ConfigUnit.qml:66
+msgid "Miles per hour"
 msgstr ""
 
-#: ../ui/ConfigUnit.qml:66
-msgid "Km/h"
+#: plasmoid/contents/ui/ConfigUnit.qml:72
+msgid "Metre per second"
 msgstr ""
 
-#: ../ui/Weather.qml:71
-msgid "YAHOO! Weather"
-msgstr "Yahoo! Pogoda"
+#: plasmoid/contents/ui/ConfigUnit.qml:78
+msgid "Kilometre per hour"
+msgstr ""
 
-#: ../ui/Weather.qml:102
-msgid "Sunrise"
-msgstr "Wschód"
+#: plasmoid/contents/ui/ConfigUnit.qml:85
+#, fuzzy
+msgid "Distance Unit"
+msgstr "Jednostka stopni"
 
-#: ../ui/Weather.qml:102
-msgid "Sunset"
-msgstr "Zachód"
+#: plasmoid/contents/ui/ConfigUnit.qml:95
+msgid "Mile"
+msgstr ""
 
-#: ../ui/Weather.qml:124
-msgid "Feels like"
-msgstr "Odczuwalna"
+#: plasmoid/contents/ui/ConfigUnit.qml:101
+msgid "Kilometre"
+msgstr ""
 
-#: ../ui/Weather.qml:124
-msgid "Visibility"
-msgstr "Widoczność"
-
-#: ../ui/Weather.qml:124
-msgid "NULL"
-msgstr "BRAK"
-
-#: ../ui/Weather.qml:130
-msgid "Humidity"
-msgstr "Wilgotność"
-
-#: ../ui/Weather.qml:130
-msgid "Pressure"
+#: plasmoid/contents/ui/ConfigUnit.qml:108
+#, fuzzy
+msgid "Pressure Unit"
 msgstr "Ciśnienie"
 
-#: ../ui/Weather.qml:136
-msgid "UV Index"
-msgstr "Indeks UV"
-
-#: ../ui/Weather.qml:136
-msgid "Wind"
-msgstr "Wiatr"
-
-#: ../ui/Weather.qml:168
-msgid "Unknown Error."
+#: plasmoid/contents/ui/ConfigUnit.qml:118
+msgid "Inch of mercury"
 msgstr ""
 
-#: ../ui/Weather.qml:233
+#: plasmoid/contents/ui/ConfigUnit.qml:124
+msgid "Atmosphere"
+msgstr ""
+
+#: plasmoid/contents/ui/ConfigUnit.qml:130
+msgid "Hectopascal"
+msgstr ""
+
+#: plasmoid/contents/ui/Weather.qml:45
 msgid "Refresh"
 msgstr ""
 
-#: ../ui/Yahoo.qml:77
+#: plasmoid/contents/ui/Weather.qml:54
+msgid "YAHOO! Weather"
+msgstr "Yahoo! Pogoda"
+
+#: plasmoid/contents/ui/Weather.qml:85
+msgid "Sunrise"
+msgstr "Wschód"
+
+#: plasmoid/contents/ui/Weather.qml:85
+msgid "Sunset"
+msgstr "Zachód"
+
+#: plasmoid/contents/ui/Weather.qml:106
+msgid "Feels like"
+msgstr "Odczuwalna"
+
+#: plasmoid/contents/ui/Weather.qml:106
+msgid "Visibility"
+msgstr "Widoczność"
+
+#: plasmoid/contents/ui/Weather.qml:106
+msgid "NULL"
+msgstr "BRAK"
+
+#: plasmoid/contents/ui/Weather.qml:112
+msgid "Humidity"
+msgstr "Wilgotność"
+
+#: plasmoid/contents/ui/Weather.qml:112
+msgid "Pressure"
+msgstr "Ciśnienie"
+
+#: plasmoid/contents/ui/Weather.qml:118
+msgid "UV Index"
+msgstr "Indeks UV"
+
+#: plasmoid/contents/ui/Weather.qml:118
+msgid "Wind"
+msgstr "Wiatr"
+
+#: plasmoid/contents/ui/Weather.qml:148
+msgid "Unknown Error."
+msgstr ""
+
+#: plasmoid/contents/ui/Yahoo.qml:80
 #, fuzzy
 msgid "Error 3. WOEID is not specified."
 msgstr "Error 2. Niewłaściwy numer WOEID"
 
-#: ../ui/Yahoo.qml:118
+#: plasmoid/contents/ui/Yahoo.qml:99
 msgid "Error 1. Please check your network."
 msgstr "Error 1. Spradź połączenie sieciowe"
 
-#: ../ui/Yahoo.qml:129 ../ui/Yahoo.qml:137
+#: plasmoid/contents/ui/Yahoo.qml:136 plasmoid/contents/ui/Yahoo.qml:144
 msgid "Error 2. WOEID may be invalid."
 msgstr "Error 2. Niewłaściwy numer WOEID"
 
-#: ../ui/Yahoo.qml:202
+#: plasmoid/contents/ui/Yahoo.qml:246
 msgid "Sunday"
 msgstr "Niedziela"
 
-#: ../ui/Yahoo.qml:204
+#: plasmoid/contents/ui/Yahoo.qml:248
 msgid "Monday"
 msgstr "Poniedziałek"
 
-#: ../ui/Yahoo.qml:206
+#: plasmoid/contents/ui/Yahoo.qml:250
 msgid "Tuesday"
 msgstr "Wtorek"
 
-#: ../ui/Yahoo.qml:208
+#: plasmoid/contents/ui/Yahoo.qml:252
 msgid "Wednesday"
 msgstr "Środa"
 
-#: ../ui/Yahoo.qml:210
+#: plasmoid/contents/ui/Yahoo.qml:254
 msgid "Thursday"
 msgstr "Czwartek"
 
-#: ../ui/Yahoo.qml:212
+#: plasmoid/contents/ui/Yahoo.qml:256
 msgid "Friday"
 msgstr "Piątek"
 
-#: ../ui/Yahoo.qml:214
+#: plasmoid/contents/ui/Yahoo.qml:258
 msgid "Saturday"
 msgstr "Sobota"
 
-#: ../ui/Yahoo.qml:306
+#: plasmoid/contents/ui/Yahoo.qml:344
 msgid "Tornado"
 msgstr "Tornado"
 
-#: ../ui/Yahoo.qml:309
+#: plasmoid/contents/ui/Yahoo.qml:346
 msgid "Tropical Storm"
 msgstr "Sztorm tropikalny"
 
-#: ../ui/Yahoo.qml:312
+#: plasmoid/contents/ui/Yahoo.qml:348
 msgid "Hurricane"
 msgstr "Huragan"
 
-#: ../ui/Yahoo.qml:315
+#: plasmoid/contents/ui/Yahoo.qml:350
 msgid "Severe Thunderstorms"
 msgstr "Silne burze"
 
-#: ../ui/Yahoo.qml:318
+#: plasmoid/contents/ui/Yahoo.qml:352
 msgid "Thunderstorms"
 msgstr "Burze"
 
-#: ../ui/Yahoo.qml:320
+#: plasmoid/contents/ui/Yahoo.qml:354
 msgid "Mixed Rain and Snow"
 msgstr "Deszcz ze śniegiem"
 
-#: ../ui/Yahoo.qml:323
+#: plasmoid/contents/ui/Yahoo.qml:356
 msgid "Mixed Rain and Sleet"
 msgstr "Deszcz i gołoledź"
 
-#: ../ui/Yahoo.qml:326
+#: plasmoid/contents/ui/Yahoo.qml:358
 msgid "Mixed Snow and Sleet"
 msgstr "Śnieg i gołoledź"
 
-#: ../ui/Yahoo.qml:328
+#: plasmoid/contents/ui/Yahoo.qml:360
 msgid "Freezing Drizzle"
 msgstr "Ślisko i mżawka"
 
-#: ../ui/Yahoo.qml:330
+#: plasmoid/contents/ui/Yahoo.qml:362
 msgid "Drizzle"
 msgstr "Mżawka"
 
-#: ../ui/Yahoo.qml:332
+#: plasmoid/contents/ui/Yahoo.qml:364
 msgid "Freezing Rain"
 msgstr "Oblodzenia"
 
-#: ../ui/Yahoo.qml:335
+#: plasmoid/contents/ui/Yahoo.qml:367
 msgid "Showers"
 msgstr "Przelotny deszcz"
 
-#: ../ui/Yahoo.qml:337
+#: plasmoid/contents/ui/Yahoo.qml:369
 msgid "Snow Flurries"
 msgstr "Ulewny deszcz"
 
-#: ../ui/Yahoo.qml:339
+#: plasmoid/contents/ui/Yahoo.qml:371
 msgid "Light Snow Showers"
 msgstr "Deszczowo z przejaśnieniami"
 
-#: ../ui/Yahoo.qml:341
+#: plasmoid/contents/ui/Yahoo.qml:373
 msgid "Blowing Snow"
 msgstr "Przelotny śnieg"
 
-#: ../ui/Yahoo.qml:343
+#: plasmoid/contents/ui/Yahoo.qml:375
 msgid "Snow"
 msgstr "Śnieg"
 
-#: ../ui/Yahoo.qml:346
+#: plasmoid/contents/ui/Yahoo.qml:377
 msgid "Hail"
 msgstr "Grad"
 
-#: ../ui/Yahoo.qml:349
+#: plasmoid/contents/ui/Yahoo.qml:379
 msgid "Sleet"
 msgstr "Deszcz ze śniegiem"
 
-#: ../ui/Yahoo.qml:351
+#: plasmoid/contents/ui/Yahoo.qml:381
 msgid "Dust"
 msgstr "Zamieć"
 
-#: ../ui/Yahoo.qml:353
+#: plasmoid/contents/ui/Yahoo.qml:383
 msgid "Foggy"
 msgstr "Mgliście"
 
-#: ../ui/Yahoo.qml:355
+#: plasmoid/contents/ui/Yahoo.qml:385
 msgid "Haze"
 msgstr "Niweleka mgła"
 
-#: ../ui/Yahoo.qml:357
+#: plasmoid/contents/ui/Yahoo.qml:387
 msgid "Smoky"
 msgstr "Widoczność słaba"
 
-#: ../ui/Yahoo.qml:359
+#: plasmoid/contents/ui/Yahoo.qml:389
 msgid "Blustery"
 msgstr "Widoczność dobra"
 
-#: ../ui/Yahoo.qml:361
+#: plasmoid/contents/ui/Yahoo.qml:391
 msgid "Windy"
 msgstr "Wietrznie"
 
-#: ../ui/Yahoo.qml:363
+#: plasmoid/contents/ui/Yahoo.qml:393
 msgid "Cold"
 msgstr "Zimno"
 
-#: ../ui/Yahoo.qml:365
+#: plasmoid/contents/ui/Yahoo.qml:395
 msgid "Cloudy"
 msgstr "Zachurzenie duże"
 
-#: ../ui/Yahoo.qml:367
+#: plasmoid/contents/ui/Yahoo.qml:397
 msgid "Mostly Cloudy (Night)"
 msgstr "Zachmurzenie (noc)"
 
-#: ../ui/Yahoo.qml:369
+#: plasmoid/contents/ui/Yahoo.qml:399
 msgid "Mostly Cloudy (Day)"
 msgstr "Zachmurzenie (dzień)"
 
-#: ../ui/Yahoo.qml:371
+#: plasmoid/contents/ui/Yahoo.qml:401
 msgid "Partly Cloudy (Night)"
 msgstr "Częściowe zachmurzenie (noc)"
 
-#: ../ui/Yahoo.qml:373
+#: plasmoid/contents/ui/Yahoo.qml:403
 msgid "Partly Cloudy (Day)"
 msgstr "Częściowe zachmurzenie (dzień)"
 
-#: ../ui/Yahoo.qml:375
+#: plasmoid/contents/ui/Yahoo.qml:405
 msgid "Clear (Night)"
 msgstr "Noc pogodna"
 
-#: ../ui/Yahoo.qml:377
+#: plasmoid/contents/ui/Yahoo.qml:407
 msgid "Sunny"
 msgstr "Słonecznie"
 
-#: ../ui/Yahoo.qml:379
+#: plasmoid/contents/ui/Yahoo.qml:409
 msgid "Fair (Night)"
 msgstr "Noc pogodna"
 
-#: ../ui/Yahoo.qml:381
+#: plasmoid/contents/ui/Yahoo.qml:411
 msgid "Fair (Day)"
 msgstr "Dzień pogodny"
 
-#: ../ui/Yahoo.qml:384
+#: plasmoid/contents/ui/Yahoo.qml:413
 msgid "Mixed Rain and Hail"
 msgstr "Deszcz i silny wiatr"
 
-#: ../ui/Yahoo.qml:386
+#: plasmoid/contents/ui/Yahoo.qml:415
 msgid "Hot"
 msgstr "Gorąco"
 
-#: ../ui/Yahoo.qml:389
+#: plasmoid/contents/ui/Yahoo.qml:417
 msgid "Isolated Thunderstorms"
 msgstr "Miejscowe burze"
 
-#: ../ui/Yahoo.qml:393
+#: plasmoid/contents/ui/Yahoo.qml:420
 msgid "Scattered Thunderstorms"
 msgstr "Gdzieniegdzie burze"
 
-#: ../ui/Yahoo.qml:395
+#: plasmoid/contents/ui/Yahoo.qml:422
 msgid "Scattered Showers"
 msgstr "Częściowe opady"
 
-#: ../ui/Yahoo.qml:399
+#: plasmoid/contents/ui/Yahoo.qml:425
 msgid "Heavy Snow"
 msgstr "Silne opady śniegu"
 
-#: ../ui/Yahoo.qml:401
+#: plasmoid/contents/ui/Yahoo.qml:427
 msgid "Scattered Snow Showers"
 msgstr "Słabe opady śniegu"
 
-#: ../ui/Yahoo.qml:403
+#: plasmoid/contents/ui/Yahoo.qml:429
 msgid "Partly Cloudy"
 msgstr "Częściowe zachmurzenie"
 
-#: ../ui/Yahoo.qml:406
+#: plasmoid/contents/ui/Yahoo.qml:431
 msgid "Thundershowers"
 msgstr "Zamieć"
 
-#: ../ui/Yahoo.qml:408
+#: plasmoid/contents/ui/Yahoo.qml:433
 msgid "Snow Showers"
 msgstr "Opady śniegu"
 
-#: ../ui/Yahoo.qml:411
+#: plasmoid/contents/ui/Yahoo.qml:435
 msgid "Isolated Thundershowers"
 msgstr "Przelotne opady śniegu"
 
-#: ../ui/Yahoo.qml:413
+#: plasmoid/contents/ui/Yahoo.qml:437
 msgid "Not Available"
 msgstr "Brak informacji"
 
-#: rc.js:1
+#: translations/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: rc.js:2
+#: translations/rc.cpp:2 rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
+msgstr ""
+
+#: translations/rc.cpp:3 rc.cpp:3
+msgctxt "HOMEPAGE OF TRANSLATORS"
+msgid "Your homepages"
 msgstr ""
 
 #~ msgid "Today"
@@ -351,6 +399,3 @@ msgstr ""
 
 #~ msgid "Where On Earth ID"
 #~ msgstr "Wymagany Earth ID"
-
-#~ msgid "Degrees Unit"
-#~ msgstr "Jednostka stopni"
