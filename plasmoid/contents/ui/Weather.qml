@@ -115,7 +115,7 @@ Item {
 
         PlasmaComponents.Label {
             id: thirdDetail
-            text: i18n("UV Index") + ": " + backend.m_atmosphereRising + "<br />" + i18n("Wind") + ": " + backend.m_windSpeed + ' ' + backend.m_unitSpeed
+            text: i18n("UV Index") + ": " + backend.m_atmosphereRising + "<br />" + i18n("Wind") + ": " + backend.m_windDirection + backend.m_windSpeed + ' ' + backend.m_unitSpeed
             font: theme.defaultFont
         }
     }
