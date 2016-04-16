@@ -440,41 +440,49 @@ Item {
     }
 
     function parseWind(d) {
-        if (d == 0) {
+        if (d === null || d === undefined) {
+            return undefined;
+        }
+
+        if (typeof d !== "number") {
+            d = parseFloat(d)
+        }
+
+        if (d <= 0) {
             return " "
-        } else if (0 <= d && d < 11.25) {
+        } else if (d < 11.25) {
             return "↓"
-        } else if (11.25 <= d && d < 33.75) {
+        } else if (d < 33.75) {
             return "↙"
-        } else if (33.75 <= d && d < 56.25) {
+        } else if (d < 56.25) {
             return "↙"
-        } else if (56.25 <= d && d < 78.75) {
+        } else if (d < 78.75) {
             return "↙"
-        } else if (78.75 <= d && d < 101.25) {
+        } else if (d < 101.25) {
             return "←"
-        } else if (101.25 <= d && d < 123.75) {
+        } else if (d < 123.75) {
             return "↖"
-        } else if (123.75 <= d && d < 146.25) {
+        } else if (d < 146.25) {
             return "↖"
-        } else if (146.25 <= d && d < 168.75) {
+        } else if (d < 168.75) {
             return "↖"
-        } else if (168.75 <= d && d < 191.25) {
+        } else if (d < 191.25) {
             return "↑"
-        } else if (191.25 <= d && d < 213.75) {
+        } else if (d < 213.75) {
             return "↗"
-        } else if (213.75 <= d && d < 236.25) {
+        } else if (d < 236.25) {
             return "↗"
-        } else if (236.25 <= d && d < 258.75) {
+        } else if (d < 258.75) {
             return "↗"
-        } else if (258.75 <= d && d < 281.25) {
+        } else if (d < 281.25) {
             return "→"
-        } else if (281.25 <= d && d < 303.75) {
+        } else if (d < 303.75) {
             return "↘"
-        } else if (303.75 <= d && d < 326.25) {
+        } else if (d < 326.25) {
             return "↘"
-        } else if (326.25 <= d && d < 348.75) {
+        } else if (d < 348.75) {
             return "↘"
-        } else if (348.75 <= d && d < 360) {
+        } else if (d < 360) {
             return "↓"
         } else if (d == 990) {
             return "⥀"
@@ -485,7 +493,7 @@ Item {
 
     // convert fahrenheit to celsius
     function fahrenheitToCelsius(f) {
-        if (!f) {
+        if (f === null || f === undefined) {
             return undefined
         }
         if (typeof f !== "number") {
@@ -497,7 +505,7 @@ Item {
 
     // convert km/h to m/s
     function kmhToMs(m) {
-        if (!m) {
+        if (m === null || m === undefined) {
             return undefined
         }
         if (typeof m !== "number") {
@@ -509,7 +517,7 @@ Item {
 
     // convert kilometre to mile
     function kmToMi(m) {
-        if (!m) {
+        if (m === null || m === undefined) {
             return undefined
         }
         if (typeof m !== "number") {
@@ -521,7 +529,7 @@ Item {
     
     // convert mbar to inch of mercury
     function mbarToIn(m) {
-        if (!m) {
+        if (m === null || m === undefined) {
             return undefined
         }
         if (typeof m !== "number") {
@@ -533,7 +541,7 @@ Item {
     
     // convert mbar to atmosphere
     function mbarToAtm(m) {
-        if (!m) {
+        if (m === null || m === undefined) {
             return undefined
         }
         if (typeof m !== "number") {
