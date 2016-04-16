@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-16 20:46+0100\n"
+"POT-Creation-Date: 2016-04-16 22:17+0100\n"
 "PO-Revision-Date: 2014-04-11 02:35+0200\n"
 "Last-Translator: Kirill Demin <deminkirill@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -367,6 +367,14 @@ msgstr "Местами грозовые ливни"
 #: ../plasmoid/contents/ui/Yahoo.qml:438
 msgid "Not Available"
 msgstr "Недоступно"
+
+#: ../plasmoid/contents/config/config.qml:16
+msgid "General"
+msgstr ""
+
+#: ../plasmoid/contents/config/config.qml:22
+msgid "Unit"
+msgstr ""
 
 #: rc.js:1
 msgctxt "NAME OF TRANSLATORS"

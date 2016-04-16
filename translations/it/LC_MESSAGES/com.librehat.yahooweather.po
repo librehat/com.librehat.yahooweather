@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-16 20:46+0100\n"
+"POT-Creation-Date: 2016-04-16 22:17+0100\n"
 "PO-Revision-Date: 2014-03-23 10:59+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -369,6 +369,14 @@ msgstr "Acquazzoni isolati"
 #: ../plasmoid/contents/ui/Yahoo.qml:438
 msgid "Not Available"
 msgstr "Non disponibile"
+
+#: ../plasmoid/contents/config/config.qml:16
+msgid "General"
+msgstr ""
+
+#: ../plasmoid/contents/config/config.qml:22
+msgid "Unit"
+msgstr ""
 
 #: rc.js:1
 msgctxt "NAME OF TRANSLATORS"

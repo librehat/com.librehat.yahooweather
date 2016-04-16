@@ -1,14 +1,14 @@
-# plasma-applet-yahooweather language translation file.
-# Copyright (C) 2014 Symeon Huang
-# This file is distributed under the same license as the plasma-applet-yahooweather package.
+# com.librehat.yahooweather language translation file.
+# Copyright (C) 2014-2016 Symeon Huang
+# This file is distributed under the same license as the com.librehat.yahooweather package.
 #
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.5\n"
+"Project-Id-Version: 5.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-16 20:46+0100\n"
-"PO-Revision-Date: 2014-03-19 13:59+0800\n"
+"POT-Creation-Date: 2016-04-16 22:17+0100\n"
+"PO-Revision-Date: 2016-04-16 22:07+0100\n"
 "Last-Translator: Symeon Huang <hzwhuang@gmail.com>\n"
 "Language-Team: Chinese Simplified <>\n"
 "Language: zh_CN\n"
@@ -47,55 +47,52 @@ msgid "Celsius"
 msgstr "摄氏"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:57
-#, fuzzy
 msgid "Speed Unit"
 msgstr "速度单位"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:67
 msgid "Miles per hour"
-msgstr ""
+msgstr "英里每小时"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:73
 msgid "Metre per second"
-msgstr ""
+msgstr "米每小时"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:79
 msgid "Kilometre per hour"
-msgstr ""
+msgstr "公里每小时"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:86
-#, fuzzy
 msgid "Distance Unit"
-msgstr "速度单位"
+msgstr "距离单位"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:96
 msgid "Mile"
-msgstr ""
+msgstr "英里"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:102
 msgid "Kilometre"
-msgstr ""
+msgstr "公里"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:109
-#, fuzzy
 msgid "Pressure Unit"
-msgstr "气压"
+msgstr "气压单位"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:119
 msgid "Inch of mercury"
-msgstr ""
+msgstr "英寸汞柱"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:125
 msgid "Atmosphere"
-msgstr ""
+msgstr "标准大气压"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:131
 msgid "Hectopascal"
-msgstr ""
+msgstr "百帕斯卡"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:137
 msgid "Millibar"
-msgstr ""
+msgstr "毫巴"
 
 #: ../plasmoid/contents/ui/Weather.qml:45
 msgid "Refresh"
@@ -143,11 +140,11 @@ msgstr "风速"
 
 #: ../plasmoid/contents/ui/Weather.qml:148
 msgid "Unknown Error."
-msgstr ""
+msgstr "未知错误。"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:80
 msgid "Error 3. WOEID is not specified."
-msgstr ""
+msgstr "错误3.WOEID未指定。"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:99
 msgid "Error 1. Please check your network."
@@ -369,6 +366,14 @@ msgstr "偶有雷阵雨"
 msgid "Not Available"
 msgstr "不可用"
 
+#: ../plasmoid/contents/config/config.qml:16
+msgid "General"
+msgstr "常规"
+
+#: ../plasmoid/contents/config/config.qml:22
+msgid "Unit"
+msgstr "单位"
+
 #: rc.js:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
@@ -378,9 +383,3 @@ msgstr ""
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-
-#~ msgid "Today"
-#~ msgstr "今天"
-
-#~ msgid "Tomorrow"
-#~ msgstr "明天"

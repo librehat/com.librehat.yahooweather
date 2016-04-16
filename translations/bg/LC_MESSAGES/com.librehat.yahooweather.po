@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 5.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-16 20:46+0100\n"
+"POT-Creation-Date: 2016-04-16 22:17+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <bvbfan@abv.bg>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -368,6 +368,14 @@ msgstr "Изолирани превалявания с гръмотевици"
 #: ../plasmoid/contents/ui/Yahoo.qml:438
 msgid "Not Available"
 msgstr "Не е налично"
+
+#: ../plasmoid/contents/config/config.qml:16
+msgid "General"
+msgstr ""
+
+#: ../plasmoid/contents/config/config.qml:22
+msgid "Unit"
+msgstr ""
 
 #: rc.js:1
 msgctxt "NAME OF TRANSLATORS"

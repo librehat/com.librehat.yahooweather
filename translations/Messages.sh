@@ -36,12 +36,11 @@ if [ "x$1" != "x" ]; then
     fi
 fi
 
-$EXTRACTRC ../plasmoid/contents/ui/*.ui > ./rc.$SCRIPTEXT
 echo 'i18nc("NAME OF TRANSLATORS","Your names");' >> ./rc.$SCRIPTEXT
 echo 'i18nc("EMAIL OF TRANSLATORS","Your emails");' >> ./rc.$SCRIPTEXT
 #$XGETTEXT rc.$SCRIPTEXT ../code/*.$SCRIPTEXT -o "$NAME.pot"
 #gettext-0.18.3 or later supports JavaScript
-$XGETTEXT ../plasmoid/contents/ui/*.qml rc.$SCRIPTEXT -L JavaScript -o "$NAME.pot"
+$XGETTEXT ../plasmoid/contents/ui/*.qml ../plasmoid/contents/config/*.qml rc.$SCRIPTEXT -L JavaScript -o "$NAME.pot"
 sed -e 's/charset=CHARSET/charset=UTF-8/g' -i "$NAME.pot"
 sed -e 's/SOME DESCRIPTIVE TITLE./plasma-applet-yahooweather language translation file./g' -i "$NAME.pot"
 sed -e "s/Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER/Copyright (C) 2014 Symeon Huang/g" -i "$NAME.pot"
