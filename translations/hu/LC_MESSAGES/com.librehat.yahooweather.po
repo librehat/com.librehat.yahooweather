@@ -49,55 +49,53 @@ msgid "Celsius"
 msgstr "Celsius"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:57
-#, fuzzy
 msgid "Speed Unit"
-msgstr "Szélsebesség mértékegység"
+msgstr "Sebesség mértékegység"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:67
 msgid "Miles per hour"
-msgstr ""
+msgstr "Mérföld/óra"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:73
 msgid "Metre per second"
-msgstr ""
+msgstr "Méter/másodperc"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:79
 msgid "Kilometre per hour"
-msgstr ""
+msgstr "Kilométer/óra"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:86
-#, fuzzy
 msgid "Distance Unit"
-msgstr "Szélsebesség mértékegység"
+msgstr "Távolság mértékegység"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:96
 msgid "Mile"
-msgstr ""
+msgstr "Mérföld"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:102
 msgid "Kilometre"
-msgstr ""
+msgstr "Kilométer"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:109
-#, fuzzy
 msgid "Pressure Unit"
-msgstr "Légnyomás"
+msgstr "Légnyomás mértékegység"
 
+# https://hu.wikipedia.org/wiki/L%C3%A9gnyom%C3%A1s
 #: ../plasmoid/contents/ui/ConfigUnit.qml:119
 msgid "Inch of mercury"
-msgstr ""
+msgstr "Higanyhüvelyk"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:125
 msgid "Atmosphere"
-msgstr ""
+msgstr "Atmoszféra"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:131
 msgid "Hectopascal"
-msgstr ""
+msgstr "Hektopascal"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:137
 msgid "Millibar"
-msgstr ""
+msgstr "Millibár"
 
 #: ../plasmoid/contents/ui/Weather.qml:45
 msgid "Refresh"
@@ -105,7 +103,7 @@ msgstr "Frissítés"
 
 #: ../plasmoid/contents/ui/Weather.qml:54
 msgid "YAHOO! Weather"
-msgstr ""
+msgstr "YAHOO! Időjárás"
 
 #: ../plasmoid/contents/ui/Weather.qml:85
 msgid "Sunrise"
@@ -125,7 +123,7 @@ msgstr "Látástávolság"
 
 #: ../plasmoid/contents/ui/Weather.qml:106
 msgid "NULL"
-msgstr ""
+msgstr "NULL"
 
 #: ../plasmoid/contents/ui/Weather.qml:112
 msgid "Humidity"
