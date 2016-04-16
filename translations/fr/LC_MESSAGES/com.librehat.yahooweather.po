@@ -1,0 +1,406 @@
+# plasma-applet-yahooweather language translation file.
+# Copyright (C) 2014 William Wong
+# This file is distributed under the same license as the plasma-applet-yahooweather package.
+#
+#
+# Valter Mura <valtermura@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-16 20:46+0100\n"
+"PO-Revision-Date: 2014-07-05 00:44+0100\n"
+"Last-Translator: spyder <ghostdarkhid@gmail.com>\n"
+"Language-Team: French <kde-i18n-it@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.6.5\n"
+
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:26
+msgid "WOEID"
+msgstr "WOEID"
+
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:34
+msgid ""
+"Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
+"to find your city's WOEID"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:41
+msgid "Update Interval"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:34
+#, fuzzy
+msgid "Temperature Unit"
+msgstr "Unité Degrés"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:44
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:50
+msgid "Celsius"
+msgstr "Celsius"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:57
+#, fuzzy
+msgid "Speed Unit"
+msgstr "Unité Degrés"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:67
+msgid "Miles per hour"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:73
+msgid "Metre per second"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:79
+msgid "Kilometre per hour"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:86
+#, fuzzy
+msgid "Distance Unit"
+msgstr "Unité Degrés"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:96
+msgid "Mile"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:102
+msgid "Kilometre"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:109
+#, fuzzy
+msgid "Pressure Unit"
+msgstr "Pression"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:119
+msgid "Inch of mercury"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:125
+msgid "Atmosphere"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:131
+msgid "Hectopascal"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:137
+msgid "Millibar"
+msgstr ""
+
+#: ../plasmoid/contents/ui/Weather.qml:45
+msgid "Refresh"
+msgstr ""
+
+#: ../plasmoid/contents/ui/Weather.qml:54
+msgid "YAHOO! Weather"
+msgstr "YAHOO! Météo"
+
+#: ../plasmoid/contents/ui/Weather.qml:85
+msgid "Sunrise"
+msgstr "Lever"
+
+#: ../plasmoid/contents/ui/Weather.qml:85
+msgid "Sunset"
+msgstr "Coucher"
+
+#: ../plasmoid/contents/ui/Weather.qml:106
+msgid "Feels like"
+msgstr "Indice de chaleur"
+
+#: ../plasmoid/contents/ui/Weather.qml:106
+msgid "Visibility"
+msgstr "Visibilité"
+
+#: ../plasmoid/contents/ui/Weather.qml:106
+msgid "NULL"
+msgstr "NULL"
+
+#: ../plasmoid/contents/ui/Weather.qml:112
+msgid "Humidity"
+msgstr "Humidité"
+
+#: ../plasmoid/contents/ui/Weather.qml:112
+msgid "Pressure"
+msgstr "Pression"
+
+#: ../plasmoid/contents/ui/Weather.qml:118
+msgid "UV Index"
+msgstr "Indice UV"
+
+#: ../plasmoid/contents/ui/Weather.qml:118
+msgid "Wind"
+msgstr "Vent"
+
+#: ../plasmoid/contents/ui/Weather.qml:148
+msgid "Unknown Error."
+msgstr ""
+
+#: ../plasmoid/contents/ui/Yahoo.qml:80
+#, fuzzy
+msgid "Error 3. WOEID is not specified."
+msgstr "Erreur 2. L'WOEID peut ne pas être correcte."
+
+#: ../plasmoid/contents/ui/Yahoo.qml:99
+msgid "Error 1. Please check your network."
+msgstr "Erreur 1. Vérifiez votre connexion"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:137 ../plasmoid/contents/ui/Yahoo.qml:145
+msgid "Error 2. WOEID may be invalid."
+msgstr "Erreur 2. L'WOEID peut ne pas être correcte."
+
+#: ../plasmoid/contents/ui/Yahoo.qml:247
+msgid "Sunday"
+msgstr "Dimanche"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:249
+msgid "Monday"
+msgstr "Lundi"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:251
+msgid "Tuesday"
+msgstr "Mardi"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:253
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:255
+msgid "Thursday"
+msgstr "Jeudi"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:257
+msgid "Friday"
+msgstr "Vendredi"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:259
+msgid "Saturday"
+msgstr "Samedi"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:345
+msgid "Tornado"
+msgstr "Tornade"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:347
+msgid "Tropical Storm"
+msgstr "Tempête Tropicale"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:349
+msgid "Hurricane"
+msgstr "Ouragan"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:351
+msgid "Severe Thunderstorms"
+msgstr " Forte Tempête"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:353
+msgid "Thunderstorms"
+msgstr "Orages"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:355
+msgid "Mixed Rain and Snow"
+msgstr "Pluie et neige"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:357
+msgid "Mixed Rain and Sleet"
+msgstr "Pluie et Grésil"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:359
+msgid "Mixed Snow and Sleet"
+msgstr "Neige et Grésil"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:361
+msgid "Freezing Drizzle"
+msgstr "Pluie fine Verglaçante"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:363
+msgid "Drizzle"
+msgstr "Pluie fine"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:365
+msgid "Freezing Rain"
+msgstr "Pluie Verglaçante"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:368
+msgid "Showers"
+msgstr "Averses"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:370
+msgid "Snow Flurries"
+msgstr "Neige Fondue"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:372
+msgid "Light Snow Showers"
+msgstr "Averses de neige légère"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:374
+msgid "Blowing Snow"
+msgstr "Averses de neige"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:376
+msgid "Snow"
+msgstr "Neige"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:378
+msgid "Hail"
+msgstr "Grêle"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:380
+msgid "Sleet"
+msgstr "Neige fondue"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:382
+msgid "Dust"
+msgstr "Poussière"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:384
+msgid "Foggy"
+msgstr "Brouillard"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:386
+msgid "Haze"
+msgstr "Brume"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:388
+msgid "Smoky"
+msgstr "Enfumé"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:390
+msgid "Blustery"
+msgstr "Orageux"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:392
+msgid "Windy"
+msgstr "Venteux"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:394
+msgid "Cold"
+msgstr "Froid"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:396
+msgid "Cloudy"
+msgstr "Nuageux"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:398
+msgid "Mostly Cloudy (Night)"
+msgstr "Très nuageux (nuit)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:400
+msgid "Mostly Cloudy (Day)"
+msgstr "Très nuageux (jour)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:402
+msgid "Partly Cloudy (Night)"
+msgstr "Partiellement nuageux (nuit)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:404
+msgid "Partly Cloudy (Day)"
+msgstr "Partiellement nuageux (jour)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:406
+msgid "Clear (Night)"
+msgstr "Ciel dégagé (Nuit)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:408
+msgid "Sunny"
+msgstr "Ensoleillé"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:410
+msgid "Fair (Night)"
+msgstr "Clair (Nuit)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:412
+msgid "Fair (Day)"
+msgstr "Clair (Jour)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:414
+msgid "Mixed Rain and Hail"
+msgstr "Pluie et Grêle"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:416
+msgid "Hot"
+msgstr "Chaud"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:418
+msgid "Isolated Thunderstorms"
+msgstr "Orages isolés"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:421
+msgid "Scattered Thunderstorms"
+msgstr "Nuages épars"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:423
+msgid "Scattered Showers"
+msgstr "Averses éparsses"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:426
+msgid "Heavy Snow"
+msgstr "Fortes chutes de neige"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:428
+msgid "Scattered Snow Showers"
+msgstr "Averses de neige"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:430
+msgid "Partly Cloudy"
+msgstr "Partiellement Nuageux"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:432
+msgid "Thundershowers"
+msgstr "Averses"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:434
+msgid "Snow Showers"
+msgstr "Chute de Neige"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:436
+msgid "Isolated Thundershowers"
+msgstr "Averses Isolées"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:438
+msgid "Not Available"
+msgstr "Non disponibile"
+
+#: rc.js:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Spyder"
+
+#: rc.js:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ghostdarkhid@gmail.com"
+
+#~ msgid "Today"
+#~ msgstr "Aujourd'hui"
+
+#~ msgid "Tomorrow"
+#~ msgstr "Demain"
+
+#~ msgid "Yahoo! Weather Widget"
+#~ msgstr "Yahoo! Widget Météo"
+
+#~ msgid "Where On Earth ID"
+#~ msgstr "Ou se trouve l'ID de localisation"
+
+#~ msgid ""
+#~ "<html><head/><body><p>To find your city's WOEID.</p><p>Go to http://"
+#~ "zourbuth.com/tools/woeid/ <br />Type in your city's zip code or name or "
+#~ "landmark.<br />Then click Lookup.</p></body></html>"
+#~ msgstr ""
+#~ "<html> <head/> <body> <p> Pour trouver le WOEID votre ville: </ p> Aller "
+#~ "à http://zourbuth.com/tools/woeid/» <br /> Entrez votre code postal de "
+#~ "votre ville, ou le nom de la région. <br /> Puis cliquez sur Recherche. "
+#~ "</ p> </ body> </ html>"
+
+#~ msgid "Form"
+#~ msgstr "Forme"

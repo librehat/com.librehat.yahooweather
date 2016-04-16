@@ -1,0 +1,386 @@
+# plasma-applet-yahooweather language translation file.
+# Copyright (C) 2014 Symeon Huang
+# This file is distributed under the same license as the plasma-applet-yahooweather package.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-16 20:46+0100\n"
+"PO-Revision-Date: 2014-03-19 13:59+0800\n"
+"Last-Translator: Symeon Huang <hzwhuang@gmail.com>\n"
+"Language-Team: Chinese Simplified <>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:26
+msgid "WOEID"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:34
+msgid ""
+"Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
+"to find your city's WOEID"
+msgstr ""
+"访问 <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> 来"
+"找到您所在城市的WOEID"
+
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:41
+msgid "Update Interval"
+msgstr "更新间隔"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:34
+msgid "Temperature Unit"
+msgstr "温度单位"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:44
+msgid "Fahrenheit"
+msgstr "华氏"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:50
+msgid "Celsius"
+msgstr "摄氏"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:57
+#, fuzzy
+msgid "Speed Unit"
+msgstr "速度单位"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:67
+msgid "Miles per hour"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:73
+msgid "Metre per second"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:79
+msgid "Kilometre per hour"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:86
+#, fuzzy
+msgid "Distance Unit"
+msgstr "速度单位"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:96
+msgid "Mile"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:102
+msgid "Kilometre"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:109
+#, fuzzy
+msgid "Pressure Unit"
+msgstr "气压"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:119
+msgid "Inch of mercury"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:125
+msgid "Atmosphere"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:131
+msgid "Hectopascal"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:137
+msgid "Millibar"
+msgstr ""
+
+#: ../plasmoid/contents/ui/Weather.qml:45
+msgid "Refresh"
+msgstr "刷新"
+
+#: ../plasmoid/contents/ui/Weather.qml:54
+msgid "YAHOO! Weather"
+msgstr "雅虎天气"
+
+#: ../plasmoid/contents/ui/Weather.qml:85
+msgid "Sunrise"
+msgstr "日出"
+
+#: ../plasmoid/contents/ui/Weather.qml:85
+msgid "Sunset"
+msgstr "日落"
+
+#: ../plasmoid/contents/ui/Weather.qml:106
+msgid "Feels like"
+msgstr "体感温度"
+
+#: ../plasmoid/contents/ui/Weather.qml:106
+msgid "Visibility"
+msgstr "能见度"
+
+#: ../plasmoid/contents/ui/Weather.qml:106
+msgid "NULL"
+msgstr "无数据"
+
+#: ../plasmoid/contents/ui/Weather.qml:112
+msgid "Humidity"
+msgstr "湿度"
+
+#: ../plasmoid/contents/ui/Weather.qml:112
+msgid "Pressure"
+msgstr "气压"
+
+#: ../plasmoid/contents/ui/Weather.qml:118
+msgid "UV Index"
+msgstr "紫外线指数"
+
+#: ../plasmoid/contents/ui/Weather.qml:118
+msgid "Wind"
+msgstr "风速"
+
+#: ../plasmoid/contents/ui/Weather.qml:148
+msgid "Unknown Error."
+msgstr ""
+
+#: ../plasmoid/contents/ui/Yahoo.qml:80
+msgid "Error 3. WOEID is not specified."
+msgstr ""
+
+#: ../plasmoid/contents/ui/Yahoo.qml:99
+msgid "Error 1. Please check your network."
+msgstr "错误1。请检查您的网络。"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:137 ../plasmoid/contents/ui/Yahoo.qml:145
+msgid "Error 2. WOEID may be invalid."
+msgstr "错误2。WOEID或许无效。"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:247
+msgid "Sunday"
+msgstr "星期日"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:249
+msgid "Monday"
+msgstr "星期一"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:251
+msgid "Tuesday"
+msgstr "星期二"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:253
+msgid "Wednesday"
+msgstr "星期三"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:255
+msgid "Thursday"
+msgstr "星期四"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:257
+msgid "Friday"
+msgstr "星期五"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:259
+msgid "Saturday"
+msgstr "星期六"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:345
+msgid "Tornado"
+msgstr "龙卷风"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:347
+msgid "Tropical Storm"
+msgstr "热带风暴"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:349
+msgid "Hurricane"
+msgstr "飓风"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:351
+msgid "Severe Thunderstorms"
+msgstr "猛烈雷暴"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:353
+msgid "Thunderstorms"
+msgstr "雷暴"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:355
+msgid "Mixed Rain and Snow"
+msgstr "雨夹雪"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:357
+msgid "Mixed Rain and Sleet"
+msgstr "雨夹冰雹"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:359
+msgid "Mixed Snow and Sleet"
+msgstr "雪夹冰雹"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:361
+msgid "Freezing Drizzle"
+msgstr "冻毛毛雨"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:363
+msgid "Drizzle"
+msgstr "毛毛雨"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:365
+msgid "Freezing Rain"
+msgstr "冻雨"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:368
+msgid "Showers"
+msgstr "阵雨"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:370
+msgid "Snow Flurries"
+msgstr "小雪"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:372
+msgid "Light Snow Showers"
+msgstr "偶有小雪"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:374
+msgid "Blowing Snow"
+msgstr "飞雪"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:376
+msgid "Snow"
+msgstr "雪"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:378
+msgid "Hail"
+msgstr "冰雹"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:380
+msgid "Sleet"
+msgstr "雨凇"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:382
+msgid "Dust"
+msgstr "灰尘"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:384
+msgid "Foggy"
+msgstr "浓雾"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:386
+msgid "Haze"
+msgstr "阴霾"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:388
+msgid "Smoky"
+msgstr "烟雾"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:390
+msgid "Blustery"
+msgstr "狂风"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:392
+msgid "Windy"
+msgstr "有风"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:394
+msgid "Cold"
+msgstr "寒冷"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:396
+msgid "Cloudy"
+msgstr "多云"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:398
+msgid "Mostly Cloudy (Night)"
+msgstr "大部份地区多云 （夜晚）"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:400
+msgid "Mostly Cloudy (Day)"
+msgstr "大部分地区多云 （白天）"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:402
+msgid "Partly Cloudy (Night)"
+msgstr "部分地区多云 （夜晚）"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:404
+msgid "Partly Cloudy (Day)"
+msgstr "部分地区多云 （白天）"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:406
+msgid "Clear (Night)"
+msgstr "晴朗 （夜晚）"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:408
+msgid "Sunny"
+msgstr "晴朗"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:410
+msgid "Fair (Night)"
+msgstr "晴朗 （夜晚）"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:412
+msgid "Fair (Day)"
+msgstr "晴朗 （白天）"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:414
+msgid "Mixed Rain and Hail"
+msgstr "雨夹冰雹"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:416
+msgid "Hot"
+msgstr "热"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:418
+msgid "Isolated Thunderstorms"
+msgstr "局部雷暴"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:421
+msgid "Scattered Thunderstorms"
+msgstr "偶有雷暴"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:423
+msgid "Scattered Showers"
+msgstr "偶有阵雨"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:426
+msgid "Heavy Snow"
+msgstr "大雪"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:428
+msgid "Scattered Snow Showers"
+msgstr "偶有阵雪"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:430
+msgid "Partly Cloudy"
+msgstr "部分地区多云"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:432
+msgid "Thundershowers"
+msgstr "雷阵雨"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:434
+msgid "Snow Showers"
+msgstr "阵雪"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:436
+msgid "Isolated Thundershowers"
+msgstr "偶有雷阵雨"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:438
+msgid "Not Available"
+msgstr "不可用"
+
+#: rc.js:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#: rc.js:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#~ msgid "Today"
+#~ msgstr "今天"
+
+#~ msgid "Tomorrow"
+#~ msgstr "明天"

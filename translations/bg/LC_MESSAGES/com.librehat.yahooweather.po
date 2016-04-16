@@ -1,0 +1,395 @@
+# plasma-applet-yahooweather language translation file.
+# Copyright (C) 2014 Symeon Huang
+# This file is distributed under the same license as the plasma-applet-yahooweather package.
+#
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 5.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-16 20:46+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <bvbfan@abv.bg>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:26
+msgid "WOEID"
+msgstr "WOEID"
+
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:34
+msgid ""
+"Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
+"to find your city's WOEID"
+msgstr ""
+"Посетете <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</"
+"a> , за да видите WOEID на вашият град"
+
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:41
+msgid "Update Interval"
+msgstr "Интервал на обновяване"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:34
+msgid "Temperature Unit"
+msgstr "Мерна единица за температура"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:44
+msgid "Fahrenheit"
+msgstr "Фаренхайт"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:50
+msgid "Celsius"
+msgstr "Целзии"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:57
+#, fuzzy
+msgid "Speed Unit"
+msgstr "Мерна единица за вятър"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:67
+msgid "Miles per hour"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:73
+msgid "Metre per second"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:79
+msgid "Kilometre per hour"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:86
+#, fuzzy
+msgid "Distance Unit"
+msgstr "Мерна единица за вятър"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:96
+msgid "Mile"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:102
+msgid "Kilometre"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:109
+#, fuzzy
+msgid "Pressure Unit"
+msgstr "Налягане"
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:119
+msgid "Inch of mercury"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:125
+msgid "Atmosphere"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:131
+msgid "Hectopascal"
+msgstr ""
+
+#: ../plasmoid/contents/ui/ConfigUnit.qml:137
+msgid "Millibar"
+msgstr ""
+
+#: ../plasmoid/contents/ui/Weather.qml:45
+msgid "Refresh"
+msgstr ""
+
+#: ../plasmoid/contents/ui/Weather.qml:54
+msgid "YAHOO! Weather"
+msgstr "YAHOO! Weather"
+
+#: ../plasmoid/contents/ui/Weather.qml:85
+msgid "Sunrise"
+msgstr "Изгрев"
+
+#: ../plasmoid/contents/ui/Weather.qml:85
+msgid "Sunset"
+msgstr "Залез"
+
+#: ../plasmoid/contents/ui/Weather.qml:106
+msgid "Feels like"
+msgstr "Усеща се като"
+
+#: ../plasmoid/contents/ui/Weather.qml:106
+msgid "Visibility"
+msgstr "Видимост"
+
+#: ../plasmoid/contents/ui/Weather.qml:106
+msgid "NULL"
+msgstr "Нищо"
+
+#: ../plasmoid/contents/ui/Weather.qml:112
+msgid "Humidity"
+msgstr "Влажност"
+
+#: ../plasmoid/contents/ui/Weather.qml:112
+msgid "Pressure"
+msgstr "Налягане"
+
+#: ../plasmoid/contents/ui/Weather.qml:118
+msgid "UV Index"
+msgstr "УВ индекс"
+
+#: ../plasmoid/contents/ui/Weather.qml:118
+msgid "Wind"
+msgstr "Вятър"
+
+#: ../plasmoid/contents/ui/Weather.qml:148
+msgid "Unknown Error."
+msgstr ""
+
+#: ../plasmoid/contents/ui/Yahoo.qml:80
+#, fuzzy
+msgid "Error 3. WOEID is not specified."
+msgstr "Грешка 2. WOEID не е валиден"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:99
+msgid "Error 1. Please check your network."
+msgstr "Грешка 1. Моля, проверете интернет връзката."
+
+#: ../plasmoid/contents/ui/Yahoo.qml:137 ../plasmoid/contents/ui/Yahoo.qml:145
+msgid "Error 2. WOEID may be invalid."
+msgstr "Грешка 2. WOEID не е валиден"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:247
+msgid "Sunday"
+msgstr "Неделя"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:249
+msgid "Monday"
+msgstr "Понеделник"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:251
+msgid "Tuesday"
+msgstr "Вторник"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:253
+msgid "Wednesday"
+msgstr "Сряда"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:255
+msgid "Thursday"
+msgstr "Четвъртък"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:257
+msgid "Friday"
+msgstr "Петък"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:259
+msgid "Saturday"
+msgstr "Събота"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:345
+msgid "Tornado"
+msgstr "Торнадо"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:347
+msgid "Tropical Storm"
+msgstr "Тропическа буря"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:349
+msgid "Hurricane"
+msgstr "Ураган"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:351
+msgid "Severe Thunderstorms"
+msgstr "Сериозни гръмотевици"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:353
+msgid "Thunderstorms"
+msgstr "Гръмотевици"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:355
+msgid "Mixed Rain and Snow"
+msgstr "Дъжд примесен със сняг"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:357
+msgid "Mixed Rain and Sleet"
+msgstr "Дъжд примесен със суграшица"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:359
+msgid "Mixed Snow and Sleet"
+msgstr "Сняг примесен със суграшица"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:361
+msgid "Freezing Drizzle"
+msgstr "Леден ръмеж"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:363
+msgid "Drizzle"
+msgstr "Ръмеж"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:365
+msgid "Freezing Rain"
+msgstr "Леден дъжд"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:368
+msgid "Showers"
+msgstr "Дъжд"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:370
+msgid "Snow Flurries"
+msgstr "Снежни вихрушки"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:372
+msgid "Light Snow Showers"
+msgstr "Леки снежни вихрушки"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:374
+msgid "Blowing Snow"
+msgstr "Снежна виелица"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:376
+msgid "Snow"
+msgstr "Сняг"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:378
+msgid "Hail"
+msgstr "Градушка"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:380
+msgid "Sleet"
+msgstr "Суграшица"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:382
+msgid "Dust"
+msgstr "Прашно"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:384
+msgid "Foggy"
+msgstr "Мъгливо"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:386
+msgid "Haze"
+msgstr "Мараня"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:388
+msgid "Smoky"
+msgstr "Замъглено"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:390
+msgid "Blustery"
+msgstr "Буреносно"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:392
+msgid "Windy"
+msgstr "Ветровито"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:394
+msgid "Cold"
+msgstr "Студено"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:396
+msgid "Cloudy"
+msgstr "Облачно"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:398
+msgid "Mostly Cloudy (Night)"
+msgstr "Предимно облачно (нощ)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:400
+msgid "Mostly Cloudy (Day)"
+msgstr "Предимно облачно (ден)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:402
+msgid "Partly Cloudy (Night)"
+msgstr "Разкъсана облачност (нощ)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:404
+msgid "Partly Cloudy (Day)"
+msgstr "Разкъсана облачност (ден)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:406
+msgid "Clear (Night)"
+msgstr "Ясно (нощ)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:408
+msgid "Sunny"
+msgstr "Слънчево"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:410
+msgid "Fair (Night)"
+msgstr "Спокойно (нощ)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:412
+msgid "Fair (Day)"
+msgstr "Спокойно (ден)"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:414
+msgid "Mixed Rain and Hail"
+msgstr "Дъжд примесен с градушка"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:416
+msgid "Hot"
+msgstr "Горещо"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:418
+msgid "Isolated Thunderstorms"
+msgstr "Изолирани гръмотевични бури"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:421
+msgid "Scattered Thunderstorms"
+msgstr "Гръмотевични бури"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:423
+msgid "Scattered Showers"
+msgstr "Проливни дъждове"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:426
+msgid "Heavy Snow"
+msgstr "Силен снеговълеж"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:428
+msgid "Scattered Snow Showers"
+msgstr "Обилни снеговалежи"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:430
+msgid "Partly Cloudy"
+msgstr "Разкъсана облачност"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:432
+msgid "Thundershowers"
+msgstr "Превалявания с гръмотевици"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:434
+msgid "Snow Showers"
+msgstr "Снеговълеж"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:436
+msgid "Isolated Thundershowers"
+msgstr "Изолирани превалявания с гръмотевици"
+
+#: ../plasmoid/contents/ui/Yahoo.qml:438
+msgid "Not Available"
+msgstr "Не е налично"
+
+#: rc.js:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Антони Фиерони"
+
+#: rc.js:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "bvbfan@abv.bg"
+
+#~ msgid "m/s"
+#~ msgstr "м/с"
+
+#~ msgid "Km/h"
+#~ msgstr "км/ч"
+
+#~ msgid "Today"
+#~ msgstr "Днес"
+
+#~ msgid "Tomorrow"
+#~ msgstr "Утре"
+
+#~ msgid "Yahoo! Weather Widget"
+#~ msgstr "Yahoo! Weather Widget"
