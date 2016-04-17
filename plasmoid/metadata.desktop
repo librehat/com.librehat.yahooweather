@@ -1,9 +1,11 @@
 [Desktop Entry]
 Name=Yahoo! Weather Widget
 Name[bg]=Yahoo джаджа
+Name[hu]=Yahoo! Időjárás Widget
 Name[pt_BR]=Widget Yahoo! Tempo
 Comment=A Simple Weather Monitor.
 Comment[bg]=Джада за времето
+Comment[hu]=Egyszerű időjárás figyelő
 Comment[pt_BR]=Um simples monitor de meteorologia
 Encoding=UTF-8
 Icon=weather-clouds
