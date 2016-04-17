@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 5.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-16 22:17+0100\n"
-"PO-Revision-Date: 2016-04-07 13:02+0800\n"
+"PO-Revision-Date: 2016-04-18 07:38+0800\n"
 "Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Chinese <chinese-l10n@googlegroups.com>\n"
 "Language: zh_TW\n"
@@ -48,55 +48,52 @@ msgid "Celsius"
 msgstr "攝氏"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:57
-#, fuzzy
 msgid "Speed Unit"
-msgstr "風速單位"
+msgstr "速率單位"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:67
 msgid "Miles per hour"
-msgstr ""
+msgstr "英哩／小時"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:73
 msgid "Metre per second"
-msgstr ""
+msgstr "公尺／秒"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:79
 msgid "Kilometre per hour"
-msgstr ""
+msgstr "公里／小時"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:86
-#, fuzzy
 msgid "Distance Unit"
-msgstr "風速單位"
+msgstr "距離單位"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:96
 msgid "Mile"
-msgstr ""
+msgstr "英哩"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:102
 msgid "Kilometre"
-msgstr ""
+msgstr "公里"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:109
-#, fuzzy
 msgid "Pressure Unit"
-msgstr "氣壓"
+msgstr "壓力單位"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:119
 msgid "Inch of mercury"
-msgstr ""
+msgstr "英吋汞柱"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:125
 msgid "Atmosphere"
-msgstr ""
+msgstr "大氣壓力"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:131
 msgid "Hectopascal"
-msgstr ""
+msgstr "百帕"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:137
 msgid "Millibar"
-msgstr ""
+msgstr "毫巴"
 
 #: ../plasmoid/contents/ui/Weather.qml:45
 msgid "Refresh"
@@ -372,11 +369,11 @@ msgstr "不可用"
 
 #: ../plasmoid/contents/config/config.qml:16
 msgid "General"
-msgstr ""
+msgstr "一般"
 
 #: ../plasmoid/contents/config/config.qml:22
 msgid "Unit"
-msgstr ""
+msgstr "單位"
 
 #: rc.js:1
 msgctxt "NAME OF TRANSLATORS"
