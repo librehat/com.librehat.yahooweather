@@ -82,7 +82,7 @@ Item {
 
             PlasmaComponents.Label {
                 id: descLabel
-                text: backend.m_conditionDesc + "<br />" + i18n("Sunrise") + ": " + backend.m_astronomySunrise + "<br />" + i18n("Sunset") + ": " + backend.m_astronomySunset
+                text: backend.m_conditionDesc + "<br />" + i18n("Feels like") + ": " + backend.m_windChill + "°" + backend.m_unitTemperature
             }
         }
 
@@ -103,19 +103,19 @@ Item {
 
         PlasmaComponents.Label {
             id: firstDetail
-            text: i18n("Feels like") + ": " + backend.m_windChill + "°" + backend.m_unitTemperature + "<br />" + i18n("Visibility") + ": " + (backend.m_atmosphereVisibility ? backend.m_atmosphereVisibility + ' ' + backend.m_unitDistance : i18n("NULL"))
+            text: i18n("Sunrise") + ": " + backend.m_astronomySunrise + "<br />" + i18n("Sunset") + ": " + backend.m_astronomySunset
             font: theme.defaultFont
         }
 
         PlasmaComponents.Label {
             id: secondDetail
-            text: i18n("Humidity") + ": " + backend.m_atmosphereHumidity + "%<br />" + i18n("Pressure") + ": " + backend.m_atmospherePressure + ' ' + backend.m_unitPressure
+            text: i18n("Humidity") + ": " + backend.m_atmosphereHumidity + "%<br />" + i18n("Pressure") + ": " + backend.m_atmosphereRising + backend.m_atmospherePressure + ' ' + backend.m_unitPressure
             font: theme.defaultFont
         }
 
         PlasmaComponents.Label {
             id: thirdDetail
-            text: i18n("UV Index") + ": " + backend.m_atmosphereRising + "<br />" + i18n("Wind") + ": " + backend.m_windDirection + backend.m_windSpeed + ' ' + backend.m_unitSpeed
+            text: i18n("Visibility") + ": " + (backend.m_atmosphereVisibility ? backend.m_atmosphereVisibility + ' ' + backend.m_unitDistance : i18n("NULL")) + "<br />" + i18n("Wind") + ": " + backend.m_windDirection + backend.m_windSpeed + ' ' + backend.m_unitSpeed
             font: theme.defaultFont
         }
     }

@@ -164,7 +164,7 @@ Item {
         m_atmosphereHumidity     = results.atmosphere.humidity
         m_atmosphereVisibility   = results.atmosphere.visibility
         m_atmospherePressure     = results.atmosphere.pressure
-        m_atmosphereRising       = results.atmosphere.rising
+        m_atmosphereRising       = parseRising(results.atmosphere.rising)
         m_astronomySunrise       = results.astronomy.sunrise
         m_astronomySunset        = results.astronomy.sunset
         m_geoLat                 = results.item.lat
@@ -488,6 +488,27 @@ Item {
             return "⥀"
         } else {
             return " "
+        }
+    }
+    
+    function parseRising(r) {
+        if (r === null || r === undefined) {
+            return undefined;
+        }
+
+        if (typeof r !== "number") {
+            r = parseInt(r)
+        }
+        
+        switch (r) {
+            case 0:
+                return "→";//steady
+            case 1:
+                return "↑";//rising
+            case 2:
+                return "↓";//falling
+            default:
+                return "";
         }
     }
 
