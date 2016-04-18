@@ -42,9 +42,9 @@ echo 'i18nc("EMAIL OF TRANSLATORS","Your emails");' >> ./rc.$SCRIPTEXT
 #gettext-0.18.3 or later supports JavaScript
 $XGETTEXT ../plasmoid/contents/ui/*.qml ../plasmoid/contents/config/*.qml rc.$SCRIPTEXT -L JavaScript -o "$NAME.pot"
 sed -e 's/charset=CHARSET/charset=UTF-8/g' -i "$NAME.pot"
-sed -e 's/SOME DESCRIPTIVE TITLE./plasma-applet-yahooweather language translation file./g' -i "$NAME.pot"
-sed -e "s/Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER/Copyright (C) 2014 Symeon Huang/g" -i "$NAME.pot"
-sed -e 's/This file is distributed under the same license as the PACKAGE package./This file is distributed under the same license as the plasma-applet-yahooweather package./g' -i "$NAME.pot"
+sed -e 's/SOME DESCRIPTIVE TITLE./com.librehat.yahooweather language translation file./g' -i "$NAME.pot"
+sed -e "s/Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER/Copyright (C) 2014-2016 Symeon Huang/g" -i "$NAME.pot"
+sed -e 's/This file is distributed under the same license as the PACKAGE package./This file is distributed under the same license as the com.librehat.yahooweather package./g' -i "$NAME.pot"
 sed -e 's/FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.//g' -i "$NAME.pot"
 sed -e "s/Project-Id-Version: PACKAGE VERSION/Project-Id-Version: $VERSION/g" -i "$NAME.pot"
 
