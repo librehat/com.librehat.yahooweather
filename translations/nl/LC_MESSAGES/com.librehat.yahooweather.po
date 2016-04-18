@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-16 22:17+0100\n"
+"POT-Creation-Date: 2016-04-18 20:52+0100\n"
 "PO-Revision-Date: 2015-01-23 13:56+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -105,24 +105,16 @@ msgid "YAHOO! Weather"
 msgstr "YAHOO! Het weer"
 
 #: ../plasmoid/contents/ui/Weather.qml:85
-msgid "Sunrise"
-msgstr "Zon op"
-
-#: ../plasmoid/contents/ui/Weather.qml:85
-msgid "Sunset"
-msgstr "Zon onder"
-
-#: ../plasmoid/contents/ui/Weather.qml:106
 msgid "Feels like"
 msgstr "Voelt als"
 
 #: ../plasmoid/contents/ui/Weather.qml:106
-msgid "Visibility"
-msgstr "Zicht"
+msgid "Sunrise"
+msgstr "Zon op"
 
 #: ../plasmoid/contents/ui/Weather.qml:106
-msgid "NULL"
-msgstr "NULL"
+msgid "Sunset"
+msgstr "Zon onder"
 
 #: ../plasmoid/contents/ui/Weather.qml:112
 msgid "Humidity"
@@ -133,8 +125,12 @@ msgid "Pressure"
 msgstr "Luchtdruk"
 
 #: ../plasmoid/contents/ui/Weather.qml:118
-msgid "UV Index"
-msgstr "UV-index"
+msgid "Visibility"
+msgstr "Zicht"
+
+#: ../plasmoid/contents/ui/Weather.qml:118
+msgid "NULL"
+msgstr "NULL"
 
 #: ../plasmoid/contents/ui/Weather.qml:118
 msgid "Wind"
@@ -386,6 +382,9 @@ msgstr "Freek de Kruijf"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
+
+#~ msgid "UV Index"
+#~ msgstr "UV-index"
 
 #~ msgid "m/s"
 #~ msgstr "m/s"

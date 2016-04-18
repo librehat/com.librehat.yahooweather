@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 5.1.1\n"
-"Report-Msgid-Bugs-To: https://github.com/librehat/com.librehat.yahooweather/issues\n"
-"POT-Creation-Date: 2016-04-16 21:57+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-18 20:52+0100\n"
 "PO-Revision-Date: 2016-04-14 22:40+0100\n"
 "Last-Translator: Mladen Pejaković <pejakm@autistici.org>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -27,8 +27,8 @@ msgid ""
 "Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
 "to find your city's WOEID"
 msgstr ""
-"Посетите <a href=\"http://zourbuth.com/tools/woeid/\">Јаху! WOEID сервис</"
-"a> да пронађете ваш град на WOEID"
+"Посетите <a href=\"http://zourbuth.com/tools/woeid/\">Јаху! WOEID сервис</a> "
+"да пронађете ваш град на WOEID"
 
 #: ../plasmoid/contents/ui/ConfigGeneral.qml:41
 msgid "Update Interval"
@@ -103,24 +103,16 @@ msgid "YAHOO! Weather"
 msgstr "ЈАХУ! време"
 
 #: ../plasmoid/contents/ui/Weather.qml:85
-msgid "Sunrise"
-msgstr "Излазак"
-
-#: ../plasmoid/contents/ui/Weather.qml:85
-msgid "Sunset"
-msgstr "Залазак"
-
-#: ../plasmoid/contents/ui/Weather.qml:106
 msgid "Feels like"
 msgstr "Осећа се као"
 
 #: ../plasmoid/contents/ui/Weather.qml:106
-msgid "Visibility"
-msgstr "Видљивост"
+msgid "Sunrise"
+msgstr "Излазак"
 
 #: ../plasmoid/contents/ui/Weather.qml:106
-msgid "NULL"
-msgstr "Н/д"
+msgid "Sunset"
+msgstr "Залазак"
 
 #: ../plasmoid/contents/ui/Weather.qml:112
 msgid "Humidity"
@@ -131,8 +123,12 @@ msgid "Pressure"
 msgstr "Притисак"
 
 #: ../plasmoid/contents/ui/Weather.qml:118
-msgid "UV Index"
-msgstr "УВ индекс"
+msgid "Visibility"
+msgstr "Видљивост"
+
+#: ../plasmoid/contents/ui/Weather.qml:118
+msgid "NULL"
+msgstr "Н/д"
 
 #: ../plasmoid/contents/ui/Weather.qml:118
 msgid "Wind"
@@ -383,3 +379,6 @@ msgstr "Младен Пејаковић,Радомир Трифуновић"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pejakm@autistici.org,trifunovic@openmailbox.org"
+
+#~ msgid "UV Index"
+#~ msgstr "УВ индекс"

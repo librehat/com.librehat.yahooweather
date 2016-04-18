@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 5.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-16 22:17+0100\n"
+"POT-Creation-Date: 2016-04-18 20:52+0100\n"
 "PO-Revision-Date: 2016-04-13 11:13+0100\n"
 "Last-Translator: kikadf <kikadf.01@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,24 +106,16 @@ msgid "YAHOO! Weather"
 msgstr "YAHOO! Időjárás"
 
 #: ../plasmoid/contents/ui/Weather.qml:85
-msgid "Sunrise"
-msgstr "Napfelkelte"
-
-#: ../plasmoid/contents/ui/Weather.qml:85
-msgid "Sunset"
-msgstr "Napnyugta"
-
-#: ../plasmoid/contents/ui/Weather.qml:106
 msgid "Feels like"
 msgstr "Hőérzet"
 
 #: ../plasmoid/contents/ui/Weather.qml:106
-msgid "Visibility"
-msgstr "Látástávolság"
+msgid "Sunrise"
+msgstr "Napfelkelte"
 
 #: ../plasmoid/contents/ui/Weather.qml:106
-msgid "NULL"
-msgstr "NULL"
+msgid "Sunset"
+msgstr "Napnyugta"
 
 #: ../plasmoid/contents/ui/Weather.qml:112
 msgid "Humidity"
@@ -134,8 +126,12 @@ msgid "Pressure"
 msgstr "Légnyomás"
 
 #: ../plasmoid/contents/ui/Weather.qml:118
-msgid "UV Index"
-msgstr "UV sugárzás"
+msgid "Visibility"
+msgstr "Látástávolság"
+
+#: ../plasmoid/contents/ui/Weather.qml:118
+msgid "NULL"
+msgstr "NULL"
 
 #: ../plasmoid/contents/ui/Weather.qml:118
 msgid "Wind"
@@ -387,3 +383,6 @@ msgstr "kikadf"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kikadf.01@gmail.com"
+
+#~ msgid "UV Index"
+#~ msgstr "UV sugárzás"

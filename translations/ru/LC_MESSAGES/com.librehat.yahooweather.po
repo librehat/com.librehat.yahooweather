@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-16 22:17+0100\n"
+"POT-Creation-Date: 2016-04-18 20:52+0100\n"
 "PO-Revision-Date: 2014-04-11 02:35+0200\n"
 "Last-Translator: Kirill Demin <deminkirill@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,24 +104,16 @@ msgid "YAHOO! Weather"
 msgstr "Погода YAHOO!"
 
 #: ../plasmoid/contents/ui/Weather.qml:85
-msgid "Sunrise"
-msgstr "Рассвет"
-
-#: ../plasmoid/contents/ui/Weather.qml:85
-msgid "Sunset"
-msgstr "Закат"
-
-#: ../plasmoid/contents/ui/Weather.qml:106
 msgid "Feels like"
 msgstr "Ощущается"
 
 #: ../plasmoid/contents/ui/Weather.qml:106
-msgid "Visibility"
-msgstr "Видимость"
+msgid "Sunrise"
+msgstr "Рассвет"
 
 #: ../plasmoid/contents/ui/Weather.qml:106
-msgid "NULL"
-msgstr "Н/д"
+msgid "Sunset"
+msgstr "Закат"
 
 #: ../plasmoid/contents/ui/Weather.qml:112
 msgid "Humidity"
@@ -132,8 +124,12 @@ msgid "Pressure"
 msgstr "Давление"
 
 #: ../plasmoid/contents/ui/Weather.qml:118
-msgid "UV Index"
-msgstr "УФ Индекс"
+msgid "Visibility"
+msgstr "Видимость"
+
+#: ../plasmoid/contents/ui/Weather.qml:118
+msgid "NULL"
+msgstr "Н/д"
 
 #: ../plasmoid/contents/ui/Weather.qml:118
 msgid "Wind"
@@ -385,6 +381,9 @@ msgstr "Ваши имена"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Ваши e-mail"
+
+#~ msgid "UV Index"
+#~ msgstr "УФ Индекс"
 
 #~ msgid "Today"
 #~ msgstr "Сегодня"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-16 22:17+0100\n"
+"POT-Creation-Date: 2016-04-18 20:52+0100\n"
 "PO-Revision-Date: 2015-03-29 14:18+0300\n"
 "Last-Translator: \n"
 "Language-Team: Romanian <kde-i18n-doc@kde.org>\n"
@@ -106,24 +106,16 @@ msgid "YAHOO! Weather"
 msgstr "YAHOO!Starea vremii"
 
 #: ../plasmoid/contents/ui/Weather.qml:85
-msgid "Sunrise"
-msgstr "Răsare"
-
-#: ../plasmoid/contents/ui/Weather.qml:85
-msgid "Sunset"
-msgstr "Apune"
-
-#: ../plasmoid/contents/ui/Weather.qml:106
 msgid "Feels like"
 msgstr "Se simt"
 
 #: ../plasmoid/contents/ui/Weather.qml:106
-msgid "Visibility"
-msgstr "Vizibilitate"
+msgid "Sunrise"
+msgstr "Răsare"
 
 #: ../plasmoid/contents/ui/Weather.qml:106
-msgid "NULL"
-msgstr "Zero"
+msgid "Sunset"
+msgstr "Apune"
 
 #: ../plasmoid/contents/ui/Weather.qml:112
 msgid "Humidity"
@@ -134,8 +126,12 @@ msgid "Pressure"
 msgstr "Presiune"
 
 #: ../plasmoid/contents/ui/Weather.qml:118
-msgid "UV Index"
-msgstr "Index UV"
+msgid "Visibility"
+msgstr "Vizibilitate"
+
+#: ../plasmoid/contents/ui/Weather.qml:118
+msgid "NULL"
+msgstr "Zero"
 
 #: ../plasmoid/contents/ui/Weather.qml:118
 msgid "Wind"
@@ -387,6 +383,9 @@ msgstr "Daniel"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "danielh1029@yahoo.com"
+
+#~ msgid "UV Index"
+#~ msgstr "Index UV"
 
 #~ msgid "Today"
 #~ msgstr "Azi"
