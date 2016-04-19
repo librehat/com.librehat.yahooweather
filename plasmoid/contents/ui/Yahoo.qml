@@ -165,8 +165,8 @@ Item {
         m_atmosphereVisibility   = results.atmosphere.visibility
         m_atmospherePressure     = results.atmosphere.pressure
         m_atmosphereRising       = parseRising(results.atmosphere.rising)
-        m_astronomySunrise       = results.astronomy.sunrise
-        m_astronomySunset        = results.astronomy.sunset
+        m_astronomySunrise       = fixTime(results.astronomy.sunrise)
+        m_astronomySunset        = fixTime(results.astronomy.sunset)
         m_geoLat                 = results.item.lat
         m_geoLong                = results.item.long
         
@@ -510,6 +510,29 @@ Item {
             default:
                 return "";
         }
+    }
+
+    // Insert missing leading 0 on minutes if necessary.
+    // E.g., if s = "8:7 pm" change to "8:07 pm"
+    function fixTime(s)
+    {
+        if (typeof s !== "string")
+            return undefined
+
+        var len = s.length;
+        var colonIndex = s.indexOf(":")
+        if (colonIndex == -1) {
+            return undefined // call when not a time string!
+        }
+        // see if 2nd minute digit is missing (i.e., it's not a number)
+        var min_digit2 = s.slice(colonIndex+2, colonIndex+3)
+        if (isNaN(parseInt(min_digit2))) {
+            // 2nd minute digit is missing, append leading '0'
+            var hour_colon = s.slice(0, colonIndex+1)
+            var min_am_or_pm = s.slice(colonIndex+1, len)
+            s = hour_colon + "0" + min_am_or_pm
+        }
+        return s
     }
 
     // convert fahrenheit to celsius
