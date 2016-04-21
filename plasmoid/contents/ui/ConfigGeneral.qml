@@ -19,6 +19,7 @@ Item {
 
     property alias cfg_woeid: woeidField.text
     property alias cfg_interval: intervalField.text
+    property alias cfg_timeFormat24: timeFormat24Field.checked
 
     ColumnLayout {
         ColumnLayout {
@@ -38,6 +39,9 @@ Item {
 
         ColumnLayout {
             Label {
+                text: " "
+            }
+            Label {
                 text: i18n("Update Interval")
             }
 
@@ -45,6 +49,16 @@ Item {
                 id: intervalField
                 inputMask: "99"
                 inputMethodHints: Qt.ImhDigitsOnly
+            }
+        }
+
+        ColumnLayout {
+            Label {
+                text: " "
+            }
+            CheckBox {
+                id: timeFormat24Field 
+                text: i18n("Show Time in 24-hour Format")
             }
         }
     }

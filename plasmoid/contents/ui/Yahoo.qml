@@ -18,7 +18,7 @@ Item {
     property string errstring
     property bool m_isbusy: false
 
-    property string m_lastBuildDate
+    property string m_pubDate;
     property string m_link
     property string m_city
     property string m_region
@@ -152,8 +152,7 @@ Item {
         m_response = response
 
         var results = resObj.query.results.channel
-
-        m_lastBuildDate      = results.lastBuildDate
+        m_pubDate            = fixTime(results.item.pubDate, plasmoid.configuration.timeFormat24)
         m_link               = results.link
         m_city               = results.location.city
         m_region             = results.location.region
@@ -165,8 +164,8 @@ Item {
         m_atmosphereVisibility   = results.atmosphere.visibility
         m_atmospherePressure     = results.atmosphere.pressure
         m_atmosphereRising       = parseRising(results.atmosphere.rising)
-        m_astronomySunrise       = fixTime(results.astronomy.sunrise)
-        m_astronomySunset        = fixTime(results.astronomy.sunset)
+        m_astronomySunrise       = fixTime(results.astronomy.sunrise, plasmoid.configuration.timeFormat24)
+        m_astronomySunset        = fixTime(results.astronomy.sunset, plasmoid.configuration.timeFormat24)
         m_geoLat                 = results.item.lat
         m_geoLong                = results.item.long
         
@@ -514,23 +513,75 @@ Item {
 
     // Insert missing leading 0 on minutes if necessary.
     // E.g., if s = "8:7 pm" change to "8:07 pm"
-    function fixTime(s)
-    {
+    // In addition, if convert24 is true, change "8:07 pm" 
+    // to "20:07" or 3:07 am to "03:07", etc.
+    function fixTime(s, convert24) {
         if (typeof s !== "string")
             return undefined
 
+        var hour_colon
         var len = s.length;
         var colonIndex = s.indexOf(":")
         if (colonIndex == -1) {
             return undefined // call when not a time string!
         }
-        // see if 2nd minute digit is missing (i.e., it's not a number)
+        // see if 2nd (leading) minute digit is missing (i.e., it's not a number)
         var min_digit2 = s.slice(colonIndex+2, colonIndex+3)
         if (isNaN(parseInt(min_digit2))) {
             // 2nd minute digit is missing, append leading '0'
-            var hour_colon = s.slice(0, colonIndex+1)
+            hour_colon = s.slice(0, colonIndex+1)
             var min_am_or_pm = s.slice(colonIndex+1, len)
             s = hour_colon + "0" + min_am_or_pm
+        }
+
+        if (convert24) {
+            hour_colon = s.slice(0, colonIndex+1)
+            len = s.length
+            var min_am_or_pm = s.slice(colonIndex+1, len)
+            var amIndex = min_am_or_pm.search(/am/i)
+            var hour
+            if ((amIndex == 2) || (amIndex == 3)) {
+                // AM is located next to minute or separated by 1 space. 
+                // Avoid detecting AM in the trailing time zone characters, 
+                // so remove only the first "am" or "AM" from string
+                min_am_or_pm = min_am_or_pm.replace(/am|am /i, "")
+                // add leading 0 to hour if not already present
+                if (colonIndex == 1) {  // hour is 1 digit
+                    hour_colon = '0' + hour_colon
+                } else { 
+                    // possibly more than 1 hour digit
+                    var leading_digit = hour_colon.slice(colonIndex-2, colonIndex-1)
+                    if (isNaN(parseInt(leading_digit))) {
+                        // leading hour digit not a number, make it '0' by insertion
+                        hour_colon = hour_colon.slice(0, colonIndex-1) + '0' +
+                                     hour_colon.slice(colonIndex-1)
+                    } else {
+                        // if am hour is 12, change to 00
+                        if ((leading_digit == '1') && (hour_colon.slice(colonIndex-1, colonIndex) == 2)) {
+                            hour_colon = hour_colon.substr(0, colonIndex-2) + "00" +
+                                         hour_colon.slice(colonIndex)
+                        }
+                    }
+                }
+            } else { // must be PM
+                // remove first "pm" or "PM" from string
+                min_am_or_pm = min_am_or_pm.replace(/pm|pm /i, "")
+                // find hour and add 12, but not when 12 pm 
+                if (colonIndex <= 2) { // decode hours from index 0
+                    hour = parseInt(hour_colon.slice(0, colonIndex))
+                    if (hour != 12)
+                        hour += 12
+                    hour_colon = hour + ":"
+                } else {               // decode exactly 2 before colon
+                    hour = parseInt(hour_colon.slice(colonIndex-2, colonIndex))
+                    if (hour != 12)
+                        hour += 12
+                    var leadingText = hour_colon.slice(0, colonIndex-2)
+                    hour_colon = leadingText + hour + ":" 
+                }
+            }
+            // reassemble modified string
+            s = hour_colon + min_am_or_pm
         }
         return s
     }
