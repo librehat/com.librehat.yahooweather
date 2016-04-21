@@ -51,7 +51,7 @@ Item {
         id: yahoo_n_date
         visible: hasdata
         anchors { top: parent.top; right: refresh_button.left; rightMargin: units.gridUnit }
-        text: backend.m_lastBuildDate + "<br /><a href='" + backend.m_link + "'>" + i18n("YAHOO! Weather") + "</a>"
+        text: backend.m_pubDate + "<br /><a href='" + backend.m_link + "'>" + i18n("YAHOO! Weather") + "</a>"
         horizontalAlignment: Text.AlignRight
         font: theme.smallestFont
         onLinkActivated: Qt.openUrlExternally(link)
