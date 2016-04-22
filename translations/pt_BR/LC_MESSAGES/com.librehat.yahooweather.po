@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 5.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-18 20:52+0100\n"
+"POT-Creation-Date: 2016-04-22 22:22+0100\n"
 "PO-Revision-Date: 2015-04-04 20:34-0300\n"
 "Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: ../plasmoid/contents/ui/ConfigGeneral.qml:26
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:27
 msgid "WOEID"
 msgstr "WOEID"
 
-#: ../plasmoid/contents/ui/ConfigGeneral.qml:34
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:35
 msgid ""
 "Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
 "to find your city's WOEID"
@@ -30,9 +30,13 @@ msgstr ""
 "Visite a página <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID "
 "Lookup</a> para encontrar o WOEID da sua cidade"
 
-#: ../plasmoid/contents/ui/ConfigGeneral.qml:41
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:45
 msgid "Update Interval"
 msgstr "Intervalo de atualização"
+
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:61
+msgid "Show Time in 24-hour Format"
+msgstr ""
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:34
 msgid "Temperature Unit"
@@ -154,215 +158,215 @@ msgstr "Erro 1. Verifique a conexão de rede."
 msgid "Error 2. WOEID may be invalid."
 msgstr "Erro 2. WOEID pode ser inválido."
 
-#: ../plasmoid/contents/ui/Yahoo.qml:247
+#: ../plasmoid/contents/ui/Yahoo.qml:246
 msgid "Sunday"
 msgstr "Domingo"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:249
+#: ../plasmoid/contents/ui/Yahoo.qml:248
 msgid "Monday"
 msgstr "Segunda-feira"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:251
+#: ../plasmoid/contents/ui/Yahoo.qml:250
 msgid "Tuesday"
 msgstr "Terça-feira"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:253
+#: ../plasmoid/contents/ui/Yahoo.qml:252
 msgid "Wednesday"
 msgstr "Quarta-feira"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:255
+#: ../plasmoid/contents/ui/Yahoo.qml:254
 msgid "Thursday"
 msgstr "Quinta-feira"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:257
+#: ../plasmoid/contents/ui/Yahoo.qml:256
 msgid "Friday"
 msgstr "Sexta-feira"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:259
+#: ../plasmoid/contents/ui/Yahoo.qml:258
 msgid "Saturday"
 msgstr "Sábado"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:345
+#: ../plasmoid/contents/ui/Yahoo.qml:344
 msgid "Tornado"
 msgstr "Tornado"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:347
+#: ../plasmoid/contents/ui/Yahoo.qml:346
 msgid "Tropical Storm"
 msgstr "Tempestade tropical"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:349
+#: ../plasmoid/contents/ui/Yahoo.qml:348
 msgid "Hurricane"
 msgstr "Furacão"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:351
+#: ../plasmoid/contents/ui/Yahoo.qml:350
 msgid "Severe Thunderstorms"
 msgstr "Tempestades fortes"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:353
+#: ../plasmoid/contents/ui/Yahoo.qml:352
 msgid "Thunderstorms"
 msgstr "Tempestades"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:355
+#: ../plasmoid/contents/ui/Yahoo.qml:354
 msgid "Mixed Rain and Snow"
 msgstr "Chuva e neve misturadas"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:357
+#: ../plasmoid/contents/ui/Yahoo.qml:356
 msgid "Mixed Rain and Sleet"
 msgstr "Chuva e neve misturados"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:359
+#: ../plasmoid/contents/ui/Yahoo.qml:358
 msgid "Mixed Snow and Sleet"
 msgstr "Neve e granizo misturados"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:361
+#: ../plasmoid/contents/ui/Yahoo.qml:360
 msgid "Freezing Drizzle"
 msgstr "Garoa congelada"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:363
+#: ../plasmoid/contents/ui/Yahoo.qml:362
 msgid "Drizzle"
 msgstr "Garoa"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:365
+#: ../plasmoid/contents/ui/Yahoo.qml:364
 msgid "Freezing Rain"
 msgstr "Chuva congelada"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:368
+#: ../plasmoid/contents/ui/Yahoo.qml:367
 msgid "Showers"
 msgstr "Pancadas de chuva"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:370
+#: ../plasmoid/contents/ui/Yahoo.qml:369
 msgid "Snow Flurries"
 msgstr "Flocos de neve"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:372
+#: ../plasmoid/contents/ui/Yahoo.qml:371
 msgid "Light Snow Showers"
 msgstr "Pancadas de chuva e neve fraca"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:374
+#: ../plasmoid/contents/ui/Yahoo.qml:373
 msgid "Blowing Snow"
 msgstr "Rajadas de neve"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:376
+#: ../plasmoid/contents/ui/Yahoo.qml:375
 msgid "Snow"
 msgstr "Neve"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:378
+#: ../plasmoid/contents/ui/Yahoo.qml:377
 msgid "Hail"
 msgstr "Granizo"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:380
+#: ../plasmoid/contents/ui/Yahoo.qml:379
 msgid "Sleet"
 msgstr "Neve derretida"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:382
+#: ../plasmoid/contents/ui/Yahoo.qml:381
 msgid "Dust"
 msgstr "Poeira"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:384
+#: ../plasmoid/contents/ui/Yahoo.qml:383
 msgid "Foggy"
 msgstr "Nebuloso"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:386
+#: ../plasmoid/contents/ui/Yahoo.qml:385
 msgid "Haze"
 msgstr "Neblina"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:388
+#: ../plasmoid/contents/ui/Yahoo.qml:387
 msgid "Smoky"
 msgstr "Enfumaçado"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:390
+#: ../plasmoid/contents/ui/Yahoo.qml:389
 msgid "Blustery"
 msgstr "Rajadas"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:392
+#: ../plasmoid/contents/ui/Yahoo.qml:391
 msgid "Windy"
 msgstr "Com ventos"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:394
+#: ../plasmoid/contents/ui/Yahoo.qml:393
 msgid "Cold"
 msgstr "Frio"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:396
+#: ../plasmoid/contents/ui/Yahoo.qml:395
 msgid "Cloudy"
 msgstr "Nublado"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:398
+#: ../plasmoid/contents/ui/Yahoo.qml:397
 msgid "Mostly Cloudy (Night)"
 msgstr "Nublado na maior parte do tempo (noite)"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:400
+#: ../plasmoid/contents/ui/Yahoo.qml:399
 msgid "Mostly Cloudy (Day)"
 msgstr "Nublado na maior parte do tempo (dia)"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:402
+#: ../plasmoid/contents/ui/Yahoo.qml:401
 msgid "Partly Cloudy (Night)"
 msgstr "Parcialmente nublado (noite)"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:404
+#: ../plasmoid/contents/ui/Yahoo.qml:403
 msgid "Partly Cloudy (Day)"
 msgstr "Parcialmente nublado (dia)"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:406
+#: ../plasmoid/contents/ui/Yahoo.qml:405
 msgid "Clear (Night)"
 msgstr "Noite clara"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:408
+#: ../plasmoid/contents/ui/Yahoo.qml:407
 msgid "Sunny"
 msgstr "Ensolarado"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:410
+#: ../plasmoid/contents/ui/Yahoo.qml:409
 msgid "Fair (Night)"
 msgstr "Bom (noite)"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:412
+#: ../plasmoid/contents/ui/Yahoo.qml:411
 msgid "Fair (Day)"
 msgstr "Bom (dia)"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:414
+#: ../plasmoid/contents/ui/Yahoo.qml:413
 msgid "Mixed Rain and Hail"
 msgstr "Chuva e granizo misturados"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:416
+#: ../plasmoid/contents/ui/Yahoo.qml:415
 msgid "Hot"
 msgstr "Quente"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:418
+#: ../plasmoid/contents/ui/Yahoo.qml:417
 msgid "Isolated Thunderstorms"
 msgstr "Tempestades isoladas"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:421
+#: ../plasmoid/contents/ui/Yahoo.qml:420
 msgid "Scattered Thunderstorms"
 msgstr "Trovoadas"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:423
+#: ../plasmoid/contents/ui/Yahoo.qml:422
 msgid "Scattered Showers"
 msgstr "Períodos de chuva"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:426
+#: ../plasmoid/contents/ui/Yahoo.qml:425
 msgid "Heavy Snow"
 msgstr "Neve forte"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:428
+#: ../plasmoid/contents/ui/Yahoo.qml:427
 msgid "Scattered Snow Showers"
 msgstr "Tempestade de neve isolada"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:430
+#: ../plasmoid/contents/ui/Yahoo.qml:429
 msgid "Partly Cloudy"
 msgstr "Parcialmente nublado"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:432
+#: ../plasmoid/contents/ui/Yahoo.qml:431
 msgid "Thundershowers"
 msgstr "Trovoadas"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:434
+#: ../plasmoid/contents/ui/Yahoo.qml:433
 msgid "Snow Showers"
 msgstr "Precipitação de neve"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:436
+#: ../plasmoid/contents/ui/Yahoo.qml:435
 msgid "Isolated Thundershowers"
 msgstr "Trovoadas isoladas"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:438
+#: ../plasmoid/contents/ui/Yahoo.qml:437
 msgid "Not Available"
 msgstr "Indisponível"
 

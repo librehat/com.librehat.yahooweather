@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 5.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-18 20:52+0100\n"
+"POT-Creation-Date: 2016-04-22 22:22+0100\n"
 "PO-Revision-Date: 2016-04-14 22:40+0100\n"
 "Last-Translator: Mladen Pejaković <pejakm@autistici.org>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: ../plasmoid/contents/ui/ConfigGeneral.qml:26
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:27
 msgid "WOEID"
 msgstr "Gdje na zemlji ID"
 
-#: ../plasmoid/contents/ui/ConfigGeneral.qml:34
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:35
 msgid ""
 "Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
 "to find your city's WOEID"
@@ -30,9 +30,13 @@ msgstr ""
 "Posjetite <a href=\"http://zourbuth.com/tools/woeid/\">Jahu! WOEID servis</"
 "a> da pronađete vaš grad na WOEID"
 
-#: ../plasmoid/contents/ui/ConfigGeneral.qml:41
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:45
 msgid "Update Interval"
 msgstr "Interval osvježavanja"
+
+#: ../plasmoid/contents/ui/ConfigGeneral.qml:61
+msgid "Show Time in 24-hour Format"
+msgstr ""
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:34
 msgid "Temperature Unit"
@@ -150,215 +154,215 @@ msgstr "Greška 1. Provjerite vašu mrežu."
 msgid "Error 2. WOEID may be invalid."
 msgstr "Greška 2. WOEID je možda neispravan."
 
-#: ../plasmoid/contents/ui/Yahoo.qml:247
+#: ../plasmoid/contents/ui/Yahoo.qml:246
 msgid "Sunday"
 msgstr "Nedjelja"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:249
+#: ../plasmoid/contents/ui/Yahoo.qml:248
 msgid "Monday"
 msgstr "Ponedjeljak"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:251
+#: ../plasmoid/contents/ui/Yahoo.qml:250
 msgid "Tuesday"
 msgstr "Utorak"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:253
+#: ../plasmoid/contents/ui/Yahoo.qml:252
 msgid "Wednesday"
 msgstr "Srijeda"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:255
+#: ../plasmoid/contents/ui/Yahoo.qml:254
 msgid "Thursday"
 msgstr "Četvrtak"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:257
+#: ../plasmoid/contents/ui/Yahoo.qml:256
 msgid "Friday"
 msgstr "Petak"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:259
+#: ../plasmoid/contents/ui/Yahoo.qml:258
 msgid "Saturday"
 msgstr "Subota"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:345
+#: ../plasmoid/contents/ui/Yahoo.qml:344
 msgid "Tornado"
 msgstr "Tornado"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:347
+#: ../plasmoid/contents/ui/Yahoo.qml:346
 msgid "Tropical Storm"
 msgstr "Tropska oluja"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:349
+#: ../plasmoid/contents/ui/Yahoo.qml:348
 msgid "Hurricane"
 msgstr "Uragan"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:351
+#: ../plasmoid/contents/ui/Yahoo.qml:350
 msgid "Severe Thunderstorms"
 msgstr "Jaka oluja s grmljavinom"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:353
+#: ../plasmoid/contents/ui/Yahoo.qml:352
 msgid "Thunderstorms"
 msgstr "Oluja s grmljavinom"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:355
+#: ../plasmoid/contents/ui/Yahoo.qml:354
 msgid "Mixed Rain and Snow"
 msgstr "Kiša sa snijegom"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:357
+#: ../plasmoid/contents/ui/Yahoo.qml:356
 msgid "Mixed Rain and Sleet"
 msgstr "Kiša sa susnježicom"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:359
+#: ../plasmoid/contents/ui/Yahoo.qml:358
 msgid "Mixed Snow and Sleet"
 msgstr "Snijeg sa susnježicom"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:361
+#: ../plasmoid/contents/ui/Yahoo.qml:360
 msgid "Freezing Drizzle"
 msgstr "Sipeća kiša sa mrazom"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:363
+#: ../plasmoid/contents/ui/Yahoo.qml:362
 msgid "Drizzle"
 msgstr "Sipeća kiša"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:365
+#: ../plasmoid/contents/ui/Yahoo.qml:364
 msgid "Freezing Rain"
 msgstr "Ledena kiša"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:368
+#: ../plasmoid/contents/ui/Yahoo.qml:367
 msgid "Showers"
 msgstr "Pljuskovi"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:370
+#: ../plasmoid/contents/ui/Yahoo.qml:369
 msgid "Snow Flurries"
 msgstr "Naleti snijega"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:372
+#: ../plasmoid/contents/ui/Yahoo.qml:371
 msgid "Light Snow Showers"
 msgstr "Lagani naleti snijega"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:374
+#: ../plasmoid/contents/ui/Yahoo.qml:373
 msgid "Blowing Snow"
 msgstr "Sniježna mećava"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:376
+#: ../plasmoid/contents/ui/Yahoo.qml:375
 msgid "Snow"
 msgstr "Snijeg"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:378
+#: ../plasmoid/contents/ui/Yahoo.qml:377
 msgid "Hail"
 msgstr "Grad"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:380
+#: ../plasmoid/contents/ui/Yahoo.qml:379
 msgid "Sleet"
 msgstr "Susnježica"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:382
+#: ../plasmoid/contents/ui/Yahoo.qml:381
 msgid "Dust"
 msgstr "Prašina"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:384
+#: ../plasmoid/contents/ui/Yahoo.qml:383
 msgid "Foggy"
 msgstr "Maglovito"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:386
+#: ../plasmoid/contents/ui/Yahoo.qml:385
 msgid "Haze"
 msgstr "Izmaglica"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:388
+#: ../plasmoid/contents/ui/Yahoo.qml:387
 msgid "Smoky"
 msgstr "Zadimljeno"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:390
+#: ../plasmoid/contents/ui/Yahoo.qml:389
 msgid "Blustery"
 msgstr "Jak vjetar"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:392
+#: ../plasmoid/contents/ui/Yahoo.qml:391
 msgid "Windy"
 msgstr "Vjetrovito"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:394
+#: ../plasmoid/contents/ui/Yahoo.qml:393
 msgid "Cold"
 msgstr "Hladno"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:396
+#: ../plasmoid/contents/ui/Yahoo.qml:395
 msgid "Cloudy"
 msgstr "Oblačno"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:398
+#: ../plasmoid/contents/ui/Yahoo.qml:397
 msgid "Mostly Cloudy (Night)"
 msgstr "Pretežno oblačno (noć)"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:400
+#: ../plasmoid/contents/ui/Yahoo.qml:399
 msgid "Mostly Cloudy (Day)"
 msgstr "Pretežno oblačno (dan)"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:402
+#: ../plasmoid/contents/ui/Yahoo.qml:401
 msgid "Partly Cloudy (Night)"
 msgstr "Djelimično oblačno (noć)"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:404
+#: ../plasmoid/contents/ui/Yahoo.qml:403
 msgid "Partly Cloudy (Day)"
 msgstr "Djelimično oblačno (dan)"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:406
+#: ../plasmoid/contents/ui/Yahoo.qml:405
 msgid "Clear (Night)"
 msgstr "Jasno (noć)"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:408
+#: ../plasmoid/contents/ui/Yahoo.qml:407
 msgid "Sunny"
 msgstr "Sunčano"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:410
+#: ../plasmoid/contents/ui/Yahoo.qml:409
 msgid "Fair (Night)"
 msgstr "Vedro (noć)"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:412
+#: ../plasmoid/contents/ui/Yahoo.qml:411
 msgid "Fair (Day)"
 msgstr "Vedro (dan)"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:414
+#: ../plasmoid/contents/ui/Yahoo.qml:413
 msgid "Mixed Rain and Hail"
 msgstr "Kiša sa gradom"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:416
+#: ../plasmoid/contents/ui/Yahoo.qml:415
 msgid "Hot"
 msgstr "Toplo"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:418
+#: ../plasmoid/contents/ui/Yahoo.qml:417
 msgid "Isolated Thunderstorms"
 msgstr "Lokalizovana oluja s grmljavinom"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:421
+#: ../plasmoid/contents/ui/Yahoo.qml:420
 msgid "Scattered Thunderstorms"
 msgstr "Mjestimična oluja s grmljavinom"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:423
+#: ../plasmoid/contents/ui/Yahoo.qml:422
 msgid "Scattered Showers"
 msgstr "Lokalizovani pljuskovi"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:426
+#: ../plasmoid/contents/ui/Yahoo.qml:425
 msgid "Heavy Snow"
 msgstr "Jak snijeg"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:428
+#: ../plasmoid/contents/ui/Yahoo.qml:427
 msgid "Scattered Snow Showers"
 msgstr "Mjestimične sniježne padavine"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:430
+#: ../plasmoid/contents/ui/Yahoo.qml:429
 msgid "Partly Cloudy"
 msgstr "Djelimično oblačno"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:432
+#: ../plasmoid/contents/ui/Yahoo.qml:431
 msgid "Thundershowers"
 msgstr "Pljuskovi s grmljavinom"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:434
+#: ../plasmoid/contents/ui/Yahoo.qml:433
 msgid "Snow Showers"
 msgstr "Sniježne padavine"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:436
+#: ../plasmoid/contents/ui/Yahoo.qml:435
 msgid "Isolated Thundershowers"
 msgstr "Lokalizovani pljuskovi s grmljavinom"
 
-#: ../plasmoid/contents/ui/Yahoo.qml:438
+#: ../plasmoid/contents/ui/Yahoo.qml:437
 msgid "Not Available"
 msgstr "Nedostupno"
 
