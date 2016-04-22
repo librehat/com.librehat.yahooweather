@@ -27,7 +27,7 @@ Installation
 
 If you need localisation (i18n/l10n) support, please use `cmake` to install this widget to your system-wide directory.
 
-```
+```bash
 mkdir build && cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=`kf5-config --prefix`
 sudo make install
@@ -39,7 +39,7 @@ This may be more convenient but localisation support is not possible via `plasma
 
 Replace the version number as needed.
 
-```
+```bash
 ./mkplasmoid.sh
 plasmapkg2 -i ~/com.librehat.yahooweather-5.2.0.plasmoid
 ```
