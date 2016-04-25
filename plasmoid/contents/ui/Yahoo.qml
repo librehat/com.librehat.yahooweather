@@ -223,7 +223,8 @@ Item {
 
             forecastModel.append({
                 "day": parseDay(forecasts[i].day),
-                "temp": low + "~" + high + "°" + m_unitTemperature,
+                "temp": high  + "°" + m_unitTemperature + "<br />" +
+                        low   + "°" + m_unitTemperature, 
                 "icon": determineIcon(parseInt(forecasts[i].code))
             })
         }
@@ -643,7 +644,7 @@ Item {
             m = parseFloat(m)
         }
         var k = m / 1013.25
-        return k.toFixed(0)
+        return k.toFixed(2)
     }
 }
 
