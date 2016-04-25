@@ -447,7 +447,7 @@ Item {
             d = parseFloat(d)
         }
 
-        if (d <= 0) {
+        if (d < 0) {
             return " "
         } else if (d < 11.25) {
             return "↓"
