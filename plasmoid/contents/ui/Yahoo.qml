@@ -14,9 +14,10 @@ Item {
     id: yahoo
     
     property bool hasdata: false
-    //used to display error on widget
-    property string errstring
+    property string errstring     //used to display error on widget
     property bool m_isbusy: false
+    property bool networkError: false
+    property int numRetries: 0
 
     property string m_pubDate;
     property string m_link
@@ -92,14 +93,28 @@ Item {
         console.debug("Source changed to", source)
         var doc = new XMLHttpRequest()
         doc.onreadystatechange = function() {
+            console.debug("readyState is", doc.readyState)
             if (doc.readyState === XMLHttpRequest.DONE) {
+                repeatquery.running = false
                 if (doc.status === 200) {
                     getweatherinfo(doc.responseText)
+                    networkError = false;
+                    numRetries = 0;
                 } else {
-                    errstring = i18n("Error 1. Please check your network.")
-                    console.debug("HTTP request failed, try again.")
+                    if (networkError || numRetries > 4) {
+                        // don't display error until several retries occur
+                        errstring = i18n("Error 1. Please check your network.")
+                        console.debug("HTTP request failed, try again.")
+                        hasdata = false;
+                        networkError = true;
+                    }
                     repeatquery.running = true
+                    numRetries++;
                 }
+            } else {
+                // Start timer to avoid response stuck at readyState of 1
+                // or any other state before DONE (4)
+                repeatquery.running = true
             }
         }
         doc.open("GET", source, true)
@@ -124,26 +139,33 @@ Item {
 
         if (resObj.error) {
             hasdata = false
-            errstring = resOjb.error.description
+            errstring = resObj.error.description
             console.error("Error message from API:", errstring)
             return
         }
 
-        if (resObj.query.count !== 1) {
-            console.debug("Query count:", resObj.query.count)
-            if (resObj.query.count === 0) {
-                if (failedAttempts >= 30) {
-                    hasdata = false
-                    errstring = i18n("Error 2. WOEID may be invalid.")
-                } else {
-                    console.debug("Could be an API issue, try again. Attempts:", failedAttempts)
-                    failedAttempts += 1
-                    query()
-                }
-            } else {
+        if ((resObj.query.count === 0) || ((resObj.query.count === 1) &&
+            (resObj.query.results.channel.description === undefined))) {
+            // query.count is zero OR it is 1 but the result not parsable.
+            // This usually indicates a bad WOEID was entered. But retry
+            // the query up to 30 times in case this is possibly an incomplete
+            // or corrupted response.
+            if (failedAttempts >= 30) {
+                console.debug("query.count =", resObj.query.count)
                 hasdata = false
                 errstring = i18n("Error 2. WOEID may be invalid.")
+                failedAttempts = 0
+            } else {
+                console.debug("Could be an API issue, try again. Attempts:", failedAttempts)
+                failedAttempts += 1
+                query()
             }
+            return
+        } else if (resObj.query.count !== 1) {
+            // count is neither 0 or 1 which is immediately invalid; no retry
+            console.debug("query.count not 0 or 1")
+            hasdata = false
+            errstring = i18n("Error 2. WOEID may be invalid.")
             return
         }
         
@@ -513,7 +535,7 @@ Item {
 
     // Insert missing leading 0 on minutes if necessary.
     // E.g., if s = "8:7 pm" change to "8:07 pm"
-    // In addition, if convert24 is true, change "8:07 pm" 
+    // In addition, if convert24 is true, change "8:07 pm"
     // to "20:07" or 3:07 am to "03:07", etc.
     function fixTime(s, convert24) {
         if (typeof s !== "string")
@@ -542,41 +564,53 @@ Item {
             var hour
             if ((amIndex == 2) || (amIndex == 3)) {
                 // AM is located next to minute or separated by 1 space. 
-                // Avoid detecting AM in the trailing time zone characters, 
+                // Avoid removing possible "AM" in the trailing time zone characters,
                 // so remove only the first "am" or "AM" from string
                 min_am_or_pm = min_am_or_pm.replace(/am|am /i, "")
                 // add leading 0 to hour if not already present
-                if (colonIndex == 1) {  // hour is 1 digit
-                    hour_colon = '0' + hour_colon
+                if (colonIndex == 1) {
+                    // hour is a single digit (this is sunrise or sunset)
+                    hour_colon = "0" + hour_colon
                 } else { 
-                    // possibly more than 1 hour digit
+                    // possibly more than a single hour digit in a time field.
                     var leading_digit = hour_colon.slice(colonIndex-2, colonIndex-1)
-                    if (isNaN(parseInt(leading_digit))) {
-                        // leading hour digit not a number, make it '0' by insertion
-                        hour_colon = hour_colon.slice(0, colonIndex-1) + '0' +
+                    if (leading_digit == " ") {
+                        // leading hour digit is blank, change it to "0"
+                        hour_colon = hour_colon.slice(0, colonIndex-1) + "0" +
                                      hour_colon.slice(colonIndex-1)
                     } else {
-                        // if am hour is 12, change to 00
-                        if ((leading_digit == '1') && (hour_colon.slice(colonIndex-1, colonIndex) == 2)) {
+                        // both hour digits are a number. If hour is 12 AM,
+                        // change to 00.
+                        if ((leading_digit == "1") && (hour_colon.slice(colonIndex-1, colonIndex) == "2")) {
                             hour_colon = hour_colon.substr(0, colonIndex-2) + "00" +
                                          hour_colon.slice(colonIndex)
                         }
                     }
                 }
-            } else { // must be PM
+            } else {
+                // must be PM
                 // remove first "pm" or "PM" from string
                 min_am_or_pm = min_am_or_pm.replace(/pm|pm /i, "")
                 // find hour and add 12, but not when 12 pm 
-                if (colonIndex <= 2) { // decode hours from index 0
+                if (colonIndex <= 2) {
+                    // this fixes-up sunrise and sunset times.
+                    // decode hours from index 0.
                     hour = parseInt(hour_colon.slice(0, colonIndex))
                     if (hour != 12)
                         hour += 12
                     hour_colon = hour + ":"
-                } else {               // decode exactly 2 before colon
+                } else {
+                    // this fixes-up the pubDate time substring.
+                    // decode exactly 2 before colon.
                     hour = parseInt(hour_colon.slice(colonIndex-2, colonIndex))
                     if (hour != 12)
                         hour += 12
                     var leadingText = hour_colon.slice(0, colonIndex-2)
+                    if (leadingText.charAt(-1 + leadingText.length) != " ") {
+                        // leadingText does not end in blank so append a space
+                        // char to separate hour from leadingText.
+                        leadingText += " ";
+                    }
                     hour_colon = leadingText + hour + ":" 
                 }
             }
