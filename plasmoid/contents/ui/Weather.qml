@@ -24,7 +24,7 @@ Item {
     Yahoo {
         id: backend
     }
-    
+
     property alias hasdata: backend.hasdata
     property alias errstring: backend.errstring
     property alias m_isbusy: backend.m_isbusy
@@ -45,7 +45,7 @@ Item {
         tooltip: i18n("Refresh")
         onClicked: action_reload()
     }
-    
+
     PlasmaComponents.Label {
         //top-right
         id: yahoo_n_date
@@ -68,7 +68,7 @@ Item {
             id: conditionCol
             width: parent.width / 2
             height: parent.height
-            
+
             PlasmaComponents.Label {
                 id: conditiontemp
                 text: backend.m_conditionTemp + "°" + backend.m_unitTemperature
@@ -119,7 +119,7 @@ Item {
             font: theme.defaultFont
         }
     }
-    
+
     ListView {
         id: forecastView
         visible: hasdata
@@ -137,17 +137,22 @@ Item {
         anchors { horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter }
 
         PlasmaCore.IconItem {
-            visible: !(hasdata || m_isbusy)
+            visible: (!(hasdata || m_isbusy)) || backend.networkError
             source: "dialog-error"
             width: theme.mediumIconSize
             height: width
         }
 
         PlasmaComponents.Label {
-            visible: !(hasdata || m_isbusy)
+            visible: (!(hasdata || m_isbusy)) || backend.networkError
             text: errstring ? errstring : i18n("Unknown Error.")
             wrapMode: Text.WordWrap
         }
+    }
+
+    Row {
+        spacing: units.gridUnit
+        anchors { horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter }
 
         PlasmaComponents.BusyIndicator {
             visible: m_isbusy
@@ -181,12 +186,12 @@ Item {
         repeat: true
         onTriggered: action_reload()
     }
-    
+
     function action_reload () {
         backend.query()
         iconUpdater.running = true
     }
-    
+
     Connections {
         target: plasmoid.configuration
         onWoeidChanged: action_reload()
