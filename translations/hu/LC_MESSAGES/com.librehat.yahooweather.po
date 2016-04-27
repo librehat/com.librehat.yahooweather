@@ -38,7 +38,7 @@ msgstr "Frissítési időköz"
 
 #: ../plasmoid/contents/ui/ConfigGeneral.qml:61
 msgid "Show Time in 24-hour Format"
-msgstr ""
+msgstr "Idő mutatása 24 órás formátumban"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:34
 msgid "Temperature Unit"
