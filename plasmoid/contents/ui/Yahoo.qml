@@ -12,11 +12,11 @@ import QtQuick 2.2
 
 Item {
     id: yahoo
-    
+
     property bool hasdata: false
-    //used to display error on widget
-    property string errstring
+    property string errstring     //used to display error on widget
     property bool m_isbusy: false
+    property bool networkError: false
 
     property string m_pubDate;
     property string m_link
@@ -44,18 +44,18 @@ Item {
     property string m_conditionDesc
     property int m_conditionTemp
     property alias dataModel: forecastModel
-    
+
     // don't use m_response outside this file!
     property string m_response
 
     Forecast {
         id: forecastModel
     }
-    
+
     property string unitsymbol
-    
+
     property int failedAttempts: 0
-    
+
     // timer for repeat query from sh033
     Timer {
         id: repeatquery
@@ -68,10 +68,9 @@ Item {
             query()
         }
     }
-    
+
     function query(woeid) {
         console.debug("Querying...")
-        
         m_isbusy = true
         woeid = woeid ? woeid : plasmoid.configuration.woeid
         if (!woeid) {
@@ -81,31 +80,39 @@ Item {
             console.debug("WOEID is empty.")
             return//fail silently
         }
-        
         if (plasmoid.configuration.celsius) {
             unitsymbol = "c"
         } else {
             unitsymbol = "f"
         }
-        
+
         var source = "http://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid='" + woeid + "' and u='f'&format=json"
         console.debug("Source changed to", source)
         var doc = new XMLHttpRequest()
         doc.onreadystatechange = function() {
+            console.debug("readyState is", doc.readyState)
             if (doc.readyState === XMLHttpRequest.DONE) {
+                repeatquery.running = false
                 if (doc.status === 200) {
                     getweatherinfo(doc.responseText)
+                    networkError = false;
                 } else {
                     errstring = i18n("Error 1. Please check your network.")
                     console.debug("HTTP request failed, try again.")
                     repeatquery.running = true
+                    hasdata = false;
+                    networkError = true;
                 }
+            } else {
+                // Start timer to avoid response stuck at readyState of 1
+                // or any other state before DONE (4)
+                repeatquery.running = true
             }
         }
         doc.open("GET", source, true)
         doc.send()
     }
-    
+
     function getweatherinfo(response) {
         console.debug("getweatherinfo() is called. Getting Weather Information...")
         if (!response) {
@@ -124,29 +131,36 @@ Item {
 
         if (resObj.error) {
             hasdata = false
-            errstring = resOjb.error.description
+            errstring = resObj.error.description
             console.error("Error message from API:", errstring)
             return
         }
 
-        if (resObj.query.count !== 1) {
-            console.debug("Query count:", resObj.query.count)
-            if (resObj.query.count === 0) {
-                if (failedAttempts >= 30) {
-                    hasdata = false
-                    errstring = i18n("Error 2. WOEID may be invalid.")
-                } else {
-                    console.debug("Could be an API issue, try again. Attempts:", failedAttempts)
-                    failedAttempts += 1
-                    query()
-                }
-            } else {
+        if ((resObj.query.count === 0) || ((resObj.query.count === 1) &&
+            (resObj.query.results.channel.description === undefined))) {
+            // query.count is zero OR it is 1 but the result not parsable.
+            // This usually indicates a bad WOEID was entered. But retry
+            // the query up to 30 times in case this is possibly an incomplete
+            // or corrupted response.
+            if (failedAttempts >= 30) {
+                console.debug("query.count =", resObj.query.count)
                 hasdata = false
                 errstring = i18n("Error 2. WOEID may be invalid.")
+                failedAttempts = 0
+            } else {
+                console.debug("Could be an API issue, try again. Attempts:", failedAttempts)
+                failedAttempts += 1
+                query()
             }
             return
+        } else if (resObj.query.count !== 1) {
+            // count is neither 0 or 1 which is immediately invalid; no retry
+            console.debug("query.count not 0 or 1")
+            hasdata = false
+            errstring = i18n("Error 2. WOEID may be invalid.")
+            return
         }
-        
+
         // store successful response in case user needs to change units
         // then we can parse the response text without querying again
         m_response = response
@@ -168,11 +182,11 @@ Item {
         m_astronomySunset        = fixTime(results.astronomy.sunset, plasmoid.configuration.timeFormat24)
         m_geoLat                 = results.item.lat
         m_geoLong                = results.item.long
-        
+
         m_conditionIcon = determineIcon(parseInt(results.item.condition.code))
         m_conditionDesc = getDescription(parseInt(results.item.condition.code))
         m_conditionTemp = parseInt(results.item.condition.temp)
-        
+
         // Unit conversions
         if (plasmoid.configuration.celsius) {
             m_unitTemperature = "C"
@@ -181,34 +195,34 @@ Item {
         } else {
             m_unitTemperature = "F"
         }
-        
+
         if (plasmoid.configuration.ms) {
-            m_unitSpeed = "m/s"
-            m_windSpeed = kmhToMs(m_windSpeed)
+           m_unitSpeed = "m/s"
+           m_windSpeed = kmhToMs(m_windSpeed)
         } else if (plasmoid.configuration.mph) {
-            m_unitSpeed = "mph"
-            m_windSpeed = kmToMi(m_windSpeed)
+           m_unitSpeed = "mph"
+           m_windSpeed = kmToMi(m_windSpeed)
         } else {
-            m_unitSpeed = "km/h"
+           m_unitSpeed = "km/h"
         }
-        
+
         if (plasmoid.configuration.mi) {
-            m_atmosphereVisibility = kmToMi(m_atmosphereVisibility)
-            m_unitDistance = "mi"
+           m_atmosphereVisibility = kmToMi(m_atmosphereVisibility)
+           m_unitDistance = "mi"
         } else {
-            m_unitDistance = "km"
+           m_unitDistance = "km"
         }
-        
+
         if (plasmoid.configuration.inhg) {
-            m_atmospherePressure = mbarToIn(m_atmospherePressure)
-            m_unitPressure = "inHg"
+           m_atmospherePressure = mbarToIn(m_atmospherePressure)
+           m_unitPressure = "inHg"
         } else if (plasmoid.configuration.atm) {
-            m_atmospherePressure = mbarToAtm(m_atmospherePressure)
-            m_unitPressure = "atm"
+           m_atmospherePressure = mbarToAtm(m_atmospherePressure)
+           m_unitPressure = "atm"
         } else if (plasmoid.configuration.hpa) {
-            m_unitPressure = "hPa"
+           m_unitPressure = "hPa"
         } else {
-            m_unitPressure = "mbar"
+           m_unitPressure = "mbar"
         }
 
         var forecasts = results.item.forecast
@@ -258,7 +272,7 @@ Item {
                 return i18n("Saturday")
         }
     }
-    
+
     function determineIcon(code) {
         if (code <= 4) {
             return "weather-storm"
@@ -336,7 +350,7 @@ Item {
             return "weather-none-available"
         }
     }
-    
+
     function getDescription(conCode) {
         //according to http://developer.yahoo.com/weather/#codes
         switch (conCode) {
@@ -489,7 +503,7 @@ Item {
             return " "
         }
     }
-    
+
     function parseRising(r) {
         if (r === null || r === undefined) {
             return undefined;
@@ -498,7 +512,7 @@ Item {
         if (typeof r !== "number") {
             r = parseInt(r)
         }
-        
+
         switch (r) {
             case 0:
                 return "→";//steady
@@ -513,7 +527,7 @@ Item {
 
     // Insert missing leading 0 on minutes if necessary.
     // E.g., if s = "8:7 pm" change to "8:07 pm"
-    // In addition, if convert24 is true, change "8:07 pm" 
+    // In addition, if convert24 is true, change "8:07 pm"
     // to "20:07" or 3:07 am to "03:07", etc.
     function fixTime(s, convert24) {
         if (typeof s !== "string")
@@ -541,43 +555,55 @@ Item {
             var amIndex = min_am_or_pm.search(/am/i)
             var hour
             if ((amIndex == 2) || (amIndex == 3)) {
-                // AM is located next to minute or separated by 1 space. 
-                // Avoid detecting AM in the trailing time zone characters, 
+                // AM is located next to minute or separated by 1 space.
+                // Avoid removing possilbe AM in the trailing time zone characters,
                 // so remove only the first "am" or "AM" from string
                 min_am_or_pm = min_am_or_pm.replace(/am|am /i, "")
                 // add leading 0 to hour if not already present
-                if (colonIndex == 1) {  // hour is 1 digit
-                    hour_colon = '0' + hour_colon
-                } else { 
-                    // possibly more than 1 hour digit
+                if (colonIndex == 1) {
+                    // hour is a single digit (this is sunrise or sunset)
+                    hour_colon = "0" + hour_colon
+                } else {
+                    // possibly more than a single hour digit in a time field.
                     var leading_digit = hour_colon.slice(colonIndex-2, colonIndex-1)
-                    if (isNaN(parseInt(leading_digit))) {
-                        // leading hour digit not a number, make it '0' by insertion
-                        hour_colon = hour_colon.slice(0, colonIndex-1) + '0' +
+                    if (leading_digit == " ") {
+                        // leading hour digit is blank, change it to "0"
+                        hour_colon = hour_colon.slice(0, colonIndex-1) + "0" +
                                      hour_colon.slice(colonIndex-1)
                     } else {
-                        // if am hour is 12, change to 00
-                        if ((leading_digit == '1') && (hour_colon.slice(colonIndex-1, colonIndex) == 2)) {
+                        // both hour digits are a number. If hour is 12 AM,
+                        // change to 00.
+                        if ((leading_digit == "1") && (hour_colon.slice(colonIndex-1, colonIndex) == "2")) {
                             hour_colon = hour_colon.substr(0, colonIndex-2) + "00" +
                                          hour_colon.slice(colonIndex)
                         }
                     }
                 }
-            } else { // must be PM
+            } else {
+                // must be PM
                 // remove first "pm" or "PM" from string
                 min_am_or_pm = min_am_or_pm.replace(/pm|pm /i, "")
-                // find hour and add 12, but not when 12 pm 
-                if (colonIndex <= 2) { // decode hours from index 0
+                // find hour and add 12, but not when 12 pm
+                if (colonIndex <= 2) {
+                    // this fixes-up sunrise and sunset times.
+                    // decode hours from index 0.
                     hour = parseInt(hour_colon.slice(0, colonIndex))
                     if (hour != 12)
                         hour += 12
                     hour_colon = hour + ":"
-                } else {               // decode exactly 2 before colon
+                } else {
+                    // this fixes-up the pubDate time substring.
+                    // decode exactly 2 before colon.
                     hour = parseInt(hour_colon.slice(colonIndex-2, colonIndex))
                     if (hour != 12)
                         hour += 12
                     var leadingText = hour_colon.slice(0, colonIndex-2)
-                    hour_colon = leadingText + hour + ":" 
+                    if (leadingText.charAt(-1 + leadingText.length) != " ") {
+                        // leadingText does not end in blank so append a space
+                        // char to separate hour from leadingText.
+                        leadingText += " ";
+                    }
+                    hour_colon = leadingText + hour + ":"
                 }
             }
             // reassemble modified string
@@ -621,7 +647,7 @@ Item {
         var k = m / 1.609344
         return k.toFixed(2)
     }
-    
+
     // convert mbar to inch of mercury
     function mbarToIn(m) {
         if (m === null || m === undefined) {
@@ -633,7 +659,7 @@ Item {
         var k = m / 33.8638867
         return k.toFixed(2)
     }
-    
+
     // convert mbar to atmosphere
     function mbarToAtm(m) {
         if (m === null || m === undefined) {
@@ -646,4 +672,3 @@ Item {
         return k.toFixed(0)
     }
 }
-
