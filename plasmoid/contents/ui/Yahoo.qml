@@ -124,7 +124,7 @@ Item {
 
         if (resObj.error) {
             hasdata = false
-            errstring = resOjb.error.description
+            errstring = resObj.error.description
             console.error("Error message from API:", errstring)
             return
         }
