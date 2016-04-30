@@ -542,41 +542,53 @@ Item {
             var hour
             if ((amIndex == 2) || (amIndex == 3)) {
                 // AM is located next to minute or separated by 1 space. 
-                // Avoid detecting AM in the trailing time zone characters, 
+                // Avoid removing possible "AM" in the trailing time zone characters,
                 // so remove only the first "am" or "AM" from string
                 min_am_or_pm = min_am_or_pm.replace(/am|am /i, "")
                 // add leading 0 to hour if not already present
-                if (colonIndex == 1) {  // hour is 1 digit
-                    hour_colon = '0' + hour_colon
+                if (colonIndex == 1) {
+                    // hour is a single digit (this is sunrise or sunset)
+                    hour_colon = "0" + hour_colon
                 } else { 
-                    // possibly more than 1 hour digit
+                    // possibly more than a single hour digit in a time field.
                     var leading_digit = hour_colon.slice(colonIndex-2, colonIndex-1)
-                    if (isNaN(parseInt(leading_digit))) {
-                        // leading hour digit not a number, make it '0' by insertion
-                        hour_colon = hour_colon.slice(0, colonIndex-1) + '0' +
+                    if (leading_digit == " ") {
+                        // leading hour digit is blank, change it to "0"
+                        hour_colon = hour_colon.slice(0, colonIndex-1) + "0" +
                                      hour_colon.slice(colonIndex-1)
                     } else {
-                        // if am hour is 12, change to 00
-                        if ((leading_digit == '1') && (hour_colon.slice(colonIndex-1, colonIndex) == 2)) {
+                        // both hour digits are a number. If hour is 12 AM,
+                        // change to 00.
+                        if ((leading_digit == "1") && (hour_colon.slice(colonIndex-1, colonIndex) == "2")) {
                             hour_colon = hour_colon.substr(0, colonIndex-2) + "00" +
                                          hour_colon.slice(colonIndex)
                         }
                     }
                 }
-            } else { // must be PM
+            } else {
+                // must be PM
                 // remove first "pm" or "PM" from string
                 min_am_or_pm = min_am_or_pm.replace(/pm|pm /i, "")
                 // find hour and add 12, but not when 12 pm 
-                if (colonIndex <= 2) { // decode hours from index 0
+                if (colonIndex <= 2) {
+                    // this fixes-up sunrise and sunset times.
+                    // decode hours from index 0.
                     hour = parseInt(hour_colon.slice(0, colonIndex))
                     if (hour != 12)
                         hour += 12
                     hour_colon = hour + ":"
-                } else {               // decode exactly 2 before colon
+                } else {
+                    // this fixes-up the pubDate time substring.
+                    // decode exactly 2 before colon.
                     hour = parseInt(hour_colon.slice(colonIndex-2, colonIndex))
                     if (hour != 12)
                         hour += 12
                     var leadingText = hour_colon.slice(0, colonIndex-2)
+                    if (leadingText.charAt(-1 + leadingText.length) != " ") {
+                        // leadingText does not end in blank so append a space
+                        // char to separate hour from leadingText.
+                        leadingText += " ";
+                    }
                     hour_colon = leadingText + hour + ":" 
                 }
             }
