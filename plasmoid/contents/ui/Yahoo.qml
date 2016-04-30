@@ -643,7 +643,7 @@ Item {
             m = parseFloat(m)
         }
         var k = m / 1013.25
-        return k.toFixed(0)
+        return k.toFixed(2)
     }
 }
 
