@@ -129,21 +129,28 @@ Item {
             return
         }
 
-        if (resObj.query.count !== 1) {
-            console.debug("Query count:", resObj.query.count)
-            if (resObj.query.count === 0) {
-                if (failedAttempts >= 30) {
-                    hasdata = false
-                    errstring = i18n("Error 2. WOEID may be invalid.")
-                } else {
-                    console.debug("Could be an API issue, try again. Attempts:", failedAttempts)
-                    failedAttempts += 1
-                    query()
-                }
-            } else {
+        if ((resObj.query.count === 0) || ((resObj.query.count === 1) &&
+            (resObj.query.results.channel.description === undefined))) {
+            // query.count is zero OR it is 1 but the result not parsable.
+            // This usually indicates a bad WOEID was entered. But retry
+            // the query up to 30 times in case this is possibly an incomplete
+            // or corrupted response.
+            if (failedAttempts >= 30) {
+                console.debug("query.count =", resObj.query.count)
                 hasdata = false
                 errstring = i18n("Error 2. WOEID may be invalid.")
+                failedAttempts = 0
+            } else {
+                console.debug("Could be an API issue, try again. Attempts:", failedAttempts)
+                failedAttempts += 1
+                query()
             }
+            return
+        } else if (resObj.query.count !== 1) {
+            // count is neither 0 or 1 which is immediately invalid; no retry
+            console.debug("query.count not 0 or 1")
+            hasdata = false
+            errstring = i18n("Error 2. WOEID may be invalid.")
             return
         }
         
