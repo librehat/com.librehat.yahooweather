@@ -12,26 +12,37 @@ import QtQuick 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
-Column {
+Item {
     id: delegate
-    spacing: units.gridUnit
     
     PlasmaComponents.Label {
         text: day
+        id: dayId
         anchors.horizontalCenter: parent.horizontalCenter
         font: theme.defaultFont
     }
     
     PlasmaCore.IconItem {
         source: icon
+        id: iconId
         width: theme.smallMediumIconSize
         height: width
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors {horizontalCenter: parent.horizontalCenter;
+                 top: dayId.bottom; topMargin: units.gridUnit}
     }
     
     PlasmaComponents.Label {
-        text: temp
-        anchors.horizontalCenter: parent.horizontalCenter
+        text: tempHi
+        id: tempHiId
+        anchors {horizontalCenter: parent.horizontalCenter; 
+                 top: iconId.bottom; topMargin: units.gridUnit}
+        font: theme.defaultFont
+    }
+
+    PlasmaComponents.Label {
+        text: tempLo
+        anchors {horizontalCenter: parent.horizontalCenter; 
+                 top: tempHiId.bottom; topMargin: -units.gridUnit/2}
         font: theme.defaultFont
     }
 }
