@@ -14,7 +14,8 @@ import QtQml.Models 2.1
 ListModel {
     ListElement {
         day: ""
-        temp: ""
+        tempHi: ""
+        tempLo: ""
         icon: "weather-none-available"
     }
 }

@@ -30,7 +30,13 @@ Column {
     }
     
     PlasmaComponents.Label {
-        text: temp
+        text: tempHi
+        anchors.horizontalCenter: parent.horizontalCenter
+        font: theme.defaultFont
+    }
+
+    PlasmaComponents.Label {
+        text: tempLo
         anchors.horizontalCenter: parent.horizontalCenter
         font: theme.defaultFont
     }
