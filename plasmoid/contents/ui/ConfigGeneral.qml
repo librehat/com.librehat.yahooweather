@@ -20,6 +20,8 @@ Item {
     property alias cfg_woeid: woeidField.text
     property alias cfg_interval: intervalField.text
     property alias cfg_timeFormat24: timeFormat24Field.checked
+    property alias cfg_widthDelta: widthDeltaField.text
+    property alias cfg_heightDelta: heightDeltaField.text
 
     ColumnLayout {
         ColumnLayout {
@@ -42,7 +44,7 @@ Item {
                 text: " "
             }
             Label {
-                text: i18n("Update Interval")
+                text: i18n("Update Interval (minutes)")
             }
 
             TextField {
@@ -59,6 +61,35 @@ Item {
             CheckBox {
                 id: timeFormat24Field 
                 text: i18n("Show Time in 24-hour Format")
+            }
+        }
+
+        ColumnLayout {
+            Label {
+                text: "<br />" + i18n("Panel only, increase default widget size (plasma restart needed)")
+            }
+
+            Row {
+                TextField {
+                    id: widthDeltaField
+                    inputMask: "99"
+                    inputMethodHints: Qt.ImhDigitsOnly
+                }
+                Label {
+                    text: i18n("Increase width by this many grid units")
+                    anchors.verticalCenter: widthDeltaField.verticalCenter
+                }
+            }
+            Row {
+                TextField {
+                    id: heightDeltaField
+                    inputMask: "99"
+                    inputMethodHints: Qt.ImhDigitsOnly
+                }
+                Label {
+                    text: i18n("Increase height by this many grid units")
+                    anchors.verticalCenter: heightDeltaField.verticalCenter
+                }
             }
         }
     }

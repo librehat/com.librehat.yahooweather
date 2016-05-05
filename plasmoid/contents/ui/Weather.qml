@@ -20,6 +20,22 @@ Item {
     Layout.minimumHeight: units.gridUnit * 20
     clip: true
 
+    //
+    // This only affects the widget size when installed into panel and
+    // allows the widget to be adjusted via user configuration if needed. 
+    // With no adjustment (width/heightDelta set to 0), on some monitors 
+    // text may be cut off at the edges. 
+    // Note: when width/heightDelta configured as 0, implicitWidth/Height
+    // remains undefined and has no effect (this is why string values foo/bar
+    // are added as an intentional type mismatch. This ensures no change from
+    // previous behavior when these configured values remain at default
+    // settings, 0.
+    // A plasmashell restart is needed for width/heightDelta entries to take 
+    // effect.
+    //
+    implicitWidth: Layout.minimumWidth   + (units.gridUnit * ((plasmoid.configuration.widthDelta !== 0) ? plasmoid.configuration.widthDelta : "foo"))
+    implicitHeight: Layout.minimumHeight + (units.gridUnit * ((plasmoid.configuration.heightDelta!== 0) ? plasmoid.configuration.heightDelta : "bar"))
+
     //Yahoo.qml implements the API and stores relevant data
     Yahoo {
         id: backend
