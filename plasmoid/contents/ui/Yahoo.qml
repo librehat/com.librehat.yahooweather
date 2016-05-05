@@ -17,6 +17,8 @@ Item {
     //used to display error on widget
     property string errstring
     property bool m_isbusy: false
+    property bool networkError: false
+    property int numRetries: 0
 
     property string m_pubDate;
     property string m_link
@@ -61,10 +63,9 @@ Item {
         id: repeatquery
         interval: 10000
         running: false
-        repeat: true
+        repeat: false 
         onTriggered: {
-            running = false
-            console.debug("Reapeat Query.. ")
+            console.debug("Repeat Query.. ")
             query()
         }
     }
@@ -92,15 +93,36 @@ Item {
         console.debug("Source changed to", source)
         var doc = new XMLHttpRequest()
         doc.onreadystatechange = function() {
+            console.debug("readyState is", doc.readyState)
             if (doc.readyState === XMLHttpRequest.DONE) {
+                repeatquery.stop()
                 if (doc.status === 200) {
                     getweatherinfo(doc.responseText)
+                    networkError = false;
+                    numRetries = 0;
                 } else {
-                    errstring = i18n("Error 1. Please check your network.")
+                    if (networkError || numRetries > 4) {
+                        // don't display error until several retries occur
+                        errstring = i18n("Error 1. Please check your network.")
+                        console.debug("Network error displayed")
+                        hasdata = false;
+                        networkError = true;
+                    }
                     console.debug("HTTP request failed, try again.")
-                    repeatquery.running = true
+                    repeatquery.start()
+                    numRetries++;
                 }
+            } else if (doc.readyState === 1) {
+                // Start timer to avoid response stuck at readyState of 1
+                // before DONE (4). query() will only be called again if the
+                // timer times out (in 10 seconds). 
+                repeatquery.start()
+            } else {
+                // readyState is 2 or 3.
+                // stop/reset timer in case previous readyState was 1
+                repeatquery.stop()
             }
+
         }
         doc.open("GET", source, true)
         doc.send()
