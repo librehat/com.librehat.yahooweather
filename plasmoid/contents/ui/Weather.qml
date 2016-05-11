@@ -156,25 +156,6 @@ Item {
     }
 
     Timer {
-        id: iconUpdater
-        interval: 1000
-        running: m_isbusy
-        repeat: m_isbusy
-        onTriggered: {
-            if(!hasdata) {
-                plasmoid.icon = "weather-none-available"
-                plasmoid.toolTipMainText = ""
-                plasmoid.toolTipSubText = ""
-            }
-            else {
-                plasmoid.icon = backend.m_conditionIcon
-                plasmoid.toolTipMainText = backend.m_city + " " + backend.m_conditionTemp + "°" + backend.m_unitTemperature
-                plasmoid.toolTipSubText = backend.m_conditionDesc
-            }
-        }
-    }
-
-    Timer {
         id: timer
         interval: plasmoid.configuration.interval * 60000 //1m=60000ms
         running: !m_isbusy
