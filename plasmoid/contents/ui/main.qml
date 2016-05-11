@@ -18,4 +18,5 @@ Item {
     //property int formFactor: plasmoid.formFactor
 
     Plasmoid.fullRepresentation: Weather { }
+    Plasmoid.compactRepresentation: CompactWx { }
 }
