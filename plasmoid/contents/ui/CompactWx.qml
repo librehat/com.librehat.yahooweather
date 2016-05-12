@@ -17,26 +17,18 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
 
-    //Yahoo.qml implements the API and stores relevant data
-    Yahoo {
-        id: backend
-    }
-    
-    property alias hasdata: backend.hasdata
-    property alias m_isbusy: backend.m_isbusy
-    
     // Items that appear in tray 
     Row {
         anchors { horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter }
 
         PlasmaComponents.Label {
-            text: plasmoid.icon != "weather-none-available" ? backend.m_conditionTemp + "°" 
+            text: plasmoid.icon != "weather-none-available" ? main.m_conditionTemp + "°" 
                       : ""
         }
 
         PlasmaCore.IconItem {
             id: conditionIcon
-            source: plasmoid.icon //backend.m_conditionIcon
+            source: plasmoid.icon //main.m_conditionIcon
         }
 
         PlasmaComponents.Label {
@@ -49,26 +41,26 @@ Item {
         anchors { horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter }
 
         PlasmaComponents.BusyIndicator {
-            visible: m_isbusy
-            running: m_isbusy
+            visible: main.m_isbusy
+            running: main.m_isbusy
         }
     }
 
     Timer {
         id: iconUpdater
         interval: 1000
-        running: m_isbusy
-        repeat: m_isbusy
+        running: main.m_isbusy
+        repeat: main.m_isbusy
         onTriggered: {
-            if(!hasdata) {
+            if(!main.hasdata) {
                 plasmoid.icon = "weather-none-available"
                 plasmoid.toolTipMainText = i18n("Click tray icon")
                 plasmoid.toolTipSubText = i18n("for error details")
             }
             else {
-                plasmoid.icon = backend.m_conditionIcon
-                plasmoid.toolTipMainText = backend.m_city + " " + backend.m_conditionTemp + "°" + backend.m_unitTemperature
-                plasmoid.toolTipSubText = backend.m_conditionDesc
+                plasmoid.icon = main.m_conditionIcon
+                plasmoid.toolTipMainText = main.m_city + " " + main.m_conditionTemp + "°" + main.m_unitTemperature
+                plasmoid.toolTipSubText = main.m_conditionDesc
             }
         }
     }
@@ -76,13 +68,13 @@ Item {
     Timer {
         id: timer
         interval: plasmoid.configuration.interval * 60000 //1m=60000ms
-        running: !m_isbusy
+        running: !main.m_isbusy
         repeat: true
         onTriggered: action_reload()
     }
     
     function action_reload () {
-        backend.query()
+        main.query()
         iconUpdater.running = true
     }
     
@@ -92,11 +84,15 @@ Item {
 
         //this signal is emitted when any unit checkbox changes
         //binding multiple unit changed signals will cause a segfault
-        onMbrChanged: backend.reparse()
+        onMbrChanged: main.reparse()
     }
 
     Component.onCompleted: {
-        action_reload()
+        if (!main.queried) {
+            // on appearance, no need for query if if full 
+            // representation has already queried.
+            action_reload()
+        }
     }
 
     MouseArea {
