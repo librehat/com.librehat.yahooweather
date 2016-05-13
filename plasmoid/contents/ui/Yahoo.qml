@@ -17,6 +17,7 @@ Item {
     //used to display error on widget
     property string errstring
     property bool m_isbusy: false
+    property bool haveQueried: false
 
     property string m_pubDate;
     property string m_link
@@ -72,6 +73,7 @@ Item {
     function query(woeid) {
         console.debug("Querying...")
         
+        haveQueried = true;
         m_isbusy = true
         woeid = woeid ? woeid : plasmoid.configuration.woeid
         if (!woeid) {

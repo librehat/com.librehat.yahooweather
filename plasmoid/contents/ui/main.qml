@@ -12,10 +12,17 @@ import QtQuick 2.2
 import org.kde.plasma.plasmoid 2.0
 
 Item {
+
+    //Yahoo.qml implements the API and stores relevant data
+    Yahoo {
+        id: backend
+    }
+
     Plasmoid.switchWidth: units.gridUnit * 12
     Plasmoid.switchHeight: units.gridUnit * 12
 
     //property int formFactor: plasmoid.formFactor
 
     Plasmoid.fullRepresentation: Weather { }
+    Plasmoid.compactRepresentation: CompactWx { }
 }
