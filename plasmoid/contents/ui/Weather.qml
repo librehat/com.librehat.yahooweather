@@ -128,17 +128,22 @@ Item {
         anchors { horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter }
 
         PlasmaCore.IconItem {
-            visible: !(backend.hasdata || backend.m_isbusy)
+            visible: (!(backend.hasdata || backend.m_isbusy)) || backend.networkError
             source: "dialog-error"
             width: theme.mediumIconSize
             height: width
         }
 
         PlasmaComponents.Label {
-            visible: !(backend.hasdata || backend.m_isbusy)
+            visible: (!(backend.hasdata || backend.m_isbusy)) || backend.networkError
             text: backend.errstring ? backend.errstring : i18n("Unknown Error.")
             wrapMode: Text.WordWrap
         }
+    }
+
+    Row {
+        spacing: units.gridUnit
+        anchors { horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter }
 
         PlasmaComponents.BusyIndicator {
             visible: backend.m_isbusy

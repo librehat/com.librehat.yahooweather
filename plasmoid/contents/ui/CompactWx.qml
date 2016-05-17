@@ -17,9 +17,10 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
 
-    // Items that appear in tray 
+    // Items that appear in tray except busy indicator
     Row {
         anchors { horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter }
+        visible: backend.hasdata || backend.networkError  || !backend.m_isbusy
 
         PlasmaComponents.Label {
             text: plasmoid.icon != "weather-none-available" ? backend.m_conditionTemp + "°" 
@@ -27,41 +28,17 @@ Item {
         }
 
         PlasmaCore.IconItem {
-            id: conditionIcon
-            source: plasmoid.icon //backend.m_conditionIcon
-        }
-
-        PlasmaComponents.Label {
-            text: " " 
+            source: plasmoid.icon 
         }
     }
 
-
+    // Busy indicator in tray
     Row {
         anchors { horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter }
 
         PlasmaComponents.BusyIndicator {
             visible: backend.m_isbusy
             running: backend.m_isbusy
-        }
-    }
-
-    Timer {
-        id: iconUpdater
-        interval: 1000
-        running: backend.m_isbusy
-        repeat: backend.m_isbusy
-        onTriggered: {
-            if(!backend.hasdata) {
-                plasmoid.icon = "weather-none-available"
-                plasmoid.toolTipMainText = i18n("Click tray icon")
-                plasmoid.toolTipSubText = i18n("for error details")
-            }
-            else {
-                plasmoid.icon = backend.m_conditionIcon
-                plasmoid.toolTipMainText = backend.m_city + " " + backend.m_conditionTemp + "°" + backend.m_unitTemperature
-                plasmoid.toolTipSubText = backend.m_conditionDesc
-            }
         }
     }
 
@@ -75,7 +52,6 @@ Item {
     
     function action_reload () {
         backend.query()
-        iconUpdater.running = true
     }
     
     Connections {
