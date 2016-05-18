@@ -87,8 +87,8 @@ Item {
         m_isbusy = true
         woeid = woeid ? woeid : plasmoid.configuration.woeid
         if (!woeid) {
-            setPlasmoidIconAndTips(false, false)
             errstring = i18n("Error 3. WOEID is not specified.")
+            setPlasmoidIconAndTips(false, false)
             console.debug("WOEID is empty.")
             return//fail silently
         }
@@ -126,8 +126,8 @@ Item {
                 // Start timer to avoid response stuck at readyState of 1 (OPENED)
                 // before DONE (4). query() will only be called again if the
                 // timer times out (in 50 seconds).  
-                repeatquery.start()
                 repeatquery.interval = 50000
+                repeatquery.start()
             } else {
                 // readyState is 2 (HEADERS_RECEIVED) or 3 (LOADING).
                 // stop/reset timer in case previous readyState was 1 (OPENED)
@@ -154,8 +154,8 @@ Item {
         }
 
         if (resObj.error) {
-            setPlasmoidIconAndTips(false, false)
             errstring = resObj.error.description
+            setPlasmoidIconAndTips(false, false)
             console.error("Error message from API:", errstring)
             return
         }
@@ -168,8 +168,8 @@ Item {
             // or corrupted response.
             if (failedAttempts >= 30) {
                 console.debug("query.count =", resObj.query.count)
-                setPlasmoidIconAndTips(false, false)
                 errstring = i18n("Error 2. WOEID may be invalid.")
+                setPlasmoidIconAndTips(false, false)
                 failedAttempts = 0
             } else {
                 console.debug("Could be an API issue, try again. Attempts:", failedAttempts)
@@ -180,8 +180,8 @@ Item {
         } else if (resObj.query.count !== 1) {
             // count is neither 0 or 1 which is immediately invalid; no retry
             console.debug("query.count not 0 or 1")
-            setPlasmoidIconAndTips(false, false)
             errstring = i18n("Error 2. WOEID may be invalid.")
+            setPlasmoidIconAndTips(false, false)
             return
         }
         
@@ -285,18 +285,22 @@ Item {
     // and serves the same purpose (but with fewer timing issues). 
     // Note: icon and tool tips set here only relevant to compact 
     // representation (widget installed to tray).
+    // Also, used to set m_isbusy if 2nd parameter present.
     //
     function setPlasmoidIconAndTips(has_data, is_busy) {
         if(!has_data) {
             plasmoid.icon = "weather-none-available"
-            plasmoid.toolTipMainText = i18n("Click tray icon")
-            plasmoid.toolTipSubText = i18n("for error details")
+            plasmoid.toolTipMainText = i18n("Error description:")
+            plasmoid.toolTipSubText = errstring 
         } 
         else {
             plasmoid.icon = m_conditionIcon
             plasmoid.toolTipMainText = m_city + " " + m_conditionTemp + "°" + m_unitTemperature
             plasmoid.toolTipSubText = m_conditionDesc
         }
+        // set these after setting icon since these control icon visibility
+        // Any other bool affecting visibility must be set after this function
+        // returns, e.g., networkError.
         hasdata = has_data 
         if (!(is_busy == undefined)) {
             m_isbusy = is_busy
