@@ -87,8 +87,7 @@ Item {
         m_isbusy = true
         woeid = woeid ? woeid : plasmoid.configuration.woeid
         if (!woeid) {
-            setPlasmoidIconAndTips(false)
-            m_isbusy = false
+            setPlasmoidIconAndTips(false, false)
             errstring = i18n("Error 3. WOEID is not specified.")
             console.debug("WOEID is empty.")
             return//fail silently
@@ -147,16 +146,15 @@ Item {
         }
 
         var resObj = JSON.parse(response)
-        m_isbusy = false
 
         if (!resObj) {
-            setPlasmoidIconAndTips(false)
+            setPlasmoidIconAndTips(false, false)
             console.error("Cannot parse response")
             return
         }
 
         if (resObj.error) {
-            setPlasmoidIconAndTips(false)
+            setPlasmoidIconAndTips(false, false)
             errstring = resObj.error.description
             console.error("Error message from API:", errstring)
             return
@@ -170,8 +168,7 @@ Item {
             // or corrupted response.
             if (failedAttempts >= 30) {
                 console.debug("query.count =", resObj.query.count)
-                setPlasmoidIconAndTips(false)
-                m_isbusy = false
+                setPlasmoidIconAndTips(false, false)
                 errstring = i18n("Error 2. WOEID may be invalid.")
                 failedAttempts = 0
             } else {
@@ -183,8 +180,7 @@ Item {
         } else if (resObj.query.count !== 1) {
             // count is neither 0 or 1 which is immediately invalid; no retry
             console.debug("query.count not 0 or 1")
-            setPlasmoidIconAndTips(false)
-            m_isbusy = false
+            setPlasmoidIconAndTips(false, false)
             errstring = i18n("Error 2. WOEID may be invalid.")
             return
         }
@@ -272,7 +268,7 @@ Item {
         }
         console.debug(forecasts.length, "days forecast")
 
-        setPlasmoidIconAndTips(true)
+        setPlasmoidIconAndTips(true, false)
         failedAttempts = 0
     }
 
@@ -290,9 +286,8 @@ Item {
     // Note: icon and tool tips set here only relevant to compact 
     // representation (widget installed to tray).
     //
-    function setPlasmoidIconAndTips(has_data) {
-        hasdata = has_data 
-        if(!hasdata) {
+    function setPlasmoidIconAndTips(has_data, is_busy) {
+        if(!has_data) {
             plasmoid.icon = "weather-none-available"
             plasmoid.toolTipMainText = i18n("Click tray icon")
             plasmoid.toolTipSubText = i18n("for error details")
@@ -301,6 +296,10 @@ Item {
             plasmoid.icon = m_conditionIcon
             plasmoid.toolTipMainText = m_city + " " + m_conditionTemp + "°" + m_unitTemperature
             plasmoid.toolTipSubText = m_conditionDesc
+        }
+        hasdata = has_data 
+        if (!(is_busy == undefined)) {
+            m_isbusy = is_busy
         }
     }
 
