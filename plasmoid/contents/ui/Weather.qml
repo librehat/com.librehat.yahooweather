@@ -20,20 +20,11 @@ Item {
     Layout.minimumHeight: units.gridUnit * 20
     clip: true
 
-    //Yahoo.qml implements the API and stores relevant data
-    Yahoo {
-        id: backend
-    }
-    
-    property alias hasdata: backend.hasdata
-    property alias errstring: backend.errstring
-    property alias m_isbusy: backend.m_isbusy
-
     //UI block
     PlasmaComponents.Label {
         //top-left
         id: cityname
-        visible: hasdata
+        visible: backend.hasdata
         anchors { top: parent.top; left: parent.left }
         text: "<strong>" + backend.m_city + "</strong><br />" + (backend.m_region ? backend.m_region + ", " : "") + backend.m_country
     }
@@ -49,7 +40,7 @@ Item {
     PlasmaComponents.Label {
         //top-right
         id: yahoo_n_date
-        visible: hasdata
+        visible: backend.hasdata
         anchors { top: parent.top; right: refresh_button.left; rightMargin: units.gridUnit }
         text: backend.m_pubDate + "<br /><a href='" + backend.m_link + "'>" + i18n("YAHOO! Weather") + "</a>"
         horizontalAlignment: Text.AlignRight
@@ -59,7 +50,7 @@ Item {
 
     Row {
         id: conditionRow
-        visible: hasdata
+        visible: backend.hasdata
         anchors.top: yahoo_n_date.bottom
         width: parent.width
         height: width / 3
@@ -97,7 +88,7 @@ Item {
 
     Row {
         id: moredetails
-        visible: hasdata
+        visible: backend.hasdata
         anchors { top: conditionRow.bottom; horizontalCenter: parent.horizontalCenter }
         spacing: Math.max(6, (parent.width - firstDetail.width - secondDetail.width - thirdDetail.width) / 2)
 
@@ -122,7 +113,7 @@ Item {
     
     ListView {
         id: forecastView
-        visible: hasdata
+        visible: backend.hasdata
         anchors { top: moredetails.bottom; topMargin: units.gridUnit; left: parent.left; right: parent.right; bottom: parent.bottom }
         orientation: ListView.Horizontal
         model: backend.dataModel
@@ -137,54 +128,39 @@ Item {
         anchors { horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter }
 
         PlasmaCore.IconItem {
-            visible: !(hasdata || m_isbusy)
+            visible: (!(backend.hasdata || backend.m_isbusy)) || backend.networkError
             source: "dialog-error"
             width: theme.mediumIconSize
             height: width
         }
 
         PlasmaComponents.Label {
-            visible: !(hasdata || m_isbusy)
-            text: errstring ? errstring : i18n("Unknown Error.")
+            visible: (!(backend.hasdata || backend.m_isbusy)) || backend.networkError
+            text: backend.errstring ? backend.errstring : i18n("Unknown Error.")
             wrapMode: Text.WordWrap
-        }
-
-        PlasmaComponents.BusyIndicator {
-            visible: m_isbusy
-            running: m_isbusy
         }
     }
 
-    Timer {
-        id: iconUpdater
-        interval: 1000
-        running: m_isbusy
-        repeat: m_isbusy
-        onTriggered: {
-            if(!hasdata) {
-                plasmoid.icon = "weather-none-available"
-                plasmoid.toolTipMainText = ""
-                plasmoid.toolTipSubText = ""
-            }
-            else {
-                plasmoid.icon = backend.m_conditionIcon
-                plasmoid.toolTipMainText = backend.m_city + " " + backend.m_conditionTemp + "°" + backend.m_unitTemperature
-                plasmoid.toolTipSubText = backend.m_conditionDesc
-            }
+    Row {
+        spacing: units.gridUnit
+        anchors { horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter }
+
+        PlasmaComponents.BusyIndicator {
+            visible: backend.m_isbusy
+            running: backend.m_isbusy
         }
     }
 
     Timer {
         id: timer
         interval: plasmoid.configuration.interval * 60000 //1m=60000ms
-        running: !m_isbusy
+        running: !backend.m_isbusy
         repeat: true
         onTriggered: action_reload()
     }
     
     function action_reload () {
         backend.query()
-        iconUpdater.running = true
     }
     
     Connections {
@@ -197,6 +173,8 @@ Item {
     }
 
     Component.onCompleted: {
-        action_reload()
+        if (!backend.haveQueried) {
+            action_reload()
+        }
     }
 }

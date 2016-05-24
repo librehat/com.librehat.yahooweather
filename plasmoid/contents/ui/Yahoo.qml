@@ -13,10 +13,14 @@ import QtQuick 2.2
 Item {
     id: yahoo
     
-    property bool hasdata: false
-    //used to display error on widget
-    property string errstring
+    property bool hasdata: false // set only by setPlasmoidIconAndTips(has_data)
+    property string errstring    // used to display error on widget
     property bool m_isbusy: false
+    property bool haveQueried: false
+    property bool networkError: false
+    property int numRetries: 0
+    property int saveReadyState: 0
+    property var doc: undefined
 
     property string m_pubDate;
     property string m_link
@@ -56,15 +60,22 @@ Item {
     
     property int failedAttempts: 0
     
-    // timer for repeat query from sh033
+    // 10s timer for repeat query from sh033
     Timer {
         id: repeatquery
         interval: 10000
         running: false
-        repeat: true
+        repeat: false 
         onTriggered: {
-            running = false
-            console.debug("Reapeat Query.. ")
+            console.debug("Repeat Query.. ")
+            if (saveReadyState === XMLHttpRequest.OPENED) {
+                // timed out in readyState 1 (OPENED); abort the previous
+                // query which causes a transitions to state 4 (DONE)
+                // Avoids hang in readyState 1 while network down.
+                console.debug("doc.abort() called")
+                doc.abort()
+                numRetries = 4; // immediately make errstring visible
+            }
             query()
         }
     }
@@ -72,12 +83,12 @@ Item {
     function query(woeid) {
         console.debug("Querying...")
         
+        haveQueried = true;
         m_isbusy = true
         woeid = woeid ? woeid : plasmoid.configuration.woeid
         if (!woeid) {
-            hasdata = false
-            m_isbusy = false
             errstring = i18n("Error 3. WOEID is not specified.")
+            setPlasmoidIconAndTips(false, false)
             console.debug("WOEID is empty.")
             return//fail silently
         }
@@ -90,16 +101,37 @@ Item {
         
         var source = "http://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid='" + woeid + "' and u='f'&format=json"
         console.debug("Source changed to", source)
-        var doc = new XMLHttpRequest()
+        doc = new XMLHttpRequest()
         doc.onreadystatechange = function() {
+            saveReadyState = doc.readyState
             if (doc.readyState === XMLHttpRequest.DONE) {
+                repeatquery.stop()
                 if (doc.status === 200) {
                     getweatherinfo(doc.responseText)
+                    networkError = false;
+                    numRetries = 0;
                 } else {
-                    errstring = i18n("Error 1. Please check your network.")
-                    console.debug("HTTP request failed, try again.")
-                    repeatquery.running = true
+                    if (networkError || numRetries > 3) {
+                        // don't display error until several retries occur
+                        errstring = i18n("Error 1. Please check your network.")
+                        setPlasmoidIconAndTips(false)
+                        networkError = true;
+                    }
+                    console.debug("HTTP request failed, trying again.", doc.status)
+                    repeatquery.interval = 10000
+                    repeatquery.start()
+                    numRetries++;
                 }
+            } else if (doc.readyState === XMLHttpRequest.OPENED) {
+                // Start timer to avoid response stuck at readyState of 1 (OPENED)
+                // before DONE (4). query() will only be called again if the
+                // timer times out (in 50 seconds).  
+                repeatquery.interval = 50000
+                repeatquery.start()
+            } else {
+                // readyState is 2 (HEADERS_RECEIVED) or 3 (LOADING).
+                // stop/reset timer in case previous readyState was 1 (OPENED)
+                repeatquery.stop()
             }
         }
         doc.open("GET", source, true)
@@ -114,17 +146,16 @@ Item {
         }
 
         var resObj = JSON.parse(response)
-        m_isbusy = false
 
         if (!resObj) {
-            hasdata = false
+            setPlasmoidIconAndTips(false, false)
             console.error("Cannot parse response")
             return
         }
 
         if (resObj.error) {
-            hasdata = false
             errstring = resObj.error.description
+            setPlasmoidIconAndTips(false, false)
             console.error("Error message from API:", errstring)
             return
         }
@@ -137,8 +168,8 @@ Item {
             // or corrupted response.
             if (failedAttempts >= 30) {
                 console.debug("query.count =", resObj.query.count)
-                hasdata = false
                 errstring = i18n("Error 2. WOEID may be invalid.")
+                setPlasmoidIconAndTips(false, false)
                 failedAttempts = 0
             } else {
                 console.debug("Could be an API issue, try again. Attempts:", failedAttempts)
@@ -149,8 +180,8 @@ Item {
         } else if (resObj.query.count !== 1) {
             // count is neither 0 or 1 which is immediately invalid; no retry
             console.debug("query.count not 0 or 1")
-            hasdata = false
             errstring = i18n("Error 2. WOEID may be invalid.")
+            setPlasmoidIconAndTips(false, false)
             return
         }
         
@@ -237,7 +268,7 @@ Item {
         }
         console.debug(forecasts.length, "days forecast")
 
-        hasdata = true
+        setPlasmoidIconAndTips(true, false)
         failedAttempts = 0
     }
 
@@ -247,6 +278,35 @@ Item {
             getweatherinfo(m_response)
         }
     }
+
+    // Call this to set tray icon and tool tips determined by bool
+    // parameter assigned to hasdata. hasdata only set by this function.
+    // This replaces the 1s timer that polled for hasdata when m_isbusy 
+    // and serves the same purpose (but with fewer timing issues). 
+    // Note: icon and tool tips set here only relevant to compact 
+    // representation (widget installed to tray).
+    // Also, used to set m_isbusy if 2nd parameter present.
+    //
+    function setPlasmoidIconAndTips(has_data, is_busy) {
+        if(!has_data) {
+            plasmoid.icon = "weather-none-available"
+            plasmoid.toolTipMainText = i18n("Error description:")
+            plasmoid.toolTipSubText = errstring 
+        } 
+        else {
+            plasmoid.icon = m_conditionIcon
+            plasmoid.toolTipMainText = m_city + " " + m_conditionTemp + "°" + m_unitTemperature
+            plasmoid.toolTipSubText = m_conditionDesc
+        }
+        // set these after setting icon since these control icon visibility
+        // Any other bool affecting visibility must be set after this function
+        // returns, e.g., networkError.
+        hasdata = has_data 
+        if (!(is_busy == undefined)) {
+            m_isbusy = is_busy
+        }
+    }
+
 
     function parseDay(daystring) {
         switch (daystring) {
