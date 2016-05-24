@@ -16,6 +16,10 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
+    // Set width in tray area for temperature + icon. Without this, default
+    // width is too small with temperature value included. It overlapped with 
+    // neighboring item in tray.
+    Layout.preferredWidth: units.gridUnit * 3.25
 
     // Items that appear in tray except busy indicator
     Row {
