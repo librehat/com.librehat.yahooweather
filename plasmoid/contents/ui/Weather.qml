@@ -16,6 +16,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
+    Layout.preferredWidth: units.gridUnit * 26 
+    Layout.preferredHeight: units.gridUnit * 24
     Layout.minimumWidth: units.gridUnit * 18
     Layout.minimumHeight: units.gridUnit * 20
     clip: true
