@@ -15,18 +15,38 @@ import QtGraphicalEffects 1.0
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import "../code/icons.js" as FontSymbolTools
 
 Item {
     id: inPanelItems
 
     anchors.fill: parent
+    property double fontPixelSize: parent.height * 0.7
+    property string fontSymbolStr: FontSymbolTools.getFontCode(plasmoid.icon)
 
-    // Weather condition icon in panel 
-    PlasmaCore.IconItem {
-        anchors { horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter }
-
+    // Weather condition icon (actually, a font symbol) in panel 
+    PlasmaComponents.Label {
         visible: backend.hasdata || backend.networkError  || !backend.m_isbusy
-        source: plasmoid.icon 
+
+        width: parent.width
+        height: parent.height
+        
+        anchors.left: parent.left
+        anchors.leftMargin: 0
+        anchors.top: parent.top
+        anchors.topMargin: 0
+
+        horizontalAlignment: Text.AlignLeft 
+        verticalAlignment: Text.AlignVCenter
+        fontSizeMode: Text.Fit
+        
+        font.family: 'weathericons'
+        text: fontSymbolStr
+        
+        opacity: 0.8 
+        
+        font.pixelSize: fontPixelSize
+        font.pointSize: -1
     }
 
     // Temperature value in panel (over left center of condition icon)
@@ -37,16 +57,15 @@ Item {
         width: parent.width
         height: parent.height
 
-        horizontalAlignment: Text.AlignLeft 
-        verticalAlignment: Text.AlignVCenter 
+        horizontalAlignment: Text.AlignRight
+        verticalAlignment: Text.AlignBottom
 
         visible: backend.hasdata || backend.networkError  || !backend.m_isbusy
 
         text: plasmoid.icon != "weather-none-available" ? backend.m_conditionTemp + "°" 
                   : ""
 
-        // set text height to about one-third of panel height
-        font.pixelSize: parent.height * 0.33 
+        font.pixelSize: fontPixelSize * 0.5 
         font.pointSize: -1
     }
 
@@ -57,7 +76,7 @@ Item {
         running: backend.m_isbusy
     }
 
-    // Improve temperature text visibility over icon/background
+    // Improve temperature text readability over icon/background
     DropShadow {
         anchors.fill: temperatureText
         radius: 3
