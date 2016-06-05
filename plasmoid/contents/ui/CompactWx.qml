@@ -46,6 +46,7 @@ Item {
         opacity: 0.8 
         
         font.pixelSize: fontPixelSize
+        font.weight: Font.Black
         font.pointSize: -1
     }
 
@@ -72,6 +73,8 @@ Item {
     // Busy indicator in panel 
     PlasmaComponents.BusyIndicator {
         anchors { horizontalCenter: parent.horizontalCenter; verticalCenter: parent.verticalCenter }
+        width: parent.width
+        height: parent.height
         visible: backend.m_isbusy
         running: backend.m_isbusy
     }
