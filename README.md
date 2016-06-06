@@ -49,8 +49,16 @@ For upgrade, run `plasmapkg2 -u ~/com.librehat.yahooweather-5.2.0.plasmoid` inst
 License
 =====
 
+### Code ###
+
 GNU GENERAL PUBLIC LICENSE Version 3
 
 Copyright 2014-2016 Symeon Huang
 
 For details, please check `LICENSE` file.
+
+### Weather Icons (font based) ###
+
+From project [weather-icons](https://github.com/erikflowers/weather-icons)
+
+For license details, please check [SIL OFL 1.1](http://scripts.sil.org/OFL)
