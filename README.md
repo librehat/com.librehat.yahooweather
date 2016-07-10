@@ -3,14 +3,13 @@ Yahoo! Weather Widget
 
 A simple weather widget that makes use of beloved Yahoo! Weather data. Written in pure QML.
 
-For `KDE SC4`, please checkout `kde4` branch.
-
 Dependencies
 =====
 
 - Plasma 5 (Plasma Shell)
 - Qt >= 5.4
-- QML Models 2 (`qml-module-qtqml-models2` on Ubuntu)
+- QML Models 2 (`qml-module-qtqml-models2` on Debian/Ubuntu)
+- QML Graphical Effects (`qml-module-qtgraphicaleffects` on Debian/Ubuntu)
 
 ### Extra Dependencies For CMake ###
 
