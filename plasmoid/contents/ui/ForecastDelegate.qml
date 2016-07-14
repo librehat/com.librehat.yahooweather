@@ -23,10 +23,27 @@ Column {
     }
     
     PlasmaCore.IconItem {
+        visible: !plasmoid.configuration.useWxFonts 
         source: icon
         width: theme.smallMediumIconSize
         height: width
         anchors.horizontalCenter: parent.horizontalCenter
+    }
+
+    PlasmaComponents.Label {
+        visible: plasmoid.configuration.useWxFonts 
+        anchors.horizontalCenter: parent.horizontalCenter
+        
+        fontSizeMode: Text.Fit
+        
+        font.family: 'weathericons'
+        text: wxFont 
+        
+        opacity: 1.0 
+        
+        font.pixelSize: height
+        font.weight: Font.Bold
+        font.pointSize: -1
     }
     
     PlasmaComponents.Label {

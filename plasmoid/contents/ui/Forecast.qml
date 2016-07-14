@@ -10,6 +10,7 @@
 
 import QtQuick 2.2
 import QtQml.Models 2.1
+import "../code/icons.js" as FontSymbolTools
 
 ListModel {
     ListElement {
@@ -17,5 +18,6 @@ ListModel {
         tempHi: ""
         tempLo: ""
         icon: "weather-none-available"
+        wxFont: 'wi-na'
     }
 }

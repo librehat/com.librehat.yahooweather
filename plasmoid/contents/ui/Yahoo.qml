@@ -9,6 +9,7 @@
 */
 
 import QtQuick 2.2
+import "../code/icons.js" as FontSymbolTools
 
 Item {
     id: yahoo
@@ -263,7 +264,8 @@ Item {
                 "day": parseDay(forecasts[i].day),
                 "tempHi": high + "°" + m_unitTemperature,
                 "tempLo": low  + "°" + m_unitTemperature,
-                "icon": determineIcon(parseInt(forecasts[i].code))
+                "icon": determineIcon(parseInt(forecasts[i].code)),
+                "wxFont": FontSymbolTools.getFontCode(determineIcon(parseInt(forecasts[i].code)))
             })
         }
         console.debug(forecasts.length, "days forecast")
@@ -279,12 +281,12 @@ Item {
         }
     }
 
-    // Call this to set tray icon and tool tips determined by bool
+    // Call this to set panel icon and tool tips determined by bool
     // parameter assigned to hasdata. hasdata only set by this function.
     // This replaces the 1s timer that polled for hasdata when m_isbusy 
     // and serves the same purpose (but with fewer timing issues). 
     // Note: icon and tool tips set here only relevant to compact 
-    // representation (widget installed to tray).
+    // representation (widget installed to panel).
     // Also, used to set m_isbusy if 2nd parameter present.
     //
     function setPlasmoidIconAndTips(has_data, is_busy) {
@@ -294,8 +296,16 @@ Item {
             plasmoid.toolTipSubText = errstring 
         } 
         else {
-            plasmoid.icon = m_conditionIcon
-            plasmoid.toolTipMainText = m_city + " " + m_conditionTemp + "°" + m_unitTemperature
+            // Use either icon from KDE theme or font symbol for tool-tip.
+            if (plasmoid.configuration.useWxFonts) {
+                plasmoid.icon = "" 
+                var fontSymbolStr = FontSymbolTools.getFontCode(m_conditionIcon)
+                plasmoid.toolTipMainText = fontSymbolStr + "  " + m_city + " " +
+                    m_conditionTemp + "°" + m_unitTemperature
+            } else {
+                plasmoid.icon = m_conditionIcon
+                plasmoid.toolTipMainText = m_city + " " + m_conditionTemp + "°" + m_unitTemperature
+            }
             plasmoid.toolTipSubText = m_conditionDesc
         }
         // set these after setting icon since these control icon visibility

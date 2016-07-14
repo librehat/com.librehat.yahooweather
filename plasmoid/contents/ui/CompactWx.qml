@@ -22,7 +22,7 @@ Item {
 
     anchors.fill: parent
     property double fontPixelSize: parent.height * 0.7
-    property string fontSymbolStr: FontSymbolTools.getFontCode(plasmoid.icon)
+    property string fontSymbolStr: FontSymbolTools.getFontCode(backend.m_conditionIcon)
 
     // Weather condition icon (actually, a font symbol) in panel 
     PlasmaComponents.Label {
@@ -63,7 +63,7 @@ Item {
 
         visible: backend.hasdata || backend.networkError  || !backend.m_isbusy
 
-        text: plasmoid.icon != "weather-none-available" ? backend.m_conditionTemp + "°" 
+        text: backend.m_conditionIcon != "weather-none-available" ? backend.m_conditionTemp + "°" 
                   : ""
 
         font.pixelSize: fontPixelSize * 0.5 
