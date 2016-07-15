@@ -20,31 +20,26 @@ Item {
     property alias cfg_woeid: woeidField.text
     property alias cfg_interval: intervalField.text
     property alias cfg_timeFormat24: timeFormat24Field.checked
+    property alias cfg_useWxFonts: useWxFontsField.checked
 
     ColumnLayout {
-        ColumnLayout {
+        RowLayout {
             Label {
                 text: i18n("WOEID")
             }
-
             TextField {
                 id: woeidField
             }
-
-            Label {
-                text: i18n("Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> to find your city's WOEID")
-                onLinkActivated: Qt.openUrlExternally(link)
-            }
+        }
+        Label {
+            text: i18n("Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> to find your city's WOEID") 
+            onLinkActivated: Qt.openUrlExternally(link)
         }
 
-        ColumnLayout {
-            Label {
-                text: " "
-            }
+        RowLayout {
             Label {
                 text: i18n("Update Interval")
             }
-
             TextField {
                 id: intervalField
                 inputMask: "99"
@@ -52,14 +47,16 @@ Item {
             }
         }
 
-        ColumnLayout {
-            Label {
-                text: " "
-            }
-            CheckBox {
-                id: timeFormat24Field 
-                text: i18n("Show Time in 24-hour Format")
-            }
+        CheckBox {
+            id: timeFormat24Field 
+            text: i18n("Show Time in 24-hour Format") 
+        }
+
+        CheckBox {
+            id: useWxFontsField 
+            text: i18n("Use webfont icons instead of KDE theme weather icons") +
+                  "<br\>" + 
+                  i18n("Note: When installed in panel webfont icons are always used")
         }
     }
 }

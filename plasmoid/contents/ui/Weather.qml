@@ -14,6 +14,7 @@ import QtQuick.Controls 1.2
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import "../code/icons.js" as FontSymbolTools
 
 Item {
     width: units.gridUnit * 26 
@@ -80,11 +81,32 @@ Item {
         }
 
         PlasmaCore.IconItem {
+            visible: !plasmoid.configuration.useWxFonts 
             id: conditionIcon
             source: backend.m_conditionIcon
             height: Math.min(conditionCol.height, 256)
             width: height
             anchors.verticalCenter: conditionCol.verticalCenter
+        }
+
+        PlasmaComponents.Label {
+            visible: plasmoid.configuration.useWxFonts 
+            height: parent.height
+            width: height
+            
+            anchors.top: parent.top
+            anchors.topMargin: 0
+
+            fontSizeMode: Text.Fit
+            
+            font.family: 'weathericons'
+            text: FontSymbolTools.getFontCode(backend.m_conditionIcon)
+            
+            opacity: 1.0 
+            
+            font.pixelSize: height
+            font.weight: Font.Bold
+            font.pointSize: -1
         }
     }
 
