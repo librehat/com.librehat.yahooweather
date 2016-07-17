@@ -18,11 +18,25 @@ Item {
     height: childrenRect.height
 
     property alias cfg_woeid: woeidField.text
+    property alias cfg_location: locationField.text
     property alias cfg_interval: intervalField.text
     property alias cfg_timeFormat24: timeFormat24Field.checked
     property alias cfg_useWxFonts: useWxFontsField.checked
 
     ColumnLayout {
+        RowLayout {
+            Label {
+                text: i18n("Location")
+            }
+            TextField {
+                id: locationField
+            }
+        }
+        Label {
+            text: i18n("Enter location string such as \"London UK\" or a zipcode.") +
+                    "<br\>" +
+                  i18n("Leave Location blank if WOEID usage preferred.")
+        }
         RowLayout {
             Label {
                 text: i18n("WOEID")
@@ -32,7 +46,9 @@ Item {
             }
         }
         Label {
-            text: i18n("Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> to find your city's WOEID") 
+            text: i18n("Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> to find your city's WOEID (Where On Earth") +
+                    "<br\>" +
+                  i18n("IDentifier) or search the web for other WOEID lookup sites if necessary.")
             onLinkActivated: Qt.openUrlExternally(link)
         }
 
@@ -54,9 +70,9 @@ Item {
 
         CheckBox {
             id: useWxFontsField 
-            text: i18n("Use webfont icons instead of KDE theme weather icons") +
+            text: i18n("Use webfont icons instead of KDE theme weather icons.") +
                   "<br\>" + 
-                  i18n("Note: When installed in panel webfont icons are always used")
+                  i18n("Note: When residing in panel webfont icons are always used.")
         }
     }
 }
