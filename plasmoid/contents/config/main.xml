@@ -5,8 +5,11 @@
      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
     <kcfgfile name=""/>
     <group name="com.librehat.yahooweather">
-        <entry name="location" type="String">
-            <default></default>
+        <entry name="locationEntry" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="woeidEntry" type="Bool">
+            <default>false</default>
         </entry>
         <entry name="woeid" type="String">
             <default></default>

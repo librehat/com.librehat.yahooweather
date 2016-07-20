@@ -86,10 +86,10 @@ Item {
         
         haveQueried = true;
         m_isbusy = true
+        var textIsLocation = plasmoid.configuration.locationEntry
         var woeid = plasmoid.configuration.woeid.trim()
-        var location = plasmoid.configuration.location.trim()
-        if (!woeid && !location) {
-            errstring = i18n("Error 3. Neither Location or WOEID are configured.")
+        if (!woeid) {
+            errstring = i18n("Error 3. The Location/WOEID is not entered.")
             setPlasmoidIconAndTips(false, false)
             console.debug("Location/WOEID are empty.")
             return//fail silently
@@ -102,10 +102,12 @@ Item {
         }
         
         var source
-        if (location)
-            source = "http://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + location + "') and u='f'&format=json"
-        else
+        if (textIsLocation) {
+            source = "http://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + woeid + "') and u='f'&format=json"
+        } else {
+            // text is WOEID
             source = "http://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid='" + woeid + "' and u='f'&format=json"
+        }
         console.debug("Source changed to", source)
         doc = new XMLHttpRequest()
         doc.onreadystatechange = function() {
@@ -174,7 +176,7 @@ Item {
             // or corrupted response.
             if (failedAttempts >= 30) {
                 console.debug("query.count =", resObj.query.count)
-                errstring = i18n("Error 2. Location or WOEID may be invalid.")
+                errstring = i18n("Error 2. Location/WOEID may be invalid.")
                 setPlasmoidIconAndTips(false, false)
                 failedAttempts = 0
             } else {
@@ -186,7 +188,7 @@ Item {
         } else if (resObj.query.count !== 1) {
             // count is neither 0 or 1 which is immediately invalid; no retry
             console.debug("query.count not 0 or 1")
-            errstring = i18n("Error 2. Location or WOEID may be invalid.")
+            errstring = i18n("Error 2. Location/WOEID may be invalid.")
             setPlasmoidIconAndTips(false, false)
             return
         }

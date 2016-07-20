@@ -17,39 +17,76 @@ Item {
     width: childrenRect.width
     height: childrenRect.height
 
+    property alias cfg_locationEntry: locationEntry.checked
+    property alias cfg_woeidEntry: woeidEntry.checked
     property alias cfg_woeid: woeidField.text
-    property alias cfg_location: locationField.text
     property alias cfg_interval: intervalField.text
     property alias cfg_timeFormat24: timeFormat24Field.checked
     property alias cfg_useWxFonts: useWxFontsField.checked
+    property bool locChecked: plasmoid.configuration.locationEntry
+    property bool woeChecked: plasmoid.configuration.woeidEntry
+
+    function onLocClicked() {
+        if (woeChecked && plasmoid.configuration.locationEntry) { 
+            cfg_woeid = plasmoid.configuration.woeid
+        } else if (!locChecked) {
+                cfg_woeid = ""
+        }
+        woeChecked = false  
+        locChecked = true
+    }
+
+    function onWoeClicked() {
+        if (locChecked && plasmoid.configuration.woeidEntry) { 
+            cfg_woeid = plasmoid.configuration.woeid
+        } else if (!woeChecked) {
+                cfg_woeid = ""
+        }
+        locChecked = false
+        woeChecked = true
+    }
 
     ColumnLayout {
-        RowLayout {
-            Label {
-                text: i18n("Location")
-            }
-            TextField {
-                id: locationField
+        GroupBox {
+            title: i18n("Select Location or WOEID entry.")
+            flat: true
+            
+            ColumnLayout {
+                ExclusiveGroup {
+                    id: locationOrWoeidGroup
+                }
+
+                RadioButton {
+                    id: locationEntry 
+                    text: i18n("Enter Location below.")
+                    exclusiveGroup: locationOrWoeidGroup
+                    onClicked: onLocClicked() 
+                }
+
+                RadioButton {
+                    id: woeidEntry 
+                    text: i18n("Enter WOEID below.")
+                    exclusiveGroup: locationOrWoeidGroup
+                    onClicked: onWoeClicked() 
+                }
             }
         }
-        Label {
-            text: i18n("Enter location string such as \"London UK\" or a zipcode.") +
-                    "<br\>" +
-                  i18n("Leave Location blank if WOEID usage preferred.")
-        }
         RowLayout {
             Label {
-                text: i18n("WOEID")
+                text: i18n("Location or WOEID")
             }
             TextField {
                 id: woeidField
             }
         }
         Label {
-            text: i18n("Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> to find your city's WOEID (Where On Earth") +
+            text: i18n("If location entry selected above, enter location text such") +
+                    "<br\>" +
+                  i18n("as London,UK or a zipcode. If WOEID entry selected, please") +
+                    "<br\>" +
+                  i18n("visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> to find your city's WOEID (Where On Earth") +
                     "<br\>" +
                   i18n("IDentifier) or search the web for other WOEID lookup sites if necessary.")
-            onLinkActivated: Qt.openUrlExternally(link)
         }
 
         RowLayout {
@@ -65,7 +102,7 @@ Item {
 
         CheckBox {
             id: timeFormat24Field 
-            text: i18n("Show Time in 24-hour Format") 
+            text: i18n("Show Time in 24-hour Format.") 
         }
 
         CheckBox {
