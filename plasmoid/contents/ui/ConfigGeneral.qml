@@ -73,7 +73,7 @@ Item {
         }
         RowLayout {
             Label {
-                text: i18n("Location or WOEID")
+                text: woeChecked ? i18n("WOEID") : i18n("Location")
             }
             TextField {
                 id: woeidField
@@ -87,6 +87,7 @@ Item {
                   i18n("visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> to find your city's WOEID (Where On Earth") +
                     "<br\>" +
                   i18n("IDentifier) or search the web for other WOEID lookup sites if necessary.")
+            onLinkActivated: Qt.openUrlExternally(link)
         }
 
         RowLayout {
