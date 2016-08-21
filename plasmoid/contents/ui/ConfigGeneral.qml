@@ -26,22 +26,48 @@ Item {
     property bool locChecked: plasmoid.configuration.locationEntry
     property bool woeChecked: plasmoid.configuration.woeidEntry
 
+    // Respond to click on "Location" radio button. Below "currently"
+    // means immediately before the radio button is clicked.
+    //
     function onLocClicked() {
         if (woeChecked && plasmoid.configuration.locationEntry) { 
-            cfg_woeid = plasmoid.configuration.woeid
-        } else if (!locChecked) {
-                cfg_woeid = ""
+            // woeid radio button is currently selected and entry mode is
+            // still location (new woeid not yet saved). Restore
+            // location string to the text box.
+            woeidField.text = plasmoid.configuration.woeid
+        } else if (woeChecked) {
+            //  woeid radio button is currently selected and entry mode is
+            //  woeid. Clear the text box string. 
+            woeidField.text = "" 
+        } else {
+            // location radio button is currently selected. Don't change
+            // the text box string. 
         }
-        woeChecked = false  
+        // save the checked state for use in the next call to onLocClicked() or
+        // onWoeClicked().
         locChecked = true
+        woeChecked = false  
     }
 
+    // Respond to click on "WOEID" radio button. Below "currently"
+    // means immediately before the radio button is clicked.
+    //
     function onWoeClicked() {
         if (locChecked && plasmoid.configuration.woeidEntry) { 
-            cfg_woeid = plasmoid.configuration.woeid
-        } else if (!woeChecked) {
-                cfg_woeid = ""
+            // location radio button is currently selected and entry mode is
+            // still woeid (new location not yet saved). Restore
+            // woeid string to the text box.
+            woeidField.text = plasmoid.configuration.woeid
+        } else if (locChecked) {
+            //  location radio button is currently selected and entry mode is
+            //  location. Clear the text box string. 
+            woeidField.text = "" 
+        } else {
+            // woeid radio button is currently selected. Don't change the
+            // text box string.
         }
+        // save the checked state for use in the next call to onLocClicked() or
+        // onWoeClicked().
         locChecked = false
         woeChecked = true
     }
@@ -73,6 +99,7 @@ Item {
         }
         RowLayout {
             Label {
+                // Set text field label to match active radio button selection.
                 text: woeChecked ? i18n("WOEID") : i18n("Location")
             }
             TextField {
