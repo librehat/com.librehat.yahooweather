@@ -1,4 +1,4 @@
-Yahoo! Weather Widget
+Weather Widget 2
 ====
 
 A simple weather widget that makes use of beloved Yahoo! Weather data. Written in pure QML.
@@ -53,6 +53,7 @@ License
 GNU GENERAL PUBLIC LICENSE Version 3
 
 Copyright 2014-2016 Symeon Huang
+Copyright 2017 Buba
 
 For details, please check `LICENSE` file.
 
