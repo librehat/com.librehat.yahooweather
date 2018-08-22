@@ -1,23 +1,23 @@
 # plasma-applet-yahooweather language translation file.
 # Copyright (C) 2014 Symeon Huang
 # This file is distributed under the same license as the plasma-applet-yahooweather package.
-# 
-# 
+#
+#
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-22 22:22+0100\n"
-"PO-Revision-Date: 2015-01-23 13:56+0100\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"PO-Revision-Date: 2018-07-20 20:11+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Language-Team: Dutch <vistausss@outlook.com>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Poedit 2.0.9\n"
 
 #: ../plasmoid/contents/ui/ConfigGeneral.qml:27
 msgid "WOEID"
@@ -28,14 +28,16 @@ msgid ""
 "Visit <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
 "to find your city's WOEID"
 msgstr ""
+"Ga naar <a href=\"http://zourbuth.com/tools/woeid/\">Yahoo! WOEID Lookup</a> "
+"om de WOEID-code van je stad op te vragen"
 
 #: ../plasmoid/contents/ui/ConfigGeneral.qml:45
 msgid "Update Interval"
-msgstr "Bijwerkinterval"
+msgstr "Bijwerktussenpoos"
 
 #: ../plasmoid/contents/ui/ConfigGeneral.qml:61
 msgid "Show Time in 24-hour Format"
-msgstr ""
+msgstr "24-urenklok gebruiken"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:34
 msgid "Temperature Unit"
@@ -50,63 +52,60 @@ msgid "Celsius"
 msgstr "Celsius"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:57
-#, fuzzy
 msgid "Speed Unit"
 msgstr "Snelheidseenheid"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:67
 msgid "Miles per hour"
-msgstr ""
+msgstr "Mijl per uur"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:73
 msgid "Metre per second"
-msgstr ""
+msgstr "Meter per seconde"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:79
 msgid "Kilometre per hour"
-msgstr ""
+msgstr "Kilometer per uur"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:86
-#, fuzzy
 msgid "Distance Unit"
-msgstr "Snelheidseenheid"
+msgstr "Afstandseenheid"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:96
 msgid "Mile"
-msgstr ""
+msgstr "Mijl"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:102
 msgid "Kilometre"
-msgstr ""
+msgstr "Kilometer"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:109
-#, fuzzy
 msgid "Pressure Unit"
-msgstr "Luchtdruk"
+msgstr "Luchtdrukeenheid"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:119
 msgid "Inch of mercury"
-msgstr ""
+msgstr "Inch of mercury"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:125
 msgid "Atmosphere"
-msgstr ""
+msgstr "Atmosfeer"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:131
 msgid "Hectopascal"
-msgstr ""
+msgstr "Hectopascal"
 
 #: ../plasmoid/contents/ui/ConfigUnit.qml:137
 msgid "Millibar"
-msgstr ""
+msgstr "Milibar"
 
 #: ../plasmoid/contents/ui/Weather.qml:45
 msgid "Refresh"
-msgstr ""
+msgstr "Verversen"
 
 #: ../plasmoid/contents/ui/Weather.qml:54
 msgid "YAHOO! Weather"
-msgstr "YAHOO! Het weer"
+msgstr "YAHOO! Weer"
 
 #: ../plasmoid/contents/ui/Weather.qml:85
 msgid "Feels like"
@@ -114,15 +113,15 @@ msgstr "Voelt als"
 
 #: ../plasmoid/contents/ui/Weather.qml:106
 msgid "Sunrise"
-msgstr "Zon op"
+msgstr "Zonsopkomst"
 
 #: ../plasmoid/contents/ui/Weather.qml:106
 msgid "Sunset"
-msgstr "Zon onder"
+msgstr "Zonsondergang"
 
 #: ../plasmoid/contents/ui/Weather.qml:112
 msgid "Humidity"
-msgstr "Vochtigheid"
+msgstr "Luchtvochtigheid"
 
 #: ../plasmoid/contents/ui/Weather.qml:112
 msgid "Pressure"
@@ -142,20 +141,19 @@ msgstr "Wind"
 
 #: ../plasmoid/contents/ui/Weather.qml:148
 msgid "Unknown Error."
-msgstr ""
+msgstr "Onbekende fout."
 
 #: ../plasmoid/contents/ui/Yahoo.qml:80
-#, fuzzy
 msgid "Error 3. WOEID is not specified."
-msgstr "Fout 2. WOEID kan niet geldig zijn."
+msgstr "Fout 3. Geen WOEID opgegeven."
 
 #: ../plasmoid/contents/ui/Yahoo.qml:99
 msgid "Error 1. Please check your network."
-msgstr "Fout 1. Controleer uw netwerk."
+msgstr "Fout 1. Controleer je netwerkverbinding."
 
 #: ../plasmoid/contents/ui/Yahoo.qml:137 ../plasmoid/contents/ui/Yahoo.qml:145
 msgid "Error 2. WOEID may be invalid."
-msgstr "Fout 2. WOEID kan niet geldig zijn."
+msgstr "Fout 2. WOEID is mogelijk onjuist."
 
 #: ../plasmoid/contents/ui/Yahoo.qml:246
 msgid "Sunday"
@@ -187,7 +185,7 @@ msgstr "Zaterdag"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:344
 msgid "Tornado"
-msgstr "Windhoos"
+msgstr "Tornado"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:346
 msgid "Tropical Storm"
@@ -243,7 +241,7 @@ msgstr "Lichte sneeuwbuien"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:373
 msgid "Blowing Snow"
-msgstr "Jachtsneeuw"
+msgstr "Stuifsneeuw"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:375
 msgid "Snow"
@@ -255,7 +253,7 @@ msgstr "Hagel"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:379
 msgid "Sleet"
-msgstr "Ijzel"
+msgstr "IJzel"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:381
 msgid "Dust"
@@ -291,11 +289,11 @@ msgstr "Bewolkt"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:397
 msgid "Mostly Cloudy (Night)"
-msgstr "Meest bewolk (nacht)"
+msgstr "Overwegend bewolkt (nacht)"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:399
 msgid "Mostly Cloudy (Day)"
-msgstr "Meest bewolk (dag)"
+msgstr "Overwegend bewolkt (dag)"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:401
 msgid "Partly Cloudy (Night)"
@@ -343,7 +341,7 @@ msgstr "Verspreide buien"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:425
 msgid "Heavy Snow"
-msgstr "Zware sneeuw"
+msgstr "Zware sneeuwbui"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:427
 msgid "Scattered Snow Showers"
@@ -363,7 +361,7 @@ msgstr "Sneeuwbuien"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:435
 msgid "Isolated Thundershowers"
-msgstr "Plaatselijk onweersbuien"
+msgstr "Plaatselijke onweersbuien"
 
 #: ../plasmoid/contents/ui/Yahoo.qml:437
 msgid "Not Available"
@@ -371,21 +369,21 @@ msgstr "Niet beschikbaar"
 
 #: ../plasmoid/contents/config/config.qml:16
 msgid "General"
-msgstr ""
+msgstr "Algemeen"
 
 #: ../plasmoid/contents/config/config.qml:22
 msgid "Unit"
-msgstr ""
+msgstr "Eenheid"
 
 #: rc.js:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf"
+msgstr "Heimen Stoffels"
 
 #: rc.js:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "freekdekruijf@kde.nl"
+msgstr "vistausss@outlook.com"
 
 #~ msgid "UV Index"
 #~ msgstr "UV-index"
