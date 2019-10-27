@@ -207,11 +207,16 @@ Item {
         m_astronomySunset        = fixTime(results.astronomy.sunset, plasmoid.configuration.timeFormat24)
         m_geoLat                 = results.item.lat
         m_geoLong                = results.item.long
+
+        var currDate = new Date(Date.now());
+        var currTime = currDate.getHours() * 60 + currDate.getMinutes();
+        var sunriseTime = getTime(results.astronomy.sunrise);
+        var sunsetTime = getTime(results.astronomy.sunset);
         
-        m_conditionIcon = determineIcon(parseInt(results.item.condition.code))
+        m_conditionIcon = determineConditionIcon(parseInt(results.item.condition.code), currTime, sunriseTime, sunsetTime)
         m_conditionDesc = getDescription(parseInt(results.item.condition.code))
         m_conditionTemp = parseInt(results.item.condition.temp)
-        
+
         // Unit conversions
         if (plasmoid.configuration.celsius) {
             m_unitTemperature = "C"
@@ -414,6 +419,17 @@ Item {
             return "weather-none-available"
         }
     }
+
+    function determineConditionIcon(conCode, currTime, sunrise, sunset) {
+        var iconName = determineIcon(conCode);
+        if (sunrise <= currTime && currTime <= sunset && FontSymbolTools.hasIcon(iconName + '-day')) {
+            return iconName + '-day';
+        }
+        if ((currTime < sunrise || sunset < currTime) && FontSymbolTools.hasIcon(iconName + '-night')) {
+            return iconName + '-night';
+        }
+        return iconName;
+    }
     
     function getDescription(conCode) {
         //according to http://developer.yahoo.com/weather/#codes
@@ -587,6 +603,37 @@ Item {
             default:
                 return "";
         }
+    }
+
+    function getTime(s) {
+        var colonIndex;
+
+        if (typeof s !== "string" || (colonIndex = s.indexOf(":")) < 1) {
+            return 0 // call when not a time string!
+        }
+
+        var hour = null;
+        if (colonIndex >= 2) {
+            hour = parseInt(s.substr(colonIndex - 2, 2))
+        }
+        if (hour === null || isNaN(hour)) {
+            hour = parseInt(s.substr(colonIndex - 1, 1))
+        }
+
+        var min = parseInt(s.substr(colonIndex + 1, 2))
+        if (isNaN(min)) {
+            min = parseInt(s.substr(colonIndex + 1, 1))
+        }
+
+        if (s.indexOf("pm") >= 0 || s.indexOf("PM") >= 0) {
+            hour += 12
+        }
+
+        if (hour == null || isNaN(hour) || isNaN(min)) {
+            return 0
+        }
+
+        return hour * 60 + min;
     }
 
     // Insert missing leading 0 on minutes if necessary.

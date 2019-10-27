@@ -1,5 +1,5 @@
 var WeatherFont = {
-    
+
     // https://erikflowers.github.io/weather-icons/
     codeByName: {
         'wi-day-sunny': '\uf00d',
@@ -51,23 +51,35 @@ var WeatherFont = {
         'wi-sunset': '\uf052',
         'wi-na': '\uf07b'    // new: for "not available"
     },
-    
+
     mapConditionIconToFont: {
-        'weather-storm': 'wi-thunderstorm',
+        'weather-clear': 'wi-day-sunny',
+        'weather-clear-night': 'wi-night-clear',
+        'weather-clouds': 'wi-cloudy',
+        'weather-clouds-night': 'wi-night-cloudy',
+        'weather-few-clouds': 'wi-cloud',
+        'weather-few-clouds-night': 'wi-night-partly-cloudy',
+        'weather-fog': 'wi-fog',
+        'weather-freezing-rain': 'wi-sleet',
+        'weather-hail': 'wi-hail',
+        'weather-many-clouds': 'wi-cloudy',
+        'weather-mist': 'wi-sprinkle',
+        'weather-overcast': 'wi-day-sunny-overcast',
+        'weather-showers': 'wi-showers',
+        'weather-showers-day': 'wi-day-showers',
+        'weather-showers-night': 'wi-night-showers',
+        'weather-showers-scattered': 'wi-showers',
+        'weather-showers-scattered-day': 'wi-day-showers',
+        'weather-showers-scattered-night': 'wi-night-showers',
+        'weather-snow': 'wi-snow',
         'weather-snow-rain': 'wi-rain-mix',
         'weather-snow-scattered': 'wi-snowflake-cold',
-        'weather-freezing-rain': 'wi-sleet',
-        'weather-showers-scattered': 'wi-showers',
-        'weather-showers': 'wi-showers',
-        'weather-snow': 'wi-snow',
-        'weather-hail': 'wi-hail',
-        'weather-mist': 'wi-sprinkle',
-        'weather-clouds': 'wi-cloudy',
-        'weather-many-clouds': 'wi-cloudy',
-        'weather-few-clouds-night': 'wi-night-partly-cloudy',
-        'weather-few-clouds': 'wi-cloud',
-        'weather-clear-night': 'wi-night-clear',
-        'weather-clear': 'wi-day-sunny',
+        'weather-snow-scattered-day': 'wi-snowflake-cold',
+        'weather-snow-scattered-night': 'wi-snowflake-cold',
+        'weather-storm': 'wi-thunderstorm',
+        'weather-storm-day': 'wi-day-thunderstorm',
+        'weather-storm-night': 'wi-night-thunderstorm',
+
         'weather-none-available': 'wi-na'
     }
 }
@@ -84,4 +96,9 @@ function getFontCode(conditionIconName) {
         fontCode = WeatherFont.codeByName['wi-na']
     }
     return fontCode
+}
+
+
+function hasIcon(iconName) {
+    return WeatherFont.mapConditionIconToFont.hasOwnProperty(iconName);
 }
